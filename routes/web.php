@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 route::get('/',[\App\Http\Controllers\FrontendController::class,'index'])->name('layouts.frontend.index');
+route::get('/profil-kota-madiun',[\App\Http\Controllers\FrontendController::class,'profilkota'])->name('layouts.frontend.profilkota');
 
 Auth::routes();
 
