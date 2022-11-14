@@ -23,7 +23,7 @@
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                <a class="text-center" href="#"> <h4>Admin PPID</h4></a>
+                                <a class="text-center" href="#"> <h4>Login Admin PPID</h4></a>
 
                                 <form class="mt-5 mb-5 login-input" method="POST" action="{{ route('login') }}">
                                     <div class="form-group">
