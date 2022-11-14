@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 route::get('/',[\App\Http\Controllers\FrontendController::class,'index'])->name('layouts.frontend.index');
 route::get('/profil-kota-madiun',[\App\Http\Controllers\FrontendController::class,'profilkota'])->name('layouts.frontend.profilkota');
+route::get('/login-admin',[\App\Http\Controllers\AdminController::class,'login'])->name('auth.login');
 
 Auth::routes();
 
