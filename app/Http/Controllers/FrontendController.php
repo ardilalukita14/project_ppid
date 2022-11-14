@@ -12,4 +12,7 @@ class FrontendController extends Controller
     public function profilkota(){
         return view('layouts.frontend.profilkota');
     }
+    public function sejarah(){
+        return view('layouts.frontend.sejarahkota');
+    }
 }
