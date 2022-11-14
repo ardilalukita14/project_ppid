@@ -28,11 +28,11 @@
         ***********************************-->
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="index.html">
+                <a href="/dashboard-admin">
                     <b class="logo-abbr"><img src="backend/images/logo.png" alt=""> </b>
                     <span class="logo-compact"><img src="backend/./images/logo-compact.png" alt=""></span>
                     <span class="brand-title">
-                        <img src="backend/images/logo-text.png" alt="">
+                        <img src="backend/images/PPID-1.png" alt="" style="width: 150px;">
                     </span>
                 </a>
             </div>
