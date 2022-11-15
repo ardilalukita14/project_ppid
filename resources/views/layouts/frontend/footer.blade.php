@@ -9,13 +9,16 @@
               labore et dolore magna aliqua.</p>
             <div class="footer-social">
               <ul>
-                <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
+                <li><a href="https://www.facebook.com/pemkotmadiun/" aria-label="Facebook"><i
                       class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <li><a href="https://twitter.com/pemkotmadiun_" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 </li>
-                <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
+                <li><a href="https://www.instagram.com/pemkotmadiun_/" aria-label="Instagram"><i
                       class="fab fa-instagram"></i></a></li>
-                <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCkolXu0GY1EdMOJ8RLOk4OQ" aria-label="Youtube">
+                    <i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@pemkotmadiun_" aria-label="Tiktok">
+                        <i class="fab fa-tiktok"></i></a></li>
               </ul>
             </div><!-- Footer social end -->
           </div><!-- Col end -->
@@ -39,7 +42,8 @@
               <li><a href="service-single.html">Design and Build</a></li>
               <li><a href="service-single.html">Self-Perform Construction</a></li>
             </ul>
-          </div><!-- Col end -->
+          </div>
+          <!-- Col end -->
         </div><!-- Row end -->
       </div><!-- Container end -->
     </div><!-- Footer main end -->
@@ -51,11 +55,11 @@
             <div class="copyright-info">
               <span>Copyright &copy; <script>
                   document.write(new Date().getFullYear())
-                </script>, Designed &amp; Developed by <a href="https://themefisher.com">Themefisher</a></span>
+                </script>, Developed by Diskominfo Kota Madiun</span>
             </div>
           </div>
 
-          <div class="col-md-6">
+          {{-- <div class="col-md-6">
             <div class="footer-menu text-center text-md-right">
               <ul class="list-unstyled">
                 <li><a href="about.html">About</a></li>
@@ -65,7 +69,7 @@
                 <li><a href="pricing.html">Pricing</a></li>
               </ul>
             </div>
-          </div>
+          </div> --}}
         </div><!-- Row end -->
 
         <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
