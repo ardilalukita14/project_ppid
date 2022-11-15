@@ -220,7 +220,7 @@
 
           <div class="col-md-2 col-sm-6 ts-facts mt-5 mt-sm-0">
             <div class="ts-facts-img">
-                <img loading="lazy" src="frontend/images/icon-image/sirup.png" alt="facts-img" style="width: 150px">
+                <img loading="lazy" src="frontend/images/icon-image/sirup3.png" alt="facts-img" style="width: 150px">
               </div><br>
               {{-- <div class="ts-facts-content"> --}}
                 <h3 class="ts-facts-num" ><a class="counterUp" href="https://sirup.lkpp.go.id/">SiRUP</a></h3>
