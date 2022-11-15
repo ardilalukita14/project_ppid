@@ -98,7 +98,7 @@
             </li>
             <li class="mega-menu mega-menu-sm">
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="fa fa-globe"></i><span class="nav-text">SOP</span>
+                    <i class="icon-book-open menu-icon"></i><span class="nav-text">SOP</span>
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="#">Pedoman Pengelolaan Organisasi</a></li>
@@ -109,7 +109,7 @@
             </li>
             <li class="mega-menu mega-menu-sm">
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="fa fa-globe"></i><span class="nav-text">Materi PPID</span>
+                    <i class="icon-envelope menu-icon"></i><span class="nav-text">Materi PPID</span>
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="#">Materi PPID Kota</a></li>
@@ -118,12 +118,12 @@
             </li>
             <li>
                 <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Laporan Pengaduan</span>
+                    <i class="ti-headphone-alt"></i><span class="nav-text">Laporan Pengaduan</span>
                 </a>
             </li>
             <li>
                 <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Berita PPID</span>
+                    <i class="far fa-newspaper-o"></i><span class="nav-text">Berita PPID</span>
                 </a>
             </li>
             <li>
