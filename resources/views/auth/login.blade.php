@@ -23,9 +23,12 @@
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                <a class="text-center" href="#"> <h4>Login Admin PPID</h4></a>
-
+                                <a class="text-center" href="#"> <h4>Login Admin</h4></a>
+                                <center>
+                                    <img src="{{asset('frontend/images/PPID-1.png')}}" alt="Constra" style="margin-left:50px; height:120px">
+                                </center>
                                 <form class="mt-5 mb-5 login-input" method="POST" action="{{ route('login') }}">
+                                @csrf
                                     <div class="form-group">
                                         <input type="email"  placeholder="Email" class="form-control  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"
                                         required autocomplete="email" autofocus>
@@ -45,9 +48,8 @@
                                     @enderror
                                         <span class="form-bar"></span>
                                     </div>
-                                    <button class="btn login-form__btn submit w-100">Sign In</button>
+                                    <button class="btn login-form__btn submit w-100">Login</button>
                                 </form>
-                                <p class="mt-5 login-form__footer">Dont have account? <a href="page-register.html" class="text-primary">Sign Up</a> now</p>
                             </div>
                         </div>
                     </div>

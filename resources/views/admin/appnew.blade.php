@@ -13,12 +13,12 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="backend/images/favicon.png">
     <!-- Pignose Calender -->
-    <link href="backend/./plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    <link href="{{asset('backend/./plugins/pg-calendar/css/pignose.calendar.min.css')}}" rel="stylesheet">
     <!-- Chartist -->
-    <link rel="stylesheet" href="backend/./plugins/chartist/css/chartist.min.css">
-    <link rel="stylesheet" href="backend/./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="{{asset('backend/./plugins/chartist/css/chartist.min.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css')}}">
     <!-- Custom Stylesheet -->
-    <link href="backend/css/style.css" rel="stylesheet">
+    <link href="{{asset('backend/css/style.css')}}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
@@ -31,29 +31,29 @@
   <!--**********************************
         Scripts
     ***********************************-->
-    <script src="backend/plugins/common/common.min.js"></script>
-    <script src="backend/js/custom.min.js"></script>
-    <script src="backend/js/settings.js"></script>
-    <script src="backend/js/gleek.js"></script>
-    <script src="backend/js/styleSwitcher.js"></script>
+    <script src="{{asset('backend/plugins/common/common.min.js')}}"></script>
+    <script src="{{asset('backend/js/custom.min.js')}}"></script>
+    <script src="{{asset('backend/js/settings.js')}}"></script>
+    <script src="{{asset('backend/js/gleek.js')}}"></script>
+    <script src="{{asset('backend/js/styleSwitcher.js')}}"></script>
 
     <!-- Chartjs -->
-    <script src="backend/./plugins/chart.js/Chart.bundle.min.js"></script>
+    <script src="{{asset('backend/./plugins/chart.js/Chart.bundle.min.js')}}"></script>
     <!-- Circle progress -->
-    <script src="backend/./plugins/circle-progress/circle-progress.min.js"></script>
+    <script src="{{asset('backend/./plugins/circle-progress/circle-progress.min.js')}}"></script>
     <!-- Datamap -->
-    <script src="backend/./plugins/d3v3/index.js"></script>
-    <script src="backend/./plugins/topojson/topojson.min.js"></script>
-    <script src="backend/./plugins/datamaps/datamaps.world.min.js"></script>
+    <script src="{{asset('backend/./plugins/d3v3/index.js')}}"></script>
+    <script src="{{asset('backend/./plugins/topojson/topojson.min.js')}}"></script>
+    <script src="{{asset('backend/./plugins/datamaps/datamaps.world.min.js')}}"></script>
     <!-- Morrisjs -->
-    <script src="backend/./plugins/raphael/raphael.min.js"></script>
-    <script src="backend/./plugins/morris/morris.min.js"></script>
+    <script src="{{asset('backend/./plugins/raphael/raphael.min.js')}}"></script>
+    <script src="{{asset('backend/./plugins/morris/morris.min.js')}}"></script>
     <!-- Pignose Calender -->
-    <script src="backend/./plugins/moment/moment.min.js"></script>
-    <script src="backend/./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <script src="{{asset('backend/./plugins/moment/moment.min.js')}}"></script>
+    <script src="{{asset('backend/./plugins/pg-calendar/js/pignose.calendar.min.js')}}"></script>
     <!-- ChartistJS -->
-    <script src="backend/./plugins/chartist/js/chartist.min.js"></script>
-    <script src="backend/./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+    <script src="{{asset('backend/./plugins/chartist/js/chartist.min.js')}}"></script>
+    <script src="{{asset('backend/./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js')}}"></script>
 
 
 
