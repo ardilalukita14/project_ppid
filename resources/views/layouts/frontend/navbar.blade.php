@@ -25,7 +25,7 @@
                                     <li><a href="/profil-kota-madiun">Profil Kota Madiun</a></li>
                                     <li><a href="/sejarah-kota-madiun">Sejarah Kota Madiun</a></li>
                                     <li><a href="#!">Letak Geografis Kota Madiun</a></li>
-                                    <li><a href="#!">Profil Pemerintahan Kota Madiun</a></li>
+                                    <li><a href="#!">Profil Pemerintah Kota Madiun</a></li>
                                     <li><a href="#!">Profil Pejabat Daerah</a></li>
                                     <li><a href="#!">LHKPN Pejabat Publik Pemerintah Kota Madiun</a></li>
                                     <li><a href="#!">Visi Misi Kota Madiun</a></li>
