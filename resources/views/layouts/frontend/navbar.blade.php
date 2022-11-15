@@ -30,6 +30,10 @@
                                     <li><a href="#!">LHKPN Pejabat Publik Pemerintah Kota Madiun</a></li>
                                     <li><a href="#!">Visi Misi Kota Madiun</a></li>
                                     <li><a href="#!">Bagan Struktur Organisasi Pemerintah Kota Madiun</a></li>
+                                    <li><a href="#!">Struktur Organisasi Unit Kerja</a></li>
+                                    <li><a href="#!">Tupoksi Pemerintah Kota Madiun</a></li>
+                                    <li><a href="#!">Tupoksi Unit Kerja</a></li>
+                                    <li><a href="#!">Agenda Kerja dan Kegiatan Pimpinan Pemerintah Kota Madiun</a></li>
                                   </ul>
                               </li>
                               <li class="dropdown-submenu">
@@ -44,7 +48,8 @@
                                     <li><a href="#!">Perwal PPID</a></li>
                                     <li><a href="#!">Maklumat PPID</a></li>
                                     <li><a href="#!">Jam Pelayanan PPID</a></li>
-                                    <li><a href="#!">SK Daftar Informasi</a></li>
+                                    <li><a href="#!">SK Daftar Informasi Publik</a></li>
+                                    <li><a href="#!">SK Daftar Informasi yang Dikecualikan</a></li>
                                   </ul>
                               </li>
                             </ul>

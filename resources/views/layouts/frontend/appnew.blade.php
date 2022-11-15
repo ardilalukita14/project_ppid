@@ -11,23 +11,23 @@
 
   <!-- Favicon
 ================================================== -->
-  <link rel="icon" type="image/png" href="frontend/images/favicon.png">
+  <link rel="icon" type="image/png" href="{{ asset ('frontend/images/favicon.png')}}">
 
   <!-- CSS
 ================================================== -->
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="frontend/plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ asset ('frontend/plugins/bootstrap/bootstrap.min.css')}}">
   <!-- FontAwesome -->
-  <link rel="stylesheet" href="frontend/plugins/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="{{ asset ('frontend/plugins/fontawesome/css/all.min.css')}}">
   <!-- Animation -->
-  <link rel="stylesheet" href="frontend/plugins/animate-css/animate.css">
+  <link rel="stylesheet" href="{{ asset ('frontend/plugins/animate-css/animate.css')}}">
   <!-- slick Carousel -->
-  <link rel="stylesheet" href="frontend/plugins/slick/slick.css">
-  <link rel="stylesheet" href="frontend/plugins/slick/slick-theme.css">
+  <link rel="stylesheet" href="{{ asset ('frontend/plugins/slick/slick.css')}}">
+  <link rel="stylesheet" href="{{ asset ('frontend/plugins/slick/slick-theme.css')}}">
   <!-- Colorbox -->
-  <link rel="stylesheet" href="frontend/plugins/colorbox/colorbox.css">
+  <link rel="stylesheet" href="{{ asset ('frontend/plugins/colorbox/colorbox.css')}}">
   <!-- Template styles-->
-  <link rel="stylesheet" href="frontend/css/style.css">
+  <link rel="stylesheet" href="{{ asset ('frontend/css/style.css')}}">
 
 </head>
 <body>
@@ -36,25 +36,25 @@
   ================================================== -->
 
   <!-- initialize jQuery Library -->
-  <script src="frontend/plugins/jQuery/jquery.min.js"></script>
+  <script src="{{ asset ('frontend/plugins/jQuery/jquery.min.js')}}"></script>
   <!-- Bootstrap jQuery -->
-  <script src="frontend/plugins/bootstrap/bootstrap.min.js" defer></script>
+  <script src="{{ asset ('frontend/plugins/bootstrap/bootstrap.min.js')}}" defer></script>
   <!-- Slick Carousel -->
-  <script src="frontend/plugins/slick/slick.min.js"></script>
-  <script src="frontend/plugins/slick/slick-animation.min.js"></script>
+  <script src="{{ asset ('frontend/plugins/slick/slick.min.js')}}"></script>
+  <script src="{{ asset ('frontend/plugins/slick/slick-animation.min.js')}}"></script>
   <!-- Color box -->
-  <script src="frontend/plugins/colorbox/jquery.colorbox.js"></script>
+  <script src="{{ asset ('frontend/plugins/colorbox/jquery.colorbox.js')}}"></script>
   <!-- shuffle -->
-  <script src="frontend/plugins/shuffle/shuffle.min.js" defer></script>
+  <script src="{{ asset ('frontend/plugins/shuffle/shuffle.min.js')}}" defer></script>
 
 
   <!-- Google Map API Key-->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
   <!-- Google Map Plugin-->
-  <script src="frontend/plugins/google-map/map.js" defer></script>
+  <script src="{{ asset ('frontend/plugins/google-map/map.js')}}" defer></script>
 
   <!-- Template custom -->
-  <script src="frontend/js/script.js"></script>
+  <script src="{{ asset ('frontend/js/script.js')}}"></script>
 
   </div><!-- Body inner end -->
   </body>
