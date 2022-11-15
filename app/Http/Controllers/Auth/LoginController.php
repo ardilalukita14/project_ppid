@@ -61,4 +61,13 @@ class LoginController extends Controller
             return redirect()->redirect()->route('login')->with('error','Email dan Password Anda salah!');
         }
      }
+
+     public function logout(Request $request)
+     {
+         request()->session()->invalidate();
+  
+         request()->session()->regenerateToken();
+  
+         return redirect('/');
+     }
 }
