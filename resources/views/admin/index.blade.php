@@ -29,10 +29,10 @@
         <div class="nav-header">
             <div class="brand-logo">
                 <a href="/dashboard-admin">
-                    <b class="logo-abbr"><img src="backend/images/logo.png" alt=""> </b>
-                    <span class="logo-compact"><img src="backend/./images/logo-compact.png" alt=""></span>
+                    <b class="logo-abbr"><img src="{{asset('backend/images/logo.png')}}" alt=""> </b>
+                    <span class="logo-compact"><img src="{{asset('backend/./images/logo-compact.png')}}" alt=""></span>
                     <span class="brand-title">
-                        <img src="backend/images/PPID-1.png" alt="" style="width: 150px;">
+                        <img src="{{asset('backend/images/PPID-1.png')}}" alt="" style="width: 150px;">
                     </span>
                 </a>
             </div>

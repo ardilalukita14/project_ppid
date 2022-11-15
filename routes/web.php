@@ -34,7 +34,13 @@ route::get('/sejarah-kota-madiun',[\App\Http\Controllers\FrontendController::cla
 /** Dashboard Admin */
 Route::group(['middleware'=>['admin','auth','PreventBackHistory']], function(){
 route::get('/dashboard-admin',[\App\Http\Controllers\AdminController::class,'dashboard'])->name('admin.index');
+route::get('/profile/kota-madiun',[\App\Http\Controllers\ProfileController::class,'madiunprofile'])->name('madiunprofile.index');
 
+/** Kategori Profile */
+Route::get('/kategori-profile','App\Http\Controllers\KategoriProfileController@index')->name('kategori.index');
+Route::get('/kategori-profile/create','App\Http\Controllers\KategoriProfileController@create')->name('kategori.create');
+Route::post('/kategori-profile/create','App\Http\Controllers\KategoriProfileController@store')->name('kategori.create');
+Route::get('/kategori-profile-edit/{id}','App\Http\Controllers\KategoriProfileController@edit')->name('kategori.edit');
+Route::post('/kategori-profile-edit/{id}','App\Http\Controllers\KategoriProfileController@update')->name('kategori.edit');
+Route::delete('/kategori-profile/hapus/{id}','App\Http\Controllers\KategoriProfileController@destroy')->name('kategori.delete');
 });
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
