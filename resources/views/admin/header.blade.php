@@ -167,7 +167,7 @@
                                 <li>
                                     <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
                                 </li>
-                                <li> <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#logoutModal"><i class="icon-key"></i> <span>Logout</span></a></li>
                             </ul>
                         </div>
                     </div>
