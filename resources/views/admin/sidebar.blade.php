@@ -36,7 +36,7 @@
             </li>
             <li class="mega-menu mega-menu-sm">
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="far fa-file-text"></i><span class="nav-text"> PPID Kota Madiun</span>
+                    <i class="fas fa-file-text"></i><span class="nav-text"> PPID Kota Madiun</span>
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="#">Profil PPID</a></li>
@@ -56,7 +56,7 @@
             <li class="nav-label">Informasi Publik</li>
             <li class="mega-menu mega-menu-sm">
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="fa fa-globe"></i><span class="nav-text">Daftar Informasi Publik</span>
+                    <i class="far fa-list-alt"></i><span class="nav-text">Daftar Informasi Publik</span>
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="#">Daftar Informasi Publik 2022</a></li>
@@ -65,22 +65,22 @@
             </li>
             <li>
                 <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Informasi Secara Berkala</span>
+                    <i class="icon-calender menu-icon"></i><span class="nav-text">Informasi Secara Berkala</span>
                 </a>
             </li>
             <li>
                 <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Informasi Serta Merta</span>
+                    <i class="ti ti-file"></i><span class="nav-text">Informasi Serta Merta</span>
                 </a>
             </li>
             <li>
                 <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Informasi Setiap Saat</span>
+                    <i class="far fa-clock-o"></i><span class="nav-text">Informasi Setiap Saat</span>
                 </a>
             </li>
             <li>
                 <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Informasi Dikecualikan</span>
+                    <i class="far fa-times-circle"></i><span class="nav-text">Informasi Dikecualikan</span>
                 </a>
             </li>
             <hr>
@@ -88,7 +88,7 @@
             <li class="nav-label">Dokumen</li>
             <li>
                 <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Pengumuman</span>
+                    <i class="fas fa-bullhorn"></i><span class="nav-text">Pengumuman</span>
                 </a>
             </li>
             <li>
@@ -141,12 +141,12 @@
             <li class="nav-label">Galeri</li>
             <li>
                 <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Galeri</span>
+                    <i class="far fa-image"></i><span class="nav-text">Galeri</span>
                 </a>
             </li>
             <li>
                 <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Infografis</span>
+                    <i class="fas fa-file-image-o"></i><span class="nav-text"> Infografis</span>
                 </a>
             </li>
             <hr>
