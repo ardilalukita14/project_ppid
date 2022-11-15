@@ -10,7 +10,7 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="backend/../../assets/images/favicon.png">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
-    <link href="backend/css/style.css" rel="stylesheet">
+    <link href="{{asset('backend/css/style.css')}}" rel="stylesheet">
 
 </head>
 
@@ -21,11 +21,11 @@
     <!--**********************************
         Scripts
     ***********************************-->
-    <script src="backend/plugins/common/common.min.js"></script>
-    <script src="backend/js/custom.min.js"></script>
-    <script src="backend/js/settings.js"></script>
-    <script src="backend/js/gleek.js"></script>
-    <script src="backend/js/styleSwitcher.js"></script>
+    <script src="{{asset('backend/plugins/common/common.min.js')}}"></script>
+    <script src="{{asset('backend/js/custom.min.js')}}"></script>
+    <script src="{{asset('backend/js/settings.js')}}"></script>
+    <script src="{{asset('backend/js/gleek.js')}}"></script>
+    <script src="{{asset('backend/js/styleSwitcher.js')}}"></script>
 </body>
 </html>
 
