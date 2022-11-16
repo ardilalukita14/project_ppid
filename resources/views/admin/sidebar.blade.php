@@ -24,14 +24,18 @@
                     <i class="fa fa-globe"></i><span class="nav-text">Pemerintah Kota Madiun</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="#">Profil Kota Madiun</a></li>
-                    <li><a href="#">Sejarah Kota Madiun</a></li>
-                    <li><a href="#">Letak Geografis</a></li>
-                    <li><a href="#">Profil Pemerintah</a></li>
-                    <li><a href="#">Profil Pejabat Daerah</a></li>
-                    <li><a href="#">LHKPN Pejabat Publik Pemerintah</a></li>
-                    <li><a href="#">Visi Misi Kota Madiun</a></li>
-                    <li><a href="#">Struktur Organisasi Pemerintah</a></li>
+                    <li><a href="{{route('madiunprofile.index')}}">Profil Kota Madiun</a></li>
+                    <li><a href="{{route('sejarah.index')}}">Sejarah Kota Madiun</a></li>
+                    <li><a href="{{route('geografis.index')}}">Letak Geografis</a></li>
+                    <li><a href="{{route('profil.pemerintah.index')}}">Profil Pemerintah</a></li>
+                    <li><a href="{{route('profil.pejabat.index')}}">Profil Pejabat Daerah</a></li>
+                    <li><a href="{{route('lhkpn.index')}}">LHKPN Pejabat Publik Pemerintah</a></li>
+                    <li><a href="{{route('visimisi.index')}}">Visi Misi Kota Madiun</a></li>
+                    <li><a href="{{route('struktur.pemerintah.index')}}">Struktur Organisasi Pemerintah</a></li>
+                    <li><a href="{{route('struktur.unitkerja.index')}}">Struktur Organisasi Unit Kerja</a></li>
+                    <li><a href="{{route('tupoksi.pemerintah.index')}}">Tupoksi Pemerintah</a></li>
+                    <li><a href="{{route('tupoksi.unitkerja.index')}}">Tupoksi Unit Kerja</a></li>
+                    <li><a href="{{route('agenda.index')}}">Agenda Kerja dan Kegiatan Pimpinan</a></li>
                 </ul>
             </li>
             <li class="mega-menu mega-menu-sm">

@@ -12,8 +12,4 @@ class Kategori extends Model
     protected $fillable = [
         'nama_kategori', 'status','tanggal'];
 
-    
-    public function profile(){
-        return $this->hasMany(Profile::class);
-    }
 }
