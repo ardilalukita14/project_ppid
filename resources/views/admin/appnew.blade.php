@@ -72,7 +72,7 @@
       $('#dataTableHover1').DataTable(); // ID From dataTable with Hover
     });
   </script>
-  
+
 </body>
 
 </html>

@@ -79,7 +79,7 @@
                 <div class="card-body">
                 <h4 class="card-title">{{$judul}}</h4>
                 <br>
-                
+
                     @if(Session::has('success'))
                         <div class="btn btn-success text-white" style="width:100%; height:40px">
                             <p>{{Session::get('success')}}</p>
@@ -107,7 +107,7 @@
                         </div>
                     <br></br>
                     @endif
-                    
+
                     <div class="form-validation">
                     <form class="form-valide" action="{{route('profil.create')}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
