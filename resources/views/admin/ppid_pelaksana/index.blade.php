@@ -120,7 +120,7 @@
                                                         <a href="{{ route('ppid.pelaksana.edit',$data->id) }}" class="btn btn-success "><i class="fa fa-edit"></i></a>
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus data ppid.pelaksana ?')" ><i class="fas fa-trash"></i></button>
+                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus data PPID Pelaksana ?')" ><i class="fas fa-trash"></i></button>
                                                     </form>
                                                 </td>
                                             </tr>
