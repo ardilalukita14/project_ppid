@@ -51,7 +51,7 @@
             <h1>Table</h1>
             <div class="section-header-breadcrumb">
               <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-              <div class="breadcrumb-item"><a href="#">PPID Pelaksana Kota Madiun</a></div>
+              <div class="breadcrumb-item"><a href="#">Kategori</a></div>
               <div class="breadcrumb-item">{{$judul}}</div>
             </div>
           </div>
@@ -67,7 +67,7 @@
                 <br>
                       <div class="card-tools">
                             <br>
-                            <a href="{{ route('ppid.pelaksana.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
+                            <a href="{{ route('kategori.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
                       </div>
                                  @if(Session::has('success'))
                                  <br></br>
@@ -103,21 +103,19 @@
                                     <table class="display table table-striped table-hover" id="dataTable">
                                         <thead>
                                             <tr>
-                                                <th>NAMA OPD</th>
-                                                <th>ALAMAT </th>
-                                                <th>NO TLP/FAX</th>
+                                                <th>Nama Kategori</th>
+                                                <th>Status</th>
                                                 <th width="220px;">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                            @foreach ($ppid_pelaksana as $data)
-                                                <td>{{$data->nama_opd}}</td>
-                                                <td>{!!$data->alamat!!}</td>
-                                                <td>{!!$data->telepon!!}</td>
+                                            @foreach ($kategori as $data)
+                                                <td>{{$data->nama_kategori}}</td>
+                                                <td>{{$data->status}}</td>
                                                 <td>
-                                                    <form action="{{ route('ppid.pelaksana.destroy',$data->id) }}"  method="POST">
-                                                        <a href="{{ route('ppid.pelaksana.edit',$data->id) }}" class="btn btn-warning "><i class="fa fa-edit"></i> Ubah</a>
+                                                    <form action="{{ route('kategori.destroy',$data->id) }}"  method="POST">
+                                                        <a href="{{ route('kategori.edit',$data->id) }}" class="btn btn-warning "><i class="fa fa-edit"></i> Ubah</a>
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus data PPID Pelaksana ?')" ><i class="fas fa-trash"></i> Hapus</button>

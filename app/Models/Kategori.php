@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
 class Kategori extends Model
 {
     use HasFactory;
-    public $table = "kategori_profile";
+    use SoftDeletes;
+    public $table = "kategori";
     protected $fillable = [
-        'nama_kategori', 'status','tanggal'];
-
+        'nama_kategori','slug', 'isaktif'];
 }

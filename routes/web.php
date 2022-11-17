@@ -69,13 +69,13 @@ Route::get('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaCont
 Route::post('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'update'])->name('ppid.pelaksana.edit');
 Route::delete('/hapus-ppid-pelaksana/{ppid}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'destroy'])->name('ppid.pelaksana.destroy');
 
-/** Kategori Profile */
-// Route::get('/kategori-profile','App\Http\Controllers\KategoriProfileController@index')->name('kategori.index');
-// Route::get('/kategori-profile/create','App\Http\Controllers\KategoriProfileController@create')->name('kategori.create');
-// Route::post('/kategori-profile/create','App\Http\Controllers\KategoriProfileController@store')->name('kategori.create');
-// Route::get('/kategori-profile-edit/{id}','App\Http\Controllers\KategoriProfileController@edit')->name('kategori.edit');
-// Route::post('/kategori-profile-edit/{id}','App\Http\Controllers\KategoriProfileController@update')->name('kategori.edit');
-// Route::delete('/kategori-profile/hapus/{id}','App\Http\Controllers\KategoriProfileController@destroy')->name('kategori.delete');
+/** Data Kategori*/
+Route::get('/kategori','App\Http\Controllers\KategoriController@index')->name('kategori.index');
+Route::get('/kategori/create','App\Http\Controllers\KategoriController@create')->name('kategori.create');
+Route::post('/kategori/create','App\Http\Controllers\KategoriController@store')->name('kategori.create');
+Route::get('/kategori/edit/{id}','App\Http\Controllers\KategoriController@edit')->name('kategori.edit');
+Route::post('/kategori/edit/{id}','App\Http\Controllers\KategoriController@update')->name('kategori.edit');
+Route::delete('/kategori/hapus/{id}','App\Http\Controllers\KategoriController@destroy')->name('kategori.destroy');
 });
 
 

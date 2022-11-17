@@ -19,7 +19,7 @@ class PPIDPelaksanaController extends Controller
 
     public function create()
     {
-        $ppid_pelaksana = PPIDPelaksana::all()->first();;
+        $ppid_pelaksana = PPIDPelaksana::all()->first();
         $judul = "Tambah Data PPID Pelaksana";
         return view('admin.ppid_pelaksana.create', compact('ppid_pelaksana', 'judul'));
     }

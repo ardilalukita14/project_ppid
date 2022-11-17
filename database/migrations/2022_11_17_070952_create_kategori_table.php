@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('kategori_profile', function (Blueprint $table) {
+        Schema::create('kategori', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_kategori', 100);
-            $table->integer('status')->length(5)->unsigned();;
-            $table->date('tanggal');
+            $table->String('nama_kategori', 150);
+            $table->String('slug');
+            $table->String('isaktif', 5);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -29,7 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kategori_profile');
-            //
+        Schema::dropIfExists('kategori');
     }
 };
