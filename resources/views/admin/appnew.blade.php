@@ -48,7 +48,7 @@
       </div>
     </div>
   </div>
-  
+
 <!-- General JS Scripts -->
 <script src="{{  asset ('backend2/assets/modules/jquery.min.js')}}"></script>
 <script src="{{  asset ('backend2/assets/modules/popper.js')}}"></script>

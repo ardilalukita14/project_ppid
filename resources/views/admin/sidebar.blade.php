@@ -8,39 +8,44 @@
           </div>
           <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li><a class="nav-link" href="/dashboard-admin-ppid"><i class="fa fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
+            <li class="{{ Request::is('*dashboard*') ? 'active' : '' }}">
+                <a class="nav-link"
+                    href="/dashboard-admin-ppid"><i class="fa fa-tachometer-alt"></i><span>Dashboard</span></a>
+            </li>
+            {{-- <li class="menu-header">Dashboard</li>
+            <li><a class="nav-link" href="/dashboard-admin-ppid"><i class="fa fa-tachometer-alt"></i> <span>Dashboard</span></a></li> --}}
 
             <li class="menu-header">Profil Kota Madiun</li>
 
-            <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-globe"></i> <span>Pemerintah Kota</span></a>
+            <li class="nav-item dropdown {{ Request::is('*profil*') ? 'active' : '' }}">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-globe"></i> <span>Pemerintah Kota</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{route('madiunprofile.index')}}">Profil Kota Madiun</a></li>
-                <li><a class="nav-link" href="{{route('sejarah.index')}}">Sejarah Kota Madiun</a></li>
-                <li><a class="nav-link" href="{{route('geografis.index')}}">Letak Geografis</a></li>
-                <li><a class="nav-link" href="{{route('profil.pemerintah.index')}}">Profil Pemerintah</a></li>
-                <li><a class="nav-link" href="{{route('profil.pejabat.index')}}">Profil Pejabat Daerah</a></li>
-                <li><a class="nav-link" href="{{route('lhkpn.index')}}">LHKPN Pejabat Publik</a></li>
-                <li><a class="nav-link" href="{{route('visimisi.index')}}">Visi Misi Kota Madiun</a></li>
-                <li class="dropdown">
+                <li class="{{ Request::is('*madiun*') ? 'active' : '' }}"><a class="nav-link" href="{{route('madiunprofile.index')}}">Profil Kota Madiun</a></li>
+                <li class="{{ Request::is('*sejarah*') ? 'active' : '' }}"><a class="nav-link" href="{{route('sejarah.index')}}">Sejarah Kota Madiun</a></li>
+                <li class="{{ Request::is('*letak*') ? 'active' : '' }}"><a class="nav-link" href="{{route('geografis.index')}}">Letak Geografis</a></li>
+                <li class="{{ Request::is('*pemerintah*') ? 'active' : '' }}"><a class="nav-link" href="{{route('profil.pemerintah.index')}}">Profil Pemerintah</a></li>
+                <li class="{{ Request::is('*pejabat*') ? 'active' : '' }}"><a class="nav-link" href="{{route('profil.pejabat.index')}}">Profil Pejabat Daerah</a></li>
+                <li class="{{ Request::is('*visi*') ? 'active' : '' }}"><a class="nav-link" href="{{route('visimisi.index')}}">Visi Misi Kota Madiun</a></li>
+                <li class="{{ Request::is ('*pejabat-publik*') ? 'active' : '' }}"><a class="nav-link" href="{{route('lhkpn.index')}}">LHKPN Pejabat Publik</a></li>
+                <li class="nav-item dropdown {{ Request::is('*struktur*') ? 'active' : '' }}">
                     <a href="#" class="nav-link has-dropdown"><span>Struktur Organisasi</span></a>
                   <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{route('struktur.pemerintah.index')}}">Organisasi Pemerintah</a></li>
-                    <li><a class="nav-link" href="{{route('struktur.unitkerja.index')}}">Organisasi Unit Kerja</a></li>
+                    <li class="{{ Request::is ('or-pem') ? 'active' : '' }}"><a class="nav-link" href="{{route('struktur.pemerintah.index')}}">Organisasi Pemerintah</a></li>
+                    <li class="{{ Request::is ('or-kerja') ? 'active' : '' }}"><a class="nav-link" href="{{route('struktur.unitkerja.index')}}">Organisasi Unit Kerja</a></li>
                   </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="nav-link has-dropdown"><span>Tupoksi</span></a>
+                <li class="nav-item dropdown {{ Request::is ('*tupoksi*') ? 'active' : '' }}">
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><span>Tupoksi</span></a>
                   <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{route('tupoksi.pemerintah.index')}}">Pemerintah</a></li>
-                    <li><a class="nav-link" href="{{route('tupoksi.unitkerja.index')}}">Unit Kerja</a></li>
+                    <li class="{{ Request::is ('*tupoksi-pem*') ? 'active' : '' }}"><a class="nav-link" href="{{route('tupoksi.pemerintah.index')}}">Pemerintah</a></li>
+                    <li class="{{ Request::is ('*tupoksi-unit*') ? 'active' : '' }}"><a class="nav-link" href="{{route('tupoksi.unitkerja.index')}}">Unit Kerja</a></li>
                   </ul>
                 </li>
-                <li><a class="nav-link" style ="margin-top:10px;" href="{{route('agenda.index')}}">Agenda Kerja & Kegiatan Pimpinan</a></li>
+                <li class="{{ Request::is ('*agenda*') ? 'active' : '' }}"><a class="nav-link" style ="margin-top:10px;" href="{{route('agenda.index')}}">Agenda Kerja & Kegiatan Pimpinan</a></li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-alt"></i> <span>PPID Kota Madiun</span></a>
+            <li class="nav-item dropdown {{ Request::is ('*ppid*') ? 'active' : '' }}">
+              <a href="#" class="nav-link has-dropdown"data-toggle="dropdown"><i class="fas fa-file-alt"></i> <span>PPID Kota Madiun</span></a>
               <ul class="dropdown-menu">
                     <li><a class="nav-link" href="#">Profil PPID</a></li>
                     <li><a class="nav-link" href="#">Visi Misi PPID</a></li>
@@ -52,12 +57,14 @@
                     <li><a class="nav-link" href="#">Maklumat</a></li>
                     <li><a class="nav-link" href="#">Jam Pelayanan</a></li>
                     <li><a class="nav-link" href="#">SK Daftar Informasi Publik</a></li>
+                    <li><a class="nav-link" href="#">SK Daftar Dikecualikan</a></li>
+                    <li><a class="nav-link" href="#">PPID Pelaksana</a></li>
               </ul>
             </li>
 
             <li class="menu-header">Informasi Publik</li>
             <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-alt"></i> <span>Daftar Informasi Publik</span></a>
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file"></i> <span>Daftar Informasi Publik</span></a>
                 <ul class="dropdown-menu">
                   <li><a class="nav-link" href="#">Informasi Publik 2022</a></li>
                   <li><a class="nav-link" href="#">Informasi PPID Pelaksana</a></li>
@@ -72,7 +79,7 @@
             <li><a class="nav-link" href=""><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>
             <li><a class="nav-link" href=""><i class="fas fa-ribbon"></i> <span>Produk Hukum</span></a></li>
             <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-book-open"></i> <span>SOP</span></a>
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>SOP</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="#">Pengelolaan Organisasi</a></li>
                 <li><a class="nav-link" href="#">Pengelolaan Administrasi</a></li>
@@ -81,7 +88,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="far fa-envelope"></i> <span>Materi PPID</span></a>
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-envelope"></i> <span>Materi PPID</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="">Materi PPID Kota</a></li>
                 <li><a class="nav-link" href="">Materi Umum</a></li>

@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+route::get('/coba',[\App\Http\Controllers\AdminController::class,'coba'])->name('admin.coba');
 
 /** Login Admin */
 
