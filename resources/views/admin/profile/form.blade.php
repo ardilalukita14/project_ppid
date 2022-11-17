@@ -60,7 +60,7 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-sm-8">
+        <div class="col-sm-10">
             <div class="card" style="padding-left:20px; padding-right:20px; padding-top:20px;">
                 <div class="card-body">
                 <h4 class="card-title">{{$judul}}</h4>
