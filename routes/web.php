@@ -33,7 +33,7 @@ route::get('/sejarah-kota-madiun',[\App\Http\Controllers\FrontendController::cla
 Route::group(['middleware'=>['admin','auth','PreventBackHistory']], function(){
 Route::get('/dashboard-admin-ppid',[\App\Http\Controllers\AdminController::class,'dashboard'])->name('admin.index');
 
-/** Menu Profile */
+/** Menu Profile Pemerintah Kota Madiun*/
 Route::get('/profile/kota-madiun',[\App\Http\Controllers\ProfileController::class,'madiunprofile'])->name('madiunprofile.index');
 Route::get('/profile/sejarah',[\App\Http\Controllers\ProfileController::class,'sejarah'])->name('sejarah.index');
 Route::get('/profile/letak-geografis',[\App\Http\Controllers\ProfileController::class,'geografis'])->name('geografis.index');
@@ -48,6 +48,27 @@ Route::get('/profile/tupoksi-unit-kerja',[\App\Http\Controllers\ProfileControlle
 Route::get('/profile/agenda-kerja-kegiatan-pimpinan',[\App\Http\Controllers\ProfileController::class,'agenda'])->name('agenda.index');
 Route::post('/profil/store', [App\Http\Controllers\ProfileController::class, 'store'])->name('profil.create');
 
+/** Menu Profile PPID*/
+Route::get('/profile/ppid',[\App\Http\Controllers\ProfilePPIDController::class,'profileppid'])->name('profile.ppid.index');
+Route::get('/profile/visi-misi-ppid',[\App\Http\Controllers\ProfilePPIDController::class,'visimisi'])->name('visimisi.ppid.index');
+Route::get('/profile/bagan-struktur-ppid',[\App\Http\Controllers\ProfilePPIDController::class,'baganstruktur'])->name('bagan.struktur.index');
+Route::get('/profile/sop-ppid',[\App\Http\Controllers\ProfilePPIDController::class,'sop'])->name('sop.index');
+Route::get('/profile/tupokis-ppid',[\App\Http\Controllers\ProfilePPIDController::class,'tupoksippid'])->name('tupoksi.ppid.index');
+Route::get('/profile/sk-ppid',[\App\Http\Controllers\ProfilePPIDController::class,'skppid'])->name('sk.ppid.index');
+Route::get('/profile/perwal-ppid',[\App\Http\Controllers\ProfilePPIDController::class,'perwalppid'])->name('perwal.ppid.index');
+Route::get('/profile/maklumat-ppid',[\App\Http\Controllers\ProfilePPIDController::class,'maklumatppid'])->name('maklumat.ppid.index');
+Route::get('/profile/jam-pelayanan',[\App\Http\Controllers\ProfilePPIDController::class,'jampelayanan'])->name('jam.pelayanan.index');
+Route::get('/profile/sk-daftar-informasi-publik',[\App\Http\Controllers\ProfilePPIDController::class,'skpublik'])->name('sk.publik.index');
+Route::get('/profile/sk-daftar-informasi-dikecualikan',[\App\Http\Controllers\ProfilePPIDController::class,'skdikecualikan'])->name('sk.dikecualikan.index');
+
+/** CRUD Data PPID Pelaksana Kota Madiun*/
+Route::get('/ppid-pelaksana', [\App\Http\Controllers\PPIDPelaksanaController::class, 'index'])->name('ppid.pelaksana.index');
+Route::get('/create/ppid-pelaksana', [\App\Http\Controllers\PPIDPelaksanaController::class, 'create'])->name('ppid.pelaksana.create');
+Route::post('/create/ppid-pelaksana', [\App\Http\Controllers\PPIDPelaksanaController::class, 'store'])->name('ppid.pelaksana.create');
+Route::get('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'edit'])->name('ppid.pelaksana.edit');
+Route::post('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'update'])->name('ppid.pelaksana.edit');
+Route::delete('/hapus-ppid-pelaksana/{ppid}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'destroy'])->name('ppid.pelaksana.destroy');
+
 /** Kategori Profile */
 // Route::get('/kategori-profile','App\Http\Controllers\KategoriProfileController@index')->name('kategori.index');
 // Route::get('/kategori-profile/create','App\Http\Controllers\KategoriProfileController@create')->name('kategori.create');
@@ -56,6 +77,7 @@ Route::post('/profil/store', [App\Http\Controllers\ProfileController::class, 'st
 // Route::post('/kategori-profile-edit/{id}','App\Http\Controllers\KategoriProfileController@update')->name('kategori.edit');
 // Route::delete('/kategori-profile/hapus/{id}','App\Http\Controllers\KategoriProfileController@destroy')->name('kategori.delete');
 });
+
 
 Auth::routes();
 
