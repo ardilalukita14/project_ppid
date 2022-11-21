@@ -29,6 +29,10 @@ route::get('/',[\App\Http\Controllers\FrontendController::class,'index'])->name(
 route::get('/profil-kota-madiun',[\App\Http\Controllers\FrontendController::class,'profilkota'])->name('layouts.frontend.profilkota');
 route::get('/sejarah-kota-madiun',[\App\Http\Controllers\FrontendController::class,'sejarah'])->name('layouts.frontend.sejarahkota');
 
+/** Slug */
+Route::get('/berita/{year}/{month}/{day}/{slug}', [App\Http\Controllers\HomeController::class, 'contents_blog'] )->name('contents_blog');
+Route::get('/kategori/{slug}', [App\Http\Controllers\HomeController::class, 'contents_kategori'] )->name('contents_kategori');
+
 /** Dashboard Admin */
 Route::group(['middleware'=>['admin','auth','PreventBackHistory']], function(){
 Route::get('/dashboard-admin-ppid',[\App\Http\Controllers\AdminController::class,'dashboard'])->name('admin.index');
@@ -80,11 +84,22 @@ Route::delete('/kategori/hapus/{id}',[\App\Http\Controllers\KategoriController::
 /** Data Tag*/
 Route::prefix('a')->name('admin.')->group(function () {
     Route::resource('/tags', App\Http\Controllers\TagController::class );
+    Route::resource('/post', App\Http\Controllers\PostController::class );
+    Route::get('document/destroy/{document}', [App\Http\Controllers\Admin\PostController::class, 'destroy_document'] )->name('destroy_document');
+    });
 });
 
+
+Route::get('/berita/{year}/{month}/{day}/{slug}', [App\Http\Controllers\HomeController::class, 'content_blog'] )->name('content_blog');
+Route::get('/kategori/{slug}', [App\Http\Controllers\HomeController::class, 'content_kategori'] )->name('content_kategori');
+/** Data File */
+
+Route::middleware('verified')->group(function () {
+    Route::get('/file/{file}', [App\Http\Controllers\FileController::class, 'show'])->name('file.show');
+    
 });
 
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

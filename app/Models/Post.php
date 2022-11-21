@@ -15,9 +15,19 @@ class Post extends Model
     protected $table = 'posts';
 
     protected $fillable = [
-        'judul', 'kategori_id', 'content', 'gambar', 'tgl_post', 'slug', 'users_id', 'ispublish', 'ispinned'];
+        'judul', 'kategori_id', 'contents', 'thumbnail', 'tgl_post', 'slug', 'users_id', 'ispublish', 'ispinned'];
+
+    
+    public function kategori(){
+        return $this->belongsTo(Kategori::class, 'kategori_id');
+    }
 
     public function tags(){
         return $this->belongsToMany(Tag::class);
     }
+
+    public function documents(){
+        return $this->hasMany(Document::class,'posts_id');
+    }
+
 }

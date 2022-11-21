@@ -49,6 +49,8 @@
 <script src="{{  asset ('backend2/assets/js/scripts.js')}}"></script>
 <script src="{{  asset ('backend2/assets/js/custom.js')}}"></script>
 
+<script src="{{ asset('backend2/assets/select2/dist/js/select2.full.min.js') }}"></script>
+
 <script>
     $(document).ready(function () {
       $('#dataTable').DataTable(); // ID From dataTable
