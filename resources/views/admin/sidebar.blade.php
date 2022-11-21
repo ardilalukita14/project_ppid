@@ -91,7 +91,8 @@
               <li><a class="nav-link" href=""><i class="far fa-times-circle"></i> <span>Informasi Dikecualikan</span></a></li>
 
             <li class="menu-header">Dokumen</li>
-            <li><a class="nav-link" href=""><i class="fas fa-columns"></i> <span>Kategori</span></a></li>
+            <li><a class="nav-link" href="/kategori"><i class="fas fa-columns"></i> <span>Kategori</span></a></li>
+            <li><a class="nav-link" href="/a/tags"><i class="fas fa-bookmark"></i> <span>Tag</span></a></li>
             <li><a class="nav-link" href=""><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>
             <li><a class="nav-link" href=""><i class="fas fa-ribbon"></i> <span>Produk Hukum</span></a></li>
             <li class="dropdown">

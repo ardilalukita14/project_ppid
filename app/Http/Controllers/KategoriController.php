@@ -95,7 +95,7 @@ class KategoriController extends Controller
        $kategori->isaktif = $request->isaktif;
        $kategori->save();
 
-    if ($kategori) {
+        if ($kategori) {
             Session::flash('update','Update Data Kategori Berhasil');
             return redirect()->route('kategori.index');
         } else {

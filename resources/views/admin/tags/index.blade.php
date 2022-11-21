@@ -51,7 +51,7 @@
             <h1>Table</h1>
             <div class="section-header-breadcrumb">
               <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-              <div class="breadcrumb-item"><a href="#">Kategori</a></div>
+              <div class="breadcrumb-item"><a href="#">Tags</a></div>
               <div class="breadcrumb-item">{{$judul}}</div>
             </div>
           </div>
@@ -67,7 +67,7 @@
                 <br>
                       <div class="card-tools">
                             <br>
-                            <a href="{{ route('kategori.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
+                            <a href="{{ route('admin.tags.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
                       </div>
                                  @if(Session::has('success'))
                                  <br></br>
@@ -104,7 +104,7 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Nama Kategori</th>
+                                                <th>Jenis Tag</th>
                                                 <th>Status</th>
                                                 <th width="220px;">Action</th>
                                             </tr>
@@ -112,20 +112,21 @@
                                         <tbody>
                                             <tr>
                                             @php $i=1 @endphp
-                                            @foreach ($kategori as $data)
-                                                <td>{{$i++}}</td>
-                                                <td>{{$data->nama_kategori}}</td>
+                                            @foreach ($tags as $data)
+                                                <td> {{$i++}}</td>
+                                                <td>{{$data->jenis_tag}}</td>
                                                 <td>@if ($data->isaktif == '1')
                                                     <div class="badge badge-success">Active</div>
                                                         @else
                                                         <div class="badge badge-danger">Hidden</div>
-                                                        @endif</td>
+                                                        @endif
+                                                </td>
                                                 <td>
-                                                    <form action="{{ route('kategori.destroy',$data->id) }}"  method="POST">
-                                                        <a href="{{ route('kategori.edit',$data->id) }}" class="btn btn-warning "><i class="fa fa-edit"></i> Ubah</a>
+                                                    <form action="{{ route('admin.tags.destroy',$data->id) }}"  method="POST">
+                                                        <a href="{{ route('admin.tags.edit',$data->id) }}" class="btn btn-warning "><i class="fa fa-edit"></i> Ubah</a>
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus data PPID Pelaksana ?')" ><i class="fas fa-trash"></i> Hapus</button>
+                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus data tag ?')" ><i class="fas fa-trash"></i> Hapus</button>
                                                     </form>
                                                 </td>
                                             </tr>
