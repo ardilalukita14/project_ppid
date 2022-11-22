@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-lg-4 col-md-6 footer-widget footer-about">
-            <h3 class="widget-title">About Us</h3>
+            <h3 class="widget-title">Tentang Kami</h3>
             <img loading="lazy" width="250px" class="footer-logo" src="frontend/images/PPID-1.png" alt="Constra">
             <p style="text-align:justify;">Dinas Komunikasi dan Informatika Kota Madiun merupakan unsur pelaksana urusan pemerintahan bidang komunikasi dan informatika, 
               urusan pemerintahan bidang persandian, dan urusan pemerintahan bidang statistik di Kota Madiun.</p>
@@ -34,13 +34,13 @@
           </div><!-- Col end -->
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
-            <h3 class="widget-title">Services</h3>
+            <h3 class="widget-title">Menu Akses</h3>
             <ul class="list-arrow">
-              <li><a href="service-single.html">Pre-Construction</a></li>
-              <li><a href="service-single.html">General Contracting</a></li>
-              <li><a href="service-single.html">Construction Management</a></li>
-              <li><a href="service-single.html">Design and Build</a></li>
-              <li><a href="service-single.html">Self-Perform Construction</a></li>
+              <li><a href="service-single.html">Profil</a></li>
+              <li><a href="service-single.html">PPID Pelaksana Kota Madiun</a></li>
+              <li><a href="service-single.html">Informasi Publik</a></li>
+              <li><a href="service-single.html">Download</a></li>
+              <li><a href="service-single.html">Galeri/Infografis</a></li>
             </ul>
           </div>
           <!-- Col end -->
