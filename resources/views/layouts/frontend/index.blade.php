@@ -150,25 +150,12 @@
         </div><!-- Col end -->
 
         <div class="col-lg-6 mt-4 mt-lg-0">
-          <h3 class="into-sub-title">Our Values</h3>
-          <p>Minim Austin 3 wolf moon scenester aesthetic, umami odio pariatur bitters. Pop-up occaecat taxidermy street art, tattooed beard literally.</p>
-
-          <div class="accordion accordion-group" id="our-values-accordion">
-              <div class="card">
-                <div class="card-header p-0 bg-transparent" id="headingOne">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Safety
-                      </button>
-                    </h2>
-                </div>
-
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#our-values-accordion">
+                <div id="gpr-kominfo-widget-container" style="width:500px">
                     <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
+                        <script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>
                     </div>
                 </div>
-              </div>
+              {{-- </div>
               <div class="card">
                 <div class="card-header p-0 bg-transparent" id="headingTwo">
                     <h2 class="mb-0">
@@ -196,8 +183,9 @@
                       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
                     </div>
                 </div>
-              </div>
+              </div> --}}
           </div>
+
           <!--/ Accordion end -->
 
         </div><!-- Col end -->

@@ -73,6 +73,30 @@ Route::get('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaCont
 Route::post('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'update'])->name('ppid.pelaksana.edit');
 Route::delete('/hapus-ppid-pelaksana/{ppid}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'destroy'])->name('ppid.pelaksana.destroy');
 
+/** CRUD Data Daftar Informasi Publik Kota Madiun*/
+Route::get('/daftar-informasi-publik', [\App\Http\Controllers\InformasiPublikController::class, 'index'])->name('informasi_publik.daftar_informasi.publik.index');
+Route::get('/create/daftar-informasi-publik', [\App\Http\Controllers\InformasiPublikController::class, 'create'])->name('informasi_publik.daftar_informasi.publik.create');
+Route::post('/create/daftar-informasi-publik', [\App\Http\Controllers\InformasiPublikController::class, 'store'])->name('informasi_publik.daftar_informasi.publik.create');
+Route::get('/edit-daftar-informasi-publik/{id}', [\App\Http\Controllers\InformasiPublikController::class, 'edit'])->name('informasi_publik.daftar_informasi.publik.edit');
+Route::post('/edit-daftar-informasi-publik/{id}', [\App\Http\Controllers\InformasiPublikController::class, 'update'])->name('informasi_publik.daftar_informasi.publik.edit');
+Route::delete('/hapus-daftar-informasi-publik/{id}', [\App\Http\Controllers\InformasiPublikController::class, 'destroy'])->name('informasi_publik.daftar_informasi.publik.destroy');
+
+/** CRUD Data Daftar Informasi Publik PPID Pelaksana Kota Madiun*/
+Route::get('/daftar-informasi-ppid', [\App\Http\Controllers\InformasiPPIDController::class, 'index'])->name('informasi_publik.daftar_informasi.pelaksana.index');
+Route::get('/create/daftar-informasi-ppid', [\App\Http\Controllers\InformasiPPIDController::class, 'create'])->name('informasi_publik.daftar_informasi.pelaksana.create');
+Route::post('/create/daftar-informasi-ppid', [\App\Http\Controllers\InformasiPPIDController::class, 'store'])->name('informasi_publik.daftar_informasi.pelaksana.create');
+Route::get('/edit-daftar-informasi-ppid/{id}', [\App\Http\Controllers\InformasiPPIDController::class, 'edit'])->name('informasi_publik.daftar_informasi.pelaksana.edit');
+Route::post('/edit-daftar-informasi-ppid/{id}', [\App\Http\Controllers\InformasiPPIDController::class, 'update'])->name('informasi_publik.daftar_informasi.pelaksana.edit');
+Route::delete('/hapus-daftar-informasi-ppid/{id}', [\App\Http\Controllers\InformasiPPIDController::class, 'destroy'])->name('informasi_publik.daftar_informasi.pelaksana.destroy');
+
+/** CRUD Data Daftar Informasi Secara Berkala Kota Madiun*/
+Route::get('/daftar-informasi-berkala', [\App\Http\Controllers\InformasiBerkalaController::class, 'index'])->name('informasi_publik.berkala.index');
+Route::get('/create/daftar-informasi-berkala', [\App\Http\Controllers\InformasiBerkalaController::class, 'create'])->name('informasi_publik.berkala.create');
+Route::post('/create/daftar-informasi-berkala', [\App\Http\Controllers\InformasiBerkalaController::class, 'store'])->name('informasi_publik.berkala.create');
+Route::get('/edit-daftar-informasi-berkala/{id}', [\App\Http\Controllers\InformasiBerkalaController::class, 'edit'])->name('informasi_publik.berkala.edit');
+Route::post('/edit-daftar-informasi-berkala/{id}', [\App\Http\Controllers\InformasiBerkalaController::class, 'update'])->name('informasi_publik.berkala.edit');
+Route::delete('/hapus-daftar-informasi-berkala/{id}', [\App\Http\Controllers\InformasiBerkalaController::class, 'destroy'])->name('informasi_publik.berkala.destroy');
+
 /** Data Kategori*/
 Route::get('/kategori', [\App\Http\Controllers\KategoriController::class, 'index'])->name('kategori.index');
 Route::get('/kategori/create', [\App\Http\Controllers\KategoriController::class, 'create'])->name('kategori.create');
@@ -96,7 +120,7 @@ Route::get('/kategori/{slug}', [App\Http\Controllers\HomeController::class, 'con
 
 Route::middleware('verified')->group(function () {
     Route::get('/file/{file}', [App\Http\Controllers\FileController::class, 'show'])->name('file.show');
-    
+
 });
 
 

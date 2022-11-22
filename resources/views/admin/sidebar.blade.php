@@ -78,11 +78,11 @@
             </li>
 
             <li class="menu-header">Informasi Publik</li>
-            <li class="dropdown">
+            <li class="nav-item dropdown {{ (request()->is('daftar-informasi-publik','daftar-informasi-ppid')) ? 'active' : '' }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file"></i> <span>Daftar Informasi Publik</span></a>
                 <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="#">Informasi Publik 2022</a></li>
-                  <li><a class="nav-link" href="#">Informasi PPID Pelaksana</a></li>
+                  <li class="{{ (request()->is('daftar-informasi-publik')) ? 'active' : '' }}"><a class="nav-link" href="/daftar-informasi-publik">Informasi Publik 2022</a></li>
+                  <li class="{{ (request()->is('daftar-informasi-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/daftar-informasi-ppid">Informasi Publik PPID</a></li>
                 </ul>
               </li>
               <li><a class="nav-link" href=""><i class="far fa-calendar-alt"></i> <span>Informasi Secara Berkala</span></a></li>
@@ -120,7 +120,7 @@
                 <li class="menu-header">Galeri</li>
                 <li><a class="nav-link" href=""><i class="far fa-image"></i> <span>Galeri</span></a></li>
                 <li><a class="nav-link" href=""><i class="fas fa-file-image"></i> <span>Infografis</span></a></li>
-                
+
           </ul>
 
           <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
