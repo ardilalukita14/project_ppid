@@ -157,7 +157,7 @@
                             </div>
                             <div class="form-group row">
                               <label class="col-lg-6 col-form-label">Galeri Berita</label>
-                              <input type="file" class="form-control" name="galeri[]" multiple>
+                              <input type="file" class="form-control" name="dokumen[]" multiple>
                             </div>
                             <div class="form-group row">
                               <label class="col-lg-6 col-form-label">File Lampiran</label>

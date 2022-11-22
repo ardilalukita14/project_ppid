@@ -159,7 +159,7 @@
                             </div>
                             <div class="form-group row">
                               <label class="col-lg-6 col-form-label">Galeri Berita</label>
-                              <input type="file" class="form-control" name="galeri[]" multiple>
+                              <input type="file" class="form-control" name="dokumen[]" multiple>
                             </div>
                             <div class="form-group row">
                               <label class="col-lg-6 col-form-label">File Lampiran</label>
@@ -182,7 +182,7 @@
                             <td style=" text-align:center;">{{ $i++ }}</td>
                             <td style=" text-align:center;">{{ $data->jenis_file }}</td>
                             <td style=" text-align:center;">
-                                @if ($data->jenis_file == "foto")
+                                @if ($data->jenis_file == "gambar")
                                     <img src="{{ route('file.show', encrypt($data->path_file)) }}" class="img-fluid" style="width: 100px"> 
                                 @else
                                    -
@@ -190,7 +190,7 @@
                                  
                             </td>
                             <td style=" text-align:center;">
-                                @if ( $data->jenis_file == "foto")
+                                @if ( $data->jenis_file == "gambar")
                                 <a target="_blank" href="{{ route('file.show', encrypt($data->path_file)) }}"><button type="button" class="btn btn-success"> <span class="badge badge-transparent"><i class="far fa-folder"></i></span> &emsp;
                                     Lihat File</span>
                                   </button></a>

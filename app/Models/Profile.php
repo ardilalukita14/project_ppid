@@ -13,5 +13,9 @@ class Profile extends Model
     public $table = "profile";
     protected $fillable = [
       'kategori_profile', 'slug', 'deskripsi', 'title', 'user_id'];
+    
+    public function berkas(){
+        return $this->hasMany(Berkas::class,'profile_id');
+    }
 
 }

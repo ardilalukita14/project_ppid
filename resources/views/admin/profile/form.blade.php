@@ -117,12 +117,60 @@
                                     <textarea class="summernote" name="deskripsi">{{ $profile->deskripsi}}</textarea>
                                 </div>
                             </div>
+                            <div class="form-group row">
+                              <label class="col-lg-6 col-form-label">Galeri Profile</label>
+                              <input type="file" class="form-control" name="image[]" multiple>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-lg-6 col-form-label">File Lampiran</label>
+                              <input type="file" class="form-control" name="file_berkas[]" multiple>
+                            </div>
                             <!-- <div class="form-group row">
                                 <label class="col-lg-6 col-form-label" for="title">Judul</label>
                                 <div class="col-sm-12">
                                     <textarea class="summernote" name="profile">{{ $profile->title }}</textarea>
                                 </div>
                             </div> -->
+                            <hr>
+
+                                <table class="table table-striped table-md">
+                                <tr>
+                                <th style=" text-align:center;">No</th>
+                                <th style=" text-align:center;">Jenis File</th>
+                                <th style=" text-align:center;">Gambar</th>
+                                <th style="text-align:center;">File</th>
+                                <th style="text-align:center;">Aksi</th>
+                                </tr>
+
+                                @php $i=1 @endphp
+                                @foreach ($documents as $data)
+                                <td style=" text-align:center;">{{ $i++ }}</td>
+                                <td style=" text-align:center;">{{ $data->jenis_file }}</td>
+                                <td style=" text-align:center;">
+                                    @if ($data->jenis_file == "gambar")
+                                        <img src="{{ route('file.show', encrypt($data->path_file)) }}" class="img-fluid" style="width: 100px"> 
+                                    @else
+                                    -
+                                    @endif
+                                    
+                                </td>
+                                <td style=" text-align:center;">
+                                    @if ( $data->jenis_file == "gambar")
+                                    <a target="_blank" href="{{ route('file.show', encrypt($data->path_file)) }}"><button type="button" class="btn btn-success"> <span class="badge badge-transparent"><i class="far fa-folder"></i></span> &emsp;
+                                        Lihat File</span>
+                                    </button></a>
+                                    @else
+                                    <a target="_blank" href="{{ route('file.show', encrypt($data->path_file)) }}"><button type="button" class="btn btn-warning"> <span class="badge badge-transparent"><i class="far fa-folder"></i></span> &emsp;
+                                        Lihat File</span>
+                                    </button></a>
+                                    @endif 
+                                </td>
+                                <td style=" text-align:center;">
+                                    <a href="{{ route('admin.destroy_berkas', encrypt($data->id)) }}">  <button type="button"  class="btn btn-danger btn-xs"><i class="fas fa-trash icon-lg"></i> Hapus</button></a>
+                                </td>
+                                </tr>
+                                @endforeach
+                                </table>
                             <div class="form-group row">
                                 <div class="col-lg-12 ml-auto">
                                     <button type="submit" class="btn btn-primary">Publish</button>

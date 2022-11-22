@@ -111,7 +111,9 @@ Route::delete('/kategori/hapus/{id}',[\App\Http\Controllers\KategoriController::
 Route::prefix('a')->name('admin.')->group(function () {
     Route::resource('/tags', App\Http\Controllers\TagController::class );
     Route::resource('/post', App\Http\Controllers\PostController::class );
-    Route::get('document/destroy/{document}', [App\Http\Controllers\Admin\PostController::class, 'destroy_document'] )->name('destroy_document');
+    Route::get('document/destroy/{document}', [App\Http\Controllers\PostController::class, 'destroy_document'] )->name('destroy_document');
+    Route::get('berkas/destroy/{berkas}', [App\Http\Controllers\ProfileController::class, 'destroy_berkas'] )->name('destroy_berkas');
+    Route::get('berkasppid/destroy/{berkasppid}', [App\Http\Controllers\ProfilePPIDController::class, 'destroy_berkasppid'] )->name('destroy_berkasppid');
     });
 });
 
@@ -126,8 +128,8 @@ Route::middleware('verified')->group(function () {
 });
 
 /** Menu Profile PPID */
-route::get('/profil-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'profil_ppid'])->name('menu.profil.ppid');
-
+Route::get('/profil-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'profil_ppid'])->name('menu.profil.ppid');
+Route::get('/visi-misi-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'visimisi_ppid'])->name('menu.visimisi.ppid');
 
 // Auth::routes();
 
