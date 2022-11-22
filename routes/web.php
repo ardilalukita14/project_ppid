@@ -32,6 +32,7 @@ route::get('/sejarah-kota-madiun',[\App\Http\Controllers\FrontendController::cla
 /** Slug */
 Route::get('/berita/{year}/{month}/{day}/{slug}', [App\Http\Controllers\HomeController::class, 'contents_blog'] )->name('contents_blog');
 Route::get('/kategori/{slug}', [App\Http\Controllers\HomeController::class, 'contents_kategori'] )->name('contents_kategori');
+Route::get('/{slug}', [App\Http\Controllers\HomeController::class, 'content_kategori'] )->name('content_kategori');
 
 /** Dashboard Admin */
 Route::group(['middleware'=>['admin','auth','PreventBackHistory']], function(){

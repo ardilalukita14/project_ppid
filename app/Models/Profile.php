@@ -12,6 +12,6 @@ class Profile extends Model
     use SoftDeletes;
     public $table = "profile";
     protected $fillable = [
-        'kategori_profie','deskripsi', 'user_id'];
+      'kategori_profile', 'slug', 'deskripsi', 'title', 'user_id'];
 
 }

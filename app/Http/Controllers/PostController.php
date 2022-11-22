@@ -85,6 +85,7 @@ class PostController extends Controller
 
         $post->tags()->attach($request->tags);
 
+
         if($request->hasFile('dokumen')){
             foreach ($request->file('dokumen') as $filegambar) {
                 $file_name = $filegambar->getClientOriginalName();

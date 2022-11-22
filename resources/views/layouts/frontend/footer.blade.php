@@ -5,8 +5,8 @@
           <div class="col-lg-4 col-md-6 footer-widget footer-about">
             <h3 class="widget-title">About Us</h3>
             <img loading="lazy" width="250px" class="footer-logo" src="frontend/images/PPID-1.png" alt="Constra">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
-              labore et dolore magna aliqua.</p>
+            <p style="text-align:justify;">Dinas Komunikasi dan Informatika Kota Madiun merupakan unsur pelaksana urusan pemerintahan bidang komunikasi dan informatika, 
+              urusan pemerintahan bidang persandian, dan urusan pemerintahan bidang statistik di Kota Madiun.</p>
             <div class="footer-social">
               <ul>
                 <li><a href="https://www.facebook.com/pemkotmadiun/" aria-label="Facebook"><i
@@ -26,9 +26,9 @@
           <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
             <h3 class="widget-title">Jam Pelayanan</h3>
             <div class="working-hours">
-              We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
-              Hotline and Contact form.
-              <br><br>Senin - Kamis : <span class="text-right">07:00 - 15:30 </span>
+              <p style="text-align:justify;">Jam pelayanan menyesuaikan jam kerja, yaitu hari Senin-Jumat. Jika ada kepentingan mendesak, Anda dapat menghubungi kami
+              melalui kontak yang tertera.</p>
+              Senin - Kamis : <span class="text-right">07:00 - 15:30 </span>
               <br> Jumat : <span class="text-right">06:30 - 14:30</span>
             </div>
           </div><!-- Col end -->

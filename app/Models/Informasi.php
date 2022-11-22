@@ -12,5 +12,5 @@ class Informasi extends Model
     use SoftDeletes;
     public $table = "informasi";
     protected $fillable = [
-        'kategori_profie','deskripsi', 'user_id'];
+        'kategori_profile','deskripsi', 'user_id'];
 }

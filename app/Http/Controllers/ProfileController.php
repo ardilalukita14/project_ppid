@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Profile;
+use Illuminate\Support\Str;
 use Session;
 
 class ProfileController extends Controller
@@ -84,17 +85,15 @@ class ProfileController extends Controller
     }
 
     public function store(Request $request){
+
         $profile = Profile::where('kategori_profile', '=', $request->kategori_profile)->first();
-
-        if($profile != null ){
-            $post_data = [
-                'deskripsi' => $request->profile,
-                'user_id' =>Auth::id(),
-            ];
-
-            $update_profile = Profile::findorfail($profile->id);
-            $update_profile->update($post_data);
-        }
+        
+        $profil = Profile::findorfail($profile->id);
+        $profil ->kategori_profile = $request->kategori_profile;
+        $profil ->title = $request->title;
+        $profil->slug = Str::slug($profil->title);
+        $profil->deskripsi = $request->deskripsi;
+        $profil->save();
 
         if($profile->kategori_profile == "profil-kota-madiun"){
             Session::flash('success','Sukses Update Data');

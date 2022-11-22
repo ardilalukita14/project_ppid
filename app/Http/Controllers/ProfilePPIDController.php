@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Profile;
+use Illuminate\Support\Str;
 use Session;
 
 class ProfilePPIDController extends Controller
@@ -14,81 +15,79 @@ class ProfilePPIDController extends Controller
     public function profileppid() {
         $profile = Profile::where('kategori_profile', '=', 'profil-ppid')->first();
         $judul = "Update Profil PPID";
-        return view('admin.profile.form', compact('profile', 'judul'));
+        return view('admin.profile.formppid', compact('profile', 'judul'));
     }
 
     public function visimisippid() {
         $profile = Profile::where('kategori_profile', '=', 'visi-misi-ppid')->first();
         $judul = "Update Visi Misi PPID";
-        return view('admin.profile.form', compact('profile', 'judul'));
+        return view('admin.profile.formppid', compact('profile', 'judul'));
     }
 
     public function baganstruktur() {
         $profile = Profile::where('kategori_profile', '=', 'bagan-struktur-ppid')->first();
         $judul = "Update Bagan Struktur PPID";
-        return view('admin.profile.form', compact('profile', 'judul'));
+        return view('admin.profile.formppid', compact('profile', 'judul'));
     }
 
     public function sop() {
         $profile = Profile::where('kategori_profile', '=', 'sop-ppid')->first();
         $judul = "Update SOP PPID";
-        return view('admin.profile.form', compact('profile', 'judul'));
+        return view('admin.profile.formppid', compact('profile', 'judul'));
     }
 
     public function tupoksippid() {
         $profile = Profile::where('kategori_profile', '=', 'tupoksi-ppid')->first();
         $judul = "Update Tupoksi PPID";
-        return view('admin.profile.form', compact('profile', 'judul'));
+        return view('admin.profile.formppid', compact('profile', 'judul'));
     }
 
     public function skppid() {
         $profile = Profile::where('kategori_profile', '=', 'sk-ppid')->first();
         $judul = "Update SK PPID";
-        return view('admin.profile.form', compact('profile', 'judul'));
+        return view('admin.profile.formppid', compact('profile', 'judul'));
     }
 
     public function perwalppid() {
         $profile = Profile::where('kategori_profile', '=', 'perwal-ppid')->first();
         $judul = "Update Perwal PPID";
-        return view('admin.profile.form', compact('profile', 'judul'));
+        return view('admin.profile.formppid', compact('profile', 'judul'));
     }
 
     public function maklumatppid() {
         $profile = Profile::where('kategori_profile', '=', 'maklumat-ppid')->first();
         $judul = "Update Maklumat PPID";
-        return view('admin.profile.form', compact('profile', 'judul'));
+        return view('admin.profile.formppid', compact('profile', 'judul'));
     }
 
     public function jampelayanan() {
         $profile = Profile::where('kategori_profile', '=', 'jam-pelayanan')->first();
         $judul = "Update Jam Pelayanan";
-        return view('admin.profile.form', compact('profile', 'judul'));
+        return view('admin.profile.formppid', compact('profile', 'judul'));
     }
 
     public function skpublik() {
         $profile = Profile::where('kategori_profile', '=', 'sk-daftar-informasi-publik')->first();
         $judul = "Update Daftar SK Informasi Publik";
-        return view('admin.profile.form', compact('profile', 'judul'));
+        return view('admin.profile.formppid', compact('profile', 'judul'));
     }
 
     public function skdikecualikan() {
         $profile = Profile::where('kategori_profile', '=', 'sk-daftar-informasi-dikecualikan')->first();
         $judul = "Update Daftar SK Informasi Dikecualikan";
-        return view('admin.profile.form', compact('profile', 'judul'));
+        return view('admin.profile.formppid', compact('profile', 'judul'));
     }
 
     public function store(Request $request){
+
         $profile = Profile::where('kategori_profile', '=', $request->kategori_profile)->first();
-
-        if($profile != null ){
-            $post_data = [
-                'deskripsi' => $request->profile,
-                'user_id' =>Auth::id(),
-            ];
-
-            $update_profile = Profile::findorfail($profile->id);
-            $update_profile->update($post_data);
-        }
+        
+        $profil = Profile::findorfail($profile->id);
+        $profil ->kategori_profile = $request->kategori_profile;
+        $profil ->title = $request->title;
+        $profil->slug = Str::slug($profil->title);
+        $profil->deskripsi = $request->deskripsi;
+        $profil->save();
 
         if($profile->kategori_profile == "profil-ppid"){
             Session::flash('success','Sukses Update Data');

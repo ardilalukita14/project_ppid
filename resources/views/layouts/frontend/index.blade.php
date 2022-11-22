@@ -194,7 +194,7 @@
 </section><!-- Feature are end -->
 
 <section id="facts" class="facts-area dark-bg">
-  <div class="container" style="margin-left: 150px; margin-right: 150px">
+  <div class="container" style="margin-left: 195px; margin-right: 150px">
     <div class="facts-wrapper">
         <div class="row">
          <div class="col-md-2 col-sm-6 ts-facts">
