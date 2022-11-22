@@ -18,6 +18,7 @@ return new class extends Migration
             $table->String('ppid');
             $table->text('link');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -32,7 +32,7 @@ route::get('/sejarah-kota-madiun',[\App\Http\Controllers\FrontendController::cla
 /** Slug */
 // Route::get('/berita/{year}/{month}/{day}/{slug}', [App\Http\Controllers\HomeController::class, 'contents_blog'] )->name('contents_blog');
 // Route::get('/kategori/{slug}', [App\Http\Controllers\HomeController::class, 'contents_kategori'] )->name('contents_kategori');
-// Route::get('/{slug}', [App\Http\Controllers\HomeController::class, 'content_kategori'] )->name('content_kategori');
+// Route::get('/{slug}', [App\Http\Controllers\User\MainController::class, 'profil_ppid'] )->name('profil_ppid');
 
 /** Dashboard Admin */
 Route::group(['middleware'=>['admin','auth','PreventBackHistory']], function(){
@@ -65,6 +65,7 @@ Route::get('/profile/maklumat-ppid',[\App\Http\Controllers\ProfilePPIDController
 Route::get('/profile/jam-pelayanan',[\App\Http\Controllers\ProfilePPIDController::class,'jampelayanan'])->name('jam.pelayanan.index');
 Route::get('/profile/sk-daftar-informasi-publik',[\App\Http\Controllers\ProfilePPIDController::class,'skpublik'])->name('sk.publik.index');
 Route::get('/profile/sk-daftar-informasi-dikecualikan',[\App\Http\Controllers\ProfilePPIDController::class,'skdikecualikan'])->name('sk.dikecualikan.index');
+Route::post('/profil-ppid/store', [App\Http\Controllers\ProfilePPIDController::class, 'store'])->name('profilppid.create');
 
 /** CRUD Data PPID Pelaksana Kota Madiun*/
 Route::get('/ppid-pelaksana', [\App\Http\Controllers\PPIDPelaksanaController::class, 'index'])->name('ppid.pelaksana.index');
@@ -123,6 +124,9 @@ Route::middleware('verified')->group(function () {
     Route::get('/file/{file}', [App\Http\Controllers\FileController::class, 'show'])->name('file.show');
 
 });
+
+/** Menu Profile PPID */
+route::get('/profil-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'profil_ppid'])->name('menu.profil.ppid');
 
 
 // Auth::routes();

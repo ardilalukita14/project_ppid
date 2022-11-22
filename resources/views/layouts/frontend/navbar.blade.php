@@ -39,7 +39,7 @@
                               <li class="dropdown-submenu">
                                   <a href="#!" class="dropdown-toggle" data-toggle="dropdown">PPID Kota Madiun </a>
                                   <ul class="dropdown-menu">
-                                    <li><a href="#!">Profil PPID Kota Madiun</a></li>
+                                    <li><a href="{{ route('menu.profil.ppid') }}">Profil PPID Kota Madiun</a></li>
                                     <li><a href="#!">Visi Misi PPID</a></li>
                                     <li><a href="#!">Bagan Struktur PPID</a></li>
                                     <li><a href="#!">SOP</a></li>

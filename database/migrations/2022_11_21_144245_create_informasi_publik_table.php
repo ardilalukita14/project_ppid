@@ -19,8 +19,9 @@ return new class extends Migration
             $table->text('ringkasan');
             $table->String('jenis');
             $table->string('jangka_waktu');
-            $table->timestamps();
             $table->text('link');
+            $table->timestamps();
+            $table->softDeletes();
 
         });
     }

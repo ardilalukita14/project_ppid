@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\InformasiBerkala;
+use Illuminate\Support\Str;
 use Session;
 
 class InformasiBerkalaController extends Controller
@@ -28,7 +29,7 @@ class InformasiBerkalaController extends Controller
     {
         $informasi_berkala = new InformasiBerkala;
         $informasi_berkala->judul = $request->judul;
-        $informasi_berkala->slug = $request->slug;
+        $informasi_berkala->slug = Str::slug($informasi_berkala->judul);
         $informasi_berkala->isi = $request->isi;
         $informasi_berkala->save();
         if ($informasi_berkala) {
@@ -50,7 +51,7 @@ class InformasiBerkalaController extends Controller
     {
             $informasi_berkala = InformasiBerkala::find($id);
             $informasi_berkala->judul = $request->judul;
-            $informasi_berkala->slug = $request->slug;
+            $informasi_berkala->slug = Str::slug($informasi_berkala->judul);
             $informasi_berkala->isi = $request->isi;
             $informasi_berkala->save();
 
