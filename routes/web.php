@@ -127,9 +127,32 @@ Route::middleware('verified')->group(function () {
 
 });
 
+/** Menu Profile Pemerintah Kota Madiun */
+Route::get('/sejarah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'sejarah_madiun'])->name('menu.sejarah.madiun');
+Route::get('/letak-geografis-kota-madiun',[\App\Http\Controllers\User\MainController::class,'geografis_madiun'])->name('menu.geografis.madiun');
+Route::get('/profile-pemerintah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'profil_pemerintah'])->name('menu.profilepemerintah.madiun');
+Route::get('/profile-pejabat-kota-madiun',[\App\Http\Controllers\User\MainController::class,'profil_pejabat'])->name('menu.profilepejabat.madiun');
+Route::get('/lhkpn-pejabat-publik-pemerintah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'lhkpn_pejabat'])->name('menu.lhkpn.madiun');
+Route::get('/visi-misi-kota-madiun',[\App\Http\Controllers\User\MainController::class,'visimisi'])->name('menu.visimisi.madiun');
+Route::get('/bagan-struktur-organisasi-pemerintah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'struktur_pemerintah'])->name('menu.strukturpemerintah.madiun');
+Route::get('/struktur-organisasi-unit-kerja',[\App\Http\Controllers\User\MainController::class,'struktur_unitkerja'])->name('menu.strukturunitkerja.madiun');
+Route::get('/tupoksi-pemerintah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'tupoksi_pemerintah'])->name('menu.tupoksipemerintah.madiun');
+Route::get('/tupoksi-unit-kerja-kota-madiun',[\App\Http\Controllers\User\MainController::class,'tupoksi_unitkerja'])->name('menu.tupoksiunitkerja.madiun');
+Route::get('/agenda-kerja-dan-kegiatan-pimpinan-pemerintah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'agenda'])->name('menu.agenda.madiun');
+
+
 /** Menu Profile PPID */
 Route::get('/profil-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'profil_ppid'])->name('menu.profil.ppid');
 Route::get('/visi-misi-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'visimisi_ppid'])->name('menu.visimisi.ppid');
+Route::get('/struktur-organisasi-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'struktur_ppid'])->name('menu.struktur.ppid');
+Route::get('/sop-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'sop_ppid'])->name('menu.sop.ppid');
+Route::get('/tupoksi-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'tupoksi_ppid'])->name('menu.tupoksi.ppid');
+Route::get('/sk-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'sk_ppid'])->name('menu.sk.ppid');
+Route::get('/perwal-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'perwal_ppid'])->name('menu.perwal.ppid');
+Route::get('/maklumat-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'maklumat_ppid'])->name('menu.maklumat.ppid');
+Route::get('/jampelayanan-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'jampelayanan_ppid'])->name('menu.jampelayanan.ppid');
+Route::get('/informasi-publik-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'informasi_publik'])->name('menu.informasipublik.ppid');
+Route::get('/informasi-dikecualikan-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'informasi_dikecualikan'])->name('menu.informasidikecualikan.ppid');
 
 // Auth::routes();
 

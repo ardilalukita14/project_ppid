@@ -22,18 +22,18 @@
                               <li class="dropdown-submenu">
                                   <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Pemerintah Kota <br> Madiun </a>
                                   <ul class="dropdown-menu">
-                                    <li><a href="/profil-kota-madiun">Profil Kota Madiun</a></li>
-                                    <li><a href="/sejarah-kota-madiun">Sejarah Kota Madiun</a></li>
-                                    <li><a href="#!">Letak Geografis Kota Madiun</a></li>
-                                    <li><a href="#!">Profil Pemerintah Kota Madiun</a></li>
-                                    <li><a href="#!">Profil Pejabat Daerah</a></li>
-                                    <li><a href="#!">LHKPN Pejabat Publik Pemerintah Kota Madiun</a></li>
-                                    <li><a href="#!">Visi Misi Kota Madiun</a></li>
-                                    <li><a href="#!">Bagan Struktur Organisasi Pemerintah Kota Madiun</a></li>
-                                    <li><a href="#!">Struktur Organisasi Unit Kerja</a></li>
-                                    <li><a href="#!">Tupoksi Pemerintah Kota Madiun</a></li>
-                                    <li><a href="#!">Tupoksi Unit Kerja</a></li>
-                                    <li><a href="#!">Agenda Kerja dan Kegiatan Pimpinan Pemerintah Kota Madiun</a></li>
+                                    <li><a href="">Profil Kota Madiun</a></li>
+                                    <li><a href="{{ route('menu.sejarah.madiun') }}">Sejarah Kota Madiun</a></li>
+                                    <li><a href="{{ route('menu.geografis.madiun') }}">Letak Geografis Kota Madiun</a></li>
+                                    <li><a href="{{ route('menu.profilepemerintah.madiun') }}">Profil Pemerintah Kota Madiun</a></li>
+                                    <li><a href="{{ route('menu.profilepejabat.madiun') }}">Profil Pejabat Daerah</a></li>
+                                    <li><a href="{{ route('menu.lhkpn.madiun') }}">LHKPN Pejabat Publik Pemerintah Kota Madiun</a></li>
+                                    <li><a href="{{ route('menu.visimisi.madiun') }}">Visi Misi Kota Madiun</a></li>
+                                    <li><a href="{{ route('menu.strukturpemerintah.madiun') }}">Bagan Struktur Organisasi Pemerintah Kota Madiun</a></li>
+                                    <li><a href="{{ route('menu.strukturunitkerja.madiun') }}">Struktur Organisasi Unit Kerja</a></li>
+                                    <li><a href="{{ route('menu.tupoksipemerintah.madiun') }}">Tupoksi Pemerintah Kota Madiun</a></li>
+                                    <li><a href="{{ route('menu.tupoksiunitkerja.madiun') }}">Tupoksi Unit Kerja</a></li>
+                                    <li><a href="{{ route('menu.agenda.madiun') }}">Agenda Kerja dan Kegiatan Pimpinan Pemerintah Kota Madiun</a></li>
                                   </ul>
                               </li>
                               <li class="dropdown-submenu">
@@ -41,15 +41,14 @@
                                   <ul class="dropdown-menu">
                                     <li><a href="{{ route('menu.profil.ppid') }}">Profil PPID Kota Madiun</a></li>
                                     <li><a href="{{ route('menu.visimisi.ppid') }}">Visi Misi PPID</a></li>
-                                    <li><a href="#!">Bagan Struktur PPID</a></li>
-                                    <li><a href="#!">SOP</a></li>
-                                    <li><a href="#!">Tupoksi PPID</a></li>
-                                    <li><a href="#!">SK PPID</a></li>
-                                    <li><a href="#!">Perwal PPID</a></li>
-                                    <li><a href="#!">Maklumat PPID</a></li>
-                                    <li><a href="#!">Jam Pelayanan PPID</a></li>
-                                    <li><a href="#!">SK Daftar Informasi Publik</a></li>
-                                    <li><a href="#!">SK Daftar Informasi yang Dikecualikan</a></li>
+                                    <li><a href="{{ route('menu.struktur.ppid') }}">Bagan Struktur PPID</a></li>
+                                    <li><a href="{{ route('menu.sop.ppid') }}">SOP</a></li>
+                                    <li><a href="{{ route('menu.tupoksi.ppid') }}">Tupoksi PPID</a></li>
+                                    <li><a href="{{ route('menu.sk.ppid') }}">SK PPID</a></li>
+                                    <li><a href="{{ route('menu.perwal.ppid') }}">Perwal PPID</a></li>
+                                    <li><a href="{{ route('menu.maklumat.ppid') }}">Maklumat PPID</a></li>
+                                    <li><a href="{{ route('menu.informasipublik.ppid') }}">SK Daftar Informasi Publik</a></li>
+                                    <li><a href="{{ route('menu.informasidikecualikan.ppid') }}">SK Daftar Informasi yang Dikecualikan</a></li>
                                   </ul>
                               </li>
                             </ul>
