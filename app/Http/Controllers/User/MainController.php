@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Profile;
 use App\Models\Berkas;
+use App\Models\PPIDPelaksana;
 
 
 class MainController extends Controller
@@ -208,6 +209,14 @@ class MainController extends Controller
         $berkas = Berkas::all()
                 -> where('profile_id', '=', '23');
         return view('user.profileppid.informasidikecualikan', compact('profile', 'berkas'));
+        
+    }
+
+    public function ppidpelaksana() {
+    
+        $profile = PPIDPelaksana::all();
+        $title = "PPID Pelaksana Kota Madiun";
+        return view('user.ppidpelaksana.index', compact('profile', 'title'));
         
     }
 }

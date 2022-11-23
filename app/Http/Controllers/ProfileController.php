@@ -114,6 +114,7 @@ class ProfileController extends Controller
         $year = date('Y');
         $month = date('m');
         $day = date('d');
+      
 
         $profile = Profile::where('kategori_profile', '=', $request->kategori_profile)->first();
         

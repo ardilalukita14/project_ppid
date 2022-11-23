@@ -54,7 +54,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item"><a class="nav-link" href="#">PPID Pelaksana Kota Madiun</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('menu.ppid.pelaksana') }}">PPID Pelaksana Kota Madiun</a></li>
 
 
                         <li class="nav-item dropdown">
