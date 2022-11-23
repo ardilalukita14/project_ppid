@@ -656,7 +656,7 @@
           <div class="latest-post">
               <div class="latest-post-media">
                 <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="frontend/images/news/news1.jpg" alt="img">
+                    <img loading="lazy" class="img-fluid" src="{{asset('frontend/images/news/news1.jpg')}}" alt="img">
                 </a>
               </div>
               <div class="post-body">
@@ -676,7 +676,7 @@
           <div class="latest-post">
               <div class="latest-post-media">
                 <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="frontend/images/news/news2.jpg" alt="img">
+                    <img loading="lazy" class="img-fluid" src="{{asset('frontend/images/news/news2.jpg')}}" alt="img">
                 </a>
               </div>
               <div class="post-body">
@@ -696,7 +696,7 @@
           <div class="latest-post">
               <div class="latest-post-media">
                 <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="frontend/images/news/news3.jpg" alt="img">
+                    <img loading="lazy" class="img-fluid" src="{{asset('frontend/images/news/news3.jpg')}}" alt="img">
                 </a>
               </div>
               <div class="post-body">

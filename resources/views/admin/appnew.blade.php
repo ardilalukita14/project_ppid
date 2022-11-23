@@ -24,6 +24,10 @@
     </div>
   </div>
 
+  <!-- Favicons -->
+  <link href="{{ asset('backend2/assets/img/Lambang_Kota_Madiun.png') }}" rel="icon">
+  <link href="{{ asset('backend2/assets/img/Lambang_Kota_Madiun.png') }}" rel="apple-touch-icon">
+
 <!-- General JS Scripts -->
 <script src="{{  asset ('backend2/assets/modules/jquery.min.js')}}"></script>
 <script src="{{  asset ('backend2/assets/modules/popper.js')}}"></script>

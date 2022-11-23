@@ -30,4 +30,8 @@ class Post extends Model
         return $this->hasMany(Document::class,'posts_id');
     }
 
+    public function users(){
+        return $this->belongsTo(User::class, 'users_id', 'id');
+    }
+
 }
