@@ -67,7 +67,7 @@
                 <br>
                       <div class="card-tools">
                             <br>
-                            <a href="{{ route('informasi_publik.berkala.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
+                            <a href="{{ route('informasi_publik.serta_merta.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
                       </div>
                                  @if(Session::has('success'))
                                  <br></br>
@@ -111,16 +111,16 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                            @foreach ($informasi_berkala as $b)
-                                                <td>{{$b->id}}</td>
-                                                <td>{{$b->judul}}</td>
-                                                <td>{!!$b->isi!!}</td>
+                                            @foreach ($informasi_serta_merta as $sm)
+                                                <td>{{$sm->id}}</td>
+                                                <td>{{$sm->judul}}</td>
+                                                <td>{!!$sm->isi!!}</td>
                                                 <td>
-                                                    <form action="{{ route('informasi_publik.berkala.destroy',$b->id) }}"  method="POST">
-                                                        <a href="{{ route('informasi_publik.berkala.edit',$b->id) }}" class="btn btn-warning "><i class="fa fa-edit"></i> Ubah</a>
+                                                    <form action="{{ route('informasi_publik.serta_merta.destroy',$sm->id) }}"  method="POST">
+                                                        <a href="{{ route('informasi_publik.serta_merta.edit',$sm->id) }}" class="btn btn-warning "><i class="fa fa-edit"></i> Ubah</a>
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus Daftar Informasi Secara Berkala?')" ><i class="fas fa-trash"></i> Hapus</button>
+                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus Daftar Informasi Serta Merta?')" ><i class="fas fa-trash"></i> Hapus</button>
                                                     </form>
                                                 </td>
                                             </tr>

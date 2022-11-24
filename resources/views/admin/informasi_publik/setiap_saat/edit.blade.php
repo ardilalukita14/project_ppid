@@ -95,19 +95,19 @@
                     @endif
 
                     <div class="form-validation">
-                    <form class="form-valide" action="{{route('informasi_publik.berkala.edit',$informasi_berkala->id)}}" method="POST" enctype="multipart/form-data">
+                    <form class="form-valide" action="{{route('informasi_publik.setiap_saat.edit',$informasi_setiap_saat->id)}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
 
                             <div class="form-group row">
                                 <label class="col-lg-8 col-form-label" for="judul">Judul Pembantu</label>
                                 <div class="col-sm-12">
-                                    <input type="text" id="judul" name="judul" class="form-control" required="" value="{{$informasi_berkala->judul}}" >
+                                    <input type="text" id="judul" name="judul" class="form-control" required="" value="{{$informasi_setiap_saat->judul}}" >
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-6 col-form-label" for="isi">Isi</label>
                                 <div class="col-sm-12">
-                                    <textarea class="summernote" name="isi" class="form-control" required="" placeholder="Isi" >{!! $informasi_berkala->isi !!}</textarea>
+                                    <textarea class="summernote" name="isi" class="form-control" required="" placeholder="Isi" >{!! $informasi_setiap_saat->isi !!}</textarea>
                                 </div>
                             </div>
                             <div class="form-group row">

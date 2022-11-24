@@ -98,6 +98,22 @@ Route::get('/edit-daftar-informasi-berkala/{id}', [\App\Http\Controllers\Informa
 Route::post('/edit-daftar-informasi-berkala/{id}', [\App\Http\Controllers\InformasiBerkalaController::class, 'update'])->name('informasi_publik.berkala.edit');
 Route::delete('/hapus-daftar-informasi-berkala/{id}', [\App\Http\Controllers\InformasiBerkalaController::class, 'destroy'])->name('informasi_publik.berkala.destroy');
 
+/** CRUD Data Daftar Informasi Serta Merta Kota Madiun*/
+Route::get('/daftar-informasi-serta-merta', [\App\Http\Controllers\InformasiSertaMertaController::class, 'index'])->name('informasi_publik.serta_merta.index');
+Route::get('/create/daftar-informasi-serta-merta', [\App\Http\Controllers\InformasiSertaMertaController::class, 'create'])->name('informasi_publik.serta_merta.create');
+Route::post('/create/daftar-informasi-serta-merta', [\App\Http\Controllers\InformasiSertaMertaController::class, 'store'])->name('informasi_publik.serta_merta.create');
+Route::get('/edit-daftar-informasi-serta-merta/{id}', [\App\Http\Controllers\InformasiSertaMertaController::class, 'edit'])->name('informasi_publik.serta_merta.edit');
+Route::post('/edit-daftar-informasi-serta-merta/{id}', [\App\Http\Controllers\InformasiSertaMertaController::class, 'update'])->name('informasi_publik.serta_merta.edit');
+Route::delete('/hapus-daftar-informasi-serta-merta/{id}', [\App\Http\Controllers\InformasiSertaMertaController::class, 'destroy'])->name('informasi_publik.serta_merta.destroy');
+
+/** CRUD Data Daftar Informasi Serta Merta Kota Madiun*/
+Route::get('/daftar-informasi-setiap-saat', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'index'])->name('informasi_publik.setiap_saat.index');
+Route::get('/create/daftar-informasi-setiap-saat', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'create'])->name('informasi_publik.setiap_saat.create');
+Route::post('/create/daftar-informasi-setiap-saat', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'store'])->name('informasi_publik.setiap_saat.create');
+Route::get('/edit-daftar-informasi-setiap-saat/{id}', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'edit'])->name('informasi_publik.setiap_saat.edit');
+Route::post('/edit-daftar-informasi-setiap-saat/{id}', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'update'])->name('informasi_publik.setiap_saat.edit');
+Route::delete('/hapus-daftar-informasi-setiap-saat/{id}', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'destroy'])->name('informasi_publik.setiap_saat.destroy');
+
 /** Data Kategori*/
 Route::get('/kategori', [\App\Http\Controllers\KategoriController::class, 'index'])->name('kategori.index');
 Route::get('/kategori/create', [\App\Http\Controllers\KategoriController::class, 'create'])->name('kategori.create');

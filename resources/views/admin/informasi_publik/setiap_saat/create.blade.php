@@ -6,18 +6,18 @@
   <title>Dashboard | judul Kota Madiun</title>
 
   <!-- General CSS Files -->
-  <link rel="stylesheet" href="{{  asset ('backend2/assets/modules/bootstrap/css/bootstrap.min.css')}}">
-  <link rel="stylesheet" href="{{  asset ('backend2/assets/modules/fontawesome/css/all.min.css')}}">
+  <link rel ="stylesheet" href="{{  asset ('backend2/assets/modules/bootstrap/css/bootstrap.min.css')}}">
+  <link rel ="stylesheet" href="{{  asset ('backend2/assets/modules/fontawesome/css/all.min.css')}}">
 
   <!-- CSS Libraries -->
-  <link rel="stylesheet" href="{{  asset ('backend2/assets/modules/jqvmap/dist/jqvmap.min.css')}}">
-  <link rel="stylesheet" href="{{  asset ('backend2/assets/modules/summernote/summernote-bs4.css')}}">
-  <link rel="stylesheet" href="{{  asset ('backend2/assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css')}}">
-  <link rel="stylesheet" href="{{  asset ('backend2/assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css')}}">
+  <link rel ="stylesheet" href="{{  asset ('backend2/assets/modules/jqvmap/dist/jqvmap.min.css')}}">
+  <link rel ="stylesheet" href="{{  asset ('backend2/assets/modules/summernote/summernote-bs4.css')}}">
+  <link rel ="stylesheet" href="{{  asset ('backend2/assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css')}}">
+  <link rel ="stylesheet" href="{{  asset ('backend2/assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css')}}">
 
   <!-- Template CSS -->
-  <link rel="stylesheet" href="{{  asset ('backend2/assets/css/style.css')}}">
-  <link rel="stylesheet" href="{{  asset ('backend2/assets/css/components.css')}}">
+  <link rel ="stylesheet" href="{{  asset ('backend2/assets/css/style.css')}}">
+  <link rel ="stylesheet" href="{{  asset ('backend2/assets/css/components.css')}}">
 <!-- Start GA -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
 <script>
@@ -95,19 +95,19 @@
                     @endif
 
                     <div class="form-validation">
-                    <form class="form-valide" action="{{route('informasi_publik.berkala.edit',$informasi_berkala->id)}}" method="POST" enctype="multipart/form-data">
+                    <form class="form-valide" action="{{route('informasi_publik.setiap_saat.create')}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
 
                             <div class="form-group row">
-                                <label class="col-lg-8 col-form-label" for="judul">Judul Pembantu</label>
+                                <label class="col-lg-6 col-form-label" for="judul">Judul</label>
                                 <div class="col-sm-12">
-                                    <input type="text" id="judul" name="judul" class="form-control" required="" value="{{$informasi_berkala->judul}}" >
+                                    <input type="text" id="judul" name="judul" class="form-control" required="" placeholder="Judul"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-6 col-form-label" for="isi">Isi</label>
                                 <div class="col-sm-12">
-                                    <textarea class="summernote" name="isi" class="form-control" required="" placeholder="Isi" >{!! $informasi_berkala->isi !!}</textarea>
+                                    <textarea class="summernote" style="height:10px;" name="isi" class="form-control" required="" placeholder="Isi"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">

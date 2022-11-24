@@ -85,9 +85,9 @@
                   <li class="{{ (request()->is('daftar-informasi-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/daftar-informasi-ppid">Informasi Publik PPID</a></li>
                 </ul>
               </li>
-              <li><a class="nav-link" href=""><i class="far fa-calendar-alt"></i> <span>Informasi Secara Berkala</span></a></li>
-              <li><a class="nav-link" href=""><i class="far fa-file"></i> <span>Informasi Serta Merta</span></a></li>
-              <li><a class="nav-link" href=""><i class="fas fa-clock"></i> <span>Informasi Setiap Saat</span></a></li>
+              <li class="{{ (request()->is('daftar-informasi-berkala')) ? 'active' : '' }}"><a class="nav-link" href="/daftar-informasi-berkala"><i class="far fa-calendar-alt"></i> <span>Informasi Secara Berkala</span></a></li>
+              <li class="{{ (request()->is('daftar-informasi-serta-merta')) ? 'active' : '' }}"><a class="nav-link" href="/daftar-informasi-serta-merta"><i class="far fa-file"></i> <span>Informasi Serta Merta</span></a></li>
+              <li class="{{ (request()->is('daftar-informasi-setiap-saat')) ? 'active' : '' }}"><a class="nav-link" href="/daftar-informasi-setiap-saat"><i class="fas fa-clock"></i> <span>Informasi Setiap Saat</span></a></li>
               <li><a class="nav-link" href=""><i class="far fa-times-circle"></i> <span>Informasi Dikecualikan</span></a></li>
 
             <li class="menu-header">Dokumen</li>
