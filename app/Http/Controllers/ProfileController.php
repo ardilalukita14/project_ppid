@@ -114,10 +114,10 @@ class ProfileController extends Controller
         $year = date('Y');
         $month = date('m');
         $day = date('d');
-      
+
 
         $profile = Profile::where('kategori_profile', '=', $request->kategori_profile)->first();
-        
+
         $profil = Profile::findorfail($profile->id);
         $profil ->kategori_profile = $request->kategori_profile;
         $profil ->title = $request->title;
@@ -180,7 +180,7 @@ class ProfileController extends Controller
             Session::flash('success','Sukses Update Data');
             return redirect()->route('profil.pejabat.index');
         }
-        elseif($profile->kategori_profile == "lkhpn-pejabat"){
+        elseif($profile->kategori_profile == "lhkpn-pejabat"){
             Session::flash('success','Sukses Update Data');
             return redirect()->route('lhkpn.index');
         }
@@ -211,7 +211,7 @@ class ProfileController extends Controller
     }
 
     public function destroy_berkas($berkas){
-      
+
         $dokumen = Berkas::findorfail(decrypt($berkas));
         $id = $dokumen->profile_id;
         $dokumen->delete();
@@ -264,7 +264,7 @@ class ProfileController extends Controller
             Session::flash('success','Sukses Hapus Data');
             return redirect()->route('agenda.index');
         }
- 
+
         Session::flash('delete','Data Berkas Berhasil Dihapus');
         return redirect()->route('admin.profile.form', $id);
      }
