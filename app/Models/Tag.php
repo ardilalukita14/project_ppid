@@ -12,7 +12,7 @@ class Tag extends Model
     use SoftDeletes;
     public $table = "tags";
     protected $fillable = [
-        'jenis_tags', 'slug_tags', 'isaktif'];
+        'jenis_tag', 'slug_tag', 'isaktif'];
     
     public function posts(){
         return $this->belongsToMany(Post::class);

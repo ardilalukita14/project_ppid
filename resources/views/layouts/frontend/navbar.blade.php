@@ -77,8 +77,8 @@
                         <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Download <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Pengumuman</a></li>
-                          <li><a href="#">Produk Hukum</a></li>
+                          <li><a href="{{ route('contents_kategori', 'pengumuman') }}">Pengumuman</a></li>
+                          <li><a href="{{ route('contents_kategori', 'produk-hukum') }}">Produk Hukum</a></li>
                             <li class="dropdown-submenu">
                                 <a href="#!" class="dropdown-toggle" data-toggle="dropdown">SOP</a>
                                 <ul class="dropdown-menu">
@@ -91,7 +91,7 @@
                             <li class="dropdown-submenu">
                               <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Materi PPID</a>
                               <ul class="dropdown-menu">
-                                <li><a href="#!">Materi PPID Kota</a></li>
+                                <li><a href="{{ route('contents_kategori', 'materi ppid') }}">Materi PPID Kota</a></li>
                                 <li><a href="#!">Materi Umum</a></li>
                               </ul>
                           </li>

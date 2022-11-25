@@ -74,45 +74,18 @@ Route::get('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaCont
 Route::post('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'update'])->name('ppid.pelaksana.edit');
 Route::delete('/hapus-ppid-pelaksana/{ppid}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'destroy'])->name('ppid.pelaksana.destroy');
 
-/** CRUD Data Daftar Informasi Publik Kota Madiun*/
-Route::get('/daftar-informasi-publik', [\App\Http\Controllers\InformasiPublikController::class, 'index'])->name('informasi_publik.daftar_informasi.publik.index');
-Route::get('/create/daftar-informasi-publik', [\App\Http\Controllers\InformasiPublikController::class, 'create'])->name('informasi_publik.daftar_informasi.publik.create');
-Route::post('/create/daftar-informasi-publik', [\App\Http\Controllers\InformasiPublikController::class, 'store'])->name('informasi_publik.daftar_informasi.publik.create');
-Route::get('/edit-daftar-informasi-publik/{id}', [\App\Http\Controllers\InformasiPublikController::class, 'edit'])->name('informasi_publik.daftar_informasi.publik.edit');
-Route::post('/edit-daftar-informasi-publik/{id}', [\App\Http\Controllers\InformasiPublikController::class, 'update'])->name('informasi_publik.daftar_informasi.publik.edit');
-Route::delete('/hapus-daftar-informasi-publik/{id}', [\App\Http\Controllers\InformasiPublikController::class, 'destroy'])->name('informasi_publik.daftar_informasi.publik.destroy');
-
-/** CRUD Data Daftar Informasi Publik PPID Pelaksana Kota Madiun*/
-Route::get('/daftar-informasi-ppid', [\App\Http\Controllers\InformasiPPIDController::class, 'index'])->name('informasi_publik.daftar_informasi.pelaksana.index');
-Route::get('/create/daftar-informasi-ppid', [\App\Http\Controllers\InformasiPPIDController::class, 'create'])->name('informasi_publik.daftar_informasi.pelaksana.create');
-Route::post('/create/daftar-informasi-ppid', [\App\Http\Controllers\InformasiPPIDController::class, 'store'])->name('informasi_publik.daftar_informasi.pelaksana.create');
-Route::get('/edit-daftar-informasi-ppid/{id}', [\App\Http\Controllers\InformasiPPIDController::class, 'edit'])->name('informasi_publik.daftar_informasi.pelaksana.edit');
-Route::post('/edit-daftar-informasi-ppid/{id}', [\App\Http\Controllers\InformasiPPIDController::class, 'update'])->name('informasi_publik.daftar_informasi.pelaksana.edit');
-Route::delete('/hapus-daftar-informasi-ppid/{id}', [\App\Http\Controllers\InformasiPPIDController::class, 'destroy'])->name('informasi_publik.daftar_informasi.pelaksana.destroy');
-
-/** CRUD Data Daftar Informasi Secara Berkala Kota Madiun*/
-Route::get('/daftar-informasi-berkala', [\App\Http\Controllers\InformasiBerkalaController::class, 'index'])->name('informasi_publik.berkala.index');
-Route::get('/create/daftar-informasi-berkala', [\App\Http\Controllers\InformasiBerkalaController::class, 'create'])->name('informasi_publik.berkala.create');
-Route::post('/create/daftar-informasi-berkala', [\App\Http\Controllers\InformasiBerkalaController::class, 'store'])->name('informasi_publik.berkala.create');
-Route::get('/edit-daftar-informasi-berkala/{id}', [\App\Http\Controllers\InformasiBerkalaController::class, 'edit'])->name('informasi_publik.berkala.edit');
-Route::post('/edit-daftar-informasi-berkala/{id}', [\App\Http\Controllers\InformasiBerkalaController::class, 'update'])->name('informasi_publik.berkala.edit');
-Route::delete('/hapus-daftar-informasi-berkala/{id}', [\App\Http\Controllers\InformasiBerkalaController::class, 'destroy'])->name('informasi_publik.berkala.destroy');
-
-/** CRUD Data Daftar Informasi Serta Merta Kota Madiun*/
-Route::get('/daftar-informasi-serta-merta', [\App\Http\Controllers\InformasiSertaMertaController::class, 'index'])->name('informasi_publik.serta_merta.index');
-Route::get('/create/daftar-informasi-serta-merta', [\App\Http\Controllers\InformasiSertaMertaController::class, 'create'])->name('informasi_publik.serta_merta.create');
-Route::post('/create/daftar-informasi-serta-merta', [\App\Http\Controllers\InformasiSertaMertaController::class, 'store'])->name('informasi_publik.serta_merta.create');
-Route::get('/edit-daftar-informasi-serta-merta/{id}', [\App\Http\Controllers\InformasiSertaMertaController::class, 'edit'])->name('informasi_publik.serta_merta.edit');
-Route::post('/edit-daftar-informasi-serta-merta/{id}', [\App\Http\Controllers\InformasiSertaMertaController::class, 'update'])->name('informasi_publik.serta_merta.edit');
-Route::delete('/hapus-daftar-informasi-serta-merta/{id}', [\App\Http\Controllers\InformasiSertaMertaController::class, 'destroy'])->name('informasi_publik.serta_merta.destroy');
-
-/** CRUD Data Daftar Informasi Serta Merta Kota Madiun*/
-Route::get('/daftar-informasi-setiap-saat', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'index'])->name('informasi_publik.setiap_saat.index');
-Route::get('/create/daftar-informasi-setiap-saat', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'create'])->name('informasi_publik.setiap_saat.create');
-Route::post('/create/daftar-informasi-setiap-saat', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'store'])->name('informasi_publik.setiap_saat.create');
-Route::get('/edit-daftar-informasi-setiap-saat/{id}', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'edit'])->name('informasi_publik.setiap_saat.edit');
-Route::post('/edit-daftar-informasi-setiap-saat/{id}', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'update'])->name('informasi_publik.setiap_saat.edit');
-Route::delete('/hapus-daftar-informasi-setiap-saat/{id}', [\App\Http\Controllers\InformasiSetiapSaatController::class, 'destroy'])->name('informasi_publik.setiap_saat.destroy');
+/** Daftar Informasi Publik dan SOP*/
+Route::get('/informasi/daftar-informasi-publik-2022',[\App\Http\Controllers\InformationController::class,'informasipublik'])->name('informasi.publik.index');
+Route::get('/informasi/daftar-informasi-publik-ppid-pelaksana',[\App\Http\Controllers\InformationController::class,'informasippid'])->name('informasi.ppid.index');
+Route::get('/informasi/informasi-secara-berkala',[\App\Http\Controllers\InformationController::class,'informasiberkala'])->name('informasi.berkala.index');
+Route::get('/informasi/informasi-serta-merta',[\App\Http\Controllers\InformationController::class,'informasisertamerta'])->name('informasi.serta.merta.index');
+Route::get('/informasi/informasi-setiap-saat',[\App\Http\Controllers\InformationController::class,'informasisetiapsaat'])->name('informasi.setiap.saat.index');
+Route::get('/informasi/informasi-dikecualikan-penetapan-dan-proses-uji-konsekuensi',[\App\Http\Controllers\InformationController::class,'informasidikecualikan'])->name('informasi.dikecualikan.index');
+Route::get('/informasi/sop-pedoman-pengelolaan-organisasi',[\App\Http\Controllers\InformationController::class,'soporganisasi'])->name('sop.organisasi.index');
+Route::get('/informasi/sop-pedoman-pengelolaan-administrasi',[\App\Http\Controllers\InformationController::class,'sopadministrasi'])->name('sop.administrasi.index');
+Route::get('/informasi/sop-pedoman-pengelolaan-kepegawaian',[\App\Http\Controllers\InformationController::class,'sopkepegawaian'])->name('sop.kepegawaian.index');
+Route::get('/informasi/sop-pedoman-pengelolaan-keuangan',[\App\Http\Controllers\InformationController::class,'sopkeuangan'])->name('sop.keuangan.index');
+Route::post('/informasi/store', [App\Http\Controllers\InformationController::class, 'store'])->name('information.create');
 
 /** Data Kategori*/
 Route::get('/kategori', [\App\Http\Controllers\KategoriController::class, 'index'])->name('kategori.index');
@@ -129,6 +102,7 @@ Route::prefix('a')->name('admin.')->group(function () {
     Route::get('document/destroy/{document}', [App\Http\Controllers\PostController::class, 'destroy_document'] )->name('destroy_document');
     Route::get('berkas/destroy/{berkas}', [App\Http\Controllers\ProfileController::class, 'destroy_berkas'] )->name('destroy_berkas');
     Route::get('berkasppid/destroy/{berkasppid}', [App\Http\Controllers\ProfilePPIDController::class, 'destroy_berkasppid'] )->name('destroy_berkasppid');
+    Route::get('berkas/destroy/{berkas}', [App\Http\Controllers\InformationController::class, 'destroy_berkas_informasi'] )->name('destroy_berkas_informasi');
     });
 });
 

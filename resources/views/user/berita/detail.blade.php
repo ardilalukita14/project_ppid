@@ -30,9 +30,13 @@
                 <span class="post-cat">
                   <i class="far fa-folder-open"></i><a href="#"> {{$detail->kategori->nama_kategori}}</a>
                 </span>
-                <span class="post-meta-date"><i class="far fa-calendar"></i> {{ date('d M Y', strtotime($detail->tgl_post)) }}</span>
-                <span class="post-comment"><i class="far fa-comment"></i> 03<a href="#"
-                    class="comments-link">Comments</a></span>
+
+                @foreach ($detail->tags as $tag)
+                <span class="post-meta-date"><i class="fas fa-tags"></i> {{ $tag->jenis_tag }}</span>
+                @endforeach
+
+                <span class="post-comment"><i class="far fa-calendar"></i>
+                      <a href="#" class="comments-link"> {{ date('d M Y', strtotime($detail->tgl_post)) }}</a></span>
               </div>
             
             </div><!-- header end -->
@@ -53,67 +57,42 @@
                 <h3 class="widget-title" style="margin-left:-20px; font-size: 25px;">Lampiran</h3>
               </div>
             </div>
-            <div class="post-author d-flex align-items-center">
-            <section id="hero" class="hero carousel  carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" style="background: white; padding:0px; min-height:0px;">
-
-                @php
+            
+            <div class="banner-carousel banner-carousel-1 mb-0">
+            @php
                 $count = 0;
                 @endphp
                 @if ($detail->documents->isEmpty())
-
-
-                <div class="banner-carousel-item">
-                <div class="slider-content text-left">
-                <div class="container h-100">
-                  <div class="row align-items-center h-100">
-                      <div class="col-md-12">
-                  <img src="{{ route('menu.file', encrypt($detail->thumbnail)) }}" alt="pic 2"  data-fancybox="gallery"
-                  style="max-height:600px;object-fit:fill;width:100%;">
-
-                </div><!-- End Carousel Item -->
-                @else
+          @else
                 
                 @foreach ($galleries as $galeri)
 
-                <div class="carousel-item <?php 
+                <div class="banner-carousel-item <?php 
                 if($count==0){
                   echo "active";  
                 }
                 else{
                     echo " ";
-                } ?>">
-                   <img src="{{ route('menu.file', encrypt($galeri->path_file)) }}" alt="pic 2"  data-fancybox="gallery"
-                   style="max-height:600px;object-fit:fill;width:100%;">
-                        <div class="container">
-                          <div class="row justify-content-center gy-6">
-                  
-                          </div>
-                        </div>
-                </div><!-- End Carousel Item -->
-
-                @php
+                } ?>" style="background-image:url({{route('menu.file', encrypt($galeri->path_file))}}); width:800px; height:400px; text-align: center;">
+            <div class="slider-content text-left">
+                <div class="container h-100">
+                  <div class="row align-items-center h-100">
+                  </div>
+                </div>
+            </div>
+              </div>
+            @php
                 $count++;
                 @endphp
                 @endforeach
                 @endif
 
-                <a class="carousel-control-prev" href="#hero" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-                </a>
-
-                <a class="carousel-control-next" href="#hero" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-                </a>
-
-                <ol class="carousel-indicators"></ol>
-
-            </section><!-- End Hero Section -->
-            </div><!-- End post author -->
-
-            <br>
+                </div><!-- End post author -->
 
             @empty
             @endforelse
+
+            <br>
 
             @if ($files != null)
 

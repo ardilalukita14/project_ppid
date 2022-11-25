@@ -14,6 +14,7 @@
 <section id="main-container" class="main-container">
   <div class="container">
     <div class="row">
+      
         @if ($posts != null)
       <div class="col-lg-8 mb-5 mb-lg-0">
        @foreach ($posts as $beritaItem)
@@ -56,18 +57,18 @@
             </div>
        
           </div><!-- post-body end --> 
-        </div><!-- 1st post end -->
-         @endforeach
-        @else
-        <p style="text-align: center" data-aos="fade-in" data-aos-delay="200">Hasil pencarian tidak ditemukan</p>
-        @endif
-
+        </div><!-- 1st post end -->   
+        @endforeach
+       
         <div class="blog-pagination">
                 {{ $posts->links() }}
             </div><!-- End blog pagination -->
 
+      @else
+            <p style="text-align: center" data-aos="fade-in">Hasil pencarian berita tidak ditemukan</p>
+        @endif
       </div><!-- Content Col end -->
-
+      
       <div class="col-lg-4">
 
         <div class="sidebar sidebar-right">
