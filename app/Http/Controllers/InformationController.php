@@ -54,7 +54,7 @@ class InformationController extends Controller
     }
 
     public function informasidikecualikan() {
-        $information = Information::where('kategori_informasi', '=', 'informasi-dicekualikan')->first();
+        $information = Information::where('kategori_informasi', '=', 'informasi-dikecualikan')->first();
         $judul = "Update Data Informasi Dikecualikan";
         $informasi = Information::findorfail($information->id);
         $documents = BerkasInformation::where('informasi_id', '=',$informasi->id)->get();
@@ -164,7 +164,7 @@ class InformationController extends Controller
             Session::flash('success','Sukses Update Data');
             return redirect()->route('informasi.setiap.saat.index');
         }
-        elseif($information->kategori_informasi == "informasi-dicekualikan"){
+        elseif($information->kategori_informasi == "informasi-dikecualikan"){
             Session::flash('success','Sukses Update Data');
             return redirect()->route('informasi.dikecualikan.index');
         }

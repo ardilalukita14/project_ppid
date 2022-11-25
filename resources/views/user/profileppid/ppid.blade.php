@@ -49,6 +49,28 @@
               <p style="margin-top:32px;">{!! $profile->deskripsi !!}</p>
             </div>
 
+            @foreach($berkas as $data)   
+              @if ($data->jenis_file == "gambar")
+              <hr>
+              <div class="sidebar sidebar-right">
+              <div class="widget recent-posts">
+                <h3 class="widget-title" style="margin-left:-20px; font-size: 25px;">Lampiran</h3>
+              </div>
+            </div>
+              <img src="{{ route('file.show', encrypt($data->path_file)) }}" class="img-fluid" style="width: 100%;"> 
+               @endif
+               @endforeach
+               <br>
+               
+              @foreach($berkas as $data) 
+              @if ($data->jenis_file == "lampiran")
+              <hr>
+                <iframe src="{{ route('file.show', encrypt($data->path_file)) }}" name="iframe_a"  width="100%" height="600" style="border:1px solid black;"></iframe> <br><br>
+                <a href="{{ route('file.show', encrypt($data->path_file)) }}" target="_blank"> <button  class="btn btn-info" style="border-radius: 20px;" >Download File</button></a><br><br>
+              @endif
+              @endforeach
+            
+            </div>
           </div><!-- post-body end -->
         </div><!-- 1st post end -->
 

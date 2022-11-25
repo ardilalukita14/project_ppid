@@ -33,7 +33,7 @@ class InformationSeeder extends Seeder
                 'kategori_informasi' => 'informasi-setiap-saat'
             ],
             [
-                'kategori_informasi' => 'informasi-dicekualikan'
+                'kategori_informasi' => 'informasi-dikecualikan'
             ],
             [
                 'kategori_informasi' => 'sop-pedoman-pengelolaan-organisasi'

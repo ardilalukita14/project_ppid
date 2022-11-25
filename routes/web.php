@@ -140,6 +140,21 @@ Route::get('/jampelayanan-ppid-kota-madiun',[\App\Http\Controllers\User\MainCont
 Route::get('/informasi-publik-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'informasi_publik'])->name('menu.informasipublik.ppid');
 Route::get('/informasi-dikecualikan-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'informasi_dikecualikan'])->name('menu.informasidikecualikan.ppid');
 
+/** Menu Informasi Publik */
+/** Menu Profile Pemerintah Kota Madiun */
+Route::get('/daftar-informasi-publik-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'informpublik'])->name('informasi.publik');
+Route::get('/daftar-informasi-publik-ppid-pelaksana',[\App\Http\Controllers\User\MainController::class,'informppid'])->name('informasi.ppid');
+Route::get('/informasi-secara-berkala',[\App\Http\Controllers\User\MainController::class,'informberkala'])->name('informasi.berkala');
+Route::get('/informasi-serta-merta',[\App\Http\Controllers\User\MainController::class,'informsertamerta'])->name('informasi.sertamerta');
+Route::get('/informasi-setiap-saat',[\App\Http\Controllers\User\MainController::class,'informsetiapsaat'])->name('informasi.setiapsaat');
+Route::get('/informasi-dikecualikan',[\App\Http\Controllers\User\MainController::class,'informdikecualikan'])->name('informasi.dikecualikan');
+
+/** Menu SOP */
+Route::get('/sop-pedoman-pengelolaan-organisasi',[\App\Http\Controllers\User\MainController::class,'soporganisasi'])->name('sop.organisasi');
+Route::get('/sop-pedoman-pengelolaan-administrasi',[\App\Http\Controllers\User\MainController::class,'sopadministrasi'])->name('sop.administrasi');
+Route::get('/sop-pedoman-kepegawaian',[\App\Http\Controllers\User\MainController::class,'sopkepegawaian'])->name('sop.kepegawaian');
+Route::get('/sop-pedoman-pengelolaan-keuangan',[\App\Http\Controllers\User\MainController::class,'sopkeuangan'])->name('sop.keuangan');
+
 /** Menu PPID Pelaksana */
 Route::get('/ppid-pelaksana-kota-madiun',[\App\Http\Controllers\User\MainController::class,'ppidpelaksana'])->name('menu.ppid.pelaksana');
 // Auth::routes();

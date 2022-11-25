@@ -52,6 +52,11 @@
               @foreach($berkas as $data)   
               @if ($data->jenis_file == "gambar")
               <hr>
+              <div class="sidebar sidebar-right">
+              <div class="widget recent-posts">
+                <h3 class="widget-title" style="margin-left:-20px; font-size: 25px;">Lampiran</h3>
+              </div>
+            </div>
               <img src="{{ route('file.show', encrypt($data->path_file)) }}" class="img-fluid" style="width: 100%;"> 
                @endif
                @endforeach

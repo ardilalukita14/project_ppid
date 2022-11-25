@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Profile;
 use App\Models\Berkas;
+use App\Models\Information;
+use App\Models\BerkasInformation;
 use App\Models\PPIDPelaksana;
 
 
@@ -218,6 +220,96 @@ class MainController extends Controller
         $title = "PPID Pelaksana Kota Madiun";
         return view('user.ppidpelaksana.index', compact('profile', 'title'));
         
+    }
+
+    public function informpublik() {
+    
+        $information = Information::where('kategori_informasi', '=', 'daftar-informasi-publik')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '1');
+        return view('user.informasi.publik', compact('information', 'berkas'));
+    
+    }
+
+    public function informppid() {
+    
+        $information = Information::where('kategori_informasi', '=', 'daftar-informasi-publik-ppid-pelaksana')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '2');
+        return view('user.informasi.ppid', compact('information', 'berkas'));
+    
+    }
+
+    public function informberkala() {
+    
+        $information = Information::where('kategori_informasi', '=', 'informasi-secara-berkala')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '3');
+        return view('user.informasi.berkala', compact('information', 'berkas'));
+    
+    }
+
+    public function informsertamerta() {
+    
+        $information = Information::where('kategori_informasi', '=', 'informasi-serta-merta')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '4');
+        return view('user.informasi.sertamerta', compact('information', 'berkas'));
+    
+    }
+
+    public function informsetiapsaat() {
+    
+        $information = Information::where('kategori_informasi', '=', 'informasi-setiap-saat')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '5');
+        return view('user.informasi.setiapsaat', compact('information', 'berkas'));
+    
+    }
+
+    public function informdikecualikan() {
+    
+        $information = Information::where('kategori_informasi', '=', 'informasi-dikecualikan')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '6');
+        return view('user.informasi.dikecualikan', compact('information', 'berkas'));
+    
+    }
+
+    public function soporganisasi() {
+    
+        $information = Information::where('kategori_informasi', '=', 'sop-pedoman-pengelolaan-organisasi')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '7');
+        return view('user.sop.organisasi', compact('information', 'berkas'));
+    
+    }
+
+    public function sopadministrasi() {
+    
+        $information = Information::where('kategori_informasi', '=', 'sop-pedoman-pengelolaan-administrasi')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '8');
+        return view('user.sop.administrasi', compact('information', 'berkas'));
+    
+    }
+
+    public function sopkepegawaian() {
+    
+        $information = Information::where('kategori_informasi', '=', 'sop-pedoman-kepegawaian')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '9');
+        return view('user.sop.kepegawaian', compact('information', 'berkas'));
+    
+    }
+
+    public function sopkeuangan() {
+    
+        $information = Information::where('kategori_informasi', '=', 'sop-pedoman-pengelolaan-keuangan')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '10');
+        return view('user.sop.keuangan', compact('information', 'berkas'));
+    
     }
 }
 

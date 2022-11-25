@@ -63,14 +63,14 @@
                               <li class="dropdown-submenu">
                                   <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Daftar Informasi <br> Publik </a>
                                   <ul class="dropdown-menu">
-                                    <li><a href="#!">Daftar Informasi Publik 2022</a></li>
-                                    <li><a href="#!">Daftar Informasi Publik PPID Pelaksana</a></li>
+                                    <li><a href="{{ route('informasi.publik') }}">Daftar Informasi Publik 2022</a></li>
+                                    <li><a href="{{ route('informasi.ppid') }}">Daftar Informasi Publik PPID Pelaksana</a></li>
                                   </ul>
                               </li>
-                              <li><a href="#">Informasi Secara Berkala</a></li>
-                              <li><a href="#">Informasi Serta Merta</a></li>
-                              <li><a href="#">Informasi Setiap Saat</a></li>
-                              <li><a href="#">Informasi Dikecualikan Penetapan dan Proses Uji Konsekuensi</a></li>
+                              <li><a href="{{ route('informasi.berkala') }}">Informasi Secara Berkala</a></li>
+                              <li><a href="{{ route('informasi.sertamerta') }}">Informasi Serta Merta</a></li>
+                              <li><a href="{{ route('informasi.setiapsaat') }}">Informasi Setiap Saat</a></li>
+                              <li><a href="{{ route('informasi.dikecualikan') }}">Informasi Dikecualikan Penetapan dan Proses Uji Konsekuensi</a></li>
                             </ul>
                         </li>
 
@@ -82,10 +82,10 @@
                             <li class="dropdown-submenu">
                                 <a href="#!" class="dropdown-toggle" data-toggle="dropdown">SOP</a>
                                 <ul class="dropdown-menu">
-                                  <li><a href="#!">SOP Pedoman Pengelolaan Organisasi</a></li>
-                                  <li><a href="#!">SOP Pedoman Pengelolaan Administrasi</a></li>
-                                  <li><a href="#!">SOP Pedoman Pengelolaan Kepegawaian</a></li>
-                                  <li><a href="#!">SOP Pedoman Pengelolaan Keuangan</a></li>
+                                  <li><a href="{{ route('sop.organisasi') }}">SOP Pedoman Pengelolaan Organisasi</a></li>
+                                  <li><a href="{{ route('sop.administrasi') }}">SOP Pedoman Pengelolaan Administrasi</a></li>
+                                  <li><a href="{{ route('sop.kepegawaian') }}">SOP Pedoman Pengelolaan Kepegawaian</a></li>
+                                  <li><a href="{{ route('sop.keuangan') }}">SOP Pedoman Pengelolaan Keuangan</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
