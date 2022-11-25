@@ -23,7 +23,7 @@
                     <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default">
                 
                 <?php }else{ ?>
-                        <img loading="lazy" src="{{ route('file.show', encrypt($beritaItem->thumbnail)) }}" alt="Gambar Content" class="img-fluid" style="width:800px; height:400px; text-align: center;">
+                        <img loading="lazy" src="{{ route('menu.file', encrypt($beritaItem->thumbnail)) }}" alt="Gambar Content" class="img-fluid" style="width:800px; height:400px; text-align: center;">
                 <?php } ?>
 
           <div class="post-body">
@@ -48,7 +48,7 @@
             </div><!-- header end -->
 
             <div class="entry-content">
-              <p>{!!substr($beritaItem->contents,0,1000)!!}...</p>
+              <p style="margin-top: -20px;">{!!substr($beritaItem->contents,0,1000)!!}...</p>
             </div>
 
             <div class="post-footer">

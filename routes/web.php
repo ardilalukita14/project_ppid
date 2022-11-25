@@ -170,4 +170,7 @@ Route::get('/informasi-dikecualikan-ppid-kota-madiun',[\App\Http\Controllers\Use
 Route::get('/ppid-pelaksana-kota-madiun',[\App\Http\Controllers\User\MainController::class,'ppidpelaksana'])->name('menu.ppid.pelaksana');
 // Auth::routes();
 
+/** File Show */
+Route::get('/menu/file/{file}', [App\Http\Controllers\User\FileController::class, 'show'])->name('menu.file');
+
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
