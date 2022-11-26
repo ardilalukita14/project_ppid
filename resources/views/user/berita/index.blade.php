@@ -66,7 +66,54 @@
 @include('layouts.frontend.content2')
 
 <!-- Content Kedua-->
-@include('layouts.frontend.content')
+<section id="ts-features" class="ts-features pb-2">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-12">
+        <h2 class="section-title" style="text-align:center;">Informasi Terkait</h2>
+        <h3 class="section-sub-title" style="text-align:center;">Berita Tersemat</h3>
+      </div>
+      @foreach($beritapinned as $data)
+        <div class="col-lg-4 col-md-6 mb-5">
+          <div class="ts-service-box">
+              <div class="ts-service-image-wrapper">
+              <?php if($data->thumbnail == null ){ ?>
+                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:400px; height:250px;">
+                
+                <?php }else{ ?>
+                        <img loading="lazy" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="Gambar Content" class="img-fluid" style="width:400px; height:200px; text-align: center;">
+                <?php } ?>
+
+              </div>
+              <div class="d-flex">
+                <div class="ts-service-box-img">
+                    <img loading="lazy" src="{{asset('frontend/images/icon-image/service-icon3.png')}}" alt="service-icon" />
+                </div>
+                <div class="ts-service-info">
+                <h3 class="service-box-title" style="width:300px;">
+                    <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
+                    <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}">{{  $data->judul }}</a>
+                  </h3>
+                  <h8 style="width:150px;">
+                <span class="post-author">
+                  <a href="#"> {{$data->users->name}} |</a>
+                </span>
+                <span class="post-cat">
+                  <a href="#"> {{$data->kategori->nama_kategori}}|</a>
+                </span>
+                <span class="post-comment">
+                  <a href="#" class="comments-link"> {{ date('d M Y', strtotime($data->tgl_post)) }}</a></span>
+                </h8>
+                  <p style="width:300px;">{!! $data->contents !!}...</p>
+                    <a class="learn-more d-inline-block" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}"  aria-label="service-datas"><i class="fa fa-caret-right"></i> Selanjutnya</a>
+                </div>
+              </div>
+          </div><!-- Service1 end -->
+        </div><!-- Col 1 end -->
+        @endforeach
+    </div><!-- Content row end -->
+  </div><!-- Container end -->
+</section><!-- Feature are end -->
 
 <!-- Content Kedua-->
 @include('layouts.frontend.content3')
@@ -77,149 +124,44 @@
   <div class="container">
     <div class="row text-center">
       <div class="col-lg-12">
-        <h2 class="section-title">Work of Excellence</h2>
-        <h3 class="section-sub-title">Recent Projects</h3>
+      <div class="shuffle-btn-group" style="margin-top:-20px;">
+        <h2 class="section-title">Informasi Terkait</h2>
+        <h3 class="section-sub-title">Daftar Berita</h3>
+          </div><!-- project filter end -->
       </div>
     </div>
     <!--/ Title row end -->
 
     <div class="row">
       <div class="col-12">
-        <div class="shuffle-btn-group">
-          <label class="active" for="all">
-            <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Show All
-          </label>
-          <label for="commercial">
-            <input type="radio" name="shuffle-filter" id="commercial" value="commercial">Commercial
-          </label>
-          <label for="education">
-            <input type="radio" name="shuffle-filter" id="education" value="education">Education
-          </label>
-          <label for="government">
-            <input type="radio" name="shuffle-filter" id="government" value="government">Government
-          </label>
-          <label for="infrastructure">
-            <input type="radio" name="shuffle-filter" id="infrastructure" value="infrastructure">Infrastructure
-          </label>
-          <label for="residential">
-            <input type="radio" name="shuffle-filter" id="residential" value="residential">Residential
-          </label>
-          <label for="healthcare">
-            <input type="radio" name="shuffle-filter" id="healthcare" value="healthcare">Healthcare
-          </label>
-        </div><!-- project filter end -->
-
 
         <div class="row shuffle-wrapper">
           <div class="col-1 shuffle-sizer"></div>
-
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;government&quot;,&quot;healthcare&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="frontend/images/projects/project1.jpg" aria-label="project-img">
-                <img class="img-fluid" src="frontend/images/projects/project1.jpg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+      @foreach($beritakonten as $data)
+      
+          <div class="col-lg-4 col-md-6 shuffle-item">
+          <div class="project-img-container">  
+            <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
+              <a class="gallery-popup" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" aria-label="project-img">
+                <img class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="project-img" style="width:400px; height:250px;">
               </a>
               <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
-                    <a href="projects-single.html">Capital Teltway Building</a>
+                    <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}">{{  $data->judul }}</a>
                   </h3>
-                  <p class="project-cat">Commercial, Interiors</p>
+                  <p class="project-cat">{{$data->kategori->nama_kategori}}</p>
                 </div>
               </div>
             </div>
           </div><!-- shuffle item 1 end -->
-
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;healthcare&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="frontend/images/projects/project2.jpg" aria-label="project-img">
-                <img class="img-fluid" src="frontend/images/projects/project2.jpg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="projects-single.html">Ghum Touch Hospital</a>
-                  </h3>
-                  <p class="project-cat">Healthcare</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- shuffle item 2 end -->
-
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;infrastructure&quot;,&quot;commercial&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="frontend/images/projects/project3.jpg" aria-label="project-img">
-                <img class="img-fluid" src="frontend/images/projects/project3.jpg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="projects-single.html">TNT East Facility</a>
-                  </h3>
-                  <p class="project-cat">Government</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- shuffle item 3 end -->
-
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;education&quot;,&quot;infrastructure&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="frontend/images/projects/project4.jpg" aria-label="project-img">
-                <img class="img-fluid" src="frontend/images/projects/project4.jpg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="projects-single.html">Narriot Headquarters</a>
-                  </h3>
-                  <p class="project-cat">Infrastructure</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- shuffle item 4 end -->
-
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;infrastructure&quot;,&quot;education&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="frontend/images/projects/project5.jpg" aria-label="project-img">
-                <img class="img-fluid" src="frontend/images/projects/project5.jpg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="projects-single.html">Kalas Metrorail</a>
-                  </h3>
-                  <p class="project-cat">Infrastructure</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- shuffle item 5 end -->
-
-          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;]">
-            <div class="project-img-container">
-              <a class="gallery-popup" href="frontend/images/projects/project6.jpg" aria-label="project-img">
-                <img class="img-fluid" src="frontend/images/projects/project6.jpg" alt="project-img">
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <h3 class="project-item-title">
-                    <a href="projects-single.html">Ancraft Avenue House</a>
-                  </h3>
-                  <p class="project-cat">Residential</p>
-                </div>
-              </div>
-            </div>
-          </div><!-- shuffle item 6 end -->
+          @endforeach
         </div><!-- shuffle end -->
       </div>
 
       <div class="col-12">
         <div class="general-btn text-center">
-          <a class="btn btn-primary" href="projects.html">View All Projects</a>
+          <a class="btn btn-primary" href="{{ route('contents_kategori', 'berita') }}">Berita Lainnya</a>
         </div>
       </div>
 
@@ -385,77 +327,40 @@
   <div class="container">
     <div class="row text-center">
         <div class="col-12">
-          <h2 class="section-title">Work of Excellence</h2>
-          <h3 class="section-sub-title">Recent Projects</h3>
+          <h2 class="section-title">Informasi Terkait</h2>
+          <h3 class="section-sub-title">Berita Terkini</h3>
         </div>
     </div>
     <!--/ Title row end -->
 
     <div class="row">
+      @foreach($beritaterkini as $data)  
+      <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="latest-post">
               <div class="latest-post-media">
                 <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="{{asset('frontend/images/news/news1.jpg')}}" alt="img">
+                    <img loading="lazy" class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="img" style="width:400px; height:250px;">
                 </a>
               </div>
               <div class="post-body">
                 <h4 class="post-title">
-                    <a href="news-single.html" class="d-inline-block">We Just Completes $17.6 million Medical Clinic in Mid-Missouri</a>
+                    <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" class="d-inline-block">{{$data->judul}}</a>
                 </h4>
                 <div class="latest-post-meta">
                     <span class="post-item-date">
-                      <i class="fa fa-clock-o"></i> July 20, 2017
+                      <i class="fa fa-clock-o"></i> {{ date('d M Y', strtotime($data->tgl_post)) }}
                     </span>
                 </div>
               </div>
           </div><!-- Latest post end -->
         </div><!-- 1st post col end -->
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="latest-post">
-              <div class="latest-post-media">
-                <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="{{asset('frontend/images/news/news2.jpg')}}" alt="img">
-                </a>
-              </div>
-              <div class="post-body">
-                <h4 class="post-title">
-                    <a href="news-single.html" class="d-inline-block">Thandler Airport Water Reclamation Facility Expansion Project Named</a>
-                </h4>
-                <div class="latest-post-meta">
-                    <span class="post-item-date">
-                      <i class="fa fa-clock-o"></i> June 17, 2017
-                    </span>
-                </div>
-              </div>
-          </div><!-- Latest post end -->
-        </div><!-- 2nd post col end -->
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="latest-post">
-              <div class="latest-post-media">
-                <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="{{asset('frontend/images/news/news3.jpg')}}" alt="img">
-                </a>
-              </div>
-              <div class="post-body">
-                <h4 class="post-title">
-                    <a href="news-single.html" class="d-inline-block">Silicon Bench and Cornike Begin Construction Solar Facilities</a>
-                </h4>
-                <div class="latest-post-meta">
-                    <span class="post-item-date">
-                      <i class="fa fa-clock-o"></i> Aug 13, 2017
-                    </span>
-                </div>
-              </div>
-          </div><!-- Latest post end -->
-        </div><!-- 3rd post col end -->
+        @endforeach
     </div>
     <!--/ Content row end -->
 
     <div class="general-btn text-center mt-4">
-        <a class="btn btn-primary" href="news-left-sidebar.html">See All Posts</a>
+        <a class="btn btn-primary" href="{{ route('contents_kategori', 'berita') }}">Berita Lainnya</a>
     </div>
 
   </div>

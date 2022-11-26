@@ -30,11 +30,6 @@
                 <span class="post-cat">
                   <i class="far fa-folder-open"></i><a href="#"> {{$detail->kategori->nama_kategori}}</a>
                 </span>
-
-                @foreach ($detail->tags as $tag)
-                <span class="post-meta-date"><i class="fas fa-tags"></i> {{ $tag->jenis_tag }}</span>
-                @endforeach
-
                 <span class="post-comment"><i class="far fa-calendar"></i>
                       <a href="#" class="comments-link"> {{ date('d M Y', strtotime($detail->tgl_post)) }}</a></span>
               </div>
@@ -52,6 +47,16 @@
             </div>
 
             <hr>
+            <div class="meta-bottom">
+                <h8 style="background-color:yellow;"><i class="fas fa-tags"></i> Tag</h1>
+                <ul class="tags">
+                  @foreach ($detail->tags as $tag)
+                      <li><a href="#">{{ $tag->jenis_tag }}</a></li>
+                   @endforeach
+               
+                </ul>
+              </div><!-- End meta bottom -->
+              <hr>
             <div class="sidebar sidebar-right">
               <div class="widget recent-posts">
                 <h3 class="widget-title" style="margin-left:-20px; font-size: 25px;">Lampiran</h3>

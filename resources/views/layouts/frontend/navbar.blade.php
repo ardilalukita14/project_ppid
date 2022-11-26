@@ -91,22 +91,22 @@
                             <li class="dropdown-submenu">
                               <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Materi PPID</a>
                               <ul class="dropdown-menu">
-                                <li><a href="{{ route('contents_kategori', 'materi ppid') }}">Materi PPID Kota</a></li>
-                                <li><a href="#!">Materi Umum</a></li>
+                                <li><a href="{{ route('contents_kategori', 'materi-ppid') }}">Materi PPID Kota</a></li>
+                                <li><a href="{{ route('contents_kategori', 'materi-umum') }}">Materi Umum</a></li>
                               </ul>
                           </li>
-                            <li><a href="#">Laporan Pengaduan</a></li>
-                            <li><a href="#">Berita PPID</a></li>
-                            <li><a href="#">Artikel</a></li>
-                            <li><a href="#">Narasi Tunggal</a></li>
+                            <li><a href="{{ route('contents_kategori', 'laporan-pengaduan') }}">Laporan Pengaduan</a></li>
+                            <li><a href="{{ route('contents_kategori', 'berita-ppid') }}">Berita PPID</a></li>
+                            <li><a href="{{ route('contents_kategori', 'artikel') }}">Artikel</a></li>
+                            <li><a href="{{ route('contents_kategori', 'narasi-tunggal') }}">Narasi Tunggal</a></li>
                           </ul>
                       </li>
 
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Galeri/Infografis <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
-                              <li><a href="#">Galeri</a></li>
-                              <li><a href="#">Infografis</a></li>
+                              <li><a href="{{ route('contents_kategori', 'galeri') }}">Galeri</a></li>
+                              <li><a href="{{ route('contents_kategori', 'infografis') }}">Infografis</a></li>
                             </ul>
                         </li>
 

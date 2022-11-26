@@ -25,7 +25,7 @@ Route::post('/admin/login',[\App\Http\Controllers\Auth\LoginController::class,'l
 Route::post('/admin/logout',[\App\Http\Controllers\Auth\LoginController::class,'logout'])->name('logout');
 
 /** Halaman Utama */
-route::get('/',[\App\Http\Controllers\FrontendController::class,'index'])->name('layouts.frontend.index');
+route::get('/',[\App\Http\Controllers\User\BaseController::class,'index'])->name('layouts.frontend.index');
 route::get('/profil-kota-madiun',[\App\Http\Controllers\FrontendController::class,'profilkota'])->name('layouts.frontend.profilkota');
 route::get('/sejarah-kota-madiun',[\App\Http\Controllers\FrontendController::class,'sejarah'])->name('layouts.frontend.sejarahkota');
 

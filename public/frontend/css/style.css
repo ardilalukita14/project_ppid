@@ -79,6 +79,13 @@ h5 {
   line-height: 24px;
 }
 
+h6 {
+  font-size: 28px;
+  color: #333;
+  line-height: 36px;
+  letter-spacing: -1px;
+}
+
 .alert .icon {
   margin-right: 15px;
 }
@@ -1249,12 +1256,13 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .slide-title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 300;
-  color: #fff;
-  margin: 20px 0 10px;
+  font-size: 18px;
+  color: #333;
+  padding-bottom: 10px;
+  line-height: 1em;
+  font-weight: 500;
 }
+
 @media (max-width: 991px) {
   .slide-title {
     font-size: 22px;
@@ -1533,11 +1541,16 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .into-sub-title {
+  font-style: normal;
+  font-size: 60px;
+  line-height: 58px;
+  margin: 20px 0;
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 32px;
-  line-height: normal;
-  margin: 10px 0;
+  letter-spacing: -1px;
+  color: #000000 !important;
+  line-height: 1.2em;
+  text-align: center;
 }
 
 /*-- Featured Tab --*/
@@ -1712,7 +1725,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   color: #fff;
 }
 
-/* Service box
+/* Service box 
 
 .ts-service-box .ts-service-icon i {
   font-size: 24px;

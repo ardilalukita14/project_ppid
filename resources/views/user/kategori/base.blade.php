@@ -36,9 +36,7 @@
                 <span class="post-cat">
                   <i class="far fa-folder-open"></i><a href="#"> {{ $beritaItem->kategori->nama_kategori }}</a>
                 </span>
-                <span class="post-meta-date"><i class="far fa-calendar"></i> {{ date('d M Y', strtotime($beritaItem->tgl_post)) }}</span>
-                <span class="post-comment"><i class="far fa-comment"></i> 03<a href="#"
-                    class="comments-link">Comments</a></span>
+                <span class="post-comment"><i class="far fa-calendar"></i> {{ date('d M Y', strtotime($beritaItem->tgl_post)) }}</span>
               </div>
               <h2 class="entry-title">
               </div>

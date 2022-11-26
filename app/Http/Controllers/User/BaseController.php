@@ -40,8 +40,6 @@ class BaseController extends Controller
            
         }
 
-    
-
         $subjudul = "Kategori";
         $parent = $slug;
         $root_parent = "/";
@@ -52,4 +50,22 @@ class BaseController extends Controller
         return view('user.kategori.base', compact('subjudul','categories','posts', 'parent', 'child', 'root_parent', 'title'));
       
     }
+
+    public function index()
+    {
+
+        // $beritapop = Post::where('ispublish', '=', '1')->where('category_id', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->first();
+            
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+        
+        $beritapinned = Post::where('ispublish', '=', '1')->where('ispinned', '=', '1')->orderBy('tgl_post', 'DESC')->limit(3)->get();
+        
+        $beritakonten = Post::where('ispublish', '=', '1')->where('ispinned', '=', '0')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(6)->get();
+
+      
+        // $youtube = Youtube::where('ispublish', '=', '1')->orderBy('created_at', 'DESC')->first();
+    
+    return view('user.berita.index',compact('beritaterkini', 'beritapinned', 'beritakonten'));
+    }
+
 }
