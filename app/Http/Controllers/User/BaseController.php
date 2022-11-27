@@ -25,7 +25,10 @@ class BaseController extends Controller
         $post =  Post::where('slug', $slug)->where('tgl_post', '=', $time)->where('ispublish', '=', '1')->first();
         $galleries = Document::where('posts_id', '=', $post->id)->where('jenis_file', '=', 'gambar')->get();
         $files = Document::where('posts_id', '=', $post->id)->where('jenis_file', '=', 'lampiran')->get();
-        return view('user.berita.detail', compact('files','post','galleries','subjudul','data', 'parent', 'child', 'root_parent', 'title'));
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+        $categories = Kategori::all();
+
+        return view('user.berita.detail', compact('files','post','galleries','subjudul','data', 'parent', 'child', 'root_parent', 'title', 'beritaterkini', 'categories'));
     }
 
     public function contents_kategori($slug){
@@ -46,8 +49,9 @@ class BaseController extends Controller
         $title = "Kategori Berita";
   
         $categories = Kategori::all();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
     
-        return view('user.kategori.base', compact('subjudul','categories','posts', 'parent', 'child', 'root_parent', 'title'));
+        return view('user.kategori.base', compact('subjudul','categories','posts', 'parent', 'child', 'root_parent', 'title', 'beritaterkini'));
       
     }
 
@@ -66,6 +70,20 @@ class BaseController extends Controller
         // $youtube = Youtube::where('ispublish', '=', '1')->orderBy('created_at', 'DESC')->first();
     
     return view('user.berita.index',compact('beritaterkini', 'beritapinned', 'beritakonten'));
+    }
+
+    public function cari(Request $request)
+    {
+        $key = $request->get('cari');
+        $news = Post::where('judul','LIKE','%'.$key.'%')
+                 ->where('ispublish', '=', '1')
+                 ->orderBy('tgl_post', 'DESC')
+                 ->paginate(3);
+        
+        $categories = Kategori::all();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+    
+        return view('user.berita.list',compact('news', 'categories', 'beritaterkini')) ;
     }
 
 }

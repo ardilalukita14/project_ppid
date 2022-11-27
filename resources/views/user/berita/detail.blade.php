@@ -248,55 +248,43 @@
       <div class="col-lg-4">
 
         <div class="sidebar sidebar-right">
+        <div class="sidebar-item search-form">
+            <h3 class="widget-title" style="margin-left:20px;">Search</h3>
+                <form action="{{ route('reader.search.berita') }}" method="POST"  class="mt-3" style="margin-left:20px;">
+                  @csrf
+                    <input type="text" value="{{ old('cari') }}" name="cari" style="padding-right:10px; padding-left:10px;">  <input type="submit" value="Search" style="color:white;"><i class="bi bi-search"></i></input>
+                </form>
+          </div><!-- End sidebar search formn-->
+          <br>
           <div class="widget recent-posts">
-            <h3 class="widget-title">Recent Posts</h3>
+          <h3 class="widget-title">Berita Terkini</h3>
             <ul class="list-unstyled">
+                @foreach($beritaterkini as $data)
               <li class="d-flex align-items-center">
                 <div class="posts-thumb">
-                  <a href="#"><img loading="lazy" alt="img" src="images/news/news1.jpg"></a>
+                  <a href="#"><img loading="lazy" alt="img" src="{{ route('menu.file', encrypt($data->thumbnail)) }}"></a>
                 </div>
                 <div class="post-info">
                   <h4 class="entry-title">
-                    <a href="#">We Just Completes $17.6 Million Medical Clinic In Mid-missouri</a>
+                  <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
+                    <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}">{{  $data->judul }}</a>
                   </h4>
                 </div>
               </li><!-- 1st post end-->
-
-              <li class="d-flex align-items-center">
-                <div class="posts-thumb">
-                  <a href="#"><img loading="lazy" alt="img" src="images/news/news2.jpg"></a>
-                </div>
-                <div class="post-info">
-                  <h4 class="entry-title">
-                    <a href="#">Thandler Airport Water Reclamation Facility Expansion Project Named</a>
-                  </h4>
-                </div>
-              </li><!-- 2nd post end-->
-
-              <li class="d-flex align-items-center">
-                <div class="posts-thumb">
-                  <a href="#"><img loading="lazy" alt="img" src="images/news/news3.jpg"></a>
-                </div>
-                <div class="post-info">
-                  <h4 class="entry-title">
-                    <a href="#">Silicon Bench And Cornike Begin Construction Solar Facilities</a>
-                  </h4>
-                </div>
-              </li><!-- 3rd post end-->
-
+              @endforeach
             </ul>
 
           </div><!-- Recent post end -->
+         
           <div class="widget">
-            <h3 class="widget-title">Archives </h3>
+            <h3 class="widget-title">Kategori</h3>
             <ul class="arrow nav nav-tabs">
-              <li><a href="#">Feburay 2016</a></li>
-              <li><a href="#">January 2016</a></li>
-              <li><a href="#">December 2015</a></li>
-              <li><a href="#">November 2015</a></li>
-              <li><a href="#">October 2015</a></li>
+            @foreach($categories as $kategori)
+                <li><a href="{{ route('contents_kategori', $kategori->slug) }}">{{ $kategori->nama_kategori }} <span>({{ $kategori->posts->count() }})</span></a></li>
+            @endforeach
             </ul>
-          </div><!-- Archives end -->
+        </div>
+        <!-- Categories end -->
 
           <div class="widget widget-tags">
             <h3 class="widget-title">Tags </h3>

@@ -162,4 +162,7 @@ Route::get('/ppid-pelaksana-kota-madiun',[\App\Http\Controllers\User\MainControl
 /** File Show */
 Route::get('/menu/file/{file}', [App\Http\Controllers\User\FileController::class, 'show'])->name('menu.file');
 
+/** Search Engine */
+Route::post('/news/cariberita',[\App\Http\Controllers\User\BaseController::class, 'cari'])->name('reader.search.berita');
+
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
