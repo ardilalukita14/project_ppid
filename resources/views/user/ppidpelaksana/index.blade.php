@@ -49,7 +49,7 @@
 
             <div class="entry-content">
            <div class="card-body" style="margin-left:-18px;">
-                    <table class="table table-bordered">
+                    <table class="table display table-bordered table-striped">
                       <thead>
                     <tr style="background-color: #ccd1d1;">
                         <th scope="col">No</th>
@@ -58,12 +58,12 @@
                         <th scope="col">No Tlp/Fax</th>
                     </tr>
                     </thead>
-                    <tbody>               
+                    <tbody>
                         <tr>
                         @php $i=1 @endphp
                         @foreach ($profile as $data)
                         <td>{{$i++}}</td>
-                        <td>{{$data->nama_opd}}</td>
+                        <td>{!! $data->nama_opd!!}</td>
                         <td>{!!$data->alamat!!}</td>
                         <td>{!!$data->telepon!!}</td>
                     </tr>
@@ -74,7 +74,7 @@
           </div><!-- post-body end -->
         </div><!-- 1st post end -->
 
-       
+
       </div><!-- Content Col end -->
 
       @include('layouts.frontend.sidebarkonten')<!-- Sidebar Col end -->

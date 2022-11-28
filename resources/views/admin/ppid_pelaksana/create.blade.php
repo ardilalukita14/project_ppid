@@ -99,9 +99,9 @@
                             {{csrf_field()}}
 
                             <div class="form-group row">
-                                <label class="col-lg-8 col-form-label" for="nama_opd">Nama OPD</label>
+                                <label class="col-lg-6 col-form-label" for="nama_opd">Nama OPD</label>
                                 <div class="col-sm-12">
-                                    <input type="text" id="nama_opd" name="nama_opd" class="form-control" required="" placeholder="Nama OPD" >
+                                    <textarea class="summernote" name="nama_opd" class="form-control" required="" placeholder="Nama OPD" ></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">

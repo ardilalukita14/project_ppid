@@ -56,7 +56,7 @@
                                                             'profile/sop-ppid','profile/tupoksi-ppid',
                                                             'profile/sk-ppid','profile/perwal-ppid',
                                                             'profile/maklumat-ppid','profile/jam-pelayanan',
-                                                            'profile/sk-/informasi/daftar-informasi-publik-2022',
+                                                            'profile/sk-daftar-informasi-publik',
                                                             'profile/sk-daftar-informasi-dikecualikan',
                                                             'profile/agenda-kerja-kegiatan-pimpinan',
                                                             'ppid-pelaksana')) ? 'active' : '' }}">
@@ -71,7 +71,7 @@
                     <li class="{{ (request()->is('profile/perwal-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/perwal-ppid">Perwal</a></li>
                     <li class="{{ (request()->is('profile/maklumat-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/maklumat-ppid">Maklumat</a></li>
                     <li class="{{ (request()->is('profile/jam-pelayanan')) ? 'active' : '' }}"><a class="nav-link" href="/profile/jam-pelayanan">Jam Pelayanan</a></li>
-                    <li class="{{ (request()->is('profile/sk-/informasi/daftar-informasi-publik-2022')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sk-/informasi/daftar-informasi-publik-2022">SK Daftar Informasi Publik</a></li>
+                    <li class="{{ (request()->is('profile/sk-daftar-informasi-publik')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sk-daftar-informasi-publik">SK Daftar Informasi Publik</a></li>
                     <li class="{{ (request()->is('profile/sk-daftar-informasi-dikecualikan')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sk-daftar-informasi-dikecualikan">SK Daftar Dikecualikan</a></li>
                     <li class="{{ (request()->is('ppid-pelaksana')) ? 'active' : '' }}"><a class="nav-link" href="/ppid-pelaksana">PPID Pelaksana</a></li>
               </ul>
@@ -81,8 +81,8 @@
             <li class="nav-item dropdown {{ (request()->is('informasi/daftar-informasi-publik-2022','informasi/daftar-informasi-publik-ppid-pelaksana')) ? 'active' : '' }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file"></i> <span>Daftar Informasi Publik</span></a>
                 <ul class="dropdown-menu">
-                  <li class="{{ (request()->is('/informasi/daftar-informasi-publik-2022')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/daftar-informasi-publik-2022">Informasi Publik 2022</a></li>
-                  <li class="{{ (request()->is('/informasi/daftar-informasi-publik-ppid-pelaksana')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/daftar-informasi-publik-ppid-pelaksana">Informasi Publik PPID</a></li>
+                  <li class="{{ (request()->is('informasi/daftar-informasi-publik-2022')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/daftar-informasi-publik-2022">Informasi Publik 2022</a></li>
+                  <li class="{{ (request()->is('informasi/daftar-informasi-publik-ppid-pelaksana')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/daftar-informasi-publik-ppid-pelaksana">Informasi Publik PPID</a></li>
                 </ul>
               </li>
               <li class="{{ (request()->is('informasi/informasi-secara-berkala')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/informasi-secara-berkala"><i class="far fa-calendar-alt"></i> <span>Informasi Secara Berkala</span></a></li>
@@ -95,7 +95,7 @@
             <li><a class="nav-link" href="/a/tags"><i class="fas fa-bookmark"></i> <span>Tag</span></a></li>
             <li><a class="nav-link" href=""><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>
             <li><a class="nav-link" href=""><i class="fas fa-ribbon"></i> <span>Produk Hukum</span></a></li>
-            
+
             <li class="dropdown">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>SOP</span></a>
               <ul class="dropdown-menu">

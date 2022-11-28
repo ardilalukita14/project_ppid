@@ -47,6 +47,7 @@
                                     <li><a href="{{ route('menu.sk.ppid') }}">SK PPID</a></li>
                                     <li><a href="{{ route('menu.perwal.ppid') }}">Perwal PPID</a></li>
                                     <li><a href="{{ route('menu.maklumat.ppid') }}">Maklumat PPID</a></li>
+                                    <li><a href="{{ route('menu.jampelayanan.ppid') }}">Jam Pelayanan</a></li>
                                     <li><a href="{{ route('menu.informasipublik.ppid') }}">SK Daftar Informasi Publik</a></li>
                                     <li><a href="{{ route('menu.informasidikecualikan.ppid') }}">SK Daftar Informasi yang Dikecualikan</a></li>
                                   </ul>

@@ -11,7 +11,7 @@
 @include('layouts.frontend.header')
 <!--/ Header end -->
 
-<div id="banner-area" class="banner-area" style="background-image:url(frontend/images/banner/banner1.jpg)">
+<div id="banner-area" class="banner-area" style="background-image:url({{asset('frontend/images/news/balkot.png')}})">
   <div class="banner-text">
     <div class="container">
         <div class="row">
@@ -21,7 +21,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">Pemerintah Kota Madiun</a></li>
-                      <li class="breadcrumb-item"><a href="#">Profil PPID Kota Madiun</a></li>
+                      <li class="breadcrumb-item"><a href="#">Visi Misi Kota Madiun</a></li>
                     </ol>
                 </nav>
               </div>
@@ -48,8 +48,8 @@
             <div class="entry-content">
               <p style="margin-top:32px;">{!! $profile->deskripsi !!}</p>
 
-            
-              @foreach($berkas as $data)   
+
+              @foreach($berkas as $data)
               @if ($data->jenis_file == "gambar")
               <hr>
               <div class="sidebar sidebar-right">
@@ -57,24 +57,24 @@
                 <h3 class="widget-title" style="margin-left:-20px; font-size: 25px;">Lampiran</h3>
               </div>
             </div>
-              <img src="{{ route('file.show', encrypt($data->path_file)) }}" class="img-fluid" style="width: 100%;"> 
+              <img src="{{ route('file.show', encrypt($data->path_file)) }}" class="img-fluid" style="width: 100%;">
                @endif
                @endforeach
                <br>
-               
-              @foreach($berkas as $data) 
+
+              @foreach($berkas as $data)
               @if ($data->jenis_file == "lampiran")
               <hr>
                 <iframe src="{{ route('file.show', encrypt($data->path_file)) }}" name="iframe_a"  width="100%" height="600" style="border:1px solid black;"></iframe> <br><br>
                 <a href="{{ route('file.show', encrypt($data->path_file)) }}" target="_blank"> <button  class="btn btn-info" style="border-radius: 20px;" >Download File</button></a><br><br>
               @endif
               @endforeach
-            
+
             </div>
           </div><!-- post-body end -->
         </div><!-- 1st post end -->
 
-       
+
       </div><!-- Content Col end -->
 
       @include('layouts.frontend.sidebarkonten')<!-- Sidebar Col end -->

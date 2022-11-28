@@ -103,6 +103,7 @@
                                     <table class="display table table-striped table-hover" id="dataTable">
                                         <thead>
                                             <tr>
+                                                <th>NO.</th>
                                                 <th>NAMA OPD</th>
                                                 <th>ALAMAT </th>
                                                 <th>NO TLP/FAX</th>
@@ -110,9 +111,10 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            <tr >
                                             @foreach ($ppid_pelaksana as $data)
-                                                <td>{{$data->nama_opd}}</td>
+                                                <td>{{ $data->id }}</td>
+                                                <td>{!! $data->nama_opd!!}</td>
                                                 <td>{!!$data->alamat!!}</td>
                                                 <td>{!!$data->telepon!!}</td>
                                                 <td>
