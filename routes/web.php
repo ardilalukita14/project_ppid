@@ -99,6 +99,16 @@ Route::delete('/kategori/hapus/{id}',[\App\Http\Controllers\KategoriController::
 Route::prefix('a')->name('admin.')->group(function () {
     Route::resource('/tags', App\Http\Controllers\TagController::class );
     Route::resource('/post', App\Http\Controllers\PostController::class );
+    Route::resource('/pengumuman', App\Http\Controllers\PostController::class );
+    Route::resource('/produk-hukum', App\Http\Controllers\PostController::class );
+    Route::resource('/materi-ppid', App\Http\Controllers\PostController::class );
+    Route::resource('/materi-umum', App\Http\Controllers\PostController::class );
+    Route::resource('/laporan-pengaduan', App\Http\Controllers\PostController::class );
+    Route::resource('/berita-ppid', App\Http\Controllers\PostController::class );
+    Route::resource('/artikel', App\Http\Controllers\PostController::class );
+    Route::resource('/narasi-tunggal', App\Http\Controllers\PostController::class );
+    Route::resource('/galeri', App\Http\Controllers\PostController::class );
+    Route::resource('/infografis', App\Http\Controllers\PostController::class );
     Route::get('document/destroy/{document}', [App\Http\Controllers\PostController::class, 'destroy_document'] )->name('destroy_document');
     Route::get('berkas/destroy/{berkas}', [App\Http\Controllers\ProfileController::class, 'destroy_berkas'] )->name('destroy_berkas');
     Route::get('berkasppid/destroy/{berkasppid}', [App\Http\Controllers\ProfilePPIDController::class, 'destroy_berkasppid'] )->name('destroy_berkasppid');

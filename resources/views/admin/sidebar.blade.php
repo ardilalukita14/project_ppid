@@ -93,8 +93,8 @@
             <li class="menu-header">Dokumen</li>
             <li><a class="nav-link" href="/kategori"><i class="fas fa-columns"></i> <span>Kategori</span></a></li>
             <li><a class="nav-link" href="/a/tags"><i class="fas fa-bookmark"></i> <span>Tag</span></a></li>
-            <li><a class="nav-link" href=""><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>
-            <li><a class="nav-link" href=""><i class="fas fa-ribbon"></i> <span>Produk Hukum</span></a></li>
+            <li class="{{ (request()->is('a/pengumuman')) ? 'active' : '' }}"><a class="nav-link" href="/a/pengumuman"><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>
+            <li class="{{ (request()->is('a/produk-hukum')) ? 'active' : '' }}"><a class="nav-link" href="/a/produk-hukum"><i class="fas fa-ribbon"></i> <span>Produk Hukum</span></a></li>
 
             <li class="dropdown">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>SOP</span></a>
@@ -108,19 +108,19 @@
             <li class="dropdown">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-envelope"></i> <span>Materi PPID</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="">Materi PPID Kota</a></li>
-                <li><a class="nav-link" href="">Materi Umum</a></li>
+              <li class="{{ (request()->is('a/materi-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/a/materi-ppid">Materi PPID Kota</a></li>
+              <li class="{{ (request()->is('a/materi-umum')) ? 'active' : '' }}"><a class="nav-link" href="/a/materi-umum">Materi Umum</a></li>
               </ul>
             </li>
-            <li><a class="nav-link" href=""><i class="fas fa-headset"></i> <span>Laporan Pengaduan</span></a></li>
-            <li><a class="nav-link" href=""><i class="fas fa-newspaper"></i> <span>Berita PPID</span></a></li>
-            <li><a class="nav-link" href=""><i class="fas fa-quote-left"></i> <span>Artikel</span></a></li>
-            <li><a class="nav-link" href=""><i class="fas fa-microphone"></i> <span>Narasi Tunggal</span></a></li>
+            <li class="{{ (request()->is('a/laporan-pengaduan')) ? 'active' : '' }}"><a class="nav-link" href="/a/laporan-pengaduan"><i class="fas fa-headset"></i> <span>Laporan Pengaduan</span></a></li>
+            <li class="{{ (request()->is('a/berita-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/a/berita-ppid"><i class="fas fa-newspaper"></i> <span>Berita PPID</span></a></li>
+            <li class="{{ (request()->is('a/artikel')) ? 'active' : '' }}"><a class="nav-link" href="/a/artikel"><i class="fas fa-quote-left"></i> <span>Artikel</span></a></li>
+            <li class="{{ (request()->is('a/narasi-tunggal')) ? 'active' : '' }}"><a class="nav-link" href="/a/narasi-tunggal"><i class="fas fa-microphone"></i> <span>Narasi Tunggal</span></a></li>
 
 
                 <li class="menu-header">Galeri</li>
-                <li><a class="nav-link" href=""><i class="far fa-image"></i> <span>Galeri</span></a></li>
-                <li><a class="nav-link" href=""><i class="fas fa-file-image"></i> <span>Infografis</span></a></li>
+                <li class="{{ (request()->is('a/galeri')) ? 'active' : '' }}"><a class="nav-link" href="/a/galeri"><i class="far fa-image"></i> <span>Galeri</span></a></li>
+                <li class="{{ (request()->is('a/infografis')) ? 'active' : '' }}"><a class="nav-link" href="/a/infografis"><i class="fas fa-file-image"></i> <span>Infografis</span></a></li>
 
           </ul>
 
