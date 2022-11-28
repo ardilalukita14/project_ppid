@@ -72,7 +72,7 @@
           </div> --}}
         </div><!-- Row end -->
 
-        <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+        <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed" style="margin-bottom:-20px;">
           <button class="btn btn-primary" title="Back to Top">
             <i class="fa fa-angle-double-up"></i>
           </button>
@@ -81,3 +81,10 @@
       </div><!-- Container end -->
     </div><!-- Copyright end -->
   </footer>
+
+  <div class="form-group" style="margin-top: 12%; float:right; position: relative; ">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <a href="https://api.whatsapp.com/send/?phone=628113577800&text&type=phone_number&app_absent=0" target="_blank" class="tooltipmake"  style="position: fixed;right: 0;  bottom: 0;margin-bottom:40px;margin-right:15px;border-radius:50%; display:block;" ><img src="{{ asset('frontend/images/icon-image/icon.webp') }}" style="height:45px;width:45px;"><span class="tooltiptext">Whatsapp Us</span></a></a>
+       </div>
+    </div>
+
