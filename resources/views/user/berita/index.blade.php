@@ -86,15 +86,12 @@
 
               </div>
               <div class="d-flex">
-                <div class="ts-service-box-img">
-                    <img loading="lazy" src="{{asset('frontend/images/icon-image/service-icon3.png')}}" alt="service-icon" />
-                </div>
                 <div class="ts-service-info">
-                <h3 class="service-box-title" style="width:300px;">
+                <h3 class="service-box-title" style="margin-left:-30px; width:350px; text-align:justify;">
                     <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
                     <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}">{{  $data->judul }}</a>
                   </h3>
-                  <h8 style="width:150px;">
+                  <h8 style="margin-left:-30px; width:350px; text-align:justify;">
                 <span class="post-author">
                   <a href="#"> {{$data->users->name}} |</a>
                 </span>
@@ -104,8 +101,15 @@
                 <span class="post-comment">
                   <a href="#" class="comments-link"> {{ date('d M Y', strtotime($data->tgl_post)) }}</a></span>
                 </h8>
-                  <p style="width:300px;">{!! $data->contents !!}...</p>
-                    <a class="learn-more d-inline-block" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}"  aria-label="service-datas"><i class="fa fa-caret-right"></i> Selanjutnya</a>
+                <style>
+                p{
+                  margin-left:-30px; 
+                  width:350px; 
+                  text-align:justify;
+                }
+                </style>
+                  <p>{!! $data->contents!!}</p>
+                    <a class="learn-more d-inline-block" style="margin-left:-30px; width:350px; text-align:justify;" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}"  aria-label="service-datas"><i class="fa fa-caret-right"></i> Selanjutnya</a>
                 </div>
               </div>
           </div><!-- Service1 end -->
