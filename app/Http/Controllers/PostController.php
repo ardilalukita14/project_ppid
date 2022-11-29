@@ -27,6 +27,86 @@ class PostController extends Controller
         return view('admin.posts.index', compact('posts', 'judul'));
     }
 
+    public function indexpengumuman()
+    {
+        $posts = Post::all()
+                ->where('kategori_id', '=', '1');
+        $judul = "Data Posts";
+        return view('admin.posts.pengumuman', compact('posts', 'judul'));
+    }
+
+    public function indexproduk()
+    {
+        $posts = Post::all()
+                ->where('kategori_id', '=', '2');
+        $judul = "Data Posts";
+        return view('admin.posts.produk', compact('posts', 'judul'));
+    }
+
+    public function materippid()
+    {
+        $posts = Post::all()
+                ->where('kategori_id', '=', '3');
+        $judul = "Data Posts";
+        return view('admin.posts.ppidmateri', compact('posts', 'judul'));
+    }
+
+    public function materiumum()
+    {
+        $posts = Post::all()
+                ->where('kategori_id', '=', '4');
+        $judul = "Data Posts";
+        return view('admin.posts.materiumum', compact('posts', 'judul'));
+    }
+
+    public function pengaduan()
+    {
+        $posts = Post::all()
+                ->where('kategori_id', '=', '5');
+        $judul = "Data Posts";
+        return view('admin.posts.pengaduan', compact('posts', 'judul'));
+    }
+
+    public function berita()
+    {
+        $posts = Post::all()
+                ->where('kategori_id', '=', '6');
+        $judul = "Data Posts";
+        return view('admin.posts.berita', compact('posts', 'judul'));
+    }
+
+    public function artikel()
+    {
+        $posts = Post::all()
+                ->where('kategori_id', '=', '7');
+        $judul = "Data Posts";
+        return view('admin.posts.artikel', compact('posts', 'judul'));
+    }
+
+    public function narasi()
+    {
+        $posts = Post::all()
+                ->where('kategori_id', '=', '8');
+        $judul = "Data Posts";
+        return view('admin.posts.narasi', compact('posts', 'judul'));
+    }
+
+    public function galeri()
+    {
+        $posts = Post::all()
+                ->where('kategori_id', '=', '9');
+        $judul = "Data Posts";
+        return view('admin.posts.galeri', compact('posts', 'judul'));
+    }
+
+    public function infografis()
+    {
+        $posts = Post::all()
+                ->where('kategori_id', '=', '10');
+        $judul = "Data Posts";
+        return view('admin.posts.infografis', compact('posts', 'judul'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

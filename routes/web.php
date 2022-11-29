@@ -88,27 +88,27 @@ Route::get('/informasi/sop-pedoman-pengelolaan-keuangan',[\App\Http\Controllers\
 Route::post('/informasi/store', [App\Http\Controllers\InformationController::class, 'store'])->name('information.create');
 
 /** Data Kategori*/
-Route::get('/kategori', [\App\Http\Controllers\KategoriController::class, 'index'])->name('kategori.index');
-Route::get('/kategori/create', [\App\Http\Controllers\KategoriController::class, 'create'])->name('kategori.create');
-Route::post('/kategori/create', [\App\Http\Controllers\KategoriController::class, 'store'])->name('kategori.create');
-Route::get('/kategori/edit/{id}', [\App\Http\Controllers\KategoriController::class, 'edit'])->name('kategori.edit');
-Route::post('/kategori/edit/{id}', [\App\Http\Controllers\KategoriController::class, 'update'])->name('kategori.edit');
-Route::delete('/kategori/hapus/{id}',[\App\Http\Controllers\KategoriController::class, 'destroy'])->name('kategori.destroy');
+Route::get('/categories', [\App\Http\Controllers\KategoriController::class, 'index'])->name('kategori.index');
+Route::get('/categories/create', [\App\Http\Controllers\KategoriController::class, 'create'])->name('kategori.create');
+Route::post('/categories/create', [\App\Http\Controllers\KategoriController::class, 'store'])->name('kategori.create');
+Route::get('/categories/edit/{id}', [\App\Http\Controllers\KategoriController::class, 'edit'])->name('kategori.edit');
+Route::post('/categories/edit/{id}', [\App\Http\Controllers\KategoriController::class, 'update'])->name('kategori.edit');
+Route::delete('/categories/hapus/{id}',[\App\Http\Controllers\KategoriController::class, 'destroy'])->name('kategori.destroy');
 
 /** Data Tag*/
 Route::prefix('a')->name('admin.')->group(function () {
     Route::resource('/tags', App\Http\Controllers\TagController::class );
     Route::resource('/post', App\Http\Controllers\PostController::class );
-    Route::resource('/pengumuman', App\Http\Controllers\PostController::class );
-    Route::resource('/produk-hukum', App\Http\Controllers\PostController::class );
-    Route::resource('/materi-ppid', App\Http\Controllers\PostController::class );
-    Route::resource('/materi-umum', App\Http\Controllers\PostController::class );
-    Route::resource('/laporan-pengaduan', App\Http\Controllers\PostController::class );
-    Route::resource('/berita-ppid', App\Http\Controllers\PostController::class );
-    Route::resource('/artikel', App\Http\Controllers\PostController::class );
-    Route::resource('/narasi-tunggal', App\Http\Controllers\PostController::class );
-    Route::resource('/galeri', App\Http\Controllers\PostController::class );
-    Route::resource('/infografis', App\Http\Controllers\PostController::class );
+    Route::get('/pengumuman', [\App\Http\Controllers\PostController::class, 'indexpengumuman'])->name('pengumuman.index');
+    Route::get('/produk-hukum', [\App\Http\Controllers\PostController::class, 'indexproduk'])->name('pengumuman.index');
+    Route::get('/materi-ppid-kota',  [\App\Http\Controllers\PostController::class, 'materippid'])->name('ppidmateri.index');
+    Route::get('/materi-umum', [\App\Http\Controllers\PostController::class, 'materiumum'])->name('materiumum.index');
+    Route::get('/laporan-pengaduan', [\App\Http\Controllers\PostController::class, 'pengaduan'])->name('pengaduan.index');
+    Route::get('/berita-ppid', [\App\Http\Controllers\PostController::class, 'berita'])->name('berita.index');
+    Route::get('/artikel', [\App\Http\Controllers\PostController::class, 'artikel'])->name('artikel.index');
+    Route::get('/narasi-tunggal', [\App\Http\Controllers\PostController::class, 'narasi'])->name('narasi.index');
+    Route::get('/galeri', [\App\Http\Controllers\PostController::class, 'galeri'])->name('galeri.index');
+    Route::get('/infografis', [\App\Http\Controllers\PostController::class, 'infografis'])->name('infografis.index');
     Route::get('document/destroy/{document}', [App\Http\Controllers\PostController::class, 'destroy_document'] )->name('destroy_document');
     Route::get('berkas/destroy/{berkas}', [App\Http\Controllers\ProfileController::class, 'destroy_berkas'] )->name('destroy_berkas');
     Route::get('berkasppid/destroy/{berkasppid}', [App\Http\Controllers\ProfilePPIDController::class, 'destroy_berkasppid'] )->name('destroy_berkasppid');

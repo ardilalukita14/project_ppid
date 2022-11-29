@@ -91,8 +91,11 @@
               <li class="{{ (request()->is('informasi/informasi-dikecualikan-penetapan-dan-proses-uji-konsekuensi')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/informasi-dikecualikan-penetapan-dan-proses-uji-konsekuensi"><i class="fas fa-clock"></i> <span>Informasi Dikecualikan</span></a></li>
 
             <li class="menu-header">Dokumen</li>
-            <li><a class="nav-link" href="/kategori"><i class="fas fa-columns"></i> <span>Kategori</span></a></li>
-            <li><a class="nav-link" href="/a/tags"><i class="fas fa-bookmark"></i> <span>Tag</span></a></li>
+            <li class="{{ (request()->is('categories')) ? 'active' : '' }}"><a class="nav-link" href="/categories"><i class="fas fa-columns"></i> <span>Kategori</span></a></li>
+            <li class="{{ (request()->is('a/tags')) ? 'active' : '' }}"><a class="nav-link" href="/a/tags"><i class="fas fa-bookmark"></i> <span>Tag</span></a></li>
+            <li class="{{ (request()->is('a/post')) ? 'active' : '' }}"><a class="nav-link" href="/a/post"><i class="fas fa-folder-open"></i> <span>Posting</span></a></li>
+            
+            <li class="menu-header">Kategori Postingan</li>
             <li class="{{ (request()->is('a/pengumuman')) ? 'active' : '' }}"><a class="nav-link" href="/a/pengumuman"><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>
             <li class="{{ (request()->is('a/produk-hukum')) ? 'active' : '' }}"><a class="nav-link" href="/a/produk-hukum"><i class="fas fa-ribbon"></i> <span>Produk Hukum</span></a></li>
 
@@ -108,7 +111,7 @@
             <li class="dropdown">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-envelope"></i> <span>Materi PPID</span></a>
               <ul class="dropdown-menu">
-              <li class="{{ (request()->is('a/materi-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/a/materi-ppid">Materi PPID Kota</a></li>
+              <li class="{{ (request()->is('a/materi-ppid-kota')) ? 'active' : '' }}"><a class="nav-link" href="/a/materi-ppid-kota">Materi PPID Kota</a></li>
               <li class="{{ (request()->is('a/materi-umum')) ? 'active' : '' }}"><a class="nav-link" href="/a/materi-umum">Materi Umum</a></li>
               </ul>
             </li>
