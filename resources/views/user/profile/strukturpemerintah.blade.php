@@ -21,7 +21,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">Pemerintah Kota Madiun</a></li>
-                      <li class="breadcrumb-item"><a href="#">Bagan Struktur Organisasi Pemerintah</a></li>
+                      <li class="breadcrumb-item"><a href="#">Bagan Struktur Organisasi Pemerintah Kota Madiun</a></li>
                     </ol>
                 </nav>
               </div>

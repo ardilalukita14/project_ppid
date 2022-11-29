@@ -21,7 +21,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">Pemerintah Kota Madiun</a></li>
-                      <li class="breadcrumb-item"><a href="#">Profil PPID Kota Madiun</a></li>
+                      <li class="breadcrumb-item"><a href="#">Profil Pejabat Daerah</a></li>
                     </ol>
                 </nav>
               </div>
