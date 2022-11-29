@@ -86,12 +86,15 @@
 
               </div>
               <div class="d-flex">
+                <div class="ts-service-box-img">
+                    <img loading="lazy" src="{{asset('frontend/images/icon-image/service-icon1.png')}}" alt="service-icon" />
+                </div>
                 <div class="ts-service-info">
-                <h3 class="service-box-title" style="margin-left:-30px; width:350px; text-align:justify;">
+                <h3 class="service-box-title" style="text-align:justify;">
                     <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
                     <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}">{{  $data->judul }}</a>
                   </h3>
-                  <h8 style="margin-left:-30px; width:350px; text-align:justify;">
+                <h8 style="text-align:justify;">
                 <span class="post-author">
                   <a href="#"> {{$data->users->name}} |</a>
                 </span>
@@ -100,16 +103,9 @@
                 </span>
                 <span class="post-comment">
                   <a href="#" class="comments-link"> {{ date('d M Y', strtotime($data->tgl_post)) }}</a></span>
-                </h8>
-                <style>
-                p{
-                  margin-left:-30px; 
-                  width:350px; 
-                  text-align:justify;
-                }
-                </style>
-                  <p>{!! $data->contents!!}</p>
-                    <a class="learn-more d-inline-block" style="margin-left:-30px; width:350px; text-align:justify;" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}"  aria-label="service-datas"><i class="fa fa-caret-right"></i> Selanjutnya</a>
+                </h8> 
+                <p>{!!$data->contents!!}</p>
+                    <a class="learn-more d-inline-block" style="text-align:justify;" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}"  aria-label="service-datas"><i class="fa fa-caret-right"></i> Selanjutnya</a>
                 </div>
               </div>
           </div><!-- Service1 end -->
@@ -174,147 +170,29 @@
   <!--/ Container end -->
 </section><!-- Project area end -->
 
-<section class="content">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-          <h3 class="column-title">Testimonials</h3>
-
-          <div id="testimonial-slide" class="testimonial-slide">
-              <div class="item">
-                <div class="quote-item">
-                    <span class="quote-text">
-                      Question ran over her cheek When she reached the first hills of the Italic Mountains, she had a last
-                      view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the
-                      subline of her own road.
-                    </span>
-
-                    <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="frontend/images/clients/testimonial1.png" alt="testimonial">
-                      <div class="quote-item-info">
-                          <h3 class="quote-author">Gabriel Denis</h3>
-                          <span class="quote-subtext">Chairman, OKT</span>
-                      </div>
-                    </div>
-                </div><!-- Quote item end -->
-              </div>
-              <!--/ Item 1 end -->
-
-              <div class="item">
-                <div class="quote-item">
-                    <span class="quote-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion ullamco laboris
-                      nisi aliquip consequat.
-                    </span>
-
-                    <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="frontend/images/clients/testimonial2.png" alt="testimonial">
-                      <div class="quote-item-info">
-                          <h3 class="quote-author">Weldon Cash</h3>
-                          <span class="quote-subtext">CFO, First Choice</span>
-                      </div>
-                    </div>
-                </div><!-- Quote item end -->
-              </div>
-              <!--/ Item 2 end -->
-
-              <div class="item">
-                <div class="quote-item">
-                    <span class="quote-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion ullamco laboris
-                      nisi ut commodo consequat.
-                    </span>
-
-                    <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="frontend/images/clients/testimonial3.png" alt="testimonial">
-                      <div class="quote-item-info">
-                          <h3 class="quote-author">Minter Puchan</h3>
-                          <span class="quote-subtext">Director, AKT</span>
-                      </div>
-                    </div>
-                </div><!-- Quote item end -->
-              </div>
-              <!--/ Item 3 end -->
-
-          </div>
-          <!--/ Testimonial carousel end-->
-        </div><!-- Col end -->
-
-        <div class="col-lg-6 mt-5 mt-lg-0">
-
-          <h3 class="column-title">Happy Clients</h3>
-
-          <div class="row all-clients">
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="frontend/images/clients/client1.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 1 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="frontend/images/clients/client2.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 2 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="frontend/images/clients/client3.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 3 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="frontend/images/clients/client4.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 4 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="frontend/images/clients/client5.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 5 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="frontend/images/clients/client6.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 6 end -->
-
-          </div><!-- Clients row end -->
-
-        </div><!-- Col end -->
-
-    </div>
-    <!--/ Content row end -->
-  </div>
-  <!--/ Container end -->
-</section><!-- Content end -->
-
 <section class="subscribe no-padding">
   <div class="container">
     <div class="row">
         <div class="col-lg-4">
           <div class="subscribe-call-to-acton">
-              <h3>Can We Help?</h3>
-              <h4>(+9) 847-291-4353</h4>
+              <h3>Temukan Informasi</h3>
+              <h4>Yang Anda Inginkan...</h4>
           </div>
         </div><!-- Col end -->
 
         <div class="col-lg-8">
           <div class="ts-newsletter row align-items-center">
               <div class="col-md-5 newsletter-introtext">
-                <h4 class="text-white mb-0">Newsletter Sign-up</h4>
-                <p class="text-white">Latest updates and news</p>
+                <h4 class="text-white mb-0">Search</h4>
+                <p class="text-white">Informasi yang dibutuhkan</p>
               </div>
 
               <div class="col-md-7 newsletter-form">
-                <form action="#" method="post">
+                 <form action="{{ route('reader.search.berita') }}" method="POST">
+                  @csrf
                     <div class="form-group">
-                      <label for="newsletter-email" class="content-hidden">Newsletter Email</label>
-                      <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Your your email and hit enter" autocomplete="off">
+                      <label for="newsletter-email" class="content-hidden">Search Berita</label>
+                      <input type="text" value="{{ old('cari') }}" name="cari" class="form-control form-control-lg" placeholder="Search berita" autocomplete="off">
                     </div>
                 </form>
               </div>

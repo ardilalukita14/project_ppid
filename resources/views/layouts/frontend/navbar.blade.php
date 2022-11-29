@@ -125,11 +125,14 @@
         </div><!-- Search end -->
 
         <div class="search-block" style="display: none;">
+        <form action="{{ route('reader.search.berita') }}" method="POST"  class="mt-3" style="margin-left:20px;">
+              @csrf
           <label for="search-field" class="w-100 mb-0">
-            <input type="text" class="form-control" id="search-field" placeholder="Type what you want and enter">
+          <input type="text" value="{{ old('cari') }}" name="cari" class="form-control" placeholder="Temukan informasi">
           </label>
           <span class="search-close">&times;</span>
-        </div><!-- Site search end -->
+        </div><!-- Site search end -->   
+      </form>
     </div>
     <!--/ Container end -->
 

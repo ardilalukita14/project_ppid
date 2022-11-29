@@ -74,7 +74,8 @@
             <h3 class="widget-title" style="margin-left:20px;">Search</h3>
                 <form action="{{ route('reader.search.berita') }}" method="POST"  class="mt-3" style="margin-left:20px;">
                   @csrf
-                    <input type="text" value="{{ old('cari') }}" name="cari" style="padding-right:10px; padding-left:10px;">  <input type="submit" value="Search" style="color:white;"><i class="bi bi-search"></i></input>
+                    <input type="text" value="{{ old('cari') }}" name="cari" style="padding-right:10px; padding-left:10px;">  
+                      <input type="submit" value="Search" style="color:white;"><i class="bi bi-search"></i></input>
                 </form>
           </div><!-- End sidebar search formn-->
           <br>

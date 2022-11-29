@@ -47,9 +47,9 @@
 
             <div class="entry-content">
               <p style="margin-top:32px;">{!! $profile->deskripsi !!}</p>
-            </div>
 
-            @foreach($berkas as $data)
+
+              @foreach($berkas as $data)
               @if ($data->jenis_file == "gambar")
               <hr>
               <div class="sidebar sidebar-right">

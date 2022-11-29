@@ -133,7 +133,10 @@ class PostController extends Controller
     public function show(Post $post)
     {
         $data = Post::where('id', '=', $post->id)->get();
-        $documents = Document::where('posts_id', '=', $post->id)->where('jenis_file', '=', 'gambar')->get();
+        $galleries = Document::where('posts_id', '=', $post->id)->where('jenis_file', '=', 'gambar')->get();
+        $files = Document::where('posts_id', '=', $post->id)->where('jenis_file', '=', 'lampiran')->get();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+        $categories = Kategori::all();
 
         $parent = "berita";
         $subjudul = "Detail Berita";
@@ -141,7 +144,7 @@ class PostController extends Controller
         $root_parent = "/";
         $title = "Detail Berita";
 
-        return view('admin.posts.show', compact('documents','subjudul','data', 'parent', 'child', 'root_parent', 'title'));
+        return view('admin.posts.show', compact('galleries','subjudul','data', 'files', 'beritaterkini', 'categories', 'parent', 'child', 'root_parent', 'title'));
     }
 
     /**
