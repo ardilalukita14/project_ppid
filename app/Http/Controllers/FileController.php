@@ -7,10 +7,10 @@ use Illuminate\Support\Facades\Storage;
 
 class FileController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware(['auth','verified']);
-    // }
+    public function __construct()
+    {
+        $this->middleware(['auth','verified']);
+    }
 
     public function show(Request $request)
     {
