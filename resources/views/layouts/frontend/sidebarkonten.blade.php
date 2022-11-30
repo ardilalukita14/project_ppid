@@ -6,7 +6,7 @@
         <ul class="list-unstyled">
           <li class="d-flex align-items-center">
             <div class="posts-thumb">
-              <a href="#"><img loading="lazy" alt="img" src="frontend/images/news/news1.jpg"></a>
+              <a href="#"><img loading="lazy" alt="img" src="{{asset('frontend/images/news/news1.jpg')}}"></a>
             </div>
             <div class="post-info">
               <h4 class="entry-title">
@@ -17,7 +17,7 @@
 
           <li class="d-flex align-items-center">
             <div class="posts-thumb">
-              <a href="#"><img loading="lazy" alt="img" src="frontend/images/news/news2.jpg"></a>
+              <a href="#"><img loading="lazy" alt="img" src="{{asset('frontend/images/news/news2.jpg')}}"></a>
             </div>
             <div class="post-info">
               <h4 class="entry-title">
@@ -28,7 +28,7 @@
 
           <li class="d-flex align-items-center">
             <div class="posts-thumb">
-              <a href="#"><img loading="lazy" alt="img" src="frontend/images/news/news3.jpg"></a>
+              <a href="#"><img loading="lazy" alt="img" src="{{asset('frontend/images/news/news3.jpg')}}"></a>
             </div>
             <div class="post-info">
               <h4 class="entry-title">

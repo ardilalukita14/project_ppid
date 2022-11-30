@@ -38,7 +38,7 @@
       <div class="col-lg-8 mb-5 mb-lg-0">
         <div class="post">
           <div class="post-media post-image">
-            <img loading="lazy" src="frontend/images/news/news1.jpg" class="img-fluid" alt="post-image">
+            <img loading="lazy" src="{{asset('frontend/images/news/news1.jpg')}}" class="img-fluid" alt="post-image">
           </div>
 
           <div class="post-body">
@@ -115,7 +115,7 @@
 
         <div class="post">
           <div class="post-media post-image">
-            <img loading="lazy" src="frontend/images/news/news3.jpg" class="img-fluid" alt="post-image">
+            <img loading="lazy" src="{{asset('frontend/images/news/news3.jpg')}}" class="img-fluid" alt="post-image">
           </div>
 
           <div class="post-body">

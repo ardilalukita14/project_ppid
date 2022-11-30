@@ -1,240 +1,134 @@
-<div class="nk-sidebar">
-    <div class="nk-nav-scroll">
-        <ul class="metismenu" id="menu">
-            <li class="nav-label">Dashboard</li>
-            <li>
-                <a href="/dashboard-admin" aria-expanded="false">
-                    <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
-                </a>
-            </li>
-            {{-- <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="./index.html">Home 1</a></li>
-                    <!-- <li><a href="./index-2.html">Home 2</a></li> -->
-                </ul>
-            </li> --}}
-            <hr>
+ <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="/dashboard-admin-ppid">PPID KOTA MADIUN</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="/dashboard-admin-ppid">PPID</a>
+          </div>
 
-            <li class="nav-label">Profil</li>
-            <li class="mega-menu mega-menu-sm">
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="fa fa-globe"></i><span class="nav-text">Pemerintah Kota Madiun</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="#">Profil Kota Madiun</a></li>
-                    <li><a href="#">Sejarah Kota Madiun</a></li>
-                    <li><a href="#">Letak Geografis</a></li>
-                    <li><a href="#">Profil Pemerintah</a></li>
-                    <li><a href="#">Profil Pejabat Daerah</a></li>
-                    <li><a href="#">LHKPN Pejabat Publik Pemerintah</a></li>
-                    <li><a href="#">Visi Misi Kota Madiun</a></li>
-                    <li><a href="#">Struktur Organisasi Pemerintah</a></li>
-                </ul>
+          <ul class="sidebar-menu">
+            <li class="menu-header">Dashboard</li>
+            <li class="{{ (request()->is('dashboard-admin-ppid')) ? 'active' : '' }}">
+                <a class="nav-link"
+                    href="/dashboard-admin-ppid"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
             </li>
-            <li class="mega-menu mega-menu-sm">
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="fas fa-file-text"></i><span class="nav-text"> PPID Kota Madiun</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="#">Profil PPID</a></li>
-                    <li><a href="#">Visi Misi PPID</a></li>
-                    <li><a href="#">Bagan Struktur</a></li>
-                    <li><a href="#">SOP</a></li>
-                    <li><a href="#">Tupoksi</a></li>
-                    <li><a href="#">SK PPID</a></li>
-                    <li><a href="#">Perwal</a></li>
-                    <li><a href="#">Maklumat</a></li>
-                    <li><a href="#">Jam Pelayanan</a></li>
-                    <li><a href="#">SK Daftar Informasi Publik</a></li>
-                </ul>
-            </li>
-            <hr>
 
-            <li class="nav-label">Informasi Publik</li>
-            <li class="mega-menu mega-menu-sm">
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="far fa-list-alt"></i><span class="nav-text">Daftar Informasi Publik</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="#">Daftar Informasi Publik 2022</a></li>
-                    <li><a href="#">Daftar Informasi PPID Pelaksana</a></li>
-                </ul>
+            <li class="menu-header">Profil Kota Madiun</li>
+            <li class="nav-item dropdown {{ (request()->is('profile/kota-madiun','profile/sejarah',
+                                                            'profile/letak-geografis',
+                                                            'profile/profil-pemerintah','profile/profil-pejabat',
+                                                            'profile/lhkpn-pejabat','profile/visi-misi',
+                                                            'profile/struktur-pemerintah','profile/struktur-unit-kerja',
+                                                            'profile/tupoksi-pemerintah','profile/tupoksi-unit-kerja',
+                                                            'profile/agenda-kerja-kegiatan-pimpinan')) ? 'active' : '' }}">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-globe"></i> <span>Pemerintah Kota</span></a>
+              <ul class="dropdown-menu">
+                <li class="{{ (request()->is('profile/kota-madiun')) ? 'active' : '' }}"><a class="nav-link" href="{{route('madiunprofile.index')}}">Profil Kota Madiun</a></li>
+                <li class="{{ (request()->is('profile/sejarah')) ? 'active' : '' }}"><a class="nav-link" href="{{route('sejarah.index')}}">Sejarah Kota Madiun</a></li>
+                <li class="{{ (request()->is('profile/letak-geografis')) ? 'active' : '' }}"><a class="nav-link" href="{{route('geografis.index')}}">Letak Geografis</a></li>
+                <li class="{{ (request()->is('profile/profil-pemerintah')) ? 'active' : '' }}"><a class="nav-link" href="{{route('profil.pemerintah.index')}}">Profil Pemerintah</a></li>
+                <li class="{{ (request()->is('profile/profil-pejabat')) ? 'active' : '' }}"><a class="nav-link" href="{{route('profil.pejabat.index')}}">Profil Pejabat Daerah</a></li>
+                <li class="{{ (request()->is('profile/lhkpn-pejabat')) ? 'active' : '' }}"><a class="nav-link" href="{{route('lhkpn.index')}}">LHKPN Pejabat Publik</a></li>
+                <li class="{{ (request()->is('profile/visi-misi')) ? 'active' : '' }}"><a class="nav-link" href="{{route('visimisi.index')}}">Visi Misi Kota Madiun</a></li>
+                <li class="nav-item dropdown {{ (request()->is('profile/struktur-pemerintah',
+                                                                'profile/struktur-unit-kerja')) ? 'active' : '' }}">
+                    <a href="#" class="nav-link has-dropdown"><span>Struktur Organisasi</span></a>
+                  <ul class="dropdown-menu">
+                    <li class="{{ (request()->is('profile/struktur-pemerintah')) ? 'active' : '' }}"><a class="nav-link" href="{{route('struktur.pemerintah.index')}}">Organisasi Pemerintah</a></li>
+                    <li class="{{ (request()->is('profile/struktur-unit-kerja')) ? 'active' : '' }}"><a class="nav-link" href="{{route('struktur.unitkerja.index')}}">Organisasi Unit Kerja</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown {{ (request()->is('profile/tupoksi-pemerintah',
+                                                                'profile/tupoksi-unit-kerja')) ? 'active' : '' }}">
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><span>Tupoksi</span></a>
+                  <ul class="dropdown-menu">
+                    <li class="{{ (request()->is('profile/tupoksi-pemerintah')) ? 'active' : '' }}"><a class="nav-link" href="{{route('tupoksi.pemerintah.index')}}">Pemerintah</a></li>
+                    <li class="{{ (request()->is('profile/tupoksi-unit-kerja')) ? 'active' : '' }}"><a class="nav-link" href="{{route('tupoksi.unitkerja.index')}}">Unit Kerja</a></li>
+                  </ul>
+                </li>
+                <li class="{{ (request()->is('profile/agenda-kerja-kegiatan-pimpinan')) ? 'active' : '' }}"><a class="nav-link" style ="margin-top:10px;" href="{{route('agenda.index')}}">Agenda Kerja & Kegiatan Pimpinan</a></li>
+              </ul>
             </li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="icon-calender menu-icon"></i><span class="nav-text">Informasi Secara Berkala</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="ti ti-file"></i><span class="nav-text">Informasi Serta Merta</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="far fa-clock-o"></i><span class="nav-text">Informasi Setiap Saat</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="far fa-times-circle"></i><span class="nav-text">Informasi Dikecualikan</span>
-                </a>
-            </li>
-            <hr>
 
-            <li class="nav-label">Dokumen</li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="fas fa-bullhorn"></i><span class="nav-text">Pengumuman</span>
-                </a>
+            <li class="nav-item dropdown {{ (request()->is('profile/ppid','profile/visi-misi-ppid',
+                                                            'profile/bagan-struktur-ppid',
+                                                            'profile/sop-ppid','profile/tupoksi-ppid',
+                                                            'profile/sk-ppid','profile/perwal-ppid',
+                                                            'profile/maklumat-ppid','profile/jam-pelayanan',
+                                                            'profile/sk-daftar-informasi-publik',
+                                                            'profile/sk-daftar-informasi-dikecualikan',
+                                                            'profile/agenda-kerja-kegiatan-pimpinan',
+                                                            'ppid-pelaksana')) ? 'active' : '' }}">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-file-alt"></i> <span>PPID Kota Madiun</span></a>
+              <ul class="dropdown-menu">
+                    <li class="{{ (request()->is('profile/ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/ppid">Profil PPID</a></li>
+                    <li class="{{ (request()->is('profile/visi-misi-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/visi-misi-ppid">Visi Misi PPID</a></li>
+                    <li class="{{ (request()->is('profile/bagan-struktur-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/bagan-struktur-ppid">Bagan Struktur</a></li>
+                    <li class="{{ (request()->is('profile/sop-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sop-ppid">SOP</a></li>
+                    <li class="{{ (request()->is('profile/tupoksi-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/tupoksi-ppid">Tupoksi</a></li>
+                    <li class="{{ (request()->is('profile/sk-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sk-ppid">SK PPID</a></li>
+                    <li class="{{ (request()->is('profile/perwal-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/perwal-ppid">Perwal</a></li>
+                    <li class="{{ (request()->is('profile/maklumat-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/maklumat-ppid">Maklumat</a></li>
+                    <li class="{{ (request()->is('profile/jam-pelayanan')) ? 'active' : '' }}"><a class="nav-link" href="/profile/jam-pelayanan">Jam Pelayanan</a></li>
+                    <li class="{{ (request()->is('profile/sk-daftar-informasi-publik')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sk-daftar-informasi-publik">SK Daftar Informasi Publik</a></li>
+                    <li class="{{ (request()->is('profile/sk-daftar-informasi-dikecualikan')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sk-daftar-informasi-dikecualikan">SK Daftar Dikecualikan</a></li>
+                    <li class="{{ (request()->is('ppid-pelaksana')) ? 'active' : '' }}"><a class="nav-link" href="/ppid-pelaksana">PPID Pelaksana</a></li>
+              </ul>
             </li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Produk Hukum</span>
-                </a>
-            </li>
-            <li class="mega-menu mega-menu-sm">
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="icon-book-open menu-icon"></i><span class="nav-text">SOP</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="#">Pedoman Pengelolaan Organisasi</a></li>
-                    <li><a href="#">Pedoman Pengelolaan Administrasi</a></li>
-                    <li><a href="#">Pedoman Pengelolaan Kepegawaian</a></li>
-                    <li><a href="#">Pedoman Pengelolaan Keuangan</a></li>
-                </ul>
-            </li>
-            <li class="mega-menu mega-menu-sm">
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="icon-envelope menu-icon"></i><span class="nav-text">Materi PPID</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="#">Materi PPID Kota</a></li>
-                    <li><a href="#">Materi Umum</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="ti-headphone-alt"></i><span class="nav-text">Laporan Pengaduan</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="far fa-newspaper-o"></i><span class="nav-text">Berita PPID</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Artikel</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Narasi Tunggal</span>
-                </a>
-            </li>
-            <hr>
 
-            <li class="nav-label">Galeri</li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="far fa-image"></i><span class="nav-text">Galeri</span>
-                </a>
+            <li class="menu-header">Informasi Publik</li>
+            <li class="nav-item dropdown {{ (request()->is('informasi/daftar-informasi-publik-2022','informasi/daftar-informasi-publik-ppid-pelaksana')) ? 'active' : '' }}">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file"></i> <span>Daftar Informasi Publik</span></a>
+                <ul class="dropdown-menu">
+                  <li class="{{ (request()->is('informasi/daftar-informasi-publik-2022')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/daftar-informasi-publik-2022">Informasi Publik 2022</a></li>
+                  <li class="{{ (request()->is('informasi/daftar-informasi-publik-ppid-pelaksana')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/daftar-informasi-publik-ppid-pelaksana">Informasi Publik PPID</a></li>
+                </ul>
+              </li>
+              <li class="{{ (request()->is('informasi/informasi-secara-berkala')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/informasi-secara-berkala"><i class="far fa-calendar-alt"></i> <span>Informasi Secara Berkala</span></a></li>
+              <li class="{{ (request()->is('informasi/informasi-serta-merta')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/informasi-serta-merta"><i class="far fa-file"></i> <span>Informasi Serta Merta</span></a></li>
+              <li class="{{ (request()->is('informasi/informasi-setiap-saat')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/informasi-setiap-saat"><i class="fas fa-clock"></i> <span>Informasi Setiap Saat</span></a></li>
+              <li class="{{ (request()->is('informasi/informasi-dikecualikan-penetapan-dan-proses-uji-konsekuensi')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/informasi-dikecualikan-penetapan-dan-proses-uji-konsekuensi"><i class="fas fa-clock"></i> <span>Informasi Dikecualikan</span></a></li>
+
+            <li class="menu-header">Dokumen</li>
+            <li class="{{ (request()->is('categories')) ? 'active' : '' }}"><a class="nav-link" href="/categories"><i class="fas fa-columns"></i> <span>Kategori</span></a></li>
+            <li class="{{ (request()->is('a/tags')) ? 'active' : '' }}"><a class="nav-link" href="/a/tags"><i class="fas fa-bookmark"></i> <span>Tag</span></a></li>
+            <li class="{{ (request()->is('a/post')) ? 'active' : '' }}"><a class="nav-link" href="/a/post"><i class="fas fa-folder-open"></i> <span>Posting</span></a></li>
+            
+            <li class="menu-header">Kategori Postingan</li>
+            <li class="{{ (request()->is('a/pengumuman')) ? 'active' : '' }}"><a class="nav-link" href="/a/pengumuman"><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>
+            <li class="{{ (request()->is('a/produk-hukum')) ? 'active' : '' }}"><a class="nav-link" href="/a/produk-hukum"><i class="fas fa-ribbon"></i> <span>Produk Hukum</span></a></li>
+
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>SOP</span></a>
+              <ul class="dropdown-menu">
+              <li class="{{ (request()->is('informasi/sop-pedoman-pengelolaan-organisasi')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/sop-pedoman-pengelolaan-organisasi">Pengelolaan Organisasi</a></li>
+              <li class="{{ (request()->is('informasi/sop-pedoman-pengelolaan-administrasi')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/sop-pedoman-pengelolaan-administrasi">Pengelolaan Administrasi</a></li>
+              <li class="{{ (request()->is('informasi/sop-pedoman-pengelolaan-kepegawaian')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/sop-pedoman-pengelolaan-kepegawaian">Pengelolaan Kepegawaian</a></li>
+              <li class="{{ (request()->is('informasi/sop-pedoman-pengelolaan-keuangan')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/sop-pedoman-pengelolaan-keuangan">Pengelolaan Keuangan</a></li>
+              </ul>
             </li>
-            <li>
-                <a href="#" aria-expanded="false">
-                    <i class="fas fa-file-image-o"></i><span class="nav-text"> Infografis</span>
-                </a>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-envelope"></i> <span>Materi PPID</span></a>
+              <ul class="dropdown-menu">
+              <li class="{{ (request()->is('a/materi-ppid-kota')) ? 'active' : '' }}"><a class="nav-link" href="/a/materi-ppid-kota">Materi PPID Kota</a></li>
+              <li class="{{ (request()->is('a/materi-umum')) ? 'active' : '' }}"><a class="nav-link" href="/a/materi-umum">Materi Umum</a></li>
+              </ul>
             </li>
-            <hr>
+            <li class="{{ (request()->is('a/laporan-pengaduan')) ? 'active' : '' }}"><a class="nav-link" href="/a/laporan-pengaduan"><i class="fas fa-headset"></i> <span>Laporan Pengaduan</span></a></li>
+            <li class="{{ (request()->is('a/berita-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/a/berita-ppid"><i class="fas fa-newspaper"></i> <span>Berita PPID</span></a></li>
+            <li class="{{ (request()->is('a/artikel')) ? 'active' : '' }}"><a class="nav-link" href="/a/artikel"><i class="fas fa-quote-left"></i> <span>Artikel</span></a></li>
+            <li class="{{ (request()->is('a/narasi-tunggal')) ? 'active' : '' }}"><a class="nav-link" href="/a/narasi-tunggal"><i class="fas fa-microphone"></i> <span>Narasi Tunggal</span></a></li>
 
 
-            {{-- <li class="nav-label">UI Components</li>
-            <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="icon-grid menu-icon"></i><span class="nav-text">UI Components</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="./ui-accordion.html">Accordion</a></li>
-                    <li><a href="./ui-alert.html">Alert</a></li>
-                    <li><a href="./ui-badge.html">Badge</a></li>
-                    <li><a href="./ui-button.html">Button</a></li>
-                    <li><a href="./ui-button-group.html">Button Group</a></li>
-                    <li><a href="./ui-cards.html">Cards</a></li>
-                    <li><a href="./ui-carousel.html">Carousel</a></li>
-                    <li><a href="./ui-dropdown.html">Dropdown</a></li>
-                    <li><a href="./ui-list-group.html">List Group</a></li>
-                    <li><a href="./ui-media-object.html">Media Object</a></li>
-                    <li><a href="./ui-modal.html">Modal</a></li>
-                    <li><a href="./ui-pagination.html">Pagination</a></li>
-                    <li><a href="./ui-popover.html">Popover</a></li>
-                    <li><a href="./ui-progressbar.html">Progressbar</a></li>
-                    <li><a href="./ui-tab.html">Tab</a></li>
-                    <li><a href="./ui-typography.html">Typography</a></li>
-                </ul>
-            </li>
-            <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
-                </a>
-                <ul aria-expanded="false"> -->
-                    <li><a href="./uc-nestedable.html">Nestedable</a></li>
-                    <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
-                    <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
-                    <li><a href="./uc-toastr.html">Toastr</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="widgets.html" aria-expanded="false">
-                    <i class="icon-badge menu-icon"></i><span class="nav-text">Widget</span>
-                </a>
-            </li>
-            <li class="nav-label">Forms</li>
-            <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="icon-note menu-icon"></i><span class="nav-text">Forms</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="./form-basic.html">Basic Form</a></li>
-                    <li><a href="./form-validation.html">Form Validation</a></li>
-                    <li><a href="./form-step.html">Step Form</a></li>
-                    <li><a href="./form-editor.html">Editor</a></li>
-                    <li><a href="./form-picker.html">Picker</a></li>
-                </ul>
-            </li>
-            <li class="nav-label">Table</li>
-            <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="icon-menu menu-icon"></i><span class="nav-text">Table</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="./table-basic.html" aria-expanded="false">Basic Table</a></li>
-                    <li><a href="./table-datatable.html" aria-expanded="false">Data Table</a></li>
-                </ul>
-            </li>
-            <li class="nav-label">Pages</li>
-            <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                    <i class="icon-notebook menu-icon"></i><span class="nav-text">Pages</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="./page-login.html">Login</a></li>
-                    <li><a href="./page-register.html">Register</a></li>
-                    <li><a href="./page-lock.html">Lock Screen</a></li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
-                        <ul aria-expanded="false">
-                            <li><a href="./page-error-404.html">Error 404</a></li>
-                            <li><a href="./page-error-403.html">Error 403</a></li>
-                            <li><a href="./page-error-400.html">Error 400</a></li>
-                            <li><a href="./page-error-500.html">Error 500</a></li>
-                            <li><a href="./page-error-503.html">Error 503</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li> --}}
-        </ul>
-    </div>
-</div>
+                <li class="menu-header">Galeri</li>
+                <li class="{{ (request()->is('a/galeri')) ? 'active' : '' }}"><a class="nav-link" href="/a/galeri"><i class="far fa-image"></i> <span>Galeri</span></a></li>
+                <li class="{{ (request()->is('a/infografis')) ? 'active' : '' }}"><a class="nav-link" href="/a/infografis"><i class="fas fa-file-image"></i> <span>Infografis</span></a></li>
+
+          </ul>
+
+          <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+
+          </div>
+        </aside>
+      </div>

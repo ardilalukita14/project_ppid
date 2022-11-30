@@ -38,7 +38,7 @@
       <div class="col-lg-8 mb-5 mb-lg-0">
         <div class="post">
           <div class="post-media post-image">
-            <img loading="lazy" src="frontend/images/news/news1.jpg" class="img-fluid" alt="post-image">
+            <img loading="lazy" src="{{asset('frontend/images/news/news1.jpg')}}" class="img-fluid" alt="post-image">
           </div>
 
           <div class="post-body">
@@ -115,7 +115,7 @@
 
         <div class="post">
           <div class="post-media post-image">
-            <img loading="lazy" src="frontend/images/news/news3.jpg" class="img-fluid" alt="post-image">
+            <img loading="lazy" src="{{asset('frontend/images/news/news3.jpg')}}" class="img-fluid" alt="post-image">
           </div>
 
           <div class="post-body">
@@ -182,7 +182,7 @@
 
               <li class="d-flex align-items-center">
                 <div class="posts-thumb">
-                  <a href="#"><img loading="lazy" alt="img" src="frontend/images/news/news2.jpg"></a>
+                  <a href="#"><img loading="lazy" alt="img" src="{{asset('frontend/images/news/news2.jpg')}}"></a>
                 </div>
                 <div class="post-info">
                   <h4 class="entry-title">
@@ -193,7 +193,7 @@
 
               <li class="d-flex align-items-center">
                 <div class="posts-thumb">
-                  <a href="#"><img loading="lazy" alt="img" src="frontend/images/news/news3.jpg"></a>
+                  <a href="#"><img loading="lazy" alt="img" src="{{asset('frontend/images/news/news3.jpg')}}"></a>
                 </div>
                 <div class="post-info">
                   <h4 class="entry-title">

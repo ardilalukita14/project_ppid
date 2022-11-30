@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Routing\Redirector;
-use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -39,35 +37,4 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-
-    public function showLoginForm(){
-        return view('auth.login');
-    }
-
-    public function login(Request $request){
-        $input = $request->all();
-        $this->validate($request,[
-             'email' => ['required', 'string', 'email', 'max:255', 'exists:users'],
-             'password' => ['required', 'string', 'min:8']
-        ]);
- 
-        if( auth()->attempt(array('email'=>$input['email'], 'password'=>$input['password'])) ){
-      
-         if( Auth()->user()->role == "admin"){
-             return redirect()->route('admin.index');
-         }
- 
-        }else{
-            return redirect()->redirect()->route('login')->with('error','Email dan Password Anda salah!');
-        }
-     }
-
-     public function logout(Request $request)
-     {
-         request()->session()->invalidate();
-  
-         request()->session()->regenerateToken();
-  
-         return redirect('/');
-     }
 }
