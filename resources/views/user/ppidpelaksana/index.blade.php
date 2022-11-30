@@ -52,17 +52,17 @@
                     <table class="table display table-bordered table-striped">
                       <thead>
                     <tr style="background-color: #ccd1d1;">
-                        <th scope="col" width="20px">No</th>
-                        <th scope="col" width="200px">Nama OPD </th>
-                        <th scope="col" width="300px">Alamat</th>
-                        <th scope="col" width="100px">No Tlp/Fax</th>
+                        <th scope="col" width="20px" style="text-align:center;">No</th>
+                        <th scope="col" width="220px" style="text-align:center;">Nama OPD </th>
+                        <th scope="col" width="200px" style="text-align:center;">Alamat</th>
+                        <th scope="col" width="180px" style="text-align:center;">No Tlp/Fax</th>
                     </tr>
                     </thead>
                     <tbody>
                         <tr>
                         @php $i=1 @endphp
                         @foreach ($profile as $data)
-                        <td>{{$i++}}</td>
+                        <td style="text-align:center;">{{$i++}}</td>
                         <td>{!! $data->nama_opd!!}</td>
                         <td>{!!$data->alamat!!}</td>
                         <td>{!!$data->telepon!!}</td>
