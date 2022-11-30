@@ -66,7 +66,7 @@
                   </div>
                 </div>
                 <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-archive"></i>
+                  <i class="fas fa-newspaper"></i>
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
@@ -118,7 +118,6 @@
           <div class="row">
             <div class="col-lg-8">
                 <div class="card-body">
-                  <canvas id="myChart" height="158"></canvas>
                 </div>
               </div>
             </div>

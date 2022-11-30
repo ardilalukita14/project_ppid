@@ -11,6 +11,25 @@
 @include('layouts.frontend.header')
 <!--/ Header end -->
 
+<div id="banner-area" class="banner-area" style="background-image:url({{asset('frontend/images/news/balkot.png')}})">
+  <div class="banner-text">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="banner-heading">
+                <h1 class="banner-title">Profil</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                      <li class="breadcrumb-item"><a href="#">Pemerintah Kota Madiun</a></li>
+                      <li class="breadcrumb-item"><a href="#">Sejarah Kota Madiun</a></li>
+                    </ol>
+                </nav>
+              </div>
+          </div><!-- Col end -->
+        </div><!-- Row end -->
+    </div><!-- Container end -->
+  </div><!-- Banner text end -->
+</div><!-- Banner area end -->
 <section id="main-container" class="main-container">
   <div class="container">
     <div class="row">
@@ -39,7 +58,6 @@
                 <span class="post-comment"><i class="far fa-calendar"></i> {{ date('d M Y', strtotime($beritaItem->tgl_post)) }}</span>
               </div>
               <h2 class="entry-title">
-              </div>
                   <h6 class="title">
                     <?php $date = DateTime::createFromFormat("Y-m-d", $beritaItem->tgl_post);?>
                     <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$beritaItem->slug] ) }}">{{  $beritaItem->judul }}</a>
@@ -61,14 +79,17 @@
         <div class="blog-pagination">
                 {{ $posts->links() }}
             </div><!-- End blog pagination -->
-
-      @else
-            <p style="text-align: center" data-aos="fade-in">Hasil pencarian berita tidak ditemukan</p>
-        @endif
+     
       </div><!-- Content Col end -->
-      
+       @else
+       <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="post">
+            <p style="text-align: center" data-aos="fade-in">Hasil pencarian berita tidak ditemukan</p>
+                </div>
+                </div>
+        @endif
+        
       <div class="col-lg-4">
-
         <div class="sidebar sidebar-right">
           <div class="sidebar-item search-form">
             <h3 class="widget-title" style="margin-left:20px;">Search</h3>
@@ -106,32 +127,15 @@
                 <li><a href="{{ route('contents_kategori', $kategori->slug) }}">{{ $kategori->nama_kategori }} <span>({{ $kategori->posts->count() }})</span></a></li>
             @endforeach
             </ul>
-        </div>
-        <!-- Categories end -->
-
-          <div class="widget widget-tags">
-            <h3 class="widget-title">Tags </h3>
-
-            <ul class="list-unstyled">
-              <li><a href="#">Construction</a></li>
-              <li><a href="#">Design</a></li>
-              <li><a href="#">Project</a></li>
-              <li><a href="#">Building</a></li>
-              <li><a href="#">Finance</a></li>
-              <li><a href="#">Safety</a></li>
-              <li><a href="#">Contracting</a></li>
-              <li><a href="#">Planning</a></li>
-            </ul>
-          </div><!-- Tags end -->
-
-
-        </div><!-- Sidebar end -->
-      </div><!-- Sidebar Col end -->
+</div>
+<!-- Categories end --><!-- Sidebar Col end -->
 
     </div><!-- Main row end -->
 
   </div><!-- Container end -->
 </section><!-- Main container end -->
+
  @include('layouts.frontend.footer')<!-- Footer end -->
 
 @endsection
+
