@@ -80,7 +80,8 @@
                 {{ $posts->links() }}
             </div><!-- End blog pagination -->
      
-      </div><!-- Content Col end -->
+      </div><!-- Content Col end -->  
+          </div><!-- Content Col end -->
        @else
        <div class="col-lg-8 mb-5 mb-lg-0">
         <div class="post">
@@ -88,7 +89,7 @@
                 </div>
                 </div>
         @endif
-        
+
       <div class="col-lg-4">
         <div class="sidebar sidebar-right">
           <div class="sidebar-item search-form">
