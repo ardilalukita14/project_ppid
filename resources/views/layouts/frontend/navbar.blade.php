@@ -92,7 +92,7 @@
                             <li class="dropdown-submenu">
                               <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Materi PPID</a>
                               <ul class="dropdown-menu">
-                                <li><a href="{{ route('contents_kategori', 'materi-ppid') }}">Materi PPID Kota</a></li>
+                                <li><a href="{{ route('contents_kategori', 'materi-ppid-kota') }}">Materi PPID Kota</a></li>
                                 <li><a href="{{ route('contents_kategori', 'materi-umum') }}">Materi Umum</a></li>
                               </ul>
                           </li>
