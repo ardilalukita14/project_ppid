@@ -108,7 +108,7 @@
         </div>
         <!-- Categories end -->
 
-
+<!-- 
           <div class="widget widget-tags">
             <h3 class="widget-title">Tags </h3>
 
@@ -122,7 +122,8 @@
               <li><a href="#">Contracting</a></li>
               <li><a href="#">Planning</a></li>
             </ul>
-          </div><!-- Tags end -->
+          </div> -->
+          <!-- Tags end -->
 
 
         </div><!-- Sidebar end -->
