@@ -110,7 +110,7 @@ Route::prefix('a')->name('admin.')->group(function () {
     Route::get('/galeri', [\App\Http\Controllers\PostController::class, 'galeri'])->name('galeri.index');
     Route::get('/infografis', [\App\Http\Controllers\PostController::class, 'infografis'])->name('infografis.index');
     Route::get('document/destroy/{document}', [App\Http\Controllers\PostController::class, 'destroy_document'] )->name('destroy_document');
-    Route::get('berkas/destroy/{berkas}', [App\Http\Controllers\ProfileController::class, 'destroy_berkas'] )->name('destroy_berkas');
+    Route::get('berkasprofile/destroy/{berkasprofile}', [App\Http\Controllers\ProfileController::class, 'destroy_berkas'] )->name('destroy_berkasprofile');
     Route::get('berkasppid/destroy/{berkasppid}', [App\Http\Controllers\ProfilePPIDController::class, 'destroy_berkasppid'] )->name('destroy_berkasppid');
     Route::get('berkas/destroy/{berkas}', [App\Http\Controllers\InformationController::class, 'destroy_berkas_informasi'] )->name('destroy_berkas_informasi');
     });

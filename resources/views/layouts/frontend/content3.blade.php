@@ -1,7 +1,10 @@
 <section id="facts" class="facts-area dark-bg">
-  <div class="container" style="margin-left: 195px; margin-right: 150px">
+   
+    <div class="container">
+     
     <div class="facts-wrapper">
-        <div class="row">
+        <div class="row"> 
+          <div class="center">
          <div class="col-md-2 col-sm-6 ts-facts">
               <div class="ts-facts-img">
                 <img loading="lazy" src="frontend/images/icon-image/lapor.png" alt="facts-img" style="width: 150px">
@@ -50,5 +53,6 @@
     </div>
     <!--/ Content row end -->
   </div>
+</div>
   <!--/ Container end -->
 </section><!-- Facts end -->

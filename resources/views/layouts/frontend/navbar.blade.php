@@ -22,7 +22,7 @@
                               <li class="dropdown-submenu">
                                   <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Pemerintah Kota <br> Madiun </a>
                                   <ul class="dropdown-menu">
-                                    <li><a href="">Profil Kota Madiun</a></li>
+                                    <li><a href="{{ route('contents_kategori', 'profil-kota-madiun') }}">Profil Kota Madiun</a></li>
                                     <li><a href="{{ route('menu.sejarah.madiun') }}">Sejarah Kota Madiun</a></li>
                                     <li><a href="{{ route('menu.geografis.madiun') }}">Letak Geografis Kota Madiun</a></li>
                                     <li><a href="{{ route('menu.profilepemerintah.madiun') }}">Profil Pemerintah Kota Madiun</a></li>
@@ -92,7 +92,7 @@
                             <li class="dropdown-submenu">
                               <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Materi PPID</a>
                               <ul class="dropdown-menu">
-                                <li><a href="{{ route('contents_kategori', 'materi-ppid') }}">Materi PPID Kota</a></li>
+                                <li><a href="{{ route('contents_kategori', 'materi-ppid-kota') }}">Materi PPID Kota</a></li>
                                 <li><a href="{{ route('contents_kategori', 'materi-umum') }}">Materi Umum</a></li>
                               </ul>
                           </li>

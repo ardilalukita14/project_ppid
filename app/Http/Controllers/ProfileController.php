@@ -210,9 +210,9 @@ class ProfileController extends Controller
         }
     }
 
-    public function destroy_berkas($berkas){
+    public function destroy_berkas($berkasprofile){
 
-        $dokumen = Berkas::findorfail(decrypt($berkas));
+        $dokumen = Berkas::findorfail(decrypt($berkasprofile));
         $id = $dokumen->profile_id;
         $dokumen->delete();
 

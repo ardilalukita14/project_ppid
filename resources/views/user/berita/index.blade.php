@@ -161,7 +161,7 @@
 
       <div class="col-12">
         <div class="general-btn text-center">
-          <a class="btn btn-primary" href="{{ route('contents_kategori', 'berita') }}">Berita Lainnya</a>
+          <a class="btn btn-primary" href="{{ route('contents_kategori', 'berita-ppid') }}">Berita Lainnya</a>
         </div>
       </div>
 
@@ -242,7 +242,7 @@
     <!--/ Content row end -->
 
     <div class="general-btn text-center mt-4">
-        <a class="btn btn-primary" href="{{ route('contents_kategori', 'berita') }}">Berita Lainnya</a>
+        <a class="btn btn-primary" href="{{ route('contents_kategori', 'berita-ppid') }}">Berita Lainnya</a>
     </div>
 
   </div>

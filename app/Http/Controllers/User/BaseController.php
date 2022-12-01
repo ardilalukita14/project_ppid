@@ -75,7 +75,7 @@ class BaseController extends Controller
     public function cari(Request $request)
     {
         $key = $request->get('cari');
-        $news = Post::where('judul','LIKE','%'.$key.'%')
+        $news = Post::where('judul','ilike','%'.$key.'%')
                  ->where('ispublish', '=', '1')
                  ->orderBy('tgl_post', 'DESC')
                  ->paginate(3);

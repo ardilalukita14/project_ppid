@@ -166,7 +166,7 @@
                                     @endif 
                                 </td>
                                 <td style=" text-align:center;">
-                                    <a href="{{ route('admin.destroy_berkas', encrypt($data->id)) }}">  <button type="button"  class="btn btn-danger btn-xs"><i class="fas fa-trash icon-lg"></i> Hapus</button></a>
+                                    <a href="{{ route('admin.destroy_berkasprofile', encrypt($data->id)) }}">  <button type="button"  class="btn btn-danger btn-xs"><i class="fas fa-trash icon-lg"></i> Hapus</button></a>
                                 </td>
                                 </tr>
                                 @endforeach
