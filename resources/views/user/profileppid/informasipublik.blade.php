@@ -11,7 +11,7 @@
 @include('layouts.frontend.header')
 <!--/ Header end -->
 
-<div id="banner-area" class="banner-area" style="background-image:url({{asset('frontend/images/news/balkot.png')}})">
+<div id="banner-area" class="banner-area" style="background-image:url({{asset('frontend/images/news/berita2.jpg')}})">
   <div class="banner-text">
     <div class="container">
         <div class="row">
