@@ -17,34 +17,34 @@ class KategoriSeeder extends Seeder
     {
         DB::table('kategori')->insert([
             [
-                'nama_kategori' => 'pengumuman'
+                'nama_kategori' => 'pengumuman', 'slug' =>'pengumuman'
             ],
             [
-                'nama_kategori' => 'produk hukum'
+                'nama_kategori' => 'produk hukum','slug' =>'produk_hukum'
             ],
             [
-                'nama_kategori' => 'materi ppid kota'
+                'nama_kategori' => 'materi ppid kota','slug' =>'materi-ppid-kota'
             ],
             [
-                'nama_kategori' => 'materi umum'
+                'nama_kategori' => 'materi umum','slug' =>'materi-umum'
             ],
             [
-                'nama_kategori' => 'laporan pengaduan'
+                'nama_kategori' => 'laporan pengaduan','slug' =>'laporan-pengaduan'
             ],
             [
-                'nama_kategori' => 'berita ppid'
+                'nama_kategori' => 'berita ppid','slug' =>'berita-ppid'
             ],
             [
-                'nama_kategori' => 'artikel'
+                'nama_kategori' => 'artikel','slug' =>'artikel'
             ],
             [
-                'nama_kategori' => 'narasi tunggal'
+                'nama_kategori' => 'narasi tunggal','slug' =>'narasi-tunggal'
             ],
             [
-                'nama_kategori' => 'galeri'
+                'nama_kategori' => 'galeri','slug' =>'galeri'
             ],
             [
-                'nama_kategori' => 'infografis'
+                'nama_kategori' => 'infografis','slug' =>'infografis'
             ]
         ]);
     }
