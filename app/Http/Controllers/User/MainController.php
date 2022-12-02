@@ -294,52 +294,67 @@ class MainController extends Controller
 
     public function informpublik() {
     
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Daftar Informasi Publik 2022";
         $information = Information::where('kategori_informasi', '=', 'daftar-informasi-publik')->first();
         $berkas = BerkasInformation::all()
                 -> where('informasi_id', '=', '1');
         $categories = Kategori::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.informasi.publik', compact('information', 'berkas', 'categories', 'beritaterkini'));
+        return view('user.informasi.publik', compact('information', 'berkas', 'categories', 'beritaterkini', 'title', 'title2', 'subtitle'));
     
     }
 
     public function informppid() {
     
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Daftar Informasi Publik PPID Pelaksana";
         $information = Information::where('kategori_informasi', '=', 'daftar-informasi-publik-ppid-pelaksana')->first();
         $berkas = BerkasInformation::all()
                 -> where('informasi_id', '=', '2');
         $categories = Kategori::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.informasi.ppid', compact('information', 'berkas', 'categories', 'beritaterkini'));
+        return view('user.informasi.ppid', compact('information', 'berkas', 'categories', 'beritaterkini', 'title', 'title2', 'subtitle'));
     
     }
 
     public function informberkala() {
     
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Informasi Secara Berkala";
         $information = Information::where('kategori_informasi', '=', 'informasi-secara-berkala')->first();
         $berkas = BerkasInformation::all()
                 -> where('informasi_id', '=', '3');
                 
         $categories = Kategori::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.informasi.berkala', compact('information', 'berkas', 'categories', 'beritaterkini'));
+        return view('user.informasi.berkala', compact('information', 'berkas', 'categories', 'beritaterkini', 'title', 'title2', 'subtitle'));
     
     }
 
     public function informsertamerta() {
     
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Informasi Serta Merta";
         $information = Information::where('kategori_informasi', '=', 'informasi-serta-merta')->first();
         $berkas = BerkasInformation::all()
                 -> where('informasi_id', '=', '4');
                 
         $categories = Kategori::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.informasi.sertamerta', compact('information', 'berkas', 'categories', 'beritaterkini'));
+        return view('user.informasi.sertamerta', compact('information', 'berkas', 'categories', 'beritaterkini', 'title', 'title2', 'subtitle'));
     
     }
 
     public function informsetiapsaat() {
     
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Informasi Setiap Saat";
         $information = Information::where('kategori_informasi', '=', 'informasi-setiap-saat')->first();
         $berkas = BerkasInformation::all()
                 -> where('informasi_id', '=', '5');
@@ -347,67 +362,82 @@ class MainController extends Controller
         $categories = Kategori::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
             
-        return view('user.informasi.setiapsaat', compact('information', 'berkas', 'categories', 'beritaterkini'));
+        return view('user.informasi.setiapsaat', compact('information', 'berkas', 'categories', 'beritaterkini', 'title', 'title2', 'subtitle'));
     
     }
 
     public function informdikecualikan() {
     
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Informasi Dikecualikan Penetapan dan Proses Uji Konsekuensi";
         $information = Information::where('kategori_informasi', '=', 'informasi-dikecualikan')->first();
         $berkas = BerkasInformation::all()
                 -> where('informasi_id', '=', '6');
                 
         $categories = Kategori::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.informasi.dikecualikan', compact('information', 'berkas', 'categories', 'beritaterkini'));
+        return view('user.informasi.dikecualikan', compact('information', 'berkas', 'categories', 'beritaterkini', 'title', 'title2', 'subtitle'));
     
     }
 
     public function soporganisasi() {
     
+        $title = "Download";
+        $title2 = "SOP";
+        $subtitle = "SOP Pedoman Pengelolaan Organisasi";
         $information = Information::where('kategori_informasi', '=', 'sop-pedoman-pengelolaan-organisasi')->first();
         $berkas = BerkasInformation::all()
                 -> where('informasi_id', '=', '7');
                 
         $categories = Kategori::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.sop.organisasi', compact('information', 'berkas', 'categories', 'beritaterkini'));
+        return view('user.sop.organisasi', compact('information', 'berkas', 'categories', 'beritaterkini', 'title', 'title2', 'subtitle'));
     
     }
 
     public function sopadministrasi() {
     
+        $title = "Download";
+        $title2 = "SOP";
+        $subtitle = "SOP Pedoman Pengelolaan Administrasi";
         $information = Information::where('kategori_informasi', '=', 'sop-pedoman-pengelolaan-administrasi')->first();
         $berkas = BerkasInformation::all()
                 -> where('informasi_id', '=', '8');
                 
         $categories = Kategori::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.sop.administrasi', compact('information', 'berkas', 'categories', 'beritaterkini'));
+        return view('user.sop.administrasi', compact('information', 'berkas', 'categories', 'beritaterkini', 'title', 'title2', 'subtitle'));
     
     }
 
     public function sopkepegawaian() {
     
+        $title = "Download";
+        $title2 = "SOP";
+        $subtitle = "SOP Pedoman Pengelolaan Kepegawaian";
         $information = Information::where('kategori_informasi', '=', 'sop-pedoman-kepegawaian')->first();
         $berkas = BerkasInformation::all()
                 -> where('informasi_id', '=', '9');
                 
         $categories = Kategori::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.sop.kepegawaian', compact('information', 'berkas', 'categories', 'beritaterkini'));
+        return view('user.sop.kepegawaian', compact('information', 'berkas', 'categories', 'beritaterkini', 'title', 'title2', 'subtitle'));
     
     }
 
     public function sopkeuangan() {
     
+        $title = "Download";
+        $title2 = "SOP";
+        $subtitle = "SOP Pedoman Pengelolaan Keuangan";
         $information = Information::where('kategori_informasi', '=', 'sop-pedoman-pengelolaan-keuangan')->first();
         $berkas = BerkasInformation::all()
                 -> where('informasi_id', '=', '10');
                 
         $categories = Kategori::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.sop.keuangan', compact('information', 'berkas', 'categories', 'beritaterkini'));
+        return view('user.sop.keuangan', compact('information', 'berkas', 'categories', 'beritaterkini', 'title', 'title2', 'subtitle'));
     
     }
 }

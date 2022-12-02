@@ -45,8 +45,86 @@
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
+        <div class="section-header">
+                <h1>Dashboard Sistem Informasi PPID Kota Madiun</h1>
+        </div>
           <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-primary">
+                    <i class="fa-solid fas fa-newspaper fa-8x"></i>
+                </div>
+              <div class="card-wrap">
+          <div class="card-header">
+            <h4>Total Berita</h4>
+          </div>
+            <div class="card-body">
+            {{$publishall}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-info">
+                    <i class="fa-solid fas fa-check-square fa-8x"></i>
+                </div>
+              <div class="card-wrap">
+          <div class="card-header">
+            <h4>Berita Publish</h4>
+          </div>
+            <div class="card-body">
+            {{$publish}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-danger">
+                    <i class="fa-solid fas fa-window-close fa-8x"></i>
+                </div>
+              <div class="card-wrap">
+          <div class="card-header">
+            <h4>Berita Unpublish</h4>
+          </div>
+            <div class="card-body">
+            {{$unpublish}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-warning">
+                    <i class="fa-solid fas fa-folder-open fa-8x"></i>
+                </div>
+              <div class="card-wrap">
+          <div class="card-header">
+            <h4>Total Kategori Berita</h4>
+          </div>
+            <div class="card-body">
+            {{$categories}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="card card-statistic-1">
+                <div class="card-icon bg-success">
+                    <i class="fa-solid fas fa-folder-open fa-8x"></i>
+                </div>
+              <div class="card-wrap">
+          <div class="card-header">
+            <h4>Total Tag Berita</h4>
+          </div>
+            <div class="card-body">
+            {{$tags}}
+            </div>
+          </div>
+        </div>
+      </div>
+            <!-- <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="card card-statistic-2">
                 <div class="card-stats">
                   <div class="card-stats-title">Data Berita -
@@ -113,7 +191,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="row">
             <div class="col-lg-8">
