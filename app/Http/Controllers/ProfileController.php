@@ -9,6 +9,7 @@ use App\Models\Profile;
 use App\Models\Berkas;
 use Illuminate\Support\Str;
 use Session;
+use Illuminate\Support\Facades\Validator;
 
 class ProfileController extends Controller
 {
