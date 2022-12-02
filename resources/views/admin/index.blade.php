@@ -86,7 +86,7 @@
                 </div>
               <div class="card-wrap">
           <div class="card-header">
-            <h4>Berita Unpublish</h4>
+            <h4>Draft Berita</h4>
           </div>
             <div class="card-body">
             {{$unpublish}}
@@ -124,74 +124,25 @@
           </div>
         </div>
       </div>
-            <!-- <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-stats">
-                  <div class="card-stats-title">Data Berita -
-                    <div class="dropdown d-inline">
-                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">Status</a>
-                    </div>
-                  </div>
-                  <div class="card-stats-items">
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">{{$publish}}</div>
-                      <div class="card-stats-item-label">Publish</div>
-                    </div>
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">{{$unpublish}}</div>
-                      <div class="card-stats-item-label">Unpublish</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-newspaper"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Total Berita Keseluruhan</h4>
-                  </div>
-                  <div class="card-body">
-                  {{$publishall}}
-                  </div>
-                </div>
+    </div>
+    <br> 
+    <div class="row">
+      <div class="col-xl-6">
+          <div class="card mb-4" style="background: rgba(178, 255, 170, 0.667); margin-left:-12px;">
+              <div class="card-header" >
+                  <i class="fas fa-chart-area me-1"></i><b style="margin-left:5px;"> Jumlah Berita Ter-Publish Per Bulan</b>
               </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-chart">
-                  <canvas id="balance-chart" height="80"></canvas>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-dollar-sign"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Kategori Aktif</h4>
-                  </div>
-                  <div class="card-body">
-                    {{$categories}}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-chart">
-                  <canvas id="sales-chart" height="80"></canvas>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-shopping-bag"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>User</h4>
-                  </div>
-                  <div class="card-body">
-                    {{$users}}
-                  </div>
-                </div>
-              </div>
-            </div> -->
+          <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+          </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="card mb-4" style="background: rgba(178, 255, 170, 0.667); margin-left:-12px;">
+            <div class="card-header" >
+                <i class="fas fa-chart-area me-1"></i> Jumlah Berita Ter-Publish Per Tahun
+                    </div>
+            <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+        </div>
+      </div>
           </div>
           <div class="row">
             <div class="col-lg-8">
@@ -199,8 +150,6 @@
                 </div>
               </div>
             </div>
-          
-                    
         </section>
       </div>
 
@@ -233,5 +182,120 @@
       </div>
     </div>
   </div>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	var _ydata=JSON.parse('{!! json_encode($months) !!}');
+	var _xdata=JSON.parse('{!! json_encode($monthCount) !!}');
+</script>
+<script type="text/javascript">
+	var __ydata=JSON.parse('{!! json_encode($year) !!}');
+	var __xdata=JSON.parse('{!! json_encode($yearsCount) !!}');
+</script>
+<script src="backend2/assets/demo/chart-area-demo.js"></script>
+<script src="backend2/assets/demo/chart-bar-demo.js"></script>
+
+<!-- Page level plugins -->
+<script src="backend2/vendor/chart.js/Chart.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="backend2/js/demo/chart-pie-demo.js"></script>
+<script src="backend2/js/demo/charts-pie-demo.js"></script>
+
+  <script>
+    Circles.create({
+        id:'circles-1',
+        radius:45,
+        value:60,
+        maxValue:100,
+        width:7,
+        text: 5,
+        colors:['#f1f1f1', '#FF9E27'],
+        duration:400,
+        wrpClass:'circles-wrp',
+        textClass:'circles-text',
+        styleWrapper:true,
+        styleText:true
+    })
+
+    Circles.create({
+        id:'circles-2',
+        radius:45,
+        value:70,
+        maxValue:100,
+        width:7,
+        text: 36,
+        colors:['#f1f1f1', '#2BB930'],
+        duration:400,
+        wrpClass:'circles-wrp',
+        textClass:'circles-text',
+        styleWrapper:true,
+        styleText:true
+    })
+
+    Circles.create({
+        id:'circles-3',
+        radius:45,
+        value:40,
+        maxValue:100,
+        width:7,
+        text: 12,
+        colors:['#f1f1f1', '#F25961'],
+        duration:400,
+        wrpClass:'circles-wrp',
+        textClass:'circles-text',
+        styleWrapper:true,
+        styleText:true
+    })
+
+    var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
+
+    var mytotalIncomeChart = new Chart(totalIncomeChart, {
+        type: 'bar',
+        data: {
+            labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
+            datasets : [{
+                label: "Total Income",
+                backgroundColor: '#ff9e27',
+                borderColor: 'rgb(23, 125, 255)',
+                data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                display: false,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        display: false //this will remove only the label
+                    },
+                    gridLines : {
+                        drawBorder: false,
+                        display : false
+                    }
+                }],
+                xAxes : [ {
+                    gridLines : {
+                        drawBorder: false,
+                        display : false
+                    }
+                }]
+            },
+        }
+    });
+
+    $('#lineChart').sparkline([105,103,123,100,95,105,115], {
+        type: 'line',
+        height: '70',
+        width: '100%',
+        lineWidth: '2',
+        lineColor: '#ffa534',
+        fillColor: 'rgba(255, 165, 52, .14)'
+    });
+</script>
 
 @endsection
