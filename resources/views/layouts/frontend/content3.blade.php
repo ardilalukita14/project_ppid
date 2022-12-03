@@ -10,7 +10,11 @@
                 <img loading="lazy" src="frontend/images/icon-image/lapor.png" alt="facts-img" style="width: 150px">
               </div><br>
               {{-- <div class="ts-facts-content"> --}}
+<<<<<<< HEAD
                 <h3 class="ts-facts-num"><a href="https://kotamadiun.lapor.go.id/"  target="_blank" >LAPOR</a></h3>
+=======
+                <h3 class="ts-facts-num" ><a href="https://kotamadiun.lapor.go.id/" target="_blank">LAPOR</a></h3>
+>>>>>>> 896861eb5def2d58f63f2216e2aa1bbfe1758ced
               {{-- </div> --}}
           </div><!-- Col end -->
 

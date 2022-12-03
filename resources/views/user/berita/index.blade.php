@@ -72,9 +72,8 @@
         {{-- <div class="col-lg-6 mt-4 mt-lg-0"> --}}
 
     <div class="col-lg-12">
-        <h2 class="section-title" style="text-align:center;">Informasi Terkait</h2>
-
-        <h3 class="section-sub-title" style="text-align:center;">Berita Tersemat</h3>
+        <h2 class="section-title" style="text-align:center; color: #06A3DA">Informasi Terkait</h2>
+        <h3 class="section-sub-title" style="text-align:center; color: #091E3E">Berita Tersemat</h3>
       </div>
       @foreach($beritapinned as $data)
         <div class="col-lg-4 col-md-6 mb-5">
@@ -129,8 +128,8 @@
     <div class="row text-center">
       <div class="col-lg-12">
       <div class="shuffle-btn-group" style="margin-top:-20px;">
-        <h2 class="section-title">Informasi Terkait</h2>
-        <h3 class="section-sub-title">Daftar Berita</h3>
+      <h2 class="section-title" style="text-align:center; color: #06A3DA">Informasi Terkait</h2>
+        <h3 class="section-sub-title" style="text-align:center; color: #091E3E">Daftar Berita</h3>
           </div><!-- project filter end -->
       </div>
     </div>
@@ -179,7 +178,7 @@
     <div class="row">
         <div class="col-lg-4">
           <div class="subscribe-call-to-acton">
-              <h3>Temukan Informasi</h3>
+              <h3 style="color: #091E3E; font-weight:bold;">Temukan Informasi</h3>
               <h4>Yang Anda Inginkan...</h4>
           </div>
         </div><!-- Col end -->
@@ -213,8 +212,8 @@
   <div class="container">
     <div class="row text-center">
         <div class="col-12">
-          <h2 class="section-title">Informasi Terkait</h2>
-          <h3 class="section-sub-title">Berita Terkini</h3>
+        <h2 class="section-title" style="text-align:center; color: #06A3DA;">Informasi Terkait</h2>
+        <h3 class="section-sub-title" style="text-align:center; color: #091E3E">Berita Terkini</h3>
         </div>
     </div>
     <!--/ Title row end -->
