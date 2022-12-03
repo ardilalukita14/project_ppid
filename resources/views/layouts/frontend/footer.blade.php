@@ -9,15 +9,15 @@
               urusan pemerintahan bidang persandian, dan urusan pemerintahan bidang statistik di Kota Madiun.</p>
             <div class="footer-social">
               <ul>
-                <li ><a href="https://www.facebook.com/pemkotmadiun/" aria-label="Facebook" ><i
+                <li ><a href="https://www.facebook.com/pemkotmadiun/" aria-label="Facebook" target="_blank"><i
                       class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/pemkotmadiun_" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <li><a href="https://twitter.com/pemkotmadiun_" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
                 </li>
-                <li><a href="https://www.instagram.com/pemkotmadiun_/" aria-label="Instagram"><i
+                <li><a href="https://www.instagram.com/pemkotmadiun_/" aria-label="Instagram" target="_blank"><i
                       class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UCkolXu0GY1EdMOJ8RLOk4OQ" aria-label="Youtube">
+                <li><a href="https://www.youtube.com/channel/UCkolXu0GY1EdMOJ8RLOk4OQ" aria-label="Youtube" target="_blank">
                     <i class="fab fa-youtube"></i></a></li>
-                    <li><a href="https://www.tiktok.com/@pemkotmadiun_" aria-label="Tiktok">
+                    <li><a href="https://www.tiktok.com/@pemkotmadiun_" aria-label="Tiktok" target="_blank">
                         <i class="fab fa-tiktok"></i></a></li>
               </ul>
             </div><!-- Footer social end -->
@@ -37,11 +37,11 @@
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
             <h3 class="widget-title">Menu Akses</h3>
             <ul class="list-arrow">
-              <li><a href="service-single.html">Profil</a></li>
-              <li><a href="service-single.html">PPID Pelaksana Kota Madiun</a></li>
-              <li><a href="service-single.html">Informasi Publik</a></li>
-              <li><a href="service-single.html">Download</a></li>
-              <li><a href="service-single.html">Galeri/Infografis</a></li>
+              <li><a href="/profil-ppid-kota-madiun">Profil</a></li>
+              <li><a href="/ppid-pelaksana-kota-madiun">PPID Pelaksana Kota Madiun</a></li>
+              <li><a href="/daftar-informasi-publik-ppid-kota-madiun">Informasi Publik</a></li>
+              <li><a href="/kategori/berita-ppid">Download</a></li>
+              <li><a href="/kategori/galeri">Galeri</a></li>
             </ul>
           </div>
           <!-- Col end -->

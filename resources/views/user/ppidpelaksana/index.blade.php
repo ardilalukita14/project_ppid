@@ -19,10 +19,10 @@
               <div class="banner-heading">
                 <h1 class="banner-title">PPID Pelaksana</h1>
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
+                    {{-- <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">Pemerintah Kota Madiun</a></li>
                       <li class="breadcrumb-item"><a href="#">PPID Pelaksana Kota Madiun</a></li>
-                    </ol>
+                    </ol> --}}
                 </nav>
               </div>
           </div><!-- Col end -->
@@ -84,7 +84,7 @@
     <h3 class="widget-title" style="margin-left:20px;">Search</h3>
         <form action="{{ route('reader.search.berita') }}" method="POST"  class="mt-3" style="margin-left:20px;">
           @csrf
-            <input type="text" value="{{ old('cari') }}" name="cari" style="padding-right:10px; padding-left:10px; width:250px;">  
+            <input type="text" value="{{ old('cari') }}" name="cari" style="padding-right:10px; padding-left:10px; width:250px;">
               <input type="submit" value="Search" style="color:white; width:75px;"><i class="bi bi-search"></i></input>
         </form>
   </div><!-- End sidebar search formn-->
