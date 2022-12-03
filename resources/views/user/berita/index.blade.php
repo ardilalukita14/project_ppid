@@ -71,6 +71,7 @@
     <div class="row">
     <div class="col-lg-12">
         <h2 class="section-title" style="text-align:center;">Informasi Terkait</h2>
+
         <h3 class="section-sub-title" style="text-align:center;">Berita Tersemat</h3>
       </div>
       @foreach($beritapinned as $data)
@@ -79,7 +80,7 @@
               <div class="ts-service-image-wrapper">
               <?php if($data->thumbnail == null ){ ?>
                     <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:400px; height:250px;">
-                
+
                 <?php }else{ ?>
                         <img loading="lazy" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="Gambar Content" class="img-fluid" style="width:400px; height:200px; text-align: center;">
                 <?php } ?>
@@ -103,7 +104,7 @@
                 </span>
                 <span class="post-comment">
                   <a href="#" class="comments-link"> {{ date('d M Y', strtotime($data->tgl_post)) }}</a></span>
-                </h8> 
+                </h8>
                 <p>{!!$data->contents!!}</p>
                     <a class="learn-more d-inline-block" style="text-align:justify;" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}"  aria-label="service-datas"><i class="fa fa-caret-right"></i> Selanjutnya</a>
                 </div>
@@ -138,9 +139,9 @@
         <div class="row shuffle-wrapper">
           <div class="col-1 shuffle-sizer"></div>
       @foreach($beritakonten as $data)
-      
+
           <div class="col-lg-4 col-md-6 shuffle-item">
-          <div class="project-img-container">  
+          <div class="project-img-container">
             <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
               <a class="gallery-popup" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" aria-label="project-img">
                 <img class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="project-img" style="width:400px; height:250px;">
@@ -216,7 +217,7 @@
     <!--/ Title row end -->
 
     <div class="row">
-      @foreach($beritaterkini as $data)  
+      @foreach($beritaterkini as $data)
       <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="latest-post">

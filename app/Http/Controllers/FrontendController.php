@@ -9,8 +9,8 @@ class FrontendController extends Controller
     public function index(){
         return view('layouts.frontend.index');
     }
-    public function profilkota(){
-        return view('layouts.frontend.profilkota');
+    public function index2(){
+        return view('layouts.frontend2.index');
     }
     public function sejarah(){
         return view('layouts.frontend.sejarahkota');

@@ -207,7 +207,7 @@ a:focus {
 }
 
 .dark-bg {
-  background: #252525;
+  background: #3c83e6;
   color: #fff;
 }
 
@@ -533,7 +533,7 @@ a[href^=tel] {
 }
 
 .btn-primary {
-  background: #ffb600;
+  background: #3c83e6;
 }
 
 .btn-dark {
@@ -586,7 +586,7 @@ a[href^=tel] {
 ================================================== */
 .top-bar {
   padding: 8px 0;
-  background: #ebebeb;
+  background: #3c83e6;
   position: relative;
 }
 
@@ -674,7 +674,7 @@ ul.top-info li p.info-text {
 
 .header-one,
 .header-one .site-navigation {
-  background: #23282d;
+  background: #3c83e6;
 }
 
 .header-one .navbar-collapse {
@@ -731,7 +731,7 @@ ul.navbar-nav > li > a {
 }
 ul.navbar-nav > li:hover > a,
 ul.navbar-nav > li.active > a {
-  color: #ffb600 !important;
+  color: #272e37 !important;
 }
 
 /*-- Logo --*/
@@ -1005,7 +1005,7 @@ ul.navbar-nav > li > a {
   min-width: 200px;
   border-radius: 0;
   border: 0;
-  border-top: 2px solid #ffb600;
+  border-top: 2px solid #272e37;
   padding: 0 20px;
   margin: 0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -1063,7 +1063,7 @@ ul.navbar-nav > li > a {
 
 .dropdown-menu li a:hover,
 .dropdown-menu li a:focus {
-  color: #ffb600;
+  color: #3c83e6;
 }
 
 @media (min-width: 991px) {
@@ -1248,7 +1248,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .slide-title-box {
   font-size: 16px;
   line-height: 39px;
-  background: #ffb600;
+  background: #3c83e6;
   color: #fff;
   display: inline-block;
   padding: 0 15px;
@@ -1725,7 +1725,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   color: #fff;
 }
 
-/* Service box 
+/* Service box
 
 .ts-service-box .ts-service-icon i {
   font-size: 24px;
@@ -1876,7 +1876,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   display: inline-block;
   margin: 20px 0 50px;
   width: 100%;
-  border-bottom: 3px solid #ffb600;
+  border-bottom: 3px solid #3c83e6;
 }
 .shuffle-btn-group label {
   display: inline-block;
@@ -2265,7 +2265,7 @@ img.testimonial-thumb {
 /* Subscribe area
 ================================================== */
 .subscribe {
-  background: #ffb600;
+  background: #3c83e6;
   padding: 0;
 }
 
@@ -2370,7 +2370,7 @@ img.testimonial-thumb {
 ================================================== */
 /*- Footer common */
 .footer {
-  background-color: #0d0d0d;
+  background-color: #0094ff;
   color: #999;
 }
 
@@ -2386,7 +2386,7 @@ img.testimonial-thumb {
   padding-left: 15px;
   text-transform: uppercase;
   color: #fff;
-  border-left: 3px solid #ffb600;
+  border-left: 3px solid #3c83e6;
 }
 
 /* Footer about us */
@@ -2416,7 +2416,7 @@ img.testimonial-thumb {
 .footer-social ul li a i {
   display: block;
   font-size: 16px;
-  color: #999;
+  color: #fff;
   transition: 400ms;
   padding: 10px 13px;
 }
@@ -2426,7 +2426,7 @@ img.testimonial-thumb {
 
 /* Links */
 .footer-widget ul.list-arrow li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgb(122, 120, 120);
   padding: 8px 0;
 }
 
@@ -2436,12 +2436,12 @@ img.testimonial-thumb {
 
 .footer-widget ul.list-arrow li a,
 .footer-widget ul.list-arrow li:before {
-  color: #747474;
+  color: #ffffff;
 }
 
 .footer-widget ul.list-arrow li:hover a,
 .footer-widget ul.list-arrow li:hover {
-  color: #ffb600;
+  color: #3c83e6;
 }
 
 .working-hours {
@@ -2454,7 +2454,7 @@ img.testimonial-thumb {
 
 /*-- Copyright --*/
 .copyright {
-  background: #ffb600;
+  background: #3c83e6;
   color: #111;
   padding: 25px 0;
   position: relative;
@@ -2505,7 +2505,7 @@ img.testimonial-thumb {
   line-height: 36px;
   background: rgba(0, 0, 0, 0.9);
   border-radius: 3px;
-  color: #ffb600;
+  color: #3c83e6;
   font-weight: 700;
   font-size: 16px;
   padding: 0;
@@ -2769,7 +2769,7 @@ img.testimonial-thumb {
   transition: 400ms;
 }
 .ts-team-wrapper .team-social-icons a i:hover {
-  color: #ffb600;
+  color: #3c83e6;
 }
 .ts-team-wrapper:hover .ts-team-content {
   top: 0;
@@ -3183,7 +3183,7 @@ label {
   margin: 0 0 30px;
   padding-left: 15px;
   text-transform: uppercase;
-  border-left: 3px solid #ffb600;
+  border-left: 3px solid #3c83e6;
 }
 
 /* Widget common */
@@ -3225,7 +3225,7 @@ label {
 }
 
 .sidebar .widget ul li a:hover {
-  color: #ffb600;
+  color: #3c83e6;
 }
 
 .sidebar .widget ul li i {
@@ -3260,7 +3260,7 @@ label {
 
 .sidebar ul.nav-tabs li.active a,
 .sidebar ul.nav-tabs li:hover a {
-  color: #ffb600;
+  color: #3c83e6;
 }
 
 .sidebar ul.nav-tabs li {
@@ -3286,7 +3286,7 @@ label {
   display: block;
 }
 .sidebar ul.service-menu li.active a, .sidebar ul.service-menu li:hover a {
-  background: #ffb600;
+  background: #3c83e6;
   color: #fff;
   cursor: pointer;
 }
@@ -3322,7 +3322,7 @@ label {
   display: inline-block;
 }
 .widget.recent-posts .post-info .entry-title a:hover {
-  color: #ffb600;
+  color: #3c83e6;
 }
 .widget.recent-posts .post-date {
   font-weight: 400;

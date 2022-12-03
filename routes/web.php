@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+route::get('/ppid-home',[\App\Http\Controllers\FrontendController::class,'index2'])->name('layout.frontend2.index');
 route::get('/coba',[\App\Http\Controllers\AdminController::class,'coba'])->name('admin.coba');
 
 /** Login Admin */

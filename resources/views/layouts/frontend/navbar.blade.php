@@ -121,7 +121,7 @@
         <!--/ Row end -->
 
         <div class="nav-search">
-          <span id="search"><i class="fa fa-search"></i></span>
+          <span id="search" class="text-white"><i class="fa fa-search" ></i></span>
         </div><!-- Search end -->
 
         <div class="search-block" style="display: none;">
@@ -131,7 +131,7 @@
           <input type="text" value="{{ old('cari') }}" name="cari" class="form-control" placeholder="Temukan informasi">
           </label>
           <span class="search-close">&times;</span>
-        </div><!-- Site search end -->   
+        </div><!-- Site search end -->
       </form>
     </div>
     <!--/ Container end -->

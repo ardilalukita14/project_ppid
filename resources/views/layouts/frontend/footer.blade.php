@@ -4,12 +4,12 @@
         <div class="row justify-content-between">
           <div class="col-lg-4 col-md-6 footer-widget footer-about">
             <h3 class="widget-title">Tentang Kami</h3>
-            <img loading="lazy" width="250px" class="footer-logo" src="{{asset('frontend/images/PPID-1.png')}}" alt="Constra">
-            <p style="text-align:justify;">Dinas Komunikasi dan Informatika Kota Madiun merupakan unsur pelaksana urusan pemerintahan bidang komunikasi dan informatika,
+            <img loading="lazy" width="250px" class="footer-logo" src="{{asset('frontend/images/logo_ppid.png')}}" alt="Constra">
+            <p style="text-align:justify;" class="text-white">Dinas Komunikasi dan Informatika Kota Madiun merupakan unsur pelaksana urusan pemerintahan bidang komunikasi dan informatika,
               urusan pemerintahan bidang persandian, dan urusan pemerintahan bidang statistik di Kota Madiun.</p>
             <div class="footer-social">
               <ul>
-                <li><a href="https://www.facebook.com/pemkotmadiun/" aria-label="Facebook"><i
+                <li ><a href="https://www.facebook.com/pemkotmadiun/" aria-label="Facebook" ><i
                       class="fab fa-facebook-f"></i></a></li>
                 <li><a href="https://twitter.com/pemkotmadiun_" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 </li>
@@ -26,10 +26,11 @@
           <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
             <h3 class="widget-title">Jam Pelayanan</h3>
             <div class="working-hours">
-              <p style="text-align:justify;">Jam pelayanan menyesuaikan jam kerja, yaitu hari Senin-Jumat. Jika ada kepentingan mendesak, Anda dapat menghubungi kami
+              <p style="text-align:justify;" class="text-white">Jam pelayanan menyesuaikan jam kerja, yaitu hari Senin-Jumat. Jika ada kepentingan mendesak, Anda dapat menghubungi kami
               melalui kontak yang tertera.</p>
-              Senin - Kamis : <span class="text-right">07:00 - 15:30 </span>
-              <br> Jumat : <span class="text-right">06:30 - 14:30</span>
+              <div class="text-white">Senin - Kamis : <span class="text-right text-white">07:00 - 15:30 </span></div>
+              <br>
+              <div class="text-white">Jumat : <span class="text-right text-white">06:30 - 14:30</span></div>
             </div>
           </div><!-- Col end -->
 
@@ -53,7 +54,7 @@
         <div class="row align-items-center">
           <div class="col-md-6">
             <div class="copyright-info">
-              <span>Copyright &copy; <script>
+              <span class="text-white">Copyright &copy; <script>
                   document.write(new Date().getFullYear())
                 </script>, Developed by Diskominfo Kota Madiun</span>
             </div>
