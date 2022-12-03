@@ -689,7 +689,7 @@ ul.top-info li p.info-text {
 
 .header-one ul.navbar-nav > li {
   padding-left: 0;
-  padding-right: 30px;
+  padding-right: 25px;
 }
 @media (max-width: 991px) {
   .header-one ul.navbar-nav > li {
@@ -1190,8 +1190,8 @@ ul.navbar-nav > li > a {
 }
 
 .header-get-a-quote .btn-primary:hover {
-  background: #272d33;
-  color: #ffb600 !important;
+  background: #000000;
+  color: #3c83e6 !important;
 }
 
 ul.navbar-nav > li.header-get-a-quote:hover > a:after {
@@ -1494,7 +1494,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /* Call to action
 ================================================== */
 .call-to-action {
-  background-color: #272d33;
+  background-color: rgb(0 30 51);
   padding: 30px;
 }
 
@@ -2296,7 +2296,7 @@ img.testimonial-thumb {
 
 /* Newsletter */
 .ts-newsletter {
-  background: #252525;
+  background: rgb(0 30 51);
   position: relative;
   min-height: 115px;
   padding: 15px 0 0 50px;
@@ -2503,7 +2503,7 @@ img.testimonial-thumb {
   width: 36px;
   height: 36px;
   line-height: 36px;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgb(0 30 51);
   border-radius: 3px;
   color: #3c83e6;
   font-weight: 700;

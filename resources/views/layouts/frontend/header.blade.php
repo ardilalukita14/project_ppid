@@ -27,6 +27,9 @@
                         </div>
                       </div>
                     </li>
+                    <li class="header-get-a-quote">
+                        <a class="btn btn-primary" href="https://www.madiunkota.go.id/" target="_blank">BERITA PEMKOT <i class="fa fa-arrow-right"></i></a>
+                      </li>
                     {{-- <li class="last">
                       <div class="info-box last">
                         <div class="info-box-content">

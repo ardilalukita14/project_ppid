@@ -92,18 +92,10 @@
                         <a href="detail.html" class="dropdown-item">Blog Detail</a>
                     </div>
                 </div>
-                {{-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                        <a href="feature.html" class="dropdown-item">Our features</a>
-                        <a href="team.html" class="dropdown-item">Team Members</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="quote.html" class="dropdown-item">Free Quote</a>
-                    </div>
-                </div> --}}
+                  <li class="header-get-a-quote">
+                <a class="btn btn-primary" href="contact.html">Get A Quote</a>
+              </li>
             </div>
-            <a href="" class="btn btn-primary py-2 px-4 ms-3">Berita Pemkot</a>
         </div>
     </nav>
 

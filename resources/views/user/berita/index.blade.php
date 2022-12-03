@@ -69,6 +69,8 @@
 <section id="ts-features" class="ts-features pb-2">
   <div class="container">
     <div class="row">
+        {{-- <div class="col-lg-6 mt-4 mt-lg-0"> --}}
+
     <div class="col-lg-12">
         <h2 class="section-title" style="text-align:center;">Informasi Terkait</h2>
 
@@ -112,7 +114,8 @@
           </div><!-- Service1 end -->
         </div><!-- Col 1 end -->
         @endforeach
-    </div><!-- Content row end -->
+    </div>
+    <!-- Content row end -->
   </div><!-- Container end -->
 </section><!-- Feature are end -->
 
