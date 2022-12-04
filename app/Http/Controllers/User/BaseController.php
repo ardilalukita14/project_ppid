@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Kategori;
 use App\Models\Post;
+use App\Models\Tag;
 use App\Models\Document;
 
 class BaseController extends Controller
@@ -27,8 +28,9 @@ class BaseController extends Controller
         $files = Document::where('posts_id', '=', $post->id)->where('jenis_file', '=', 'lampiran')->get();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
         $categories = Kategori::all();
+        $tags = Tag::all();
 
-        return view('user.berita.detail', compact('files','post','galleries','subjudul','data', 'parent', 'child', 'root_parent', 'title', 'beritaterkini', 'categories'));
+        return view('user.berita.detail', compact('files','post','galleries','subjudul','data', 'parent', 'child', 'root_parent', 'title', 'beritaterkini', 'categories', 'tags'));
     }
 
     public function contents_kategori($slug){
@@ -49,9 +51,10 @@ class BaseController extends Controller
         $title = "Kategori Berita";
   
         $categories = Kategori::all();
+        $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
     
-        return view('user.kategori.base', compact('subjudul','categories','posts', 'parent', 'child', 'root_parent', 'title', 'beritaterkini'));
+        return view('user.kategori.base', compact('subjudul','categories','posts', 'parent', 'child', 'root_parent', 'title', 'beritaterkini','tags'));
       
     }
 
@@ -81,9 +84,10 @@ class BaseController extends Controller
                  ->paginate(3);
         
         $categories = Kategori::all();
+        $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
     
-        return view('user.berita.list',compact('news', 'categories', 'beritaterkini')) ;
+        return view('user.berita.list',compact('news', 'categories', 'beritaterkini', 'tags')) ;
     }
 
 }

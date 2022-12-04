@@ -106,35 +106,46 @@
                         <input type="submit" value="Search" style="color:white;"><i class="bi bi-search"></i></input>
                   </form>
             </div>
+            <br>
+
             <div class="widget recent-posts">
-              <h3 class="widget-title">Berita Terkini</h3>
-              <ul class="list-unstyled">
+                <h3 class="widget-title">Berita Terkini</h3>
                 @foreach($beritaterkini as $data)
-                <li class="d-flex align-items-center">
-                  <div class="posts-thumb">
-                    <a href="#"><img loading="lazy" alt="img" src="{{ route('menu.file', encrypt($data->thumbnail)) }}"></a>
-                  </div>
-                  <div class="post-info">
-                    <h4 class="entry-title">
-                      <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
+              <li class="d-flex align-items-center" style="background-color: #EEF9FF;">
+                <div class="posts-thumb">
+                  <a href="#"><img loading="lazy" alt="img" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" style="width: 100px; height: 100px; object-fit: cover;"></a>
+                </div>
+                <div class="post-info">
+                  <h4 class="entry-title">
+                  <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
                     <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}">{{  $data->judul }}</a>
-                    </h4>
-                  </div>
-                </li>
-                @endforeach
+                  </h4>
+                </div>
+              </li><!-- 1st post end-->
+              <br>
+              @endforeach
               </ul><!-- 1st post end-->
 
             </div><!-- Recent post end -->
 
             <div class="widget">
-              <h3 class="widget-title">Kategori</h3>
-              <ul class="arrow nav nav-tabs">
-                @foreach($categories as $kategori)
-                <li><a href="{{ route('contents_kategori', $kategori->slug) }}">{{ $kategori->nama_kategori }} <span>({{ $kategori->posts->count() }})</span></a></li>
-              @endforeach
-              </ul>
-            </div><!-- Categories end -->
-
+            <h3 class="widget-title">Kategori</h3>
+            <div class="d-flex flex-wrap m-n1" >
+            @foreach($categories as $kategori)
+            <a href="{{ route('contents_kategori', $kategori->slug) }}" class="btn btn-light m-1" style="background-color: #EEF9FF;">{{ $kategori->nama_kategori }} <span>({{ $kategori->posts->count() }})</span></a></li>
+            @endforeach
+        </div>
+        <!-- Categories end -->
+        </div>
+                  <div class="widget">
+                      <h3 class="widget-title">Tag</h3>
+                        <div class="d-flex flex-wrap m-n1" style="background-color: #EEF9FF;">
+                          @foreach($tags as $tag) 
+                            <a href="" class="btn btn-light m-1" style="background-color: #EEF9FF;">{{ $tag->jenis_tag }}</a>
+                          @endforeach
+                        </div>
+                    </div>
+                    <!-- Tags End -->
           </div><!-- Sidebar end -->
         </div>
 
