@@ -65,59 +65,183 @@
 <!-- Content Pertama-->
 @include('layouts.frontend.content2')
 
+<section id="ts-features" class="ts-features">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+          <div class="ts-intro">
+              <h2 class="into-title">About Us</h2>
+              <h8 class="into-sub-title">We deliver landmark projects</h8>
+              <p>We are rethoric question ran over her cheek When she reached the first hills of the Italic Mountains,
+                she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village
+                and the subline of her own road, the Line Lane.</p>
+          </div><!-- Intro box end -->
+
+          <div class="gap-20"></div>
+
+          <div class="row">
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-trophy"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">We've Repution for Excellence</h3>
+                    </div>
+                </div><!-- Service 1 end -->
+              </div><!-- col end -->
+
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-sliders-h"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">We Build Partnerships</h3>
+                    </div>
+                </div><!-- Service 2 end -->
+              </div><!-- col end -->
+          </div><!-- Content row 1 end -->
+
+          <div class="row">
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-thumbs-up"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">Guided by Commitment</h3>
+                    </div>
+                </div><!-- Service 1 end -->
+              </div><!-- col end -->
+
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-users"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title">A Team of Professionals</h3>
+                    </div>
+                </div><!-- Service 2 end -->
+              </div><!-- col end -->
+          </div><!-- Content row 1 end -->
+        </div><!-- Col end -->
+
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <h8 class="into-sub-title">Our Values</h8>
+          <p>Minim Austin 3 wolf moon scenester aesthetic, umami odio pariatur bitters. Pop-up occaecat taxidermy street art, tattooed beard literally.</p>
+
+          <div class="accordion accordion-group" id="our-values-accordion">
+              <div class="card">
+                <div class="card-header p-0 bg-transparent" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Safety
+                      </button>
+                    </h2>
+                </div>
+              
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#our-values-accordion">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
+                    </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header p-0 bg-transparent" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Customer Service
+                      </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#our-values-accordion">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
+                    </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header p-0 bg-transparent" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Integrity
+                      </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#our-values-accordion">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
+                    </div>
+                </div>
+              </div>
+          </div>
+          <!--/ Accordion end -->
+
+        </div><!-- Col end -->
+    </div><!-- Row end -->
+  </div><!-- Container end -->
+</section><!-- Feature are end -->
+
+<hr>
 <!-- Content Kedua-->
 <section id="ts-features" class="ts-features pb-2">
   <div class="container">
     <div class="row">
-        {{-- <div class="col-lg-6 mt-4 mt-lg-0"> --}}
-
-    <div class="col-lg-12">
+    <div class="col-lg-12" style="margin-top: -40px;">
         <h2 class="section-title" style="text-align:center; color: #06A3DA">Informasi Terkait</h2>
         <h3 class="section-sub-title" style="text-align:center; color: #091E3E">Berita Tersemat</h3>
       </div>
-      @foreach($beritapinned as $data)
-        <div class="col-lg-4 col-md-6 mb-5">
-          <div class="ts-service-box">
-              <div class="ts-service-image-wrapper">
-              <?php if($data->thumbnail == null ){ ?>
-                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:400px; height:250px;">
+      </div>
+    <!--/ Title row end -->
 
-                <?php }else{ ?>
-                        <img loading="lazy" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="Gambar Content" class="img-fluid" style="width:400px; height:200px; text-align: center;">
-                <?php } ?>
-
-              </div>
-              <div class="d-flex">
-                <div class="ts-service-box-img">
-                    <img loading="lazy" src="{{asset('frontend/images/icon-image/service-icon1.png')}}" alt="service-icon" />
-                </div>
-                <div class="ts-service-info">
-                <h3 class="service-box-title" style="text-align:justify;">
-                    <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
-                    <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}">{{  $data->judul }}</a>
+    <div class="row">
+     @foreach($beritapinned as $data)
+      <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
+      <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s" >
+          <div class="blog-item bg-light rounded overflow-hidden">
+            <div class="shuffle-item" >
+              <div class="project-img-container">
+                <a href="news-single.html" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="img" style="width:400px; height:250px;">
+                    <div class="project-item-info">
+                <div class="project-item-info-content">
+                  <h3 class="project-item-title">
+                  <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" class="d-inline-block">{{$data->judul}}</a>
                   </h3>
-                <h8 style="text-align:justify;">
-                <span class="post-author">
-                  <a href="#"> {{$data->users->name}} |</a>
-                </span>
-                <span class="post-cat">
-                  <a href="#"> {{$data->kategori->nama_kategori}}|</a>
-                </span>
-                <span class="post-comment">
-                  <a href="#" class="comments-link"> {{ date('d M Y', strtotime($data->tgl_post)) }}</a></span>
-                </h8>
-                <p>{!!$data->contents!!}</p>
-                    <a class="learn-more d-inline-block" style="text-align:justify;" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}"  aria-label="service-datas"><i class="fa fa-caret-right"></i> Selanjutnya</a>
+                  <p class="project-cat">
+                      {{$data->kategori->nama_kategori}}
+                </p>
                 </div>
+              </div> 
+            </div>
+              <div class="p-4" style="background-color: #EEF9FF; height: 280px;">
+                  <div class="d-flex mb-3">
+                  <small class="me-3"><i class="far fa-user fa-1x text-primary"></i>  {{$data->users->name}}</small>
+                  <small style="margin-left:10px;"><i class="far fa-calendar-alt text-primary me-2"></i> {{ date('d M Y', strtotime($data->tgl_post)) }}</small>
+                  <small style="margin-left:10px;"><i class="far fa-folder-open text-primary"></i>  {{$data->kategori->nama_kategori}}</small>
               </div>
-          </div><!-- Service1 end -->
-        </div><!-- Col 1 end -->
+              <h4 class="mb-3"> <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" class="d-inline-block">{{$data->judul}}</a></h4>
+              <p>{!!substr($data->contents,0,80)!!}</p><br>
+                <a class="text-uppercase" href="" style="color: #06A3DA; font-weight: bold;  font-family: Nunito,sans-serif; font-size: 1rem; line-height: 1.5; padding-top: 10px; padding-bottom:10px;">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+              </div>
+          </div><!-- Latest post end -->
+        </div><!-- 1st post col end -->
         @endforeach
     </div>
-    <!-- Content row end -->
-  </div><!-- Container end -->
-</section><!-- Feature are end -->
+    <!--/ Content row end -->
 
+    <div class="general-btn text-center mt-4">
+        <a class="btn btn-primary" href="{{ route('contents_kategori', 'berita-ppid') }}">Berita Lainnya</a>
+    </div>
+
+  </div>
+  <!--/ Container end -->
+</section>
+
+<br></br>
 <!-- Content Kedua-->
 @include('layouts.frontend.content3')
 
@@ -221,22 +345,33 @@
     <div class="row">
       @foreach($beritaterkini as $data)
       <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="latest-post">
-              <div class="latest-post-media">
+      <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s" >
+          <div class="blog-item bg-light rounded overflow-hidden">
+            <div class="shuffle-item" >
+              <div class="project-img-container">
                 <a href="news-single.html" class="latest-post-img">
                     <img loading="lazy" class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="img" style="width:400px; height:250px;">
-                </a>
-              </div>
-              <div class="post-body">
-                <h4 class="post-title">
-                    <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" class="d-inline-block">{{$data->judul}}</a>
-                </h4>
-                <div class="latest-post-meta">
-                    <span class="post-item-date">
-                      <i class="fa fa-clock-o"></i> {{ date('d M Y', strtotime($data->tgl_post)) }}
-                    </span>
+                    <div class="project-item-info">
+                <div class="project-item-info-content">
+                  <h3 class="project-item-title">
+                  <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" class="d-inline-block">{{$data->judul}}</a>
+                  </h3>
+                  <p class="project-cat">
+                      {{$data->kategori->nama_kategori}}
+                </p>
                 </div>
+              </div> 
+            </div>
+              <div class="p-4" style="background-color: #EEF9FF; height: 280px;">
+                  <div class="d-flex mb-3">
+                  <small class="me-3"><i class="far fa-user fa-1x text-primary"></i>  {{$data->users->name}}</small>
+                  <small style="margin-left:10px;"><i class="far fa-calendar-alt text-primary me-2"></i> {{ date('d M Y', strtotime($data->tgl_post)) }}</small>
+                  <small style="margin-left:10px;"><i class="far fa-folder-open text-primary"></i>  {{$data->kategori->nama_kategori}}</small>
+              </div>
+              <h4 class="mb-3"> <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" class="d-inline-block">{{$data->judul}}</a></h4>
+              <p>{!!substr($data->contents,0,80)!!}</p><br>
+                <a class="text-uppercase" href="" style="color: #06A3DA; font-weight: bold;  font-family: Nunito,sans-serif; font-size: 1rem; line-height: 1.5; padding-top: 10px; padding-bottom:10px;">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
               </div>
           </div><!-- Latest post end -->
         </div><!-- 1st post col end -->
