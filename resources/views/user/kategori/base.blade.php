@@ -36,7 +36,7 @@
   <div class="container">
     <div class="row">
 
-      @if ($posts != null)
+    @if (count($posts) != 0)
       <div class="col-lg-8 row g-5">
         @foreach ($posts as $beritaItem)
         <div class="post">
@@ -90,7 +90,7 @@
       @else
        <div class="col-lg-8 mb-5 mb-lg-0">
         <div class="post">
-            <p style="text-align: center" data-aos="fade-in">Hasil pencarian berita tidak ditemukan</p>
+            <p style="text-align: center" data-aos="fade-in">Berita tidak ditemukan</p>
                 </div>
                 </div>
         @endif
@@ -113,7 +113,11 @@
                 @foreach($beritaterkini as $data)
               <li class="d-flex align-items-center" style="background-color: #EEF9FF;">
                 <div class="posts-thumb">
+                <?php if($data->thumbnail == null ){ ?>
+                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:400px; text-align: center;">                      
+                  <?php }else{ ?>
                   <a href="#"><img loading="lazy" alt="img" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" style="width: 100px; height: 100px; object-fit: cover;"></a>
+                  <?php } ?> 
                 </div>
                 <div class="post-info">
                   <h4 class="entry-title">

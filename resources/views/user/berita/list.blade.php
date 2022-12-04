@@ -15,7 +15,7 @@
   <div class="container">
     <div class="row">
       
-        @if ($news != null)
+    @if (count($news) != 0)
       <div class="col-lg-8 mb-5 mb-lg-0">
        @foreach ($news as $berita)
         <div class="post">
@@ -26,7 +26,7 @@
                 <?php }else{ ?>
                         <img loading="lazy" src="{{ route('menu.file', encrypt($berita->thumbnail)) }}" alt="Gambar Content" class="img-fluid" style="width:800px; height:400px; text-align: center;">
                 <?php } ?>
-
+          </div>
           <div class="post-body">
             <div class="entry-header">
               <div class="post-meta">
@@ -44,6 +44,7 @@
                     <?php $date = DateTime::createFromFormat("Y-m-d", $berita->tgl_post);?>
                     <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$berita->slug] ) }}">{{  $berita->judul }}</a>
                   </h6>
+                </h2>
             </div><!-- header end -->
 
             <div class="entry-content">
@@ -61,11 +62,14 @@
         <div class="blog-pagination">
                 {{ $news->links() }}
             </div><!-- End blog pagination -->
-
+      </div>
       @else
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="post">
             <p style="text-align: center" data-aos="fade-in">Hasil pencarian berita tidak ditemukan</p>
+                </div>
+          </div>
         @endif
-      </div><!-- Content Col end -->
       
       <div class="col-lg-4">
 
@@ -83,7 +87,11 @@
                 @foreach($beritaterkini as $data)
               <li class="d-flex align-items-center" style="background-color: #EEF9FF;">
                 <div class="posts-thumb">
+                <?php if($data->thumbnail == null ){ ?>
+                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:400px; text-align: center;">                      
+                  <?php }else{ ?>
                   <a href="#"><img loading="lazy" alt="img" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" style="width: 100px; height: 100px; object-fit: cover;"></a>
+                  <?php } ?> 
                 </div>
                 <div class="post-info">
                   <h4 class="entry-title">

@@ -161,7 +161,11 @@
             <div class="shuffle-item" >
               <div class="project-img-container">
                 <a href="news-single.html" class="latest-post-img">
+                <?php if($data->thumbnail == null ){ ?>
+                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:400px; text-align: center;">                      
+                  <?php }else{ ?>
                     <img loading="lazy" class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="img" style="width:400px; height:250px;">
+                  <?php } ?> 
                     <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
