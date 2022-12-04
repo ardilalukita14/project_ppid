@@ -91,6 +91,7 @@ h6 {
   letter-spacing: -1px;
 }
 
+
 .alert .icon {
   margin-right: 15px;
 }
@@ -3438,5 +3439,16 @@ label {
   justify-content: center;
   height: 100%;
   flex: 1 0 100%;
+}
+
+#gpr-kominfo-widget-container {
+  background-color: #23277B !important;
+  width: 100% !important;
+  min-width: 200px !important;
+  max-width: 500px !important;
+  border-top: 5px solid #23277B !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
 }
 /*# sourceMappingURL=style.css.map */
