@@ -36,45 +36,48 @@
   <div class="container">
     <div class="row">
 
+
     @if (count($posts) != 0)
       <div class="col-lg-8 row g-5">
         @foreach ($posts as $beritaItem)
+        <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
         <div class="post">
           <div class="post-media post-image">
             <?php if($beritaItem->thumbnail == null ){ ?>
               <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default">
 
           <?php }else{ ?>
-                  <img loading="lazy" src="{{ route('menu.file', encrypt($beritaItem->thumbnail)) }}" alt="Gambar Content" class="img-fluid" style="width:800px; height:400px; text-align: center;">
+                  <img loading="lazy" src="{{ route('menu.file', encrypt($beritaItem->thumbnail)) }}" alt="Gambar Content" class="img-fluid" style="width:400px; height:200px; text-align: center;">
           <?php } ?>
           </div>
+        </div>
 
           <div class="post-body">
             <div class="entry-header">
               <div class="post-meta">
-                <span class="post-author">
-                  <i class="far fa-user"></i><a href="#"> {{ $beritaItem->users->name }}</a>
-                </span>
-                <span class="post-cat">
-                  <i class="far fa-folder-open"></i><a href="#"> {{ $beritaItem->kategori->nama_kategori }}</a>
-                </span>
-                <span class="post-meta-date"><i class="far fa-calendar"></i> {{ date('d M Y', strtotime($beritaItem->tgl_post)) }}</span>
-                <span class="post-comment"><i class="far fa-comment"></i> 03<a href="#"
-                    class="comments-link">Comments</a></span>
+                <small class="post-author">
+                  <i class="far fa-user text-primary me-2"></i><a href="#">{{ $beritaItem->users->name }}</a>
+                </small>
+                <small class="post-cat">&nbsp;
+                  <i class="far fa-folder-open text-primary me-2"></i><a href="#">{{ $beritaItem->kategori->nama_kategori }}</a>
+                </small>&nbsp;
+                <small class="post-meta-date"><i class="far fa-calendar-alt text-primary me-2"></i>{{ date('d M Y', strtotime($beritaItem->tgl_post)) }}</small>&nbsp;
+                <small class="post-comment"><i class="far fa-comment text-primary me-2"></i> 03<a href="#"
+                    class="comments-link">Comments</a></small>
               </div>
-              <h2 class="entry-title">
-                <h6 class="title">
+              <h2 class="entry-title" >
+                <h6 class="title" style="margin-left: 15px; margin-right:15px">
                   <?php $date = DateTime::createFromFormat("Y-m-d", $beritaItem->tgl_post);?>
                   <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$beritaItem->slug] ) }}">{{  $beritaItem->judul }}</a>
                 </h6>
               </h2>
             </div><!-- header end -->
 
-            <div class="entry-content">
+            <div class="entry-content" style="margin-left: 15px; margin-right:15px">
               <p style="margin-top: -20px;">{!!substr($beritaItem->contents,0,1000)!!}...</p>
             </div>
 
-            <div class="post-footer">
+            <div class="post-footer" style="margin-left: 15px; margin-right:15px">
               <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$beritaItem->slug] ) }}" class="btn btn-primary">Baca Lebih Lanjut</a>
             </div>
 
@@ -114,10 +117,10 @@
               <li class="d-flex align-items-center" style="background-color: #EEF9FF;">
                 <div class="posts-thumb">
                 <?php if($data->thumbnail == null ){ ?>
-                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:400px; text-align: center;">                      
+                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:400px; text-align: center;">
                   <?php }else{ ?>
                   <a href="#"><img loading="lazy" alt="img" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" style="width: 100px; height: 100px; object-fit: cover;"></a>
-                  <?php } ?> 
+                  <?php } ?>
                 </div>
                 <div class="post-info">
                   <h4 class="entry-title">
@@ -144,7 +147,7 @@
                   <div class="widget">
                       <h3 class="widget-title">Tag</h3>
                         <div class="d-flex flex-wrap m-n1" style="background-color: #EEF9FF;">
-                          @foreach($tags as $tag) 
+                          @foreach($tags as $tag)
                             <a href="" class="btn btn-light m-1" style="background-color: #EEF9FF;">{{ $tag->jenis_tag }}</a>
                           @endforeach
                         </div>

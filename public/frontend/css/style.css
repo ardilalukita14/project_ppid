@@ -1685,7 +1685,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .ts-service-box .ts-service-icon i {
   font-size: 36px;
   float: left;
-  color: #ffb600;
+  color: #3c83e6;
 }
 
 .ts-service-box .ts-service-box-content {
@@ -2907,8 +2907,8 @@ label {
 ================================================== */
 .post {
   border-bottom: 1px solid #dadada;
-  padding: 0 0 30px;
-  margin: 0 0 45px;
+  /* padding: 0 0 30px;
+  margin: 0 0 45px; */
 }
 
 .post.last {
@@ -2919,6 +2919,7 @@ label {
 
 .post-body {
   padding: 20px 0;
+  background-color: rgb(238 249 255);
 }
 
 .entry-header .entry-title {
@@ -2944,6 +2945,10 @@ label {
 /* Meta */
 .post-meta {
   padding-bottom: 10px;
+  font-size: 17px;
+  margin-left: 15px;
+  margin-right: 15px;
+
 }
 
 .post-meta a {
@@ -2951,7 +2956,7 @@ label {
 }
 
 .post-meta a:hover {
-  color: #ffb600;
+  color: #3c83e6;
 }
 
 .post-meta span {
