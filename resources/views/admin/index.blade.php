@@ -128,7 +128,7 @@
     <br> 
     <div class="row">
       <div class="col-xl-6">
-          <div class="card mb-4" style="background: rgba(178, 255, 170, 0.667); margin-left:-12px;">
+          <div class="card mb-4" style="background-color: #aed6f1; margin-left:-12px;">
               <div class="card-header" >
                   <i class="fas fa-chart-area me-1"></i><b style="margin-left:5px;"> Jumlah Berita Ter-Publish Per Bulan</b>
               </div>
@@ -136,9 +136,9 @@
           </div>
       </div>
       <div class="col-xl-6">
-        <div class="card mb-4" style="background: rgba(178, 255, 170, 0.667); margin-left:-12px;">
+        <div class="card mb-4" style="background-color: #aed6f1; margin-left:-12px;">
             <div class="card-header" >
-                <i class="fas fa-chart-area me-1"></i> Jumlah Berita Ter-Publish Per Tahun
+                <i class="fas fa-chart-area me-1"></i><b style="margin-left:5px;"> Jumlah Berita Ter-Publish Per Tahun</b>
                     </div>
             <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
         </div>

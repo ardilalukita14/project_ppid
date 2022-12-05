@@ -72,13 +72,15 @@
                 
                 @foreach ($galleries as $galeri)
 
+                <a href="{{route('menu.file', encrypt($galeri->path_file))}}" target="_blank" style="color: blue;">{{$galeri->path_file}}</a>
                 <div class="banner-carousel-item <?php 
                 if($count==0){
                   echo "active";  
                 }
                 else{
                     echo " ";
-                } ?>" style="background-image:url({{route('menu.file', encrypt($galeri->path_file))}}); width:800px; height:400px; text-align: center;">
+                } ?>" 
+                style="background-image:url({{route('menu.file', encrypt($galeri->path_file))}}); width:800px; height:400px; text-align: center;">
             <div class="slider-content text-left">
                 <div class="container h-100">
                   <div class="row align-items-center h-100">
@@ -103,6 +105,7 @@
 
             @foreach($files as $file)
 
+            <a href="{{ route('menu.file', encrypt($file->path_file)) }}" target="_blank" style="color: blue;">{{$file->path_file}}</a>
             <iframe src="{{ route('menu.file', encrypt($file->path_file)) }}" name="iframe_a"  width="100%" height="600" style="border:1px solid black;"></iframe> <br>
             <a href="{{ route('menu.file', encrypt($file->path_file)) }}" target="_blank"> <button  class="btn btn-info" style="border-radius: 20px; margin-top:15px;" >Download File</button></a><br><br>
             
@@ -130,42 +133,6 @@
           <!-- post-body end -->
         </div>
         <!-- post content end -->
-
-        <div class="comments-form border-box">
-          <h3 class="title-normal">Komentar</h3>
-
-          <form role="form">
-            <div class="row">
-              <div class="col-md-12" style="width:300px;">
-                <div class="form-group" >
-                  <label for="message"> <textarea class="summernote" id="message" placeholder="Your Comment" rows="10" required></textarea></label>
-                </div>
-              </div><!-- Col 12 end -->
-
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label for="name"><input class="form-control" name="name" id="name" placeholder="Your Name" type="text" required></label>
-                </div>
-              </div><!-- Col 4 end -->
-
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label for="email"><input class="form-control" name="email" id="email" placeholder="Your Email" type="email" required></label>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label for="website"><input class="form-control" id="website" placeholder="Your Website" type="text" required></label>
-                </div>
-              </div>
-
-            </div><!-- Form row end -->
-            <div class="clearfix">
-              <button class="btn btn-primary" type="submit" aria-label="post-comment">Post Comment</button>
-            </div>
-          </form><!-- Form end -->
-        </div><!-- Comments form end -->
       </div><!-- Content Col end -->
 
       <div class="col-lg-4">
@@ -202,26 +169,29 @@
 
           </div><!-- Recent post end -->
          
-          <div class="widget">
+          <div class="widget widget-tags">
             <h3 class="widget-title">Kategori</h3>
             <div class="d-flex flex-wrap m-n1" >
+            <ul class="list-unstyled">
             @foreach($categories as $kategori)
-            <a href="{{ route('contents_kategori', $kategori->slug) }}" class="btn btn-light m-1" style="background-color: #EEF9FF;">{{ $kategori->nama_kategori }} <span>({{ $kategori->posts->count() }})</span></a></li>
+                <li><a href="{{ route('contents_kategori', $kategori->slug) }}">{{ $kategori->nama_kategori }} <span>({{ $kategori->posts->count() }})</span></a></li>
             @endforeach
+              </ul>
         </div>
         <!-- Categories end -->
         </div>
-                  <div class="widget">
-                      <h3 class="widget-title">Tag</h3>
-                        <div class="d-flex flex-wrap m-n1" style="background-color: #EEF9FF;">
-                          @foreach($tags as $tag) 
-                            <a href="" class="btn btn-light m-1" style="background-color: #EEF9FF;">{{ $tag->jenis_tag }}</a>
-                          @endforeach
-                        </div>
-                    </div>
                     <!-- Tags End -->
 
-        </div><!-- Sidebar end -->
+        <div class="widget widget-tags">
+            <h3 class="widget-title">Tags </h3>
+
+            <ul class="list-unstyled">
+            @foreach($tags as $tag)
+              <li><a href="#">{{ $tag->jenis_tag }}</a></li>
+              @endforeach
+            </ul>
+          </div><!-- Tags end -->
+          </div><!-- Sidebar end -->
       </div><!-- Sidebar Col end -->
 
     </div><!-- Main row end -->
