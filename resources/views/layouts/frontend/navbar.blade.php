@@ -110,8 +110,8 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Jadwal <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
-                              <li><a href="">Jadwal Rapat</a></li>
-                              <li><a href="">Agenda Kota</a></li>
+                              <li><a href="{{ route('jadwalrapat') }}">Jadwal Rapat</a></li>
+                              <li><a href="{{ route('daftaragenda') }}">Agenda Kota</a></li>
                             </ul>
                         </li>
 

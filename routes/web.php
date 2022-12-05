@@ -30,6 +30,10 @@ route::get('/',[\App\Http\Controllers\User\BaseController::class,'index'])->name
 route::get('/profil-kota-madiun',[\App\Http\Controllers\FrontendController::class,'profilkota'])->name('layouts.frontend.profilkota');
 route::get('/sejarah-kota-madiun',[\App\Http\Controllers\FrontendController::class,'sejarah'])->name('layouts.frontend.sejarahkota');
 
+/** Jadwal Rapat dan Agenda Kota */
+Route::get('/jadwal-rapat', [App\Http\Controllers\User\BaseController::class, 'jadwal_rapat'])->name('jadwalrapat');
+Route::get('/agenda-kota', [App\Http\Controllers\User\BaseController::class, 'daftar_agenda'])->name('daftaragenda');
+
 /** Slug */
 Route::get('/kategori/{slug}', [App\Http\Controllers\User\BaseController::class, 'contents_kategori'] )->name('contents_kategori');
 Route::get('/berita/{year}/{month}/{day}/{slug}', [App\Http\Controllers\User\BaseController::class, 'contents_blog'] )->name('contents_blog');

@@ -52,21 +52,19 @@
           </div>
         </div>
 
-          <div class="post-body">
+          <div class="post-body" style="background-color: #EEF9FF;">
             <div class="entry-header">
               <div class="post-meta">
                 <small class="post-author">
-                  <i class="far fa-user text-primary me-2"></i><a href="#">{{ $beritaItem->users->name }}</a>
+                  <i class="far fa-user text-primary me-2"></i><a href="#" style="font-size: 12px;">{{ $beritaItem->users->name }}</a>
                 </small>
                 <small class="post-cat">&nbsp;
-                  <i class="far fa-folder-open text-primary me-2"></i><a href="#">{{ $beritaItem->kategori->nama_kategori }}</a>
+                  <i class="far fa-folder-open text-primary me-2"></i><a href="#" style="font-size: 12px;">{{ $beritaItem->kategori->nama_kategori }}</a>
                 </small>&nbsp;
-                <small class="post-meta-date"><i class="far fa-calendar-alt text-primary me-2"></i>{{ date('d M Y', strtotime($beritaItem->tgl_post)) }}</small>&nbsp;
-                <small class="post-comment"><i class="far fa-comment text-primary me-2"></i> 03<a href="#"
-                    class="comments-link">Comments</a></small>
+                <small class="post-meta-date"><i class="far fa-calendar-alt text-primary me-2"></i><a href="#" style="font-size: 12px;">{{ date('d M Y', strtotime($beritaItem->tgl_post)) }}</a></small>&nbsp;
               </div>
               <h2 class="entry-title" >
-                <h6 class="title" style="margin-left: 15px; margin-right:15px">
+                <h6 class="title" style="margin-left: 15px; margin-right:15px;">
                   <?php $date = DateTime::createFromFormat("Y-m-d", $beritaItem->tgl_post);?>
                   <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$beritaItem->slug] ) }}">{{  $beritaItem->judul }}</a>
                 </h6>
@@ -135,24 +133,28 @@
 
             </div><!-- Recent post end -->
 
-            <div class="widget">
+            <div class="widget widget-tags">
             <h3 class="widget-title">Kategori</h3>
             <div class="d-flex flex-wrap m-n1" >
+            <ul class="list-unstyled">
             @foreach($categories as $kategori)
-            <a href="{{ route('contents_kategori', $kategori->slug) }}" class="btn btn-light m-1" style="background-color: #EEF9FF;">{{ $kategori->nama_kategori }} <span>({{ $kategori->posts->count() }})</span></a></li>
+                <li><a href="{{ route('contents_kategori', $kategori->slug) }}">{{ $kategori->nama_kategori }} <span>({{ $kategori->posts->count() }})</span></a></li>
             @endforeach
+              </ul>
         </div>
         <!-- Categories end -->
         </div>
-                  <div class="widget">
-                      <h3 class="widget-title">Tag</h3>
-                        <div class="d-flex flex-wrap m-n1" style="background-color: #EEF9FF;">
-                          @foreach($tags as $tag)
-                            <a href="" class="btn btn-light m-1" style="background-color: #EEF9FF;">{{ $tag->jenis_tag }}</a>
-                          @endforeach
-                        </div>
-                    </div>
                     <!-- Tags End -->
+
+        <div class="widget widget-tags">
+            <h3 class="widget-title">Tags </h3>
+
+            <ul class="list-unstyled">
+            @foreach($tags as $tag)
+              <li><a href="#">{{ $tag->jenis_tag }}</a></li>
+              @endforeach
+            </ul>
+          </div><!-- Tags end -->
           </div><!-- Sidebar end -->
         </div>
 

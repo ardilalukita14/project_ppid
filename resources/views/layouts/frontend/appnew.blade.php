@@ -65,12 +65,28 @@
   <script src="frontend/lib/waypoints/waypoints.min.js"></script>
   <script src="frontend/lib/counterup/counterup.min.js"></script>
   <script src="frontend/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="{{asset('vendorss/datatables/jquery.dataTables.min.js')}}"></script>
+  <script src="{{asset('vendorss/datatables/dataTables.bootstrap4.min.js')}}"></script>
 
   <!-- Template custom -->
   <script src="{{ asset ('frontend/js/script.js')}}"></script>
 
   <script id="aioa-adawidget" src="https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#d1202f&token=&position=bottom_left"></script>
 
+  
+<script ttype="text/javascript">
+
+    $(document).ready(function() {
+
+
+        $('#jadwal_rapat').DataTable( {
+            scrollCollapse: true,
+            paging:         true
+        } );
+
+    } );
+  
+</script>
   </div><!-- Body inner end -->
   </body>
 

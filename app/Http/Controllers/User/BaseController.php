@@ -10,6 +10,8 @@ use App\Models\Kategori;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\Document;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
 
 class BaseController extends Controller
 {
@@ -88,6 +90,72 @@ class BaseController extends Controller
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
     
         return view('user.berita.list',compact('news', 'categories', 'beritaterkini', 'tags')) ;
+    }
+
+    public function jadwal_rapat() {
+
+        $client = new Client(); //GuzzleHttp\Client
+
+        $url = 'http://10.11.15.69:680/api/ruangrapat/jadwal'; // url api data
+
+        try{
+            $response = $client->post($url, 
+                array(
+                    'headers' => array(
+                        'passcode' => 'k0taPendekArr'
+                    )
+                )
+            );
+        }catch(RequestException $exception){
+            var_dump($exception->getResponse()->getBody()->getContents());
+        }
+        
+        $json = $response->getBody()->getContents();
+        
+        $hasil = json_decode($json, true);
+
+        $total = (count($hasil["data"]));
+      
+         return view('user.jadwal.rapat', [
+             "data_rapat" => $hasil,
+             "jumlah" => $total,
+             "title" => "Jadwal Rapat Kota Madiun",
+             "parent" => "jadwal_rapat"
+         ]);
+
+    }
+
+    public function daftar_agenda() {
+
+        $client = new Client(['verify' => false]); //GuzzleHttp\Client, verification SSL
+
+        $url = 'https://agenda.madiunkota.go.id/api/daftarAgenda'; // url api data
+
+        try{
+            $response = $client->post($url, 
+                array(
+                    'headers' => array(
+                        'passcode' => 'k0taPendekArr'
+                    )
+                )
+            );
+        }catch(RequestException $exception){
+            var_dump($exception->getResponse()->getBody()->getContents());
+        }
+        
+        $json = $response->getBody()->getContents();
+        
+        $hasil = json_decode($json, true);
+
+        $total = (count($hasil["data"]));
+      
+         return view('user.jadwal.agenda', [
+             "data_agenda" => $hasil,
+             "jumlah" => $total,
+             "title" => "Daftar Agenda Kota Madiun",
+             "parent" => "daftar_agenda"
+         ]);
+
     }
 
 }
