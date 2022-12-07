@@ -24,21 +24,30 @@
           </div><!-- Col end -->
 
           <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
-            <h3 class="widget-title">Jam Pelayanan</h3>
+            <h3 class="widget-title">Informasi</h3>
+            <div class="text-white"><i class="fas fa-map-marker-alt"></i><h8 style="margin-left:15px;">Jl. Perintis Kemerdekaan No. 32 Kota Madiun</h8></div><br>
+            <div class="text-white"><i class="fas fa-phone"></i><h8 style="margin-left:10px;">(0351) 467327</h8></div><br>
+            <div class="text-white"><i class="fas fa-envelope"></i><h8 style="margin-left:10px;">ppid@madiunkota.go.id</h8></div><br>
             <div class="working-hours">
               <p style="text-align:justify;" class="text-white">Jam pelayanan menyesuaikan jam kerja, yaitu hari Senin-Jumat. Jika ada kepentingan mendesak, Anda dapat menghubungi kami
               melalui kontak yang tertera.</p>
               <div class="text-white">Senin - Kamis : <span class="text-right text-white">07:00 - 15:30 </span></div>
               <br>
-              <div class="text-white">Jumat : <span class="text-right text-white">06:30 - 14:30</span></div>
+              <div class="text-white">Jumat : <span class="text-right text-white">06:30 - 14:30</span></div><br><br>
+
             </div>
 
+
             <br></br>
+
+          </div><!-- Col end -->
+
+          {{-- <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
             <h3 class="widget-title">Informasi</h3>
             <div class="text-white"><i class="fas fa-map-marker-alt"></i><h8 style="margin-left:15px;">Jl. Perintis Kemerdekaan No. 32 Kota Madiun</h8></div>
             <div class="text-white"><i class="fas fa-phone"></i><h8 style="margin-left:10px;">(0351) 467327</h8></div>
             <div class="text-white"><i class="fas fa-envelope"></i><h8 style="margin-left:10px;">ppid@madiunkota.go.id</h8></div>
-          </div><!-- Col end -->
+            </div> --}}
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
             <h3 class="widget-title">Menu Akses</h3>
@@ -51,7 +60,7 @@
             </ul>
           </div>
           <!-- Col end -->
-          
+
         </div><!-- Row end -->
       </div><!-- Container end -->
     </div><!-- Footer main end -->
