@@ -3,16 +3,12 @@
       <div class="container">
         <div class="logo-area">
             <div class="row align-items-center">
-              <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-                  <a class="d-block" href="/">
-                    <img src="{{asset('frontend/images/logo_ppid.png')}}" alt="Constra" style="width:200px; height:80px">
-                  </a>
-              </div><!-- logo end -->
+             
 
               <div class="col-lg-9 header-right">
                   <ul class="top-info-box">
                     <li>
-                      <div class="info-box">
+                      <!-- <div class="info-box">
                         <div class="info-box-content">
                             <p class="info-box-title">Hubungi Kami</p>
                             <p class="info-box-subtitle">(0351) 467327</p>
@@ -26,10 +22,10 @@
                             <p class="info-box-subtitle">ppid@madiunkota.go.id </p>
                         </div>
                       </div>
-                    </li>
-                    <li class="header-get-a-quote">
+                    </li> -->
+                    <!-- <li class="header-get-a-quote">
                         <a class="btn btn-primary" href="https://www.madiunkota.go.id/" target="_blank">BERITA PEMKOT <i class="fa fa-arrow-right"></i></a>
-                      </li>
+                      </li> -->
                     {{-- <li class="last">
                       <div class="info-box last">
                         <div class="info-box-content">

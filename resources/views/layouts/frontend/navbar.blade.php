@@ -7,8 +7,12 @@
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                   </button>
-
-                  <div id="navbar-collapse" class="collapse navbar-collapse" >
+                  <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                  <a class="d-block" href="/">
+                    <img src="{{asset('frontend/images/logo_ppid.png')}}" alt="Constra" style="width:150px; height:65px; margin-left: 120px;">
+                  </a>
+              </div><!-- logo end -->
+                  <div id="navbar-collapse" class="collapse navbar-collapse" style="margin-left: -50px;">
                       <ul class="nav navbar-nav mr-auto" >
                           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
 
@@ -134,7 +138,7 @@
         </div>
         <!--/ Row end -->
 
-        <div class="nav-search" style="margin-left: 550px">
+        <div class="nav-search" style="margin-left: 550px; margin-top: 10px;">
           <span id="search" class="text-white"><i class="fa fa-search" ></i></span>
         </div><!-- Search end -->
 
