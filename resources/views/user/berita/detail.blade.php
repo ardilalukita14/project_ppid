@@ -72,13 +72,15 @@
                 
                 @foreach ($galleries as $galeri)
 
+                <a href="{{route('menu.file', encrypt($galeri->path_file))}}" target="_blank" style="color: blue;">{{$galeri->path_file}}</a>
                 <div class="banner-carousel-item <?php 
                 if($count==0){
                   echo "active";  
                 }
                 else{
                     echo " ";
-                } ?>" style="background-image:url({{route('menu.file', encrypt($galeri->path_file))}}); width:800px; height:400px; text-align: center;">
+                } ?>" 
+                style="background-image:url({{route('menu.file', encrypt($galeri->path_file))}}); width:800px; height:400px; text-align: center;">
             <div class="slider-content text-left">
                 <div class="container h-100">
                   <div class="row align-items-center h-100">
@@ -103,6 +105,7 @@
 
             @foreach($files as $file)
 
+            <a href="{{ route('menu.file', encrypt($file->path_file)) }}" target="_blank" style="color: blue;">{{$file->path_file}}</a>
             <iframe src="{{ route('menu.file', encrypt($file->path_file)) }}" name="iframe_a"  width="100%" height="600" style="border:1px solid black;"></iframe> <br>
             <a href="{{ route('menu.file', encrypt($file->path_file)) }}" target="_blank"> <button  class="btn btn-info" style="border-radius: 20px; margin-top:15px;" >Download File</button></a><br><br>
             
@@ -130,42 +133,6 @@
           <!-- post-body end -->
         </div>
         <!-- post content end -->
-
-        <div class="comments-form border-box">
-          <h3 class="title-normal">Komentar</h3>
-
-          <form role="form">
-            <div class="row">
-              <div class="col-md-12" style="width:300px;">
-                <div class="form-group" >
-                  <label for="message"> <textarea class="summernote" id="message" placeholder="Your Comment" rows="10" required></textarea></label>
-                </div>
-              </div><!-- Col 12 end -->
-
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label for="name"><input class="form-control" name="name" id="name" placeholder="Your Name" type="text" required></label>
-                </div>
-              </div><!-- Col 4 end -->
-
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label for="email"><input class="form-control" name="email" id="email" placeholder="Your Email" type="email" required></label>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label for="website"><input class="form-control" id="website" placeholder="Your Website" type="text" required></label>
-                </div>
-              </div>
-
-            </div><!-- Form row end -->
-            <div class="clearfix">
-              <button class="btn btn-primary" type="submit" aria-label="post-comment">Post Comment</button>
-            </div>
-          </form><!-- Form end -->
-        </div><!-- Comments form end -->
       </div><!-- Content Col end -->
 
       <div class="col-lg-4">
@@ -181,11 +148,14 @@
           <br>
           <div class="widget recent-posts">
           <h3 class="widget-title">Berita Terkini</h3>
-            <ul class="list-unstyled">
                 @foreach($beritaterkini as $data)
-              <li class="d-flex align-items-center">
+              <li class="d-flex align-items-center" style="background-color: #EEF9FF;">
                 <div class="posts-thumb">
-                  <a href="#"><img loading="lazy" alt="img" src="{{ route('menu.file', encrypt($data->thumbnail)) }}"></a>
+                <?php if($data->thumbnail == null ){ ?>
+                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:400px; text-align: center;">                      
+                  <?php }else{ ?>
+                  <a href="#"><img loading="lazy" alt="img" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" style="width: 100px; height: 100px; object-fit: cover;"></a>
+                <?php } ?>
                 </div>
                 <div class="post-info">
                   <h4 class="entry-title">
@@ -194,39 +164,34 @@
                   </h4>
                 </div>
               </li><!-- 1st post end-->
+              <br>
               @endforeach
-            </ul>
 
           </div><!-- Recent post end -->
          
-          <div class="widget">
+          <div class="widget widget-tags">
             <h3 class="widget-title">Kategori</h3>
-            <ul class="arrow nav nav-tabs">
+            <div class="d-flex flex-wrap m-n1" >
+            <ul class="list-unstyled">
             @foreach($categories as $kategori)
                 <li><a href="{{ route('contents_kategori', $kategori->slug) }}">{{ $kategori->nama_kategori }} <span>({{ $kategori->posts->count() }})</span></a></li>
             @endforeach
-            </ul>
+              </ul>
         </div>
         <!-- Categories end -->
+        </div>
+                    <!-- Tags End -->
 
-          <!-- <div class="widget widget-tags">
+        <div class="widget widget-tags">
             <h3 class="widget-title">Tags </h3>
 
             <ul class="list-unstyled">
-              <li><a href="#">Construction</a></li>
-              <li><a href="#">Design</a></li>
-              <li><a href="#">Project</a></li>
-              <li><a href="#">Building</a></li>
-              <li><a href="#">Finance</a></li>
-              <li><a href="#">Safety</a></li>
-              <li><a href="#">Contracting</a></li>
-              <li><a href="#">Planning</a></li>
+            @foreach($tags as $tag)
+              <li><a href="#">{{ $tag->jenis_tag }}</a></li>
+              @endforeach
             </ul>
-          </div> -->
-          <!-- Tags end -->
-
-
-        </div><!-- Sidebar end -->
+          </div><!-- Tags end -->
+          </div><!-- Sidebar end -->
       </div><!-- Sidebar Col end -->
 
     </div><!-- Main row end -->

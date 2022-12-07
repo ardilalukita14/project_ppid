@@ -8,13 +8,9 @@
                       <span class="navbar-toggler-icon"></span>
                   </button>
 
-                  <div id="navbar-collapse" class="collapse navbar-collapse">
-                      <ul class="nav navbar-nav mr-auto">
+                  <div id="navbar-collapse" class="collapse navbar-collapse" >
+                      <ul class="nav navbar-nav mr-auto" >
                           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                            {{-- <ul class="dropdown-menu" role="menu">
-                              <li class="active"><a href="index.html">Home One</a></li>
-                              <li><a href="index-2.html">Home Two</a></li>
-                            </ul> --}}
 
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Profil <i class="fa fa-angle-down"></i></a>
@@ -104,10 +100,28 @@
                       </li>
 
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Galeri/Infografis <i class="fa fa-angle-down"></i></a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Galeri <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
                               <li><a href="{{ route('contents_kategori', 'galeri') }}">Galeri</a></li>
                               <li><a href="{{ route('contents_kategori', 'infografis') }}">Infografis</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Jadwal <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                              <li><a href="{{ route('jadwalrapat') }}">Jadwal Rapat</a></li>
+                              <li><a href="{{ route('daftaragenda') }}">Agenda Kota</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data Statistik <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                              <li><a href="https://dashboard.madiunkota.go.id/" target="_blank">Data Sektoral</a></li>
+                              <li><a href="https://madiunkota.bps.go.id/" target="_blank">BPS Kota Madiun</a></li>
+                              <li><a href="">Data Penduduk Kota Madiun Tahun 2019</a></li>
+                              <li><a href="https://hargapangan.id/" target="_blank">Tabel Harga Berdasarkan Daerah</a></li>
                             </ul>
                         </li>
 
@@ -120,8 +134,8 @@
         </div>
         <!--/ Row end -->
 
-        <div class="nav-search">
-          <span id="search"><i class="fa fa-search"></i></span>
+        <div class="nav-search" style="margin-left: 550px">
+          <span id="search" class="text-white"><i class="fa fa-search" ></i></span>
         </div><!-- Search end -->
 
         <div class="search-block" style="display: none;">
@@ -131,7 +145,7 @@
           <input type="text" value="{{ old('cari') }}" name="cari" class="form-control" placeholder="Temukan informasi">
           </label>
           <span class="search-close">&times;</span>
-        </div><!-- Site search end -->   
+        </div><!-- Site search end -->
       </form>
     </div>
     <!--/ Container end -->

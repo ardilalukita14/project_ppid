@@ -32,6 +32,10 @@
   <!-- Template styles-->
   <link rel="stylesheet" href="{{ asset ('frontend/css/style.css')}}">
 
+   <!-- Libraries Stylesheet -->
+   <link href="frontend/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+   <link href="frontend/lib/animate/animate.min.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -56,9 +60,33 @@
   <!-- Google Map Plugin-->
   <script src="{{ asset ('frontend/plugins/google-map/map.js')}}" defer></script>
 
+  <script src="frontend/lib/wow/wow.min.js"></script>
+  <script src="frontend/lib/easing/easing.min.js"></script>
+  <script src="frontend/lib/waypoints/waypoints.min.js"></script>
+  <script src="frontend/lib/counterup/counterup.min.js"></script>
+  <script src="frontend/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="{{asset('vendorss/datatables/jquery.dataTables.min.js')}}"></script>
+  <script src="{{asset('vendorss/datatables/dataTables.bootstrap4.min.js')}}"></script>
+
   <!-- Template custom -->
   <script src="{{ asset ('frontend/js/script.js')}}"></script>
 
+  <script id="aioa-adawidget" src="https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#d1202f&token=&position=bottom_left"></script>
+
+  
+<script ttype="text/javascript">
+
+    $(document).ready(function() {
+
+
+        $('#jadwal_rapat').DataTable( {
+            scrollCollapse: true,
+            paging:         true
+        } );
+
+    } );
+  
+</script>
   </div><!-- Body inner end -->
   </body>
 

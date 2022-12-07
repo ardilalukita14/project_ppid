@@ -65,56 +65,144 @@
 <!-- Content Pertama-->
 @include('layouts.frontend.content2')
 
+<section id="ts-features" class="ts-features">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+          <div class="ts-intro">
+              <p class="into-title">About Us</p>
+              <h8 class="into-sub-title" style="font-size: 36px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: -0.5px; color: #212121; font-weight: 700; font-family: Montserrat, sans-serif;
+                text-rendering: optimizeLegibility;">PPID PELAKSANA KOTA MADIUN</h8>
+              <p style="text-align:justify;">Pejabat Pengelola Informasi dan Dokumentasi (PPID) adalah pejabat yang bertanggung jawab di bidang penyimpanan, 
+                  pendokumentasian, penyediaan dan/ atau pelayanan informasi di badan publik.</p>
+          </div><!-- Intro box end -->
+
+          <div class="gap-20"></div>
+
+          <div class="row">
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-trophy"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title" style="color: #555; text-align:justify;">Menyediakan informasi yang dibutuhkan publik</h3>
+                    </div>
+                </div><!-- Service 1 end -->
+              </div><!-- col end -->
+
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-sliders-h"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title" style="color: #555; text-align:justify;">Meningkatkan pengelolaan dan pelayanan informasi</h3>
+                    </div>
+                </div><!-- Service 2 end -->
+              </div><!-- col end -->
+          </div><!-- Content row 1 end -->
+
+          <div class="row">
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-thumbs-up"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title" style="color: #555; text-align:justify;">Membangun dan mengembangkan sistem informasi penyediaan dan layanan informasi</h3>
+                    </div>
+                </div><!-- Service 1 end -->
+              </div><!-- col end -->
+
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                    <span class="ts-service-icon">
+                      <i class="fas fa-users"></i>
+                    </span>
+                    <div class="ts-service-box-content">
+                      <h3 class="service-box-title" style="color: #555; text-align:justify;">Meningkatkan kompetensi sumberdaya manusia</h3>
+                    </div>
+                </div><!-- Service 2 end -->
+              </div><!-- col end -->
+          </div><!-- Content row 1 end -->
+        </div><!-- Col end -->
+
+        <div class="col-lg-6 mt-4 mt-lg-0">
+                <div id="gpr-kominfo-widget-container">
+                    <div class="card-body">
+                        <script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>
+                    </div>
+                </div>
+
+    </div>
+        </div><!-- Col end -->
+    </div><!-- Row end -->
+  </div><!-- Container end -->
+</section><!-- Feature are end -->
+
+<hr>
 <!-- Content Kedua-->
 <section id="ts-features" class="ts-features pb-2">
   <div class="container">
     <div class="row">
-    <div class="col-lg-12">
-        <h2 class="section-title" style="text-align:center;">Informasi Terkait</h2>
-        <h3 class="section-sub-title" style="text-align:center;">Berita Tersemat</h3>
+    <div class="col-lg-12" style="margin-top: -40px;">
+        <h2 class="section-title" style="text-align:center; color: #06A3DA">Informasi Terkait</h2>
+        <h3 class="section-sub-title" style="text-align:center; color: #091E3E">Berita Tersemat</h3>
       </div>
-      @foreach($beritapinned as $data)
-        <div class="col-lg-4 col-md-6 mb-5">
-          <div class="ts-service-box">
-              <div class="ts-service-image-wrapper">
-              <?php if($data->thumbnail == null ){ ?>
-                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:400px; height:250px;">
-                
-                <?php }else{ ?>
-                        <img loading="lazy" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="Gambar Content" class="img-fluid" style="width:400px; height:200px; text-align: center;">
-                <?php } ?>
+      </div>
+    <!--/ Title row end -->
 
-              </div>
-              <div class="d-flex">
-                <div class="ts-service-box-img">
-                    <img loading="lazy" src="{{asset('frontend/images/icon-image/service-icon1.png')}}" alt="service-icon" />
-                </div>
-                <div class="ts-service-info">
-                <h3 class="service-box-title" style="text-align:justify;">
-                    <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
-                    <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}">{{  $data->judul }}</a>
+    <div class="row">
+     @foreach($beritapinned as $data)
+      <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
+      <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s" >
+          <div class="blog-item bg-light rounded overflow-hidden">
+            <div class="shuffle-item" >
+              <div class="project-img-container">
+                <a href="news-single.html" class="latest-post-img">
+                <?php if($data->thumbnail == null ){ ?>
+                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:400px; text-align: center;">                      
+                  <?php }else{ ?>
+                    <img loading="lazy" class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="img" style="width:400px; height:250px;">
+                  <?php } ?> 
+                    <div class="project-item-info">
+                <div class="project-item-info-content">
+                  <h3 class="project-item-title">
+                  <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" class="d-inline-block">{{$data->judul}}</a>
                   </h3>
-                <h8 style="text-align:justify;">
-                <span class="post-author">
-                  <a href="#"> {{$data->users->name}} |</a>
-                </span>
-                <span class="post-cat">
-                  <a href="#"> {{$data->kategori->nama_kategori}}|</a>
-                </span>
-                <span class="post-comment">
-                  <a href="#" class="comments-link"> {{ date('d M Y', strtotime($data->tgl_post)) }}</a></span>
-                </h8> 
-                <p>{!!$data->contents!!}</p>
-                    <a class="learn-more d-inline-block" style="text-align:justify;" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}"  aria-label="service-datas"><i class="fa fa-caret-right"></i> Selanjutnya</a>
+                  <p class="project-cat">
+                      {{$data->kategori->nama_kategori}}
+                </p>
                 </div>
+              </div> 
+            </div>
+              <div class="p-4" style="background-color: #EEF9FF; height: 280px;">
+                  <div class="d-flex mb-3">
+                  <small class="me-3"><i class="far fa-user fa-1x text-primary"></i>  {{$data->users->name}}</small>
+                  <small style="margin-left:10px;"><i class="far fa-calendar-alt text-primary me-2"></i> {{ date('d M Y', strtotime($data->tgl_post)) }}</small>
+                  <small style="margin-left:10px;"><i class="far fa-folder-open text-primary"></i>  {{$data->kategori->nama_kategori}}</small>
               </div>
-          </div><!-- Service1 end -->
-        </div><!-- Col 1 end -->
+              <h4 class="mb-3"> <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" class="d-inline-block">{{$data->judul}}</a></h4>
+              <p>{!!substr($data->contents,0,80)!!}</p><br>
+                <a class="text-uppercase" href="" style="color: #06A3DA; font-weight: bold;  font-family: Nunito,sans-serif; font-size: 1rem; line-height: 1.5; padding-top: 10px; padding-bottom:10px;">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+              </div>
+          </div><!-- Latest post end -->
+        </div><!-- 1st post col end -->
         @endforeach
-    </div><!-- Content row end -->
-  </div><!-- Container end -->
-</section><!-- Feature are end -->
+    </div>
+    <!--/ Content row end -->
 
+    <div class="general-btn text-center mt-4">
+        <a class="btn btn-primary" href="{{ route('contents_kategori', 'berita-ppid') }}">Berita Lainnya</a>
+    </div>
+
+  </div>
+  <!--/ Container end -->
+</section>
+
+<br></br>
 <!-- Content Kedua-->
 @include('layouts.frontend.content3')
 
@@ -125,8 +213,8 @@
     <div class="row text-center">
       <div class="col-lg-12">
       <div class="shuffle-btn-group" style="margin-top:-20px;">
-        <h2 class="section-title">Informasi Terkait</h2>
-        <h3 class="section-sub-title">Daftar Berita</h3>
+      <h2 class="section-title" style="text-align:center; color: #06A3DA">Informasi Terkait</h2>
+        <h3 class="section-sub-title" style="text-align:center; color: #091E3E">Daftar Berita</h3>
           </div><!-- project filter end -->
       </div>
     </div>
@@ -138,9 +226,9 @@
         <div class="row shuffle-wrapper">
           <div class="col-1 shuffle-sizer"></div>
       @foreach($beritakonten as $data)
-      
+
           <div class="col-lg-4 col-md-6 shuffle-item">
-          <div class="project-img-container">  
+          <div class="project-img-container">
             <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
               <a class="gallery-popup" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" aria-label="project-img">
                 <img class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="project-img" style="width:400px; height:250px;">
@@ -175,7 +263,7 @@
     <div class="row">
         <div class="col-lg-4">
           <div class="subscribe-call-to-acton">
-              <h3>Temukan Informasi</h3>
+              <h3 style="color: #091E3E; font-weight:bold;">Temukan Informasi</h3>
               <h4>Yang Anda Inginkan...</h4>
           </div>
         </div><!-- Col end -->
@@ -209,31 +297,42 @@
   <div class="container">
     <div class="row text-center">
         <div class="col-12">
-          <h2 class="section-title">Informasi Terkait</h2>
-          <h3 class="section-sub-title">Berita Terkini</h3>
+        <h2 class="section-title" style="text-align:center; color: #06A3DA;">Informasi Terkait</h2>
+        <h3 class="section-sub-title" style="text-align:center; color: #091E3E">Berita Terkini</h3>
         </div>
     </div>
     <!--/ Title row end -->
 
     <div class="row">
-      @foreach($beritaterkini as $data)  
+      @foreach($beritaterkini as $data)
       <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="latest-post">
-              <div class="latest-post-media">
+      <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s" >
+          <div class="blog-item bg-light rounded overflow-hidden">
+            <div class="shuffle-item" >
+              <div class="project-img-container">
                 <a href="news-single.html" class="latest-post-img">
                     <img loading="lazy" class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="img" style="width:400px; height:250px;">
-                </a>
-              </div>
-              <div class="post-body">
-                <h4 class="post-title">
-                    <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" class="d-inline-block">{{$data->judul}}</a>
-                </h4>
-                <div class="latest-post-meta">
-                    <span class="post-item-date">
-                      <i class="fa fa-clock-o"></i> {{ date('d M Y', strtotime($data->tgl_post)) }}
-                    </span>
+                    <div class="project-item-info">
+                <div class="project-item-info-content">
+                  <h3 class="project-item-title">
+                  <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" class="d-inline-block">{{$data->judul}}</a>
+                  </h3>
+                  <p class="project-cat">
+                      {{$data->kategori->nama_kategori}}
+                </p>
                 </div>
+              </div> 
+            </div>
+              <div class="p-4" style="background-color: #EEF9FF; height: 280px;">
+                  <div class="d-flex mb-3">
+                  <small class="me-3"><i class="far fa-user fa-1x text-primary"></i>  {{$data->users->name}}</small>
+                  <small style="margin-left:10px;"><i class="far fa-calendar-alt text-primary me-2"></i> {{ date('d M Y', strtotime($data->tgl_post)) }}</small>
+                  <small style="margin-left:10px;"><i class="far fa-folder-open text-primary"></i>  {{$data->kategori->nama_kategori}}</small>
+              </div>
+              <h4 class="mb-3"> <a href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" class="d-inline-block">{{$data->judul}}</a></h4>
+              <p>{!!substr($data->contents,0,80)!!}</p><br>
+                <a class="text-uppercase" href="" style="color: #06A3DA; font-weight: bold;  font-family: Nunito,sans-serif; font-size: 1rem; line-height: 1.5; padding-top: 10px; padding-bottom:10px;">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
               </div>
           </div><!-- Latest post end -->
         </div><!-- 1st post col end -->

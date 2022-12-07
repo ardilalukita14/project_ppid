@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+route::get('/ppid-home',[\App\Http\Controllers\FrontendController::class,'index2'])->name('layout.frontend2.index');
 route::get('/coba',[\App\Http\Controllers\AdminController::class,'coba'])->name('admin.coba');
 
 /** Login Admin */
@@ -28,6 +29,10 @@ Route::post('/admin/logout',[\App\Http\Controllers\Auth\LoginController::class,'
 route::get('/',[\App\Http\Controllers\User\BaseController::class,'index'])->name('layouts.frontend.index');
 route::get('/profil-kota-madiun',[\App\Http\Controllers\FrontendController::class,'profilkota'])->name('layouts.frontend.profilkota');
 route::get('/sejarah-kota-madiun',[\App\Http\Controllers\FrontendController::class,'sejarah'])->name('layouts.frontend.sejarahkota');
+
+/** Jadwal Rapat dan Agenda Kota */
+Route::get('/jadwal-rapat', [App\Http\Controllers\User\BaseController::class, 'jadwal_rapat'])->name('jadwalrapat');
+Route::get('/agenda-kota', [App\Http\Controllers\User\BaseController::class, 'daftar_agenda'])->name('daftaragenda');
 
 /** Slug */
 Route::get('/kategori/{slug}', [App\Http\Controllers\User\BaseController::class, 'contents_kategori'] )->name('contents_kategori');
