@@ -60,6 +60,7 @@
                 <h3 class="widget-title" style="margin-left:-20px; font-size: 25px;">Lampiran</h3>
               </div>
             </div>
+            <a href="{{route('menu.file', encrypt($data->path_file))}}" target="_blank" style="color: blue;">{{$data->path_file}}</a>
               <img src="{{ route('menu.file', encrypt($data->path_file)) }}" class="img-fluid" style="width: 100%;">
                @endif
                @endforeach
@@ -68,6 +69,7 @@
               @foreach($berkas as $data)
               @if ($data->jenis_file == "lampiran")
               <hr>
+              <a href="{{route('menu.file', encrypt($data->path_file))}}" target="_blank" style="color: blue;">{{$data->path_file}}</a>
               <div class="sidebar sidebar-right">
               <div class="widget recent-posts">
                 <h3 class="widget-title" style="margin-left:-20px; font-size: 25px;">Lampiran</h3>
