@@ -70,7 +70,7 @@
     <div class="row">
         <div class="col-lg-6">
           <div class="ts-intro">
-              <p class="into-title">About Us</p>
+              <p class="into-title">Tentang Kami</p>
               <h8 class="into-sub-title" style="font-size: 36px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: -0.5px; color: #212121; font-weight: 700; font-family: Montserrat, sans-serif;
                 text-rendering: optimizeLegibility;">PPID PELAKSANA KOTA MADIUN</h8>
               <p style="text-align:justify;">Pejabat Pengelola Informasi dan Dokumentasi (PPID) adalah pejabat yang bertanggung jawab di bidang penyimpanan, 
