@@ -9,7 +9,7 @@
                   </button>
                   <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
                   <a class="d-block" href="/">
-                    <img src="{{asset('frontend/images/logo_ppid.png')}}" alt="Constra" style="width:150px; height:65px">
+                    <img src="{{asset('frontend/images/logo_ppid.png')}}" alt="Constra" style="width:200px; height:82px; margin-left:-50px">
                   </a>
               </div><!-- logo end -->
                   <div id="navbar-collapse" class="collapse navbar-collapse" style="margin-left: -50px;">
