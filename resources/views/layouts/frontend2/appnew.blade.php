@@ -8,8 +8,11 @@
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    
+    <!-- Favicons -->
+    <link href="{{ asset('backend2/assets/img/Lambang_Kota_Madiun.png') }}" rel="icon">
+    <link href="{{ asset('backend2/assets/img/Lambang_Kota_Madiun.png') }}" rel="apple-touch-icon">
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
