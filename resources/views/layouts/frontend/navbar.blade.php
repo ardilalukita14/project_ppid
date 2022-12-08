@@ -7,8 +7,12 @@
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                   </button>
-
-                  <div id="navbar-collapse" class="collapse navbar-collapse" >
+                  <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                  <a class="d-block" href="/">
+                    <img src="{{asset('frontend/images/logo_ppid.png')}}" alt="Constra" style="width:200px; height:82px; margin-left:-50px">
+                  </a>
+              </div><!-- logo end -->
+                  <div id="navbar-collapse" class="collapse navbar-collapse" style="margin-left: -50px;">
                       <ul class="nav navbar-nav mr-auto" >
                           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
 
@@ -107,13 +111,16 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-item"><a class="nav-link" href="{{ route('jadwalrapat') }}">Jadwal Rapat</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('daftaragenda') }}">Agenda Kota</a></li>
+
+                        {{-- <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Jadwal <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
                               <li><a href="{{ route('jadwalrapat') }}">Jadwal Rapat</a></li>
                               <li><a href="{{ route('daftaragenda') }}">Agenda Kota</a></li>
                             </ul>
-                        </li>
+                        </li> --}}
 
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Data Statistik <i class="fa fa-angle-down"></i></a>
@@ -124,6 +131,10 @@
                               <li><a href="https://hargapangan.id/" target="_blank">Tabel Harga Berdasarkan Daerah</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item"><a class="nav-link" href="https://ppid.madiunkota.go.id/" target="_blank">Arsip PPID Kota Madiun</a></li>
+                        <li class="header-get-a-quote" style="margin-top: 5px">
+                            <a class="btn btn-primary" href="https://www.madiunkota.go.id/" target="_blank">BERITA PEMKOT <i class="fa fa-arrow-right " ></i></a>
+                          </li>
 
                       </ul>
                   </div>
@@ -134,7 +145,7 @@
         </div>
         <!--/ Row end -->
 
-        <div class="nav-search" style="margin-left: 550px">
+        <div class="nav-search" style="margin-left: 550px; margin-top: 10px;">
           <span id="search" class="text-white"><i class="fa fa-search" ></i></span>
         </div><!-- Search end -->
 

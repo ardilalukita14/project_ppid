@@ -23,9 +23,9 @@
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                <a class="text-center" href="#"> <h4>Login Admin</h4></a>
+                                <a class="text-center" href="#"> <h4>Login Admin</h4></a><br>
                                 <center>
-                                    <img src="{{asset('frontend/images/PPID-1.png')}}" alt="Constra" style="margin-left:50px; height:120px">
+                                    <img src="{{asset('frontend/images/logo_ppid.png')}}" alt="Constra" style=" height:90px">
                                 </center>
                                 <form class="mt-5 mb-5 login-input" method="POST" action="{{ route('login') }}">
                                 @csrf

@@ -73,7 +73,7 @@
               <p class="into-title">Tentang Kami</p>
               <h8 class="into-sub-title" style="font-size: 36px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: -0.5px; color: #212121; font-weight: 700; font-family: Montserrat, sans-serif;
                 text-rendering: optimizeLegibility;">PPID PELAKSANA KOTA MADIUN</h8>
-              <p style="text-align:justify;">Pejabat Pengelola Informasi dan Dokumentasi (PPID) adalah pejabat yang bertanggung jawab di bidang penyimpanan, 
+              <p style="text-align:justify;">Pejabat Pengelola Informasi dan Dokumentasi (PPID) adalah pejabat yang bertanggung jawab di bidang penyimpanan,
                   pendokumentasian, penyediaan dan/ atau pelayanan informasi di badan publik.</p>
           </div><!-- Intro box end -->
 
@@ -162,10 +162,10 @@
               <div class="project-img-container">
                 <a href="news-single.html" class="latest-post-img">
                 <?php if($data->thumbnail == null ){ ?>
-                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:400px; text-align: center;">                      
+                    <img loading="lazy" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:400px; text-align: center;">
                   <?php }else{ ?>
                     <img loading="lazy" class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="img" style="width:400px; height:250px;">
-                  <?php } ?> 
+                  <?php } ?>
                     <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
@@ -175,7 +175,7 @@
                       {{$data->kategori->nama_kategori}}
                 </p>
                 </div>
-              </div> 
+              </div>
             </div>
               <div class="p-4" style="background-color: #EEF9FF; height: 280px;">
                   <div class="d-flex mb-3">
@@ -263,7 +263,7 @@
     <div class="row">
         <div class="col-lg-4">
           <div class="subscribe-call-to-acton">
-              <h3 style="color: #091E3E; font-weight:bold;">Temukan Informasi</h3>
+              <h3 style="color: #ffffff; font-weight:bold;">Temukan Informasi</h3>
               <h4>Yang Anda Inginkan...</h4>
           </div>
         </div><!-- Col end -->
@@ -321,7 +321,7 @@
                       {{$data->kategori->nama_kategori}}
                 </p>
                 </div>
-              </div> 
+              </div>
             </div>
               <div class="p-4" style="background-color: #EEF9FF; height: 280px;">
                   <div class="d-flex mb-3">

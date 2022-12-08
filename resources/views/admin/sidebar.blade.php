@@ -78,7 +78,8 @@
             </li>
 
             <li class="menu-header">Informasi Publik</li>
-            <li class="nav-item dropdown {{ (request()->is('informasi/daftar-informasi-publik-2022','informasi/daftar-informasi-publik-ppid-pelaksana')) ? 'active' : '' }}">
+            <li class="nav-item dropdown {{ (request()->is('informasi/daftar-informasi-publik-2022',
+                                            'informasi/daftar-informasi-publik-ppid-pelaksana')) ? 'active' : '' }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file"></i> <span>Daftar Informasi Publik</span></a>
                 <ul class="dropdown-menu">
                   <li class="{{ (request()->is('informasi/daftar-informasi-publik-2022')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/daftar-informasi-publik-2022">Informasi Publik 2022</a></li>
@@ -94,12 +95,15 @@
             <li class="{{ (request()->is('categories')) ? 'active' : '' }}"><a class="nav-link" href="/categories"><i class="fas fa-columns"></i> <span>Kategori</span></a></li>
             <li class="{{ (request()->is('a/tags')) ? 'active' : '' }}"><a class="nav-link" href="/a/tags"><i class="fas fa-bookmark"></i> <span>Tag</span></a></li>
             <li class="{{ (request()->is('a/post')) ? 'active' : '' }}"><a class="nav-link" href="/a/post"><i class="fas fa-folder-open"></i> <span>Posting</span></a></li>
-            
+
             <li class="menu-header">Kategori Postingan</li>
             <li class="{{ (request()->is('a/pengumuman')) ? 'active' : '' }}"><a class="nav-link" href="/a/pengumuman"><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>
             <li class="{{ (request()->is('a/produk-hukum')) ? 'active' : '' }}"><a class="nav-link" href="/a/produk-hukum"><i class="fas fa-ribbon"></i> <span>Produk Hukum</span></a></li>
 
-            <li class="dropdown">
+            <li class="nav-item dropdown {{ (request()->is('informasi/sop-pedoman-pengelolaan-organisasi',
+                                                            'informasi/sop-pedoman-pengelolaan-administrasi',
+                                                            'informasi/sop-pedoman-pengelolaan-kepegawaian',
+                                                            'informasi/sop-pedoman-pengelolaan-keuangan')) ? 'active' : '' }}">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-book-open"></i> <span>SOP</span></a>
               <ul class="dropdown-menu">
               <li class="{{ (request()->is('informasi/sop-pedoman-pengelolaan-organisasi')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/sop-pedoman-pengelolaan-organisasi">Pengelolaan Organisasi</a></li>
@@ -108,7 +112,8 @@
               <li class="{{ (request()->is('informasi/sop-pedoman-pengelolaan-keuangan')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/sop-pedoman-pengelolaan-keuangan">Pengelolaan Keuangan</a></li>
               </ul>
             </li>
-            <li class="dropdown">
+            <li class="nav-item dropdown {{ (request()->is('a/materi-ppid-kota',
+                                                            'a/materi-umum')) ? 'active' : '' }}">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-envelope"></i> <span>Materi PPID</span></a>
               <ul class="dropdown-menu">
               <li class="{{ (request()->is('a/materi-ppid-kota')) ? 'active' : '' }}"><a class="nav-link" href="/a/materi-ppid-kota">Materi PPID Kota</a></li>
