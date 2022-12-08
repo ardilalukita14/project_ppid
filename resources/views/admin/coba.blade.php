@@ -1,5 +1,5 @@
 @extends('admin.appnew')
-@extends('admin.konten')
+
 @section('content')
 
   <div id="app">

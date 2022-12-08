@@ -37,8 +37,16 @@
    <link href="frontend/lib/animate/animate.min.css" rel="stylesheet">
 
 </head>
-<body>
+<body onload="loader()">
 
+<div id="loading">
+            <span class="loader"></span>
+            <div class="textLoader">
+                <center>
+                <b>Loading ... </b>
+                </center>
+            </div>
+        </div>
 <!-- Javascript Files
   ================================================== -->
 
@@ -87,7 +95,33 @@
     } );
   
 </script>
+<script>
+              // set delay 10s
+              var delay = 1000;
+             
+             function loader() {
+                 setTimeout(function(){
+                     $("#loading").hide();
+                     $(".loader").hide();
+                 },delay);
+             };
+             </script>
+
+<script ttype="text/javascript">
+
+$(document).ready(function() {
+
+
+    $('#jadwal_rapat').DataTable( {
+        scrollCollapse: true,
+        paging:         true
+    } );
+
+} );
+
+</script>
   </div><!-- Body inner end -->
+  @yield('content')
   </body>
 
   </html>
