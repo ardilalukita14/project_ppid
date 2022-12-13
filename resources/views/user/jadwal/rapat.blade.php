@@ -31,7 +31,7 @@
     </style>
 @endpush
 
-@extends('layouts.frontend.konten')
+
 @section('content')
 
 

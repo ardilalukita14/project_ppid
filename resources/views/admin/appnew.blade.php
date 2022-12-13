@@ -56,11 +56,26 @@
 <script src="{{ asset('backend2/assets/select2/dist/js/select2.full.min.js') }}"></script>
 
 <script>
+              // set delay 10s
+              var delay = 1000;
+             
+             function loader() {
+                 setTimeout(function(){
+                     $("#loading").hide();
+                     $(".loader").hide();
+                 },delay);
+             };
+             </script>
+             
+<script>
     $(document).ready(function () {
       $('#dataTable').DataTable(); // ID From dataTable
       $('#dataTableHover1').DataTable(); // ID From dataTable with Hover
     });
   </script>
+
+@yield('content')
+
 
 </body>
 </html>
