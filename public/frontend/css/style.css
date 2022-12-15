@@ -700,6 +700,7 @@ ul.top-info li p.info-text {
 @media (max-width: 991px) {
   .header-one ul.navbar-nav > li {
     padding-right: 0;
+    margin-left: 58px;
   }
 }
 .header-one .logo-area {
