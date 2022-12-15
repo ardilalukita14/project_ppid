@@ -34,7 +34,7 @@
 <body>
 
 @extends('admin.appnew')
-@extends('admin.konten')
+
 @section('content')
 
 

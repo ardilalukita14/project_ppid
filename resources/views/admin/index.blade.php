@@ -29,9 +29,18 @@
 </script>
 <!-- /END GA --></head>
 
-<body>
+<body onload="loader()">
+
+<div id="loading">
+            <span class="loader"></span>
+            <div class="textLoader">
+                <center>
+                <b>Loading ... </b>
+                </center>
+            </div>
+        </div>
 @extends('admin.appnew')
-@extends('admin.konten')
+
 @section('content')
 
   <div id="app">
