@@ -1,6 +1,15 @@
 <footer id="footer" class="footer bg-overlay">
     <div class="footer-main">
       <div class="container">
+      <img loading="lazy" width="80px" class="footer-logos" src="{{asset('backend2/assets/img/Lambang_Kota_Madiun.png')}}" alt="Constra">
+      <img loading="lazy" width="80px" class="footer-logos" src="{{asset('backend2/assets/img/Lambang_Kota_Madiun.png')}}" alt="Constra">
+      <img loading="lazy" width="80px" class="footer-logos" src="{{asset('backend2/assets/img/Lambang_Kota_Madiun.png')}}" alt="Constra">
+      <img loading="lazy" width="80px" class="footer-logos" src="{{asset('backend2/assets/img/Lambang_Kota_Madiun.png')}}" alt="Constra">
+      <img loading="lazy" width="80px" class="footer-logos" src="{{asset('backend2/assets/img/Lambang_Kota_Madiun.png')}}" alt="Constra">
+      <img loading="lazy" width="80px" class="footer-logos" src="{{asset('backend2/assets/img/Lambang_Kota_Madiun.png')}}" alt="Constra">
+      <img loading="lazy" width="80px" class="footer-logos" src="{{asset('backend2/assets/img/Lambang_Kota_Madiun.png')}}" alt="Constra">
+      <img loading="lazy" width="80px" class="footer-logos" src="{{asset('backend2/assets/img/Lambang_Kota_Madiun.png')}}" alt="Constra">
+        <hr style="display:block; height: 3px;  border: 0; border-top; 3px solid #ccc;">
         <div class="row justify-content-between">
           <div class="col-lg-4 col-md-6 footer-widget footer-about">
             <h3 class="widget-title">Tentang Kami</h3>
