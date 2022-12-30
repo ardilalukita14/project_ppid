@@ -101,10 +101,8 @@
                             {{csrf_field()}}
                             @method('PATCH')
                             <div class="form-group row">
-                                <label class="col-lg-8 col-form-label" for="judul">Judul Berita</label>
-                                <div class="col-sm-12">
+                              <label class="col-lg-6 col-form-label" for="judul">Judul Berita</label>
                                     <input type="text" id="judul" name="judul" class="form-control" required="" value="{{ $posts->judul }}" >
-                                </div>
                             </div>
                             <div class="form-group row">
                               <label class="col-lg-6 col-form-label" for="status_publish">Status Publish</label>

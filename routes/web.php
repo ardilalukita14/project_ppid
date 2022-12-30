@@ -72,6 +72,9 @@ Route::post('/profil-ppid/store', [App\Http\Controllers\ProfilePPIDController::c
 /** CRUD Data PPID Pelaksana Kota Madiun*/
 Route::resource('/ppidpelaksana', App\Http\Controllers\PPIDPelaksanaController::class );
 
+/** CRUD Data Icon*/
+Route::resource('/icons', App\Http\Controllers\IconController::class );
+
 /** Daftar Informasi Publik dan SOP*/
 Route::get('/informasi/daftar-informasi-publik-2022',[\App\Http\Controllers\InformationController::class,'informasipublik'])->name('informasi.publik.index');
 Route::get('/informasi/daftar-informasi-publik-ppid-pelaksana',[\App\Http\Controllers\InformationController::class,'informasippid'])->name('informasi.ppid.index');
