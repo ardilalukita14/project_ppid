@@ -127,12 +127,12 @@
           </div><!-- Content row 1 end -->
         </div><!-- Col end -->
 
-        <div class="col-lg-6 mt-4 mt-lg-0">
+        {{-- <div class="col-lg-6 mt-4 mt-lg-0">
                 <div id="gpr-kominfo-widget-container">
                     <div class="card-body">
                         <script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>
                     </div>
-                </div>
+                </div> --}}
 
     </div>
         </div><!-- Col end -->

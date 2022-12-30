@@ -4,7 +4,8 @@
         <div class="row justify-content-between">
           <div class="col-lg-4 col-md-6 footer-widget footer-about">
             <h3 class="widget-title">Tentang Kami</h3>
-            <img loading="lazy" width="250px" class="footer-logo" src="{{asset('frontend/images/logo_ppid.png')}}" alt="Constra">
+            <img loading="lazy" width="80px" class="footer-logo" src="{{asset('backend2/assets/img/Lambang_Kota_Madiun.png')}}" alt="Constra">
+            <img loading="lazy" width="230px" class="footer-logo" src="{{asset('frontend/images/logo_ppid.png')}}" alt="Constra">
             <p style="text-align:justify;" class="text-white">Dinas Komunikasi dan Informatika Kota Madiun merupakan unsur pelaksana urusan pemerintahan bidang komunikasi dan informatika,
               urusan pemerintahan bidang persandian, dan urusan pemerintahan bidang statistik di Kota Madiun.</p>
             <div class="footer-social">
@@ -36,9 +37,6 @@
               <div class="text-white">Jumat : <span class="text-right text-white">06:30 - 14:30</span></div><br><br>
 
             </div>
-
-
-            <br></br>
 
           </div><!-- Col end -->
 

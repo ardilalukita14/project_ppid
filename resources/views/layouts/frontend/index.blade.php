@@ -4,7 +4,7 @@
 
   <div class="body-inner">
 
-    @include('layouts.frontend.topbar')
+    {{-- @include('layouts.frontend.topbar') --}}
     <!--/ Topbar end -->
 
 <!-- Header start -->
