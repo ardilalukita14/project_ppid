@@ -1691,7 +1691,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .ts-service-box .ts-service-icon i {
   font-size: 36px;
   float: left;
-  color: #3c83e6;
+  color: #687ffa;
 }
 
 .ts-service-box .ts-service-box-content {
@@ -1978,10 +1978,10 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   color: #fff;
 }
 .shuffle-item .project-img-container .project-item-info-content .project-item-title a:hover {
-  color: #3c83e6;
+  color: #687ffa;
 }
 .shuffle-item .project-img-container .project-item-info-content .project-cat {
-  background: #3c83e6;
+  background: #687ffa;
   display: inline-block;
   padding: 2px 8px;
   font-weight: 700;
@@ -2398,7 +2398,7 @@ img.testimonial-thumb {
   padding-left: 15px;
   text-transform: uppercase;
   color: #fff;
-  border-left: 3px solid #3c83e6;
+  border-left: 3px solid #687ffa;
 }
 
 /* Footer about us */
@@ -2952,7 +2952,7 @@ label {
   padding-bottom: 10px;
   font-size: 17px;
   margin-left: 15px;
-  margin-right: 15px;
+  /* margin-right: 15px; */
 
 }
 
@@ -3199,7 +3199,7 @@ label {
   margin: 0 0 30px;
   padding-left: 15px;
   text-transform: uppercase;
-  border-left: 3px solid #3c83e6;
+  border-left: 3px solid #687ffa;
 }
 
 /* Widget common */
@@ -3362,7 +3362,7 @@ label {
 }
 
 .sidebar .widget-tags ul > li a:hover {
-  background: #3c83e6;
+  background: #687ffa;
   color: #fff;
   border: 1px solid transparent;
 }

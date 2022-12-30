@@ -55,7 +55,7 @@
         <div class="logo-area">
             <div class="row align-items-center">
               <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-                  <a class="d-block" href="index.html">
+                  <a class="d-block" href="/">
                     {{-- <img src="{{asset('backend2/assets/img/Lambang_Kota_Madiun.png')}}" alt="Constra" style="margin-bottom: 10px"> --}}
                     <img src="{{asset('frontend/images/ppid2.png')}}" alt="Constra" style="width:230px; height:80px; margin-bottom: 10px">
                   </a>
