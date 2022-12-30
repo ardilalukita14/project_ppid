@@ -97,7 +97,7 @@
 </script>
 <script>
               // set delay 10s
-              var delay = 100;
+              var delay = 1000;
              
              function loader() {
                  setTimeout(function(){
