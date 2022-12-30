@@ -67,7 +67,7 @@
                 <br>
                       <div class="card-tools">
                             <br>
-                            <a href="{{ route('ppid.pelaksana.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
+                            <a href="{{ route('ppidpelaksana.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
                       </div>
                                  @if(Session::has('success'))
                                  <br></br>
@@ -118,8 +118,8 @@
                                                 <td>{!!$data->alamat!!}</td>
                                                 <td>{!!$data->telepon!!}</td>
                                                 <td>
-                                                    <form action="{{ route('ppid.pelaksana.destroy',$data->id) }}"  method="POST">
-                                                        <a href="{{ route('ppid.pelaksana.edit',$data->id) }}" class="btn btn-warning "><i class="fa fa-edit"></i> Ubah</a>
+                                                    <form action="{{ route('ppidpelaksana.destroy',$data->id) }}"  method="POST">
+                                                        <a href="{{ route('ppidpelaksana.edit',$data->id) }}" class="btn btn-warning "><i class="fa fa-edit"></i> Ubah</a>
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus data PPID Pelaksana ?')" ><i class="fas fa-trash"></i> Hapus</button>

@@ -59,7 +59,7 @@
                                                             'profile/sk-daftar-informasi-publik',
                                                             'profile/sk-daftar-informasi-dikecualikan',
                                                             'profile/agenda-kerja-kegiatan-pimpinan',
-                                                            'ppid-pelaksana')) ? 'active' : '' }}">
+                                                            'ppidpelaksana')) ? 'active' : '' }}">
               <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-file-alt"></i> <span>PPID Kota Madiun</span></a>
               <ul class="dropdown-menu">
                     <li class="{{ (request()->is('profile/ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/ppid">Profil PPID</a></li>
@@ -73,7 +73,7 @@
                     <li class="{{ (request()->is('profile/jam-pelayanan')) ? 'active' : '' }}"><a class="nav-link" href="/profile/jam-pelayanan">Jam Pelayanan</a></li>
                     <li class="{{ (request()->is('profile/sk-daftar-informasi-publik')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sk-daftar-informasi-publik">SK Daftar Informasi Publik</a></li>
                     <li class="{{ (request()->is('profile/sk-daftar-informasi-dikecualikan')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sk-daftar-informasi-dikecualikan">SK Daftar Dikecualikan</a></li>
-                    <li class="{{ (request()->is('ppid-pelaksana')) ? 'active' : '' }}"><a class="nav-link" href="/ppid-pelaksana">PPID Pelaksana</a></li>
+                    <li class="{{ (request()->is('ppidpelaksana')) ? 'active' : '' }}"><a class="nav-link" href="/ppidpelaksana">PPID Pelaksana</a></li>
               </ul>
             </li>
 

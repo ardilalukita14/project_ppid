@@ -97,7 +97,7 @@
 </script>
 <script>
               // set delay 10s
-              var delay = 1000;
+              var delay = 100;
              
              function loader() {
                  setTimeout(function(){
@@ -113,11 +113,11 @@ $(document).ready(function() {
 
 
     $('#jadwal_rapat').DataTable( {
-        scrollCollapse: true,
-        paging:         true
-    } );
+         retrieve: true,
+         paging: false
+    });
 
-} );
+});
 
 </script>
   </div><!-- Body inner end -->

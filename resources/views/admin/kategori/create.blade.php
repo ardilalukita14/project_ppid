@@ -95,7 +95,7 @@
                     @endif
 
                     <div class="form-validation">
-                    <form class="form-valide" action="{{route('kategori.create')}}" method="POST" enctype="multipart/form-data">
+                    <form class="form-valide" action="{{route('categories.store')}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
 
                             <div class="form-group row">

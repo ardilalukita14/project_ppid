@@ -16,8 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-route::get('/ppid-home',[\App\Http\Controllers\FrontendController::class,'index2'])->name('layout.frontend2.index');
-route::get('/coba',[\App\Http\Controllers\AdminController::class,'coba'])->name('admin.coba');
+
 
 /** Login Admin */
 
@@ -27,7 +26,6 @@ Route::post('/admin/logout',[\App\Http\Controllers\Auth\LoginController::class,'
 
 /** Halaman Utama */
 route::get('/',[\App\Http\Controllers\User\BaseController::class,'index'])->name('layouts.frontend.index');
-route::get('/profil-kota-madiun',[\App\Http\Controllers\FrontendController::class,'profilkota'])->name('layouts.frontend.profilkota');
 route::get('/sejarah-kota-madiun',[\App\Http\Controllers\FrontendController::class,'sejarah'])->name('layouts.frontend.sejarahkota');
 
 /** Jadwal Rapat dan Agenda Kota */
@@ -72,12 +70,7 @@ Route::get('/profile/sk-daftar-informasi-dikecualikan',[\App\Http\Controllers\Pr
 Route::post('/profil-ppid/store', [App\Http\Controllers\ProfilePPIDController::class, 'store'])->name('profilppid.create');
 
 /** CRUD Data PPID Pelaksana Kota Madiun*/
-Route::get('/ppid-pelaksana', [\App\Http\Controllers\PPIDPelaksanaController::class, 'index'])->name('ppid.pelaksana.index');
-Route::get('/create/ppid-pelaksana', [\App\Http\Controllers\PPIDPelaksanaController::class, 'create'])->name('ppid.pelaksana.create');
-Route::post('/create/ppid-pelaksana', [\App\Http\Controllers\PPIDPelaksanaController::class, 'store'])->name('ppid.pelaksana.create');
-Route::get('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'edit'])->name('ppid.pelaksana.edit');
-Route::post('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'update'])->name('ppid.pelaksana.edit');
-Route::delete('/hapus-ppid-pelaksana/{ppid}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'destroy'])->name('ppid.pelaksana.destroy');
+Route::resource('/ppidpelaksana', App\Http\Controllers\PPIDPelaksanaController::class );
 
 /** Daftar Informasi Publik dan SOP*/
 Route::get('/informasi/daftar-informasi-publik-2022',[\App\Http\Controllers\InformationController::class,'informasipublik'])->name('informasi.publik.index');
@@ -93,12 +86,7 @@ Route::get('/informasi/sop-pedoman-pengelolaan-keuangan',[\App\Http\Controllers\
 Route::post('/informasi/store', [App\Http\Controllers\InformationController::class, 'store'])->name('information.create');
 
 /** Data Kategori*/
-Route::get('/categories', [\App\Http\Controllers\KategoriController::class, 'index'])->name('kategori.index');
-Route::get('/categories/create', [\App\Http\Controllers\KategoriController::class, 'create'])->name('kategori.create');
-Route::post('/categories/create', [\App\Http\Controllers\KategoriController::class, 'store'])->name('kategori.create');
-Route::get('/categories/edit/{id}', [\App\Http\Controllers\KategoriController::class, 'edit'])->name('kategori.edit');
-Route::post('/categories/edit/{id}', [\App\Http\Controllers\KategoriController::class, 'update'])->name('kategori.edit');
-Route::delete('/categories/hapus/{id}',[\App\Http\Controllers\KategoriController::class, 'destroy'])->name('kategori.destroy');
+Route::resource('/categories', App\Http\Controllers\KategoriController::class );
 
 /** Data Tag*/
 Route::prefix('a')->name('admin.')->group(function () {
