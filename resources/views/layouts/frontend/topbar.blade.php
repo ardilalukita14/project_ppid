@@ -29,7 +29,7 @@
                 </a>
                 </li>
             </ul>
-          </div> -->
+          </div> 
           <!--/ Top social end -->
       </div>
       <!--/ Content row end -->

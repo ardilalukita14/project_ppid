@@ -282,18 +282,6 @@
         <div class="col-lg-8">
           <div class="ts-newsletter row align-items-center">
               <div class="col-md-5 newsletter-introtext">
-                <h4 class="text-white mb-0">Search</h4>
-                <p class="text-white">Informasi yang dibutuhkan</p>
-              </div>
-
-              <div class="col-md-7 newsletter-form">
-                 <form action="{{ route('reader.search.berita') }}" method="POST">
-                  @csrf
-                    <div class="form-group">
-                      <label for="newsletter-email" class="content-hidden">Search Berita</label>
-                      <input type="text" value="{{ old('cari') }}" name="cari" class="form-control form-control-lg" placeholder="Search berita" autocomplete="off">
-                    </div>
-                </form>
               </div>
           </div><!-- Newsletter end -->
         </div><!-- Col end -->

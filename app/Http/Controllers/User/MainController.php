@@ -28,7 +28,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profile.sejarah', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profile.sejarah', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
 
@@ -41,7 +42,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profile.geografis', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profile.geografis', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
 
@@ -54,7 +56,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profile.pemerintah', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profile.pemerintah', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
 
@@ -67,7 +70,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profile.pejabat', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profile.pejabat', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
 
@@ -80,7 +84,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profile.lhkpn', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profile.lhkpn', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
 
@@ -93,7 +98,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profile.visimisi', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profile.visimisi', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
 
@@ -106,7 +112,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profile.strukturpemerintah', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profile.strukturpemerintah', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
 
@@ -119,7 +126,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profile.strukturunitkerja', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profile.strukturunitkerja', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
 
@@ -132,7 +140,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profile.tupoksipemerintah', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profile.tupoksipemerintah', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
 
@@ -145,7 +154,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profile.tupoksiunitkerja', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profile.tupoksiunitkerja', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
     
@@ -158,7 +168,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profile.agenda', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profile.agenda', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
 
@@ -171,7 +182,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profileppid.ppid', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profileppid.ppid', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
 
     }
 
@@ -184,7 +196,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profileppid.visimisi', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profileppid.visimisi', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'. 'logo'));
     
     }
     
@@ -197,7 +210,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profileppid.struktur', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profileppid.struktur', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
         
     }
 
@@ -210,7 +224,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profileppid.sop', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profileppid.sop', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
         
     }
 
@@ -223,7 +238,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profileppid.tupoksi', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profileppid.tupoksi', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
         
     }
 
@@ -236,7 +252,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profileppid.sk', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profileppid.sk', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
         
     }
 
@@ -249,7 +266,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profileppid.perwal', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profileppid.perwal', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
         
     }
 
@@ -262,7 +280,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profileppid.maklumat', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profileppid.maklumat', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
         
     }
 
@@ -275,7 +294,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profileppid.jampelayanan', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profileppid.jampelayanan', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
         
     }
 
@@ -288,7 +308,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profileppid.informasipublik', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profileppid.informasipublik', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
         
     }
 
@@ -301,7 +322,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.profileppid.informasidikecualikan', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.profileppid.informasidikecualikan', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
         
     }
 
@@ -312,7 +334,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.ppidpelaksana.index', compact('profile', 'title', 'categories', 'beritaterkini', 'tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.ppidpelaksana.index', compact('profile', 'title', 'categories', 'beritaterkini', 'tags', 'logo'));
         
     }
 
@@ -327,7 +350,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.informasi.publik', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasi.publik', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
 
@@ -342,7 +366,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.informasi.ppid', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasi.ppid', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
 
@@ -358,7 +383,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.informasi.berkala', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasi.berkala', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
 
@@ -374,7 +400,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.informasi.sertamerta', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasi.sertamerta', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
 
@@ -390,8 +417,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-            
-        return view('user.informasi.setiapsaat', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasi.setiapsaat', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
 
@@ -407,7 +434,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.informasi.dikecualikan', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasi.dikecualikan', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
 
@@ -423,7 +451,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.sop.organisasi', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.sop.organisasi', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
 
@@ -439,7 +468,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.sop.administrasi', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.sop.administrasi', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
 
@@ -455,7 +485,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.sop.kepegawaian', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.sop.kepegawaian', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
 
@@ -471,7 +502,8 @@ class MainController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        return view('user.sop.keuangan', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.sop.keuangan', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
 }

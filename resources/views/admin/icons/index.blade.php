@@ -69,7 +69,7 @@
                 <br>
                       <div class="card-tools">
                             <br>
-                            <a href="{{ route('icons.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
+                            <a href="{{ route('admin.icons.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
                       </div>
                                  @if(Session::has('success'))
                                  <br></br>
@@ -118,8 +118,8 @@
                                             @php $i=1 @endphp
                                             @foreach ($icons as $data)
                                                 <td>{{$i++}}</td>
-                                                <td>{{$data->judul}}</td>
-                                                <td>{{$data->subjudul}}</td>
+                                                <td>{!! $data->judul !!}</td>
+                                                <td>{!! $data->subjudul !!}</td>
                                                 <td>{{ $data->kategori_name}}</td>
                                                 <td>
                                                     @if ($data->icon == null)
@@ -129,10 +129,10 @@
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    <form action="{{ route('icons.destroy',$data->id) }}"  method="POST">
+                                                    <form action="{{ route('admin.icons.destroy',$data->id) }}"  method="POST">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <a href="{{ route('icons.edit',$data->id) }}" class="btn btn-warning " data-id="{{ $data->id }}"><i class="fa fa-edit"></i> Ubah</a>&ensp;
+                                                        <a href="{{ route('admin.icons.edit',$data->id) }}" class="btn btn-warning " data-id="{{ $data->id }}"><i class="fa fa-edit"></i> Ubah</a>&ensp;
                                                         <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus data icon ?')" ><i class="fas fa-trash"></i> Hapus</button>
                                                     </form>
                                                 </td>

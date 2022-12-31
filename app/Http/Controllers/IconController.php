@@ -18,7 +18,7 @@ class IconController extends Controller
      */
     public function index()
     {
-        $icons = Icon::paginate(5);
+        $icons = Icon::all();
         $judul = "Data Icons";
         return view('admin.icons.index', compact('icons', 'judul'));
     }
@@ -62,10 +62,10 @@ class IconController extends Controller
         $icon->save();
         if ($icon) {
             Session::flash('success','Data Icon Berhasil Ditambahkan');
-            return redirect()->route('icons.index');
+            return redirect()->route('admin.icons.index');
         } else {
             Session::flash('failed','Data Icon Gagal Ditambahkan');
-            return redirect()->route('icons.index');
+            return redirect()->route('admin.icons.index');
         }
     }
 
@@ -138,7 +138,7 @@ class IconController extends Controller
         $icon->update($icon_data);
 
             Session::flash('success','Update Data icon Berhasil');
-            return redirect()->route('icons.index');
+            return redirect()->route('admin.icons.index');
     }
 
     /**
@@ -155,6 +155,6 @@ class IconController extends Controller
         $icon->delete();
 
         Session::flash('delete','Data icon Berhasil Dihapus');
-        return redirect()->route('icons.index');
+        return redirect()->route('admin.icons.index');
     }
 }

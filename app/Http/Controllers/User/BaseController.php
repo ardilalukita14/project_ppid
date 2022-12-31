@@ -31,9 +31,10 @@ class BaseController extends Controller
         $files = Document::where('posts_id', '=', $post->id)->where('jenis_file', '=', 'lampiran')->get();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
         $categories = Kategori::all();
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
         $tags = Tag::all();
 
-        return view('user.berita.detail', compact('files','post','galleries','subjudul','data', 'parent', 'child', 'root_parent', 'title', 'beritaterkini', 'categories', 'tags'));
+        return view('user.berita.detail', compact('files','post','galleries','subjudul','data', 'parent', 'child', 'root_parent', 'title', 'beritaterkini', 'categories', 'tags', 'logo'));
     }
 
     public function contents_kategori($slug){
@@ -56,8 +57,8 @@ class BaseController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-    
-        return view('user.kategori.base', compact('subjudul','categories','posts', 'parent', 'child', 'root_parent', 'title', 'beritaterkini','tags'));
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.kategori.base', compact('subjudul','categories','posts', 'parent', 'child', 'root_parent', 'title', 'beritaterkini','tags', 'logo'));
       
     }
 
@@ -93,8 +94,8 @@ class BaseController extends Controller
         $categories = Kategori::all();
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-    
-        return view('user.berita.list',compact('news', 'categories', 'beritaterkini', 'tags')) ;
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.berita.list',compact('news', 'categories', 'beritaterkini', 'tags', 'logo')) ;
     }
 
     public function jadwal_rapat() {

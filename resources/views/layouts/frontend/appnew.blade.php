@@ -75,7 +75,7 @@
   <script src="frontend/lib/waypoints/waypoints.min.js"></script>
   <script src="frontend/lib/counterup/counterup.min.js"></script>
  <!-- JS Libraies -->
- < <script src="{{('frontend/dist/assets/modules/owlcarousel2/dist/owl.carousel.min.js')}}"></script>
+ <script src="{{('frontend/dist/assets/modules/owlcarousel2/dist/owl.carousel.min.js')}}"></script>
   <script src="{{asset('vendorss/datatables/jquery.dataTables.min.js')}}"></script>
   <script src="{{asset('vendorss/datatables/dataTables.bootstrap4.min.js')}}"></script>
 

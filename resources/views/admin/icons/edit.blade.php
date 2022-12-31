@@ -97,16 +97,16 @@
                     @endif
 
                     <div class="form-validation">
-                    <form class="form-valide" action="{{route('icons.update', $icons->id)}}" method="POST" enctype="multipart/form-data">
+                    <form class="form-valide" action="{{route('admin.icons.update', $icons->id)}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
                             @method('PATCH')
                             <div class="form-group row">
                             <label class="col-lg-6 col-form-label" for="judul">Judul</label>
-                                    <input type="text" id="judul" name="judul" class="form-control"  value="{{ $icons->judul }}" >
+                            <textarea class="summernote" style="height:10px;" name="judul" class="form-control" required="" placeholder="Judul">{!! $icons->judul !!}</textarea>
                             </div>
                             <div class="form-group row">
                             <label class="col-lg-6 col-form-label" for="subjudul">Sub Judul</label>
-                                    <input type="text" id="subjudul" name="subjudul" class="form-control"  value="{{ $icons->subjudul }}" >
+                            <textarea class="summernote" style="height:10px;" name="subjudul" class="form-control" required="" placeholder="Sub Judul">{!! $icons->subjudul !!}</textarea>
                             </div>
                             <div class="form-group row">
                             <select class="form-control" name="kategori_name" required>
@@ -125,7 +125,7 @@
                     <div class="card-footer text-right">
                         <button class="btn btn-primary mr-1" type="submit"><i class="fa fa-plus" aria-hidden="true"></i> Submit</button>
                     </form>
-                        <a href="{{ route('admin.post.index') }}"><button class="btn btn-info"><i class="fa fa-undo" aria-hidden="true"></i> Kembali</button></a>
+                        <a href="{{ route('admin.icons.index') }}"><button class="btn btn-info"><i class="fa fa-undo" aria-hidden="true"></i> Kembali</button></a>
                     </div>
                 </div>
             </div>

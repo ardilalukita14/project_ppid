@@ -129,6 +129,7 @@
                 <li class="menu-header">Galeri</li>
                 <li class="{{ (request()->is('a/galeri')) ? 'active' : '' }}"><a class="nav-link" href="/a/galeri"><i class="far fa-image"></i> <span>Galeri</span></a></li>
                 <li class="{{ (request()->is('a/infografis')) ? 'active' : '' }}"><a class="nav-link" href="/a/infografis"><i class="fas fa-file-image"></i> <span>Infografis</span></a></li>
+                <li class="{{ (request()->is('a/icons')) ? 'active' : '' }}"><a class="nav-link" href="/a/icons"><i class="fas fa-camera-retro"></i> <span>Icons</span></a></li>
 
           </ul>
 

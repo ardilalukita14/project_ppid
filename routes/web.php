@@ -72,8 +72,6 @@ Route::post('/profil-ppid/store', [App\Http\Controllers\ProfilePPIDController::c
 /** CRUD Data PPID Pelaksana Kota Madiun*/
 Route::resource('/ppidpelaksana', App\Http\Controllers\PPIDPelaksanaController::class );
 
-/** CRUD Data Icon*/
-Route::resource('/icons', App\Http\Controllers\IconController::class );
 
 /** Daftar Informasi Publik dan SOP*/
 Route::get('/informasi/daftar-informasi-publik-2022',[\App\Http\Controllers\InformationController::class,'informasipublik'])->name('informasi.publik.index');
@@ -95,6 +93,7 @@ Route::resource('/categories', App\Http\Controllers\KategoriController::class );
 Route::prefix('a')->name('admin.')->group(function () {
     Route::resource('/tags', App\Http\Controllers\TagController::class );
     Route::resource('/post', App\Http\Controllers\PostController::class );
+    Route::resource('/icons', App\Http\Controllers\IconController::class );
     Route::get('/pengumuman', [\App\Http\Controllers\PostController::class, 'indexpengumuman'])->name('pengumuman.index');
     Route::get('/produk-hukum', [\App\Http\Controllers\PostController::class, 'indexproduk'])->name('pengumuman.index');
     Route::get('/materi-ppid-kota',  [\App\Http\Controllers\PostController::class, 'materippid'])->name('ppidmateri.index');
