@@ -101,16 +101,12 @@
                             {{csrf_field()}}
 
                             <div class="form-group row">
-                                <label class="col-lg-8 col-form-label" for="judul">Judul</label>
-                                <div class="col-sm-12">
-                                    <input type="text" id="judul" name="judul" class="form-control" required="" placeholder="Judul" >
-                                </div>
+                            <label class="col-lg-6 col-form-label" for="judul">Judul</label>
+                                    <input type="text" id="judul" name="judul" class="form-control" placeholder="Judul" >
                             </div>
                             <div class="form-group row">
-                                <label class="col-lg-8 col-form-label" for="subjudul">Sub Judul</label>
-                                <div class="col-sm-12">
-                                    <input type="text" id="subjudul" name="subjudul" class="form-control" required="" placeholder="Sub Judul" >
-                                </div>
+                            <label class="col-lg-6 col-form-label" for="judul">Sub Judul</label>
+                                    <input type="text" id="subjudul" name="subjudul" class="form-control" placeholder="Sub Judul" >
                             </div>
                             <div class="form-group row">
                             <select class="form-control" name="kategori_name" required>

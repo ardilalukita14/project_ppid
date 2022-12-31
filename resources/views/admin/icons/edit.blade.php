@@ -102,13 +102,13 @@
                             @method('PATCH')
                             <div class="form-group row">
                             <label class="col-lg-6 col-form-label" for="judul">Judul</label>
-                                    <input type="text" id="judul" name="judul" class="form-control" required="" value="{{ $icons->judul }}" >
+                                    <input type="text" id="judul" name="judul" class="form-control"  value="{{ $icons->judul }}" >
                             </div>
                             <div class="form-group row">
                             <label class="col-lg-6 col-form-label" for="subjudul">Sub Judul</label>
-                                    <input type="text" id="subjudul" name="subjudul" class="form-control" required="" value="{{ $icons->subjudul }}" >
+                                    <input type="text" id="subjudul" name="subjudul" class="form-control"  value="{{ $icons->subjudul }}" >
                             </div>
-                            <div class="form-group row" sy>
+                            <div class="form-group row">
                             <select class="form-control" name="kategori_name" required>
                                 <option value="{{ $icons->kategori_name }}" @if($icons->kategori_name == "carousel") selected @endif>{{ $icons->kategori_name }}</option>
                                 <option value="Carousel">Carousel</option>

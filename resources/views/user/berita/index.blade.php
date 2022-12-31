@@ -12,13 +12,14 @@
 <!--/ Header end -->
 
 <div class="banner-carousel banner-carousel-1 mb-0">
-<div class="banner-carousel-item" style="background-image:url(frontend/images/news/berita3.jpg)">
+  @foreach($carousel as $data)
+<div class="banner-carousel-item" style="background-image:url({{ route('menu.file', encrypt($data->icon)) }})">
     <div class="slider-content">
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12 text-center">
-                <h3 class="into-sub-title" data-animation-in="fadeIn">Website Resmi PPID</h3>
-                <h6 class="slide-title" data-animation-in="slideInLeft">Pemerintah Kota Madiun</h6>
+                <h3 class="into-sub-title" data-animation-in="fadeIn">{{$data->judul}}</h3>
+                <h6 class="slide-title" data-animation-in="slideInLeft">{{$data->subjudul}}</h6>
                 <p data-animation-in="slideInLeft" data-duration-in="1.2">
                     <a href="https://www.madiunkota.go.id/" class="slider btn btn-primary" style="align:center">Lihat</a>
                 </p>
@@ -27,37 +28,7 @@
         </div>
     </div>
   </div>
-
-  <div class="banner-carousel-item" style="background-image:url({{asset('frontend/images/news/berita2.jpg')}})">
-    <div class="slider-content">
-        <div class="container h-100">
-          <div class="row align-items-center h-100">
-              <div class="col-md-12">
-                <h2 class="slide-title-box" data-animation-in="slideInDown">Pemerintah Kota Madiun</h2>
-                <h3 class="slide-sub-title" data-animation-in="slideInLeft">Website Resmi PPID</h3>
-                <p data-animation-in="slideInRight">
-                  <a href="https://www.madiunkota.go.id/" class="slider btn btn-primary" aria-label="contact-with-us">Lihat</a>
-                </p>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="banner-carousel-item" style="background-image:url({{asset('frontend/images/news/berita.jpg')}})">
-    <div class="slider-content ">
-        <div class="container h-100">
-          <div class="row align-items-center h-100">
-              <div class="col-md-12">
-                <h3 class="slide-sub-title" data-animation-in="fadeIn">Website Resmi PPID</h3>
-                <p class="slider-description lead" data-animation-in="slideInRight">Pemerintah Kota Madiun</p>
-                <div data-animation-in="slideInLeft">
-                    <a href="https://www.madiunkota.go.id/" class="slider btn btn-primary" aria-label="contact-with-us">Lihat</a>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
+@endforeach
   </div>
 </div>
 
@@ -199,8 +170,7 @@
     <div class="row text-center">
       <div class="col-lg-12">
       <div class="shuffle-btn-group" style="margin-top:-20px;">
-      <h2 class="section-title" style="text-align:center; color: #06A3DA">Informasi Terkait</h2>
-        <h3 class="section-sub-title" style="text-align:center; color: #091E3E">Daftar Berita</h3>
+        <h3 class="section-sub-title" style="text-align:center; color: #091E3E">Penghargaan</h3>
           </div><!-- project filter end -->
       </div>
     </div>
@@ -242,6 +212,7 @@
     </div>
      --}}
 
+     <div class="row">
      <div class="col-6 col-md-12 col-lg-12">
         <div class="card" style="height: 400px; background-color:#a9b5f8">
           {{-- <div class="card-header">

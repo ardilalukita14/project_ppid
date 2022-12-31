@@ -33,7 +33,9 @@
   <link rel="stylesheet" href="{{ asset ('frontend/css/style.css')}}">
 
    <!-- Libraries Stylesheet -->
-   <link href="frontend/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+ <!-- CSS Libraries -->
+ <link rel="stylesheet" href="{{ asset ('frontend/dist/assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{ asset ('frontend/dist/assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css')}}">
    <link href="frontend/lib/animate/animate.min.css" rel="stylesheet">
 
 </head>
@@ -72,7 +74,8 @@
   <script src="frontend/lib/easing/easing.min.js"></script>
   <script src="frontend/lib/waypoints/waypoints.min.js"></script>
   <script src="frontend/lib/counterup/counterup.min.js"></script>
-  <script src="frontend/lib/owlcarousel/owl.carousel.min.js"></script>
+ <!-- JS Libraies -->
+ < <script src="{{('frontend/dist/assets/modules/owlcarousel2/dist/owl.carousel.min.js')}}"></script>
   <script src="{{asset('vendorss/datatables/jquery.dataTables.min.js')}}"></script>
   <script src="{{asset('vendorss/datatables/dataTables.bootstrap4.min.js')}}"></script>
 
@@ -119,6 +122,25 @@ $(document).ready(function() {
 
 });
 
+</script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
 </script>
   </div><!-- Body inner end -->
   @yield('content')

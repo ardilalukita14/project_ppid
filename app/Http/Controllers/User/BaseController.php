@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Kategori;
 use App\Models\Post;
 use App\Models\Tag;
+use App\Models\Icon;
 use App\Models\Document;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
@@ -71,10 +72,14 @@ class BaseController extends Controller
         
         $beritakonten = Post::where('ispublish', '=', '1')->where('ispinned', '=', '0')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(6)->get();
 
-      
+        // icon
+
+        $carousel = Icon::where('kategori_name', '=', 'Carousel')->orderBy('created_at', 'DESC')->limit(3)->get();
+        $penghargaan = Icon::where('kategori_name', '=', 'Penghargaan')->orderBy('created_at', 'DESC')->limit(3)->get();
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
         // $youtube = Youtube::where('ispublish', '=', '1')->orderBy('created_at', 'DESC')->first();
     
-    return view('user.berita.index',compact('beritaterkini', 'beritapinned', 'beritakonten'));
+    return view('user.berita.index',compact('beritaterkini', 'beritapinned', 'beritakonten', 'carousel', 'penghargaan', 'carousel', 'penghargaan', 'logo'));
     }
 
     public function cari(Request $request)
