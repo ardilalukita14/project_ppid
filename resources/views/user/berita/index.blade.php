@@ -218,48 +218,12 @@
           {{-- <div class="card-header">
             <h4>Caption</h4>
           </div> --}}
-          <div class="card-body">
-            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner ">
-                <div class="carousel-item active">
-                  <img class="d-block"src="backend2/assets/img/news/img01.jpg" style="width: 500px; margin-left: 260px" alt="First slide">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Heading</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block" src="backend2/assets/img/news/img07.jpg" style="width: 500px; margin-left: 260px" alt="Second slide">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Heading</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block" src="backend2/assets/img/news/img08.jpg" style="width: 500px; margin-left: 260px" alt="Third slide">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Heading</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+          <div class="your-class">
+            @foreach($penghargaan as $data)
+            <div class="icon1"><img loading="lazy" class="img-fluid" src="{{ route('menu.file', encrypt($data->icon)) }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:300px; text-align: center;">
             </div>
+            @endforeach
+          </div>
           </div>
         </div>
       </div>
@@ -273,15 +237,38 @@
   <div class="container">
     <div class="row">
         <div class="col-lg-4">
-          <div class="subscribe-call-to-acton">
-              <h3 style="color: #ffffff; font-weight:bold;">Temukan Informasi</h3>
-              <h4>Yang Anda Inginkan...</h4>
+          <div class="subscribe-call-to-acton" style="padding-top: 40px; padding-bottom: 40px;">
+              <h4 style="color: #ffffff; font-weight:bold;">Pengajuan</h4>
+              <h4 style="color: #ffffff; font-weight:bold;">Keberatan Informasi</h4>
           </div>
         </div><!-- Col end -->
 
         <div class="col-lg-8">
           <div class="ts-newsletter row align-items-center">
               <div class="col-md-5 newsletter-introtext">
+              <div class="container">
+
+<div class="facts-wrapper">
+    <div class="row">
+      <div class="center">
+     <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
+          <div class="ts-facts-img">
+            <a href="/permohonan-informasi" target="_blank"><img loading="lazy" src="frontend/images/permohonan.png" alt="facts-img" style="margin-left: -40px;">
+          </div>
+          <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="https://kotamadiun.lapor.go.id/" target="_blank">Form Permohonan Informasi Publik</a></h3>
+      </div><!-- Col end -->
+
+      <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
+        <div class="ts-facts-img">
+            <a href="pengajuan-keberatan" target="_blank"><img loading="lazy" src="frontend/images/pengajuan.png" alt="facts-img" style="margin-left:-120px;">
+          </div>
+            <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -30px;"><a class="counterUp" href="https://sirup.lkpp.go.id/" target="_blank">Form Pengajuan Keberatan Informasi Publik</a></h3>
+      </div><!-- Col end -->
+    </div> <!-- Facts end -->
+</div>
+<!--/ Content row end -->
+</div>
+</div>
               </div>
           </div><!-- Newsletter end -->
         </div><!-- Col end -->
@@ -337,6 +324,7 @@
 </section>
 <!--/ News end -->
 
+	
 
 @include('layouts.frontend.footer')
 <!-- Footer end -->

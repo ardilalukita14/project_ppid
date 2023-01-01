@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="{{ asset ('frontend/dist/assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css')}}">
    <link href="frontend/lib/animate/animate.min.css" rel="stylesheet">
 
+   <link rel="stylesheet" type="text/css" href="frontend/slick/slick.css"/>
+  	<link rel="stylesheet" type="text/css" href="frontend/slick/slick-theme.css"/>
 </head>
 <body onload="loader()">
 
@@ -75,10 +77,9 @@
   <script src="frontend/lib/waypoints/waypoints.min.js"></script>
   <script src="frontend/lib/counterup/counterup.min.js"></script>
  <!-- JS Libraies -->
- <script src="{{('frontend/dist/assets/modules/owlcarousel2/dist/owl.carousel.min.js')}}"></script>
+  <script src="{{('frontend/dist/assets/modules/owlcarousel2/dist/owl.carousel.min.js')}}"></script>
   <script src="{{asset('vendorss/datatables/jquery.dataTables.min.js')}}"></script>
   <script src="{{asset('vendorss/datatables/dataTables.bootstrap4.min.js')}}"></script>
-
   <!-- Template custom -->
   <script src="{{ asset ('frontend/js/script.js')}}"></script>
 
@@ -142,6 +143,25 @@ $('.owl-carousel').owlCarousel({
     }
 })
 </script>
+<!-- summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('.summernote').summernote();
+});
+</script>
+<script type="text/javascript" src="frontend/slick/slick.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('.your-class').slick({
+infinite: true,
+slidesToShow: 2,
+slidesToScroll: 2
+});
+});
+</script>
+<script src="//cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
   </div><!-- Body inner end -->
   @yield('content')
   </body>

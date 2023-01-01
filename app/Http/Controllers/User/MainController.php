@@ -11,6 +11,7 @@ use App\Models\Kategori;
 use App\Models\Tag;
 use App\Models\Post;
 use App\Models\Berkas;
+use App\Models\Icon;
 use App\Models\Information;
 use App\Models\BerkasInformation;
 use App\Models\PPIDPelaksana;
@@ -506,5 +507,14 @@ class MainController extends Controller
         return view('user.sop.keuangan', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
+    public function permohonan() {
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasipublik.permohonan', compact('logo'));
+     }
+
+     public function pengajuan() {
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasipublik.pengajuan', compact('logo'));
+     }
 }
 

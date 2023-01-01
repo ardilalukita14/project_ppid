@@ -36,6 +36,10 @@ Route::get('/agenda-kota', [App\Http\Controllers\User\BaseController::class, 'da
 Route::get('/kategori/{slug}', [App\Http\Controllers\User\BaseController::class, 'contents_kategori'] )->name('contents_kategori');
 Route::get('/berita/{year}/{month}/{day}/{slug}', [App\Http\Controllers\User\BaseController::class, 'contents_blog'] )->name('contents_blog');
 
+/** Informasi Publik */
+Route::get('/permohonan-informasi',[\App\Http\Controllers\User\MainController::class,'permohonan'])->name('informasi.permohonan');
+Route::get('/pengajuan-keberatan',[\App\Http\Controllers\User\MainController::class,'pengajuan'])->name('informasi.pengajuan');
+
 /** Dashboard Admin */
 Route::group(['middleware'=>['admin','auth','PreventBackHistory']], function(){
 Route::get('/dashboard-admin-ppid',[\App\Http\Controllers\AdminController::class,'dashboard'])->name('admin.index');
@@ -68,6 +72,7 @@ Route::get('/profile/jam-pelayanan',[\App\Http\Controllers\ProfilePPIDController
 Route::get('/profile/sk-daftar-informasi-publik',[\App\Http\Controllers\ProfilePPIDController::class,'skpublik'])->name('sk.publik.index');
 Route::get('/profile/sk-daftar-informasi-dikecualikan',[\App\Http\Controllers\ProfilePPIDController::class,'skdikecualikan'])->name('sk.dikecualikan.index');
 Route::post('/profil-ppid/store', [App\Http\Controllers\ProfilePPIDController::class, 'store'])->name('profilppid.create');
+
 
 /** CRUD Data PPID Pelaksana Kota Madiun*/
 Route::resource('/ppidpelaksana', App\Http\Controllers\PPIDPelaksanaController::class );
