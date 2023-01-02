@@ -102,11 +102,15 @@
                             @method('PATCH')
                             <div class="form-group row">
                             <label class="col-lg-6 col-form-label" for="judul">Judul</label>
-                            <textarea class="summernote" style="height:10px;" name="judul" class="form-control" required="" placeholder="Judul">{!! $icons->judul !!}</textarea>
+                            <textarea class="summernote" style="height:10px;" name="judul" class="form-control" placeholder="Judul">{!! $icons->judul !!}</textarea>
                             </div>
                             <div class="form-group row">
                             <label class="col-lg-6 col-form-label" for="subjudul">Sub Judul</label>
-                            <textarea class="summernote" style="height:10px;" name="subjudul" class="form-control" required="" placeholder="Sub Judul">{!! $icons->subjudul !!}</textarea>
+                            <textarea class="summernote" style="height:10px;" name="subjudul" class="form-control" placeholder="Sub Judul">{!! $icons->subjudul !!}</textarea>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-lg-6 col-form-label">Link</label>
+                              <input type="text" class="form-control" name="link">
                             </div>
                             <div class="form-group row">
                             <select class="form-control" name="kategori_name" required>

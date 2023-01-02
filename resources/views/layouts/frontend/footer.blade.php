@@ -2,7 +2,7 @@
     <div class="footer-main">
       <div class="container">
         @foreach($logo as $data)
-      <img loading="lazy" width="80px" class="footer-logos" src="{{ route('menu.file', encrypt($data->icon)) }}" alt="Constra">
+        <a href="{{ $data->link }}" aria-label="Facebook" target="_blank"><img loading="lazy" width="80px" class="footer-logos" src="{{ route('menu.file', encrypt($data->icon)) }}" alt="Constra"></a>
       @endforeach
         <hr style="display:block; height: 3px;  border: 0; border-top; 3px solid #ccc;">
         <div class="row justify-content-between">

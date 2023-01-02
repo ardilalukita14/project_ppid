@@ -108,6 +108,7 @@
                                                 <th>No</th>
                                                 <th style="width:220px; text-align:center;">Judul</th>
                                                 <th style="text-align:center;">Sub Judul</th>
+                                                <th style="text-align:center;">Link</th>
                                                 <th style="text-align:center;">Kategori Icon</th>
                                                 <th style="text-align:center;">icon</th>
                                                 <th style="width:200px;">Action</th>
@@ -120,6 +121,7 @@
                                                 <td>{{$i++}}</td>
                                                 <td>{!! $data->judul !!}</td>
                                                 <td>{!! $data->subjudul !!}</td>
+                                                <td>{{$data->link}}</td>
                                                 <td>{{ $data->kategori_name}}</td>
                                                 <td>
                                                     @if ($data->icon == null)

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('judul')->nullable();
             $table->string('subjudul')->nullable();
+            $table->string('link')->nullable();
             $table->string('kategori_name');
             $table->string('icon');
             $table->timestamps();

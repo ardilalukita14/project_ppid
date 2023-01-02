@@ -57,6 +57,7 @@ class IconController extends Controller
         $icon = new icon;
         $icon->judul = $request->judul;
         $icon->subjudul = $request->subjudul;
+        $icon->link = $request->link;
         $icon->kategori_name = $request->kategori_name;
         $icon->icon = $path;
         $icon->save();
@@ -122,6 +123,7 @@ class IconController extends Controller
         $icon_data = [
             'judul' => $request->judul,
             'subjudul' => $request->subjudul,
+            'link' => $request->link,
             'kategori_name' => $request->kategori_name,
             'icon' => $path
         ];
@@ -131,6 +133,7 @@ class IconController extends Controller
         $icon_data = [
             'judul' => $request->judul,
             'subjudul' => $request->subjudul,
+            'link' => $request->link,
             'kategori_name' => $request->kategori_name
         ];
     }

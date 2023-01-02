@@ -12,5 +12,5 @@ class Icon extends Model
     protected $table = 'icons';
 
     protected $fillable = [
-        'judul', 'subjudul', 'kategori_name', 'icon'];
+        'judul', 'subjudul', 'link', 'kategori_name', 'icon'];
 }
