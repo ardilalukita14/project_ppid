@@ -37,7 +37,7 @@
     </div>
 
 <br></br>
-<div class="tabsMenu">
+<div class="tabsMenu"  style="margin-left: 50px">
     <input type="radio" class="hidden" id="multitabs1" name="mtabs" checked>
     <input type="radio" class="hidden" id="multitabs2" name="mtabs">
     <input type="radio" class="hidden" id="multitabs3" name="mtabs">
@@ -90,9 +90,10 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-              <lable><b>Nomor WhatsApp Aktif*</b></label>
+              <lable><b>Nomor WhatsApp</b></label>
                 <input class="form-control form-control-subject" name="telepon" id="telepon" placeholder="" required>
-              </div>
+                <span style="color: #ff0000; font-size: 12px">*wajib diisi dan harus WA aktif</span>
+            </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
@@ -202,9 +203,10 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-              <lable><b>Nomor WhatsApp Aktif*</b></label>
+              <lable><b>Nomor WhatsApp</b></label>
                 <input class="form-control form-control-subject" name="telepon" id="telepon" placeholder="" required>
-              </div>
+                <span style="color: #ff0000; font-size: 12px">*wajib diisi dan harus WA aktif</span>
+            </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
