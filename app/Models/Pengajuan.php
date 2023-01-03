@@ -10,5 +10,5 @@ class Pengajuan extends Model
     use HasFactory;
     public $table = "pengajuan";
     protected $fillable = [
-        'kode_permohonan', 'nik'];
+        'kode_permohonan', 'nik_nip'];
 }

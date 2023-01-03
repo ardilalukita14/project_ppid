@@ -38,7 +38,7 @@ Route::get('/berita/{year}/{month}/{day}/{slug}', [App\Http\Controllers\User\Bas
 
 /** Informasi Publik */
 Route::resource('/permohonan-informasi', App\Http\Controllers\User\PermohonanController::class );
-Route::get('/pengajuan-keberatan',[\App\Http\Controllers\User\MainController::class,'pengajuan'])->name('informasi.pengajuan');
+Route::resource('/pengajuan-keberatan', App\Http\Controllers\User\PengajuanController::class );
 
 /** Dashboard Admin */
 Route::group(['middleware'=>['admin','auth','PreventBackHistory']], function(){

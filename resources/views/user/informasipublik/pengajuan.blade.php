@@ -39,7 +39,33 @@
 <section id="blog" class="blog">
         <div class="container" data-aos="fade-up">
 
-        <form id="contact-form" action="#" method="post" role="form">
+        @if(Session::has('success'))
+            <div class="btn btn-success" style="width:100%; height:50px">
+                <p>{{Session::get('success')}}</p>
+            </div>
+        @endif
+
+        @if(Session::has('delete'))
+            <div class="btn btn-warning" style="width:100%; height:50px">
+                <p>{{Session::get('delete')}}</p>
+            </div>
+        @endif
+
+        @if(Session::has('update'))
+            <div class="btn btn-info" style="width:100%; height:50px">
+                <p>{{Session::get('update')}}</p>
+            </div>
+        @endif
+
+        @if(Session::has('failed'))
+            <div class="btn btn-danger" style="width:100%; height:50px">
+                <p>{{Session::get('delete')}}</p>
+            </div>
+        @endif
+        <br></br>
+        
+        <form id="contact-form" class="form-valide" action="{{route('pengajuan-keberatan.store')}}" method="POST" enctype="multipart/form-data" role="form">
+            {{csrf_field()}}
           <div class="error-container"></div>
           <b>Pengajuan Keberatan*</b><br></br>
           <div class="row">
@@ -51,8 +77,8 @@
             </div>
             <div class="col-md-8">
               <div class="form-group">
-                <label>NIK</label>
-                <input class="form-control form-control-email" name="nik" id="nik" placeholder="NIK" type="integer"
+                <label>NIK / No. Identitas Pribadi</label>
+                <input class="form-control form-control-email" name="nik_nip" id="nik_nip" placeholder="NIK" type="integer"
                   required>
               </div>
             </div>
