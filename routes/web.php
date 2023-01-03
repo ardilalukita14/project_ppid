@@ -73,6 +73,14 @@ Route::get('/profile/sk-daftar-informasi-publik',[\App\Http\Controllers\ProfileP
 Route::get('/profile/sk-daftar-informasi-dikecualikan',[\App\Http\Controllers\ProfilePPIDController::class,'skdikecualikan'])->name('sk.dikecualikan.index');
 Route::post('/profil-ppid/store', [App\Http\Controllers\ProfilePPIDController::class, 'store'])->name('profilppid.create');
 
+/** Data Permohonan */
+Route::get('/permohonan', '\App\Http\Controllers\InformasiPublikController@indexpermohonan')->name('admin.informasipublik.indexpermohonan');
+Route::delete('/hapus-permohonan/{permohonan}', '\App\Http\Controllers\InformasiPublikController@destroypermohonan')->name('destroy_permohonan');
+
+/** Data Pengajuan */
+Route::get('/pengajuan', '\App\Http\Controllers\InformasiPublikController@indexpengajuan')->name('admin.informasipublik.indexpengajuan');
+Route::delete('/hapus-pengajuan/{pengajuan}', '\App\Http\Controllers\InformasiPublikController@destroypengajuan')->name('destroy_pengajuan');
+
 
 /** CRUD Data PPID Pelaksana Kota Madiun*/
 Route::resource('/ppidpelaksana', App\Http\Controllers\PPIDPelaksanaController::class );
@@ -113,6 +121,7 @@ Route::prefix('a')->name('admin.')->group(function () {
     Route::get('berkasprofile/destroy/{berkasprofile}', [App\Http\Controllers\ProfileController::class, 'destroy_berkas'] )->name('destroy_berkasprofile');
     Route::get('berkasppid/destroy/{berkasppid}', [App\Http\Controllers\ProfilePPIDController::class, 'destroy_berkasppid'] )->name('destroy_berkasppid');
     Route::get('berkas/destroy/{berkas}', [App\Http\Controllers\InformationController::class, 'destroy_berkas_informasi'] )->name('destroy_berkas_informasi');
+
     });
 });
 
@@ -176,3 +185,4 @@ Route::get('/menu/file/{file}', [App\Http\Controllers\User\FileController::class
 Route::post('/news/cariberita',[\App\Http\Controllers\User\BaseController::class, 'cari'])->name('reader.search.berita');
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
