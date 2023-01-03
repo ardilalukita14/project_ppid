@@ -41,7 +41,7 @@
 
         <h5>Terima Kasih Telah Menggunakan Layanan Kami</h5>
         @foreach($pemohon as $data)
-        <p>Data pengaduan atas nama {{$data->nama_lengkap}} dengan keluhan : {!!$data->rincian_informasi!!} berhasil terkirim.
+        <p>Data pengaduan atas nama {{$data->nama_lengkap}} dengan keluhan : {!!$data->rincian_informasi!!} Berhasil terkirim.
            Mohon untuk menyimpan kode pengaduan ini <b>{{$data->kode_permohonan}}</b> untuk memantau proses pengaduan
            ke admin PPID.
         </div>
