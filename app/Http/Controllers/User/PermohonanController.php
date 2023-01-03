@@ -54,31 +54,52 @@ class PermohonanController extends Controller
         $fileName = $fileName.'_'.time().'.'.$extension;
         $path = $file->storeAs('permohonan_ktp/'.$year.'/'.$month.'/'.$day, $fileName, 'local');
 
-        // $files = $request->file('akta');
-        // $files_name = $files->getClientOriginalName();
-        // $filesName = pathinfo($files_name, PATHINFO_FILENAME);
-        // $extension = $files->getClientOriginalExtension();
-        // $filesName = $filesName.'_'.time().'.'.$extension;
-        // $paths = $files->storeAs('permohonan_akta_notaris/'.$year.'/'.$month.'/'.$day, $filesName, 'local');
+        if($request->hasFile('akta')){
+            $files = $request->file('akta');
+                $files_name = $files->getClientOriginalName();
+                $filesName = pathinfo($files_name, PATHINFO_FILENAME);
+                $extension = $files->getClientOriginalExtension();
+                $filesName = $filesName.'_'.time().'.'.$extension;
+                $paths = $files->storeAs('permohonan_akta_notaris/'.$year.'/'.$month.'/'.$day, $filesName, 'local');
 
-        $permohonan = new permohonan;
-        $permohonan->kategori_permohonan = $request->kategori_permohonan;
-        $permohonan->nik_nip = $request->nik_nip;
-        $permohonan->nama_lengkap = $request->nama_lengkap;
-        $permohonan->ktp = $path;
-        // $permohonan->akta = $paths;
-        $permohonan->email = $request->email;
-        $permohonan->telepon = $request->telepon;
-        $permohonan->pekerjaan = $request->pekerjaan;
-        $permohonan->alamat = $request->alamat;
-        $permohonan->rincian_informasi = $request->rincian_informasi;
-        $permohonan->tujuan = $request->tujuan;
-        $permohonan->get_information = $request->get_information;
-        $permohonan->copy_information = $request->copy_information;
-        $permohonan->how_copy = $request->how_copy;
-        $permohonan->kode_permohonan = mt_rand(10000000,99999999);
-        $permohonan->save();
+        $permohonan = Permohonan::create([
+            'kategori_permohonan' => $request->kategori_permohonan,
+            'nik_nip' => $request->nik_nip,
+            'nama_lengkap' => $request->nama_lengkap,
+            'ktp' => $path,
+            'akta' => $paths,
+            'email' => $request->email,
+            'telepon' => $request->telepon,
+            'pekerjaan' => $request->pekerjaan,
+            'alamat' => $request->alamat,
+            'rincian_informasi' => $request->rincian_informasi,
+            'tujuan' => $request->tujuan,
+            'get_information' => $request->get_information,
+            'copy_information' => $request->copy_information,
+            'how_copy' => $request->how_copy,
+            'kode_permohonan' => mt_rand(10000000,99999999)
+        ]);
         
+    }else{
+
+        $permohonan = Permohonan::create([
+            'kategori_permohonan' => $request->kategori_permohonan,
+            'nik_nip' => $request->nik_nip,
+            'nama_lengkap' => $request->nama_lengkap,
+            'ktp' => $path,
+            'email' => $request->email,
+            'telepon' => $request->telepon,
+            'pekerjaan' => $request->pekerjaan,
+            'alamat' => $request->alamat,
+            'rincian_informasi' => $request->rincian_informasi,
+            'tujuan' => $request->tujuan,
+            'get_information' => $request->get_information,
+            'copy_information' => $request->copy_information,
+            'how_copy' => $request->how_copy,
+            'kode_permohonan' => mt_rand(10000000,99999999)
+        ]);
+    }
+
         if ($permohonan) {
             Session::flash('success','Data Permohonan Berhasil Ditambahkan');
             return redirect()->route('permohonan-informasi.index');

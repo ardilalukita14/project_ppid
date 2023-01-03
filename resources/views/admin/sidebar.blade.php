@@ -96,6 +96,10 @@
             <li class="{{ (request()->is('a/tags')) ? 'active' : '' }}"><a class="nav-link" href="/a/tags"><i class="fas fa-bookmark"></i> <span>Tag</span></a></li>
             <li class="{{ (request()->is('a/post')) ? 'active' : '' }}"><a class="nav-link" href="/a/post"><i class="fas fa-folder-open"></i> <span>Posting</span></a></li>
 
+            <li class="menu-header">Informasi Publik</li>
+            <li class="{{ (request()->is('permohonan')) ? 'active' : '' }}"><a class="nav-link" href="/permohonan"><i class="fas fa-envelope"></i> <span>Permohonan</span></a></li>
+            <li class="{{ (request()->is('pengajuan')) ? 'active' : '' }}"><a class="nav-link" href="/pengajuan"><i class="fas fa-envelope"></i> <span>Pengajuan</span></a></li>
+
             <li class="menu-header">Kategori Postingan</li>
             <li class="{{ (request()->is('a/pengumuman')) ? 'active' : '' }}"><a class="nav-link" href="/a/pengumuman"><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>
             <li class="{{ (request()->is('a/produk-hukum')) ? 'active' : '' }}"><a class="nav-link" href="/a/produk-hukum"><i class="fas fa-ribbon"></i> <span>Produk Hukum</span></a></li>
