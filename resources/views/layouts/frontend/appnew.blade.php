@@ -161,6 +161,13 @@ slidesToScroll: 2
 });
 });
 </script>
+
+<script type="text/javascript"> 
+      $(document).ready(function(){
+        $("ul.tabs").tabs("div.panes > div");
+      });
+   </script>
+   
 <script src="//cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
   </div><!-- Body inner end -->
   @yield('content')

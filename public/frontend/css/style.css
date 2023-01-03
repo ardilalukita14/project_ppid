@@ -3662,3 +3662,53 @@ label {
 .icon3{
  color: #fff;font-size: 50px;text-align: center;
 }
+
+.hidden {
+  display: none;
+}
+
+.tabsMenu {
+  font-family: arial;
+  /* background: #f6f6f6; */
+}
+
+.tabsMenu .tabsHead {
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+}
+
+.tabsMenu .tabsHead:after {
+  content: "";
+  margin-left: auto;
+  padding: 10px 15px;
+  font-family: courier new;
+}
+
+.tabsMenu .tabsHead>* {
+  padding: 13px 17px;
+  margin-bottom: -1px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.tabsMenu .tabsContent {
+  padding: 25px 23px;
+  line-height: 1.7em;
+}
+
+.tabsMenu .tabsContent>* {
+  display: none;
+}
+
+.tabsMenu input[id*="1"]:checked~.tabsHead label[for*="1"],
+.tabsMenu input[id*="2"]:checked~.tabsHead label[for*="2"],
+.tabsMenu input[id*="3"]:checked~.tabsHead label[for*="3"] {
+  color: #1e1e1e;
+  border-bottom: 1px solid #0b57cf;
+}
+
+.tabsMenu input[id*="1"]:checked~.tabsContent .tabsContent1,
+.tabsMenu input[id*="2"]:checked~.tabsContent .tabsContent2,
+.tabsMenu input[id*="3"]:checked~.tabsContent .tabsContent3{
+  display: block;
+}
