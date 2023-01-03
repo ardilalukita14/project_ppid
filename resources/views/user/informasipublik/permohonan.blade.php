@@ -50,17 +50,18 @@
         <section id="blog" class="blog">
         <div class="container" data-aos="fade-up">
 
-        <form id="contact-form" action="#" method="post" role="form">
+        <form id="contact-form" class="form-valide" action="{{route('permohonan-informasi.store')}}" method="POST" enctype="multipart/form-data" role="form">
+            {{csrf_field()}}
           <div class="error-container"></div>
           <b>Identitas Pemohon*</b><br></br>
           <div class="row">
             <div class="col-md-6">
             <div class="form-group">
             <lable><b>Kategori Permohonan</b></label>
-                <select class="form-control" name="kategori_name" required>
+            <select class="form-control" name="kategori_permohonan" required>
                     <option value="">Pilih</option>
-                    <option value="Carousel">Perorangan</option>
-                    <option value="Penghargaan">Lembaga / Organisasi</option>
+                    <option value="Perorangan">Perorangan</option>
+                    <option value="Lembaga_Organisasi">Lembaga / Organisasi</option>
                 </select>
             </div>
             </div>
@@ -157,17 +158,18 @@
         <section id="blog" class="blog">
         <div class="container" data-aos="fade-up">
 
-        <form id="contact-form" action="#" method="post" role="form">
+        <form id="contact-form" class="form-valide" action="{{route('permohonan-informasi.store')}}" method="POST" enctype="multipart/form-data" role="form">
+            {{csrf_field()}}
           <div class="error-container"></div>
           <b>Identitas Pemohon*</b><br></br>
           <div class="row">
             <div class="col-md-6">
             <div class="form-group">
             <lable><b>Kategori Permohonan</b></label>
-                <select class="form-control" name="kategori_name" required>
+                <select class="form-control" name="kategori_permohonan" required>
                     <option value="">Pilih</option>
-                    <option value="Carousel">Perorangan</option>
-                    <option value="Penghargaan">Lembaga / Organisasi</option>
+                    <option value="Perorangan">Perorangan</option>
+                    <option value="Lembaga_Organisasi">Lembaga / Organisasi</option>
                 </select>
             </div>
             </div>
@@ -192,7 +194,7 @@
             <div class="col-md-6">
               <div class="form-group">
               <lable><b>Upload Akta Notaris Lembaga / Organisasi</b></label>
-                <input type="file" class="form-control form-control-subject" name="akta_notaris" id="akta_notaris" placeholder="" required>
+                <input type="file" class="form-control form-control-subject" name="akta" id="akta" placeholder="" required>
               </div>
             </div>
             <div class="col-md-6">

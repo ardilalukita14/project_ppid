@@ -37,7 +37,7 @@ Route::get('/kategori/{slug}', [App\Http\Controllers\User\BaseController::class,
 Route::get('/berita/{year}/{month}/{day}/{slug}', [App\Http\Controllers\User\BaseController::class, 'contents_blog'] )->name('contents_blog');
 
 /** Informasi Publik */
-Route::get('/permohonan-informasi',[\App\Http\Controllers\User\MainController::class,'permohonan'])->name('informasi.permohonan');
+Route::resource('/permohonan-informasi', App\Http\Controllers\User\PermohonanController::class );
 Route::get('/pengajuan-keberatan',[\App\Http\Controllers\User\MainController::class,'pengajuan'])->name('informasi.pengajuan');
 
 /** Dashboard Admin */
