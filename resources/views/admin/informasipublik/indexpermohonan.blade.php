@@ -35,6 +35,20 @@
 
 @section('content')
 
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">							   
+    <div class="modal-content">         						      
+     <div class="modal-body">
+								      	 
+       <button type="button" class="close" data-dismiss="modal"><span 
+       aria-hidden="true">&times;</span><span class="sr- 
+       only"></span></button>						        
+      <img src="" class="imagepreview" style="width: 100%;">
+								      
+     </div>							    
+   </div>								   
+  </div>
+</div>
 
 <div id="app">
     <div class="main-wrapper main-wrapper-1">
@@ -124,19 +138,35 @@
                                             @foreach ($permohonan as $data)
                                                 <td>{{$i++}}</td>
                                                 <td>{{$data->kategori_permohonan}}</td>
-                                                <td>{{$data->nik_nip}}
+                                                <td>{{$data->nik_nip}}</td>
                                                 <td>{{$data->nama_lengkap}}
-                                                <td>{{$data->ktp}}
-                                                <td>{{$data->akta}}
-                                                <td>{{$data->email}}
-                                                <td>{{$data->telepon}}
-                                                <td>{{$data->pekerjaan}}
-                                                <td>{!!$data->alamat!!}
-                                                <td>{!!$data->rincian_informasi!!}
-                                                <td>{!!$data->tujuan!!}
-                                                <td>{!!$data->get_information!!}
-                                                <td>{!!$data->copy_information!!}
-                                                <td>{!!$data->how_copy!!}
+                                                <td>
+                                                    @if ($data->ktp == null)
+                                                        -
+                                                    @else
+                                                    <a href="#" class="pop">		
+                                                        <img src="{{ route('file.show', encrypt($data->ktp)) }}" class="img-fluid" style="width: 100px"> 
+                                                    </a>
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    @if ($data->akta == null)
+                                                        -
+                                                    @else
+                                                    <a href="#" class="pop">		
+                                                        <img src="{{ route('file.show', encrypt($data->akta)) }}" class="img-fluid" style="width: 100px"> 
+                                                    </a>
+                                                    @endif
+                                                </td>
+                                                <td>{{$data->email}}</td>
+                                                <td>{{$data->telepon}}</td>
+                                                <td>{{$data->pekerjaan}}</td>
+                                                <td>{!!$data->alamat!!}</td>
+                                                <td>{!!$data->rincian_informasi!!}</td>
+                                                <td>{!!$data->tujuan!!}</td>
+                                                <td>{!!$data->get_information!!}</td>
+                                                <td>{!!$data->copy_information!!}</td>
+                                                <td>{!!$data->how_copy!!}</td>
                                                 <td>
                                                     <form action="{{ route('destroy_permohonan',$data->id) }}"  method="POST">
                                                         @csrf
