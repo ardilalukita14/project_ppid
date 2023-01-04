@@ -214,7 +214,7 @@ a:focus {
 }
 
 .dark-bg {
-  background: #687ffa;
+  background: #23437f;
   color: #fff;
 }
 
@@ -681,7 +681,7 @@ ul.top-info li p.info-text {
 
 .header-one,
 .header-one .site-navigation {
-  background: #687ffa;
+  background: #23437f;
 }
 
 .header-one .navbar-collapse {
@@ -1203,7 +1203,7 @@ ul.navbar-nav > li > a {
 
 .header-get-a-quote .btn-primary:hover {
   background: #000000;
-  color: #3c83e6 !important;
+  color: #687ffa !important;
 }
 
 ul.navbar-nav > li.header-get-a-quote:hover > a:after {
@@ -1269,7 +1269,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .slide-title {
   font-size: 18px;
-  color: #333;
+  color: #ffff;
   padding-bottom: 10px;
   line-height: 1em;
   font-weight: 500;
@@ -1560,7 +1560,10 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -1px;
-  color: #000000 !important;
+  color: #ffff !important;
+  -webkit-text-stroke: 1px rgb(82, 109, 139);
+  /* text-stroke: 1px #F8F8F8; */
+  text-shadow: 0px 2px 4px  rgb(53, 53, 146);
   line-height: 1.2em;
   text-align: center;
 }
@@ -2277,7 +2280,7 @@ img.testimonial-thumb {
 /* Subscribe area
 ================================================== */
 .subscribe {
-  background: #687ffa;
+  background: #23437f;
   padding: 0;
 }
 
@@ -2473,7 +2476,7 @@ img.testimonial-thumb {
 
 /*-- Copyright --*/
 .copyright {
-  background: #687ffa;
+  background: #23437f;
   color: #111;
   padding: 25px 0;
   position: relative;
@@ -3616,7 +3619,7 @@ label {
 
 .testimonial-carousel .owl-item.center .testimonial-item img {
     background: var(--primary) !important;
-} 
+}
 
 .testimonial-carousel .owl-nav {
     position: absolute;

@@ -459,8 +459,10 @@
 
   </div>
   <!--/ Container end -->
+
 </section>
 <!--/ News end -->
+
 
 @include('layouts.frontend.footer')
 <!-- Footer end -->

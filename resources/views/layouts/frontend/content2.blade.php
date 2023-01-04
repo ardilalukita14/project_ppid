@@ -9,7 +9,7 @@
           </div><!-- Col end -->
           <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
               <div class="call-to-action-btn">
-                <a class="btn btn-primary" href="https://www.madiunkota.go.id/">More</a>
+                <a class="btn btn-primary" href="https://www.madiunkota.go.id/" target="_blank">Kunjungi Madiun Kota <i class="fa fa-arrow-right"></i></a>
               </div>
           </div><!-- col end -->
         </div><!-- row end -->

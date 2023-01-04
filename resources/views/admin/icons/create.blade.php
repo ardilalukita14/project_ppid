@@ -102,11 +102,11 @@
 
                             <div class="form-group row">
                             <label class="col-lg-6 col-form-label" for="judul">Judul</label>
-                            <textarea class="summernote" style="height:10px;" name="judul" class="form-control"  placeholder="Judul"></textarea>
+                            <input type="text" name="judul" class="form-control"  placeholder="Judul"/>
                             </div>
                             <div class="form-group row">
                             <label class="col-lg-6 col-form-label" for="judul">Sub Judul</label>
-                            <textarea class="summernote" style="height:10px;" name="subjudul" class="form-control" placeholder="Sub Judul"></textarea>
+                            <input type="text" name="subjudul" class="form-control" placeholder="Sub Judul"/>
                             </div>
                             <div class="form-group row">
                               <label class="col-lg-6 col-form-label">Link</label>
