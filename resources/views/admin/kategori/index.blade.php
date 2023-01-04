@@ -67,7 +67,7 @@
                 <br>
                       <div class="card-tools">
                             <br>
-                            <a href="{{ route('kategori.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
+                            <a href="{{ route('categories.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
                       </div>
                                  @if(Session::has('success'))
                                  <br></br>
@@ -121,8 +121,8 @@
                                                         <div class="badge badge-danger">Hidden</div>
                                                         @endif</td>
                                                 <td>
-                                                    <form action="{{ route('kategori.destroy',$data->id) }}"  method="POST">
-                                                        <a href="{{ route('kategori.edit',$data->id) }}" class="btn btn-warning "><i class="fa fa-edit"></i> Ubah</a>
+                                                    <form action="{{ route('categories.destroy',$data->id) }}"  method="POST">
+                                                        <a href="{{ route('categories.edit',$data->id) }}" class="btn btn-warning "><i class="fa fa-edit"></i> Ubah</a>
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus data PPID Pelaksana ?')" ><i class="fas fa-trash"></i> Hapus</button>

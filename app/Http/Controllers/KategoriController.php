@@ -49,10 +49,10 @@ class KategoriController extends Controller
         $kategori->save();
         if ($kategori) {
             Session::flash('success','Data Kategori Berhasil Ditambahkan');
-            return redirect()->route('kategori.index');
+            return redirect()->route('categories.index');
         } else {
             Session::flash('failed','Data Kategori Gagal Ditambahkan');
-            return redirect()->route('kategori.index');
+            return redirect()->route('categories.index');
         }
     }
 
@@ -97,10 +97,10 @@ class KategoriController extends Controller
 
         if ($kategori) {
             Session::flash('update','Update Data Kategori Berhasil');
-            return redirect()->route('kategori.index');
+            return redirect()->route('categories.index');
         } else {
             Session::flash('failed','Update Data Kategori Gagal');
-            return redirect()->route('kategori.index');
+            return redirect()->route('categories.index');
         }
     }
 
@@ -114,6 +114,6 @@ class KategoriController extends Controller
     {
         Kategori::find($id)->delete();
         Session::flash('delete','Data Kategori Berhasil Dihapus');
-        return redirect()->route('kategori.index');
+        return redirect()->route('categories.index');
     }
 }

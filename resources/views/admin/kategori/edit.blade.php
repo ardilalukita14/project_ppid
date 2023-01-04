@@ -95,9 +95,9 @@
                     @endif
 
                     <div class="form-validation">
-                    <form class="form-valide" action="{{route('kategori.edit', $kategori->id)}}" method="POST" enctype="multipart/form-data">
-                            {{csrf_field()}}
-
+                    <form class="form-valide" action="{{route('categories.update', $kategori->id)}}" method="POST" enctype="multipart/form-data">
+                    {{csrf_field()}}
+                            @method('patch')
                             <div class="form-group row">
                                 <label class="col-lg-8 col-form-label" for="nama_kategori">Nama Kategori</label>
                                 <div class="col-sm-12">

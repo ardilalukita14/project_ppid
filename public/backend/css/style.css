@@ -179,7 +179,9 @@ strong {
   font-weight: bolder; }
 
 small {
-  font-size: 80%; }
+  font-size: 80%; 
+  text-transform: lowercase;
+}
 
 sub,
 sup {
@@ -414,7 +416,8 @@ hr {
 small,
 .small {
   font-size: 80%;
-  font-weight: 400; }
+  font-weight: 400; 
+  text-transform: lowercase;}
 
 mark,
 .mark {

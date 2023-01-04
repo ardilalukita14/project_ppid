@@ -16,8 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-route::get('/ppid-home',[\App\Http\Controllers\FrontendController::class,'index2'])->name('layout.frontend2.index');
-route::get('/coba',[\App\Http\Controllers\AdminController::class,'coba'])->name('admin.coba');
+
 
 /** Login Admin */
 
@@ -27,7 +26,6 @@ Route::post('/admin/logout',[\App\Http\Controllers\Auth\LoginController::class,'
 
 /** Halaman Utama */
 route::get('/',[\App\Http\Controllers\User\BaseController::class,'index'])->name('layouts.frontend.index');
-route::get('/profil-kota-madiun',[\App\Http\Controllers\FrontendController::class,'profilkota'])->name('layouts.frontend.profilkota');
 route::get('/sejarah-kota-madiun',[\App\Http\Controllers\FrontendController::class,'sejarah'])->name('layouts.frontend.sejarahkota');
 
 /** Jadwal Rapat dan Agenda Kota */
@@ -37,6 +35,10 @@ Route::get('/agenda-kota', [App\Http\Controllers\User\BaseController::class, 'da
 /** Slug */
 Route::get('/kategori/{slug}', [App\Http\Controllers\User\BaseController::class, 'contents_kategori'] )->name('contents_kategori');
 Route::get('/berita/{year}/{month}/{day}/{slug}', [App\Http\Controllers\User\BaseController::class, 'contents_blog'] )->name('contents_blog');
+
+/** Informasi Publik */
+Route::resource('/permohonan-informasi', App\Http\Controllers\User\PermohonanController::class );
+Route::resource('/pengajuan-keberatan', App\Http\Controllers\User\PengajuanController::class );
 
 /** Dashboard Admin */
 Route::group(['middleware'=>['admin','auth','PreventBackHistory']], function(){
@@ -71,13 +73,18 @@ Route::get('/profile/sk-daftar-informasi-publik',[\App\Http\Controllers\ProfileP
 Route::get('/profile/sk-daftar-informasi-dikecualikan',[\App\Http\Controllers\ProfilePPIDController::class,'skdikecualikan'])->name('sk.dikecualikan.index');
 Route::post('/profil-ppid/store', [App\Http\Controllers\ProfilePPIDController::class, 'store'])->name('profilppid.create');
 
+/** Data Permohonan */
+Route::get('/permohonan', '\App\Http\Controllers\InformasiPublikController@indexpermohonan')->name('admin.informasipublik.indexpermohonan');
+Route::delete('/hapus-permohonan/{permohonan}', '\App\Http\Controllers\InformasiPublikController@destroypermohonan')->name('destroy_permohonan');
+
+/** Data Pengajuan */
+Route::get('/pengajuan', '\App\Http\Controllers\InformasiPublikController@indexpengajuan')->name('admin.informasipublik.indexpengajuan');
+Route::delete('/hapus-pengajuan/{pengajuan}', '\App\Http\Controllers\InformasiPublikController@destroypengajuan')->name('destroy_pengajuan');
+
+
 /** CRUD Data PPID Pelaksana Kota Madiun*/
-Route::get('/ppid-pelaksana', [\App\Http\Controllers\PPIDPelaksanaController::class, 'index'])->name('ppid.pelaksana.index');
-Route::get('/create/ppid-pelaksana', [\App\Http\Controllers\PPIDPelaksanaController::class, 'create'])->name('ppid.pelaksana.create');
-Route::post('/create/ppid-pelaksana', [\App\Http\Controllers\PPIDPelaksanaController::class, 'store'])->name('ppid.pelaksana.create');
-Route::get('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'edit'])->name('ppid.pelaksana.edit');
-Route::post('/edit-ppid-pelaksana/{id}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'update'])->name('ppid.pelaksana.edit');
-Route::delete('/hapus-ppid-pelaksana/{ppid}', [\App\Http\Controllers\PPIDPelaksanaController::class, 'destroy'])->name('ppid.pelaksana.destroy');
+Route::resource('/ppidpelaksana', App\Http\Controllers\PPIDPelaksanaController::class );
+
 
 /** Daftar Informasi Publik dan SOP*/
 Route::get('/informasi/daftar-informasi-publik-2022',[\App\Http\Controllers\InformationController::class,'informasipublik'])->name('informasi.publik.index');
@@ -93,17 +100,13 @@ Route::get('/informasi/sop-pedoman-pengelolaan-keuangan',[\App\Http\Controllers\
 Route::post('/informasi/store', [App\Http\Controllers\InformationController::class, 'store'])->name('information.create');
 
 /** Data Kategori*/
-Route::get('/categories', [\App\Http\Controllers\KategoriController::class, 'index'])->name('kategori.index');
-Route::get('/categories/create', [\App\Http\Controllers\KategoriController::class, 'create'])->name('kategori.create');
-Route::post('/categories/create', [\App\Http\Controllers\KategoriController::class, 'store'])->name('kategori.create');
-Route::get('/categories/edit/{id}', [\App\Http\Controllers\KategoriController::class, 'edit'])->name('kategori.edit');
-Route::post('/categories/edit/{id}', [\App\Http\Controllers\KategoriController::class, 'update'])->name('kategori.edit');
-Route::delete('/categories/hapus/{id}',[\App\Http\Controllers\KategoriController::class, 'destroy'])->name('kategori.destroy');
+Route::resource('/categories', App\Http\Controllers\KategoriController::class );
 
 /** Data Tag*/
 Route::prefix('a')->name('admin.')->group(function () {
     Route::resource('/tags', App\Http\Controllers\TagController::class );
     Route::resource('/post', App\Http\Controllers\PostController::class );
+    Route::resource('/icons', App\Http\Controllers\IconController::class );
     Route::get('/pengumuman', [\App\Http\Controllers\PostController::class, 'indexpengumuman'])->name('pengumuman.index');
     Route::get('/produk-hukum', [\App\Http\Controllers\PostController::class, 'indexproduk'])->name('pengumuman.index');
     Route::get('/materi-ppid-kota',  [\App\Http\Controllers\PostController::class, 'materippid'])->name('ppidmateri.index');
@@ -118,6 +121,7 @@ Route::prefix('a')->name('admin.')->group(function () {
     Route::get('berkasprofile/destroy/{berkasprofile}', [App\Http\Controllers\ProfileController::class, 'destroy_berkas'] )->name('destroy_berkasprofile');
     Route::get('berkasppid/destroy/{berkasppid}', [App\Http\Controllers\ProfilePPIDController::class, 'destroy_berkasppid'] )->name('destroy_berkasppid');
     Route::get('berkas/destroy/{berkas}', [App\Http\Controllers\InformationController::class, 'destroy_berkas_informasi'] )->name('destroy_berkas_informasi');
+
     });
 });
 
@@ -181,3 +185,4 @@ Route::get('/menu/file/{file}', [App\Http\Controllers\User\FileController::class
 Route::post('/news/cariberita',[\App\Http\Controllers\User\BaseController::class, 'cari'])->name('reader.search.berita');
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

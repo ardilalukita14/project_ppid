@@ -95,9 +95,9 @@
                     @endif
 
                     <div class="form-validation">
-                    <form class="form-valide" action="{{route('ppid.pelaksana.edit',$ppid_pelaksana->id)}}" method="POST" enctype="multipart/form-data">
+                    <form class="form-valide" action="{{route('ppidpelaksana.update',$ppid_pelaksana->id)}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
-
+                            @method('patch')
                             <div class="form-group row">
                                 <label class="col-lg-6 col-form-label" for="nama_opd">Nama OPD</label>
                                 <div class="col-sm-12">

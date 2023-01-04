@@ -55,14 +55,17 @@
           <div class="post-body" style="background-color: #EEF9FF;">
             <div class="entry-header">
               <div class="post-meta">
-                <small class="post-author">
+                {{-- <small class="post-author">
                   <i class="far fa-user text-primary me-2"></i><a href="#" style="font-size: 12px;">{{ $beritaItem->users->name }}</a>
                 </small>
                 <small class="post-cat">&nbsp;
                   <i class="far fa-folder-open text-primary me-2"></i><a href="#" style="font-size: 12px;">{{ $beritaItem->kategori->nama_kategori }}</a>
                 </small>&nbsp;
-                <small class="post-meta-date"><i class="far fa-calendar-alt text-primary me-2"></i><a href="#" style="font-size: 12px;">{{ date('d M Y', strtotime($beritaItem->tgl_post)) }}</a></small>&nbsp;
-              </div>
+                <small class="post-meta-date"><i class="far fa-calendar-alt text-primary me-2"></i><a href="#" style="font-size: 12px;">{{ date('d M Y', strtotime($beritaItem->tgl_post)) }}</a></small>&nbsp; --}}
+                <small class="me-3"><i class="far fa-user fa-1x text-primary"></i>  {{ $beritaItem->users->name }}</small>
+                <small style="margin-left:10px;"><i class="far fa-calendar-alt text-primary me-2"></i> {{ date('d M Y', strtotime($beritaItem->tgl_post)) }}</small>
+                <small style="margin-left:10px;"><i class="far fa-folder-open text-primary"></i>  {{ $beritaItem->kategori->nama_kategori }}</small>
+            </div>
               <h2 class="entry-title" >
                 <h6 class="title" style="margin-left: 15px; margin-right:15px;">
                   <?php $date = DateTime::createFromFormat("Y-m-d", $beritaItem->tgl_post);?>
@@ -104,7 +107,7 @@
                   <form action="{{ route('reader.search.berita') }}" method="POST"  class="mt-3" style="margin-left:20px;">
                     @csrf
                       <input type="text" value="{{ old('cari') }}" name="cari" style="padding-right:10px; padding-left:10px;">
-                        <input type="submit" value="Search" style="color:white;"><i class="bi bi-search"></i></input>
+                        <input type="submit" value="Search" style="color:rgb(105, 175, 223);"><i class="bi bi-search"></i></input>
                   </form>
             </div>
             <br>

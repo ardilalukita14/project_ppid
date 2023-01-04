@@ -19,7 +19,7 @@ class PPIDPelaksanaController extends Controller
 
     public function create()
     {
-        $ppid_pelaksana = PPIDPelaksana::all()->first();
+        $ppid_pelaksana = PPIDPelaksana::all();
         $judul = "Tambah Data PPID Pelaksana";
         return view('admin.ppid_pelaksana.create', compact('ppid_pelaksana', 'judul'));
     }
@@ -34,10 +34,10 @@ class PPIDPelaksanaController extends Controller
         $ppid_pelaksana->save();
         if ($ppid_pelaksana) {
             Session::flash('success','Data PPID Pelaksana Berhasil Ditambahkan');
-            return redirect()->route('ppid.pelaksana.index');
+            return redirect()->route('ppidpelaksana.index');
         } else {
             Session::flash('failed','Data PPID Pelaksana Gagal Ditambahkan');
-            return redirect()->route('ppid.pelaksana.index');
+            return redirect()->route('ppidpelaksana.index');
         }
     } 
 
@@ -58,17 +58,17 @@ class PPIDPelaksanaController extends Controller
 
         if ($ppid_pelaksana) {
                 Session::flash('update','Update Data PPID Pelaksana Berhasil');
-                return redirect()->route('ppid.pelaksana.index');
+                return redirect()->route('ppidpelaksana.index');
             } else {
                 Session::flash('failed','Update Data PPID Pelaksana Gagal');
-                return redirect()->route('ppid.pelaksana.index');
+                return redirect()->route('ppidpelaksana.index');
             }
     }
 
     public function destroy($id) {
         PPIDPelaksana::find($id)->delete();
         Session::flash('delete','Data PPID Pelaksana Berhasil Dihapus');
-        return redirect()->route('ppid.pelaksana.index');
+        return redirect()->route('ppidpelaksana.index');
     }
 
 
