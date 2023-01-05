@@ -18,7 +18,7 @@
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12 text-center">
-                <h3 class="into-sub-title" data-animation-in="fadeIn">{{  $data->judul }}</h3>
+                <h3 class="into-sub-title" data-animation-in="fadeIn" style="color: rgb(255, 255, 255) !important;-webkit-text-stroke: 1px rgb(74, 109, 165); text-shadow: 0px 2px 4px  rgb(255, 255, 255);">{{  $data->judul }}</h3>
                 <h6 class="slide-title" data-animation-in="slideInLeft">{{ $data->subjudul }}</h6>
                 <p data-animation-in="slideInLeft" data-duration-in="1.2">
                     <a href="https://www.madiunkota.go.id/" class="slider btn btn-primary" style="align:center">Lihat</a>
@@ -40,7 +40,7 @@
     <div class="row">
         <div class="col-lg-6">
           <div class="ts-intro">
-              <h8 class="into-sub-title" style="font-size: 36px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: -0.5px; color: #212121; font-weight: 700; font-family: Montserrat, sans-serif;
+              <h8 class="into-sub-title" style="font-size: 40px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: -0.5px; color: #2c3769; font-family: Montserrat, sans-serif;
                 text-rendering: optimizeLegibility;">PPID KOTA MADIUN</h8>
               <p style="text-align:justify; width: 550px; margin-top: 30px;">Pejabat Pengelola Informasi dan Dokumentasi (PPID) adalah pejabat yang bertanggung jawab di bidang penyimpanan,
                   pendokumentasian, penyediaan dan/ atau pelayanan informasi di badan publik.</p>
