@@ -107,7 +107,10 @@ Route::prefix('a')->name('admin.')->group(function () {
     Route::resource('/tags', App\Http\Controllers\TagController::class );
     Route::resource('/post', App\Http\Controllers\PostController::class );
     Route::resource('/icons', App\Http\Controllers\IconController::class );
+<<<<<<< HEAD
     Route::resource('/youtube', App\Http\Controllers\YoutubeController::class );
+=======
+>>>>>>> cb9dd6def2d1899c6ad3bd4261ebc1ff2cc14476
     Route::get('/pengumuman', [\App\Http\Controllers\PostController::class, 'indexpengumuman'])->name('pengumuman.index');
     Route::get('/produk-hukum', [\App\Http\Controllers\PostController::class, 'indexproduk'])->name('pengumuman.index');
     Route::get('/materi-ppid-kota',  [\App\Http\Controllers\PostController::class, 'materippid'])->name('ppidmateri.index');

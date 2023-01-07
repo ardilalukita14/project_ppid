@@ -94,6 +94,7 @@
                     </div>
                 </div><!-- Service 2 end -->
               </div><!-- col end -->
+<<<<<<< HEAD
               <a href="/ppid-pelaksana-kota-madiun">
                 <div class="shadow">
                 <center> <span class="ts-service-icon">
@@ -104,6 +105,8 @@
             </a>
           </div><!-- Content row 1 end -->
         </div><!-- Col end -->
+=======
+>>>>>>> cb9dd6def2d1899c6ad3bd4261ebc1ff2cc14476
           </div><!-- Content row 1 end -->
         </div><!-- Col end -->
 
@@ -119,6 +122,7 @@
     </div><!-- Row end -->
   </div><!-- Container end -->
 </section><!-- Feature are end -->
+<<<<<<< HEAD
   @foreach($youtube as $data)
 <section id="facts" class="facts-area dark-bg">
 
@@ -163,6 +167,10 @@
   <!--/ Container end -->
 </section><!-- Facts end -->
 
+=======
+
+<hr>
+>>>>>>> cb9dd6def2d1899c6ad3bd4261ebc1ff2cc14476
 <!-- Content Kedua-->
 <section id="project-area" class="project-area solid-bg">
   <div class="container">

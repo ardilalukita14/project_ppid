@@ -1,6 +1,7 @@
 @extends('layouts.frontend.appnew')
 @section('content')
 
+<<<<<<< HEAD
 <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">							   
     <div class="modal-content">         						      
@@ -15,6 +16,8 @@
    </div>								   
   </div>
 </div>
+=======
+>>>>>>> cb9dd6def2d1899c6ad3bd4261ebc1ff2cc14476
 
   <div class="body-inner">
 

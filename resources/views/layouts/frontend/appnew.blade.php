@@ -170,6 +170,7 @@ slidesToScroll: 2
    
 <script src="//cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
   </div><!-- Body inner end -->
+<<<<<<< HEAD
 
   <script>
    $(function() {
@@ -179,6 +180,8 @@ slidesToScroll: 2
        });		
    });
 </script>
+=======
+>>>>>>> cb9dd6def2d1899c6ad3bd4261ebc1ff2cc14476
   @yield('content')
   </body>
 

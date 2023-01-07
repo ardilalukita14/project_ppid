@@ -3,7 +3,11 @@
 <div class="row text-center">
     <div class="col-12">
       {{-- <h2 class="section-title">Reaching our Office</h2> --}}
+<<<<<<< HEAD
       <h3 class="section-sub-title" style="color: #091E3E;">Lokasi PPID Kota Madiun</h3>
+=======
+      <h3 class="section-sub-title">Lokasi PPID Kota Madiun</h3>
+>>>>>>> cb9dd6def2d1899c6ad3bd4261ebc1ff2cc14476
     </div>
   </div>
   <!--/ Title row end -->
