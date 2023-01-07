@@ -3715,7 +3715,6 @@ label {
 .tabsMenu input[id*="3"]:checked~.tabsContent .tabsContent3{
   display: block;
 }
-<<<<<<< HEAD
 
 .shadow {
   width: 550px;
@@ -3724,5 +3723,4 @@ label {
   background-color: #687ffa;
   box-shadow: 10px 10px 5px coral;
 }
-=======
->>>>>>> cb9dd6def2d1899c6ad3bd4261ebc1ff2cc14476
+
