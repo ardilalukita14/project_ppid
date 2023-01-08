@@ -114,7 +114,8 @@
                                 <label class="col-lg-6 col-form-label" for="link">Link</label>
                                 <div class="col-sm-12">
                                 <input type="text" id="link" name="link" class="form-control" required="" placeholder="Link" value="{{$youtube->link}}" >
-                                </div>
+                                <span style="color: #ff0000; font-size: 12px">*Format link : https://www.youtube.com/embed/eCthuzNClSs</span> 
+                            </div>
                             </div>
                             <div class="form-group row">
                               <label class="col-lg-6 col-form-label" for="status_publish">Status Publish</label>

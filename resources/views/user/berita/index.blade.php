@@ -94,7 +94,7 @@
                     </div>
                 </div><!-- Service 2 end -->
               </div><!-- col end -->
-<<<<<<< HEAD
+
               <a href="/ppid-pelaksana-kota-madiun">
                 <div class="shadow">
                 <center> <span class="ts-service-icon">
@@ -103,10 +103,6 @@
                 <center><h8 class="into-sub-title text-white" style="font-size:24px; font-color: #ffff;">PPID Pelaksana</h8></center>
               </div>
             </a>
-          </div><!-- Content row 1 end -->
-        </div><!-- Col end -->
-=======
->>>>>>> cb9dd6def2d1899c6ad3bd4261ebc1ff2cc14476
           </div><!-- Content row 1 end -->
         </div><!-- Col end -->
 
@@ -122,8 +118,8 @@
     </div><!-- Row end -->
   </div><!-- Container end -->
 </section><!-- Feature are end -->
-<<<<<<< HEAD
-  @foreach($youtube as $data)
+
+@foreach($youtube as $data)
 <section id="facts" class="facts-area dark-bg">
 
     <div class="container">
@@ -135,12 +131,10 @@
           
                   <!-- Button trigger modal -->
                  
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="width: 700px; heigth: 350px; padding-top: 20px; padding-bottom: 20px; padding-left:20px; padding-right:20px;">
-             <iframe src="{{$data->link}}" frameborder="0" allowfullscreen style="width: 650px; height: 300px;"></iframe>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="width: 900px; heigth: 450px; padding-top: 20px; padding-bottom: 20px; padding-left:20px; padding-right:20px;">
+              <iframe src="{{$data->link}}" frameborder="0" allowfullscreen style="width: 850px; height: 400px;"></iframe>
             </button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -157,8 +151,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-      @endforeach
+            </div> -->
         </div> <!-- Facts end -->
     </div>
     <!--/ Content row end -->
@@ -166,11 +159,7 @@
 </div>
   <!--/ Container end -->
 </section><!-- Facts end -->
-
-=======
-
-<hr>
->>>>>>> cb9dd6def2d1899c6ad3bd4261ebc1ff2cc14476
+    @endforeach
 <!-- Content Kedua-->
 <section id="project-area" class="project-area solid-bg">
   <div class="container">
@@ -240,11 +229,9 @@
 
     {{-- <div class="row">
       <div class="col-12">
-
         <div class="row shuffle-wrapper">
           <div class="col-1 shuffle-sizer"></div>
       @foreach($beritakonten as $data)
-
           <div class="col-lg-4 col-md-6 shuffle-item">
           <div class="project-img-container">
             <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
@@ -264,13 +251,11 @@
           @endforeach
         </div><!-- shuffle end -->
       </div>
-
       <div class="col-12">
         <div class="general-btn text-center">
           <a class="btn btn-primary" href="{{ route('contents_kategori', 'berita-ppid') }}">Berita Lainnya</a>
         </div>
       </div>
-
     </div>
      --}}
 
@@ -395,4 +380,3 @@
 <!-- Footer end -->
 
 @endsection
-

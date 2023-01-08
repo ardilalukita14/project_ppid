@@ -40,6 +40,7 @@
 
    <link rel="stylesheet" type="text/css" href="frontend/slick/slick.css"/>
   	<link rel="stylesheet" type="text/css" href="frontend/slick/slick-theme.css"/>
+    
 </head>
 <body onload="loader()">
 

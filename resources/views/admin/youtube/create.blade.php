@@ -114,6 +114,7 @@
                                 <label class="col-lg-8 col-form-label" for="link">Judul</label>
                                 <div class="col-sm-12">
                                     <input type="text" id="link" name="link" class="form-control" required="" placeholder="Link" >
+                                    <span style="color: #ff0000; font-size: 12px">*Format link : https://www.youtube.com/embed/eCthuzNClSs</span>
                                 </div>
                             </div>
                             <div class="form-group row">
