@@ -18,7 +18,9 @@
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12 text-center">
-                <h3 class="into-sub-title" data-animation-in="fadeIn">{{  $data->judul }}</h3>
+                <h3 class="into-sub-title" data-animation-in="fadeIn" style="color: rgb(255, 255, 255) !important;
+                -webkit-text-stroke: 1px rgb(74, 109, 165);
+                text-shadow: 0px 2px 4px rgb(255, 255, 255);">{{  $data->judul }}</h3>
                 <h6 class="slide-title" data-animation-in="slideInLeft">{{ $data->subjudul }}</h6>
                 <p data-animation-in="slideInLeft" data-duration-in="1.2">
                     <a href="https://www.madiunkota.go.id/" class="slider btn btn-primary" style="align:center">Lihat</a>
@@ -128,9 +130,9 @@
     <div class="facts-wrapper">
         <div class="row">
           <div class="center">
-          
+
                   <!-- Button trigger modal -->
-                 
+
             <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="width: 900px; heigth: 450px; padding-top: 20px; padding-bottom: 20px; padding-left:20px; padding-right:20px;">
               <iframe src="{{$data->link}}" frameborder="0" allowfullscreen style="width: 850px; height: 400px;"></iframe>
             </button>
