@@ -134,7 +134,7 @@
                 <li class="{{ (request()->is('a/galeri')) ? 'active' : '' }}"><a class="nav-link" href="/a/galeri"><i class="far fa-image"></i> <span>Galeri</span></a></li>
                 <li class="{{ (request()->is('a/infografis')) ? 'active' : '' }}"><a class="nav-link" href="/a/infografis"><i class="fas fa-file-image"></i> <span>Infografis</span></a></li>
                 <li class="{{ (request()->is('a/icons')) ? 'active' : '' }}"><a class="nav-link" href="/a/icons"><i class="fas fa-camera-retro"></i> <span>Icons</span></a></li>
-
+                <li class="{{ (request()->is('a/youtube')) ? 'active' : '' }}"><a class="nav-link" href="/a/youtube"><i class="fas fa-file-video" aria-hidden="true"></i><span>Youtube</span></a></li>
           </ul>
 
           <div class="mt-4 mb-4 p-3 hide-sidebar-mini">

@@ -18,8 +18,6 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{  asset ('backend2/assets/css/style.css')}}">
   <link rel="stylesheet" href="{{  asset ('backend2/assets/css/components.css')}}">
-
-  <link rel="stylesheet" href="{{ asset('backend2/assets/select2/dist/css/select2.min.css') }}">
 <!-- Start GA -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
 <script>
@@ -53,7 +51,7 @@
             <h1>Table</h1>
             <div class="section-header-breadcrumb">
               <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-              <div class="breadcrumb-item"><a href="#">Icons</a></div>
+              <div class="breadcrumb-item"><a href="#">Youtube</a></div>
               <div class="breadcrumb-item">{{$judul}}</div>
             </div>
           </div>
@@ -97,32 +95,37 @@
                     @endif
 
                     <div class="form-validation">
-                    <form class="form-valide" action="{{route('admin.icons.store')}}" method="POST" enctype="multipart/form-data">
+                    <form class="form-valide" action="{{route('admin.youtube.store')}}" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
 
                             <div class="form-group row">
-                            <label class="col-lg-6 col-form-label" for="judul">Judul</label>
-                            <input type="text" name="judul" class="form-control"  placeholder="Judul"/>
+                                <label class="col-lg-8 col-form-label" for="judul">Judul</label>
+                                <div class="col-sm-12">
+                                    <input type="text" id="judul" name="judul" class="form-control" required="" placeholder="Judul" >
+                                </div>
                             </div>
                             <div class="form-group row">
-                            <label class="col-lg-6 col-form-label" for="judul">Sub Judul</label>
-                            <input type="text" name="subjudul" class="form-control" placeholder="Sub Judul"/>
+                                <label class="col-lg-8 col-form-label" for="content">Konten</label>
+                                <div class="col-sm-12">
+                                    <textarea class="summernote" name="content" class="form-control" required="" placeholder="Konten" ></textarea>
+                                </div>
                             </div>
                             <div class="form-group row">
-                              <label class="col-lg-6 col-form-label">Link</label>
-                              <input type="text" class="form-control" name="link">
+                                <label class="col-lg-8 col-form-label" for="link">Judul</label>
+                                <div class="col-sm-12">
+                                    <input type="text" id="link" name="link" class="form-control" required="" placeholder="Link" >
+                                    <span style="color: #ff0000; font-size: 12px">*Format link : https://www.youtube.com/embed/eCthuzNClSs</span>
+                                </div>
                             </div>
                             <div class="form-group row">
-                            <select class="form-control" name="kategori_name" required>
-                                <option value="">Pilih Kategori Icon</option>
-                                <option value="Carousel">Carousel</option>
-                                <option value="Penghargaan">Penghargaan</option>
-                                <option value="Logo">Logo</option>
-                              </select>
-                            </div>
-                            <div class="form-group row">
-                              <label class="col-lg-6 col-form-label">Icon</label>
-                              <input type="file" class="form-control" name="icon">
+                              <label class="col-lg-6 col-form-label" for="status_publish">Status Publish</label>
+                                <div class="col-sm-12">
+                                <label class="custom-switch mt-2">
+                                    <input type="checkbox" name="status_publish" class="custom-switch-input" >
+                                    <span class="custom-switch-indicator"></span>
+                                    <span class="custom-switch-description">Video youtube akan terlihat secara umum di halaman utama</span>
+                                </label>
+                                </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-lg-12 ml-auto">

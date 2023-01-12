@@ -18,6 +18,8 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{  asset ('backend2/assets/css/style.css')}}">
   <link rel="stylesheet" href="{{  asset ('backend2/assets/css/components.css')}}">
+
+  <link rel="stylesheet" href="{{ asset('backend2/assets/select2/dist/css/select2.min.css') }}">
 <!-- Start GA -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
 <script>
@@ -65,7 +67,7 @@
             <h1>Table</h1>
             <div class="section-header-breadcrumb">
               <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-              <div class="breadcrumb-item"><a href="#">Permohonan</a></div>
+              <div class="breadcrumb-item"><a href="#">Youtube</a></div>
               <div class="breadcrumb-item">{{$judul}}</div>
             </div>
           </div>
@@ -74,12 +76,15 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-sm-12">
+        <div class="col-sm-14">
             <div class="card" style="padding-left:20px; padding-right:20px; padding-top:20px;">
                 <div class="card-body">
                 <h4 class="card-title">{{$judul}}</h4>
                 <br>
-                      
+                      <div class="card-tools">
+                            <br>
+                            <a href="{{ route('admin.youtube.create') }}" class="btn btn-primary btn-round">Tambah Data <i class="fa fa-plus"></i></a>
+                      </div>
                                  @if(Session::has('success'))
                                  <br></br>
                                     <div class="btn btn-success text-white" style="width:100%; height:40px">
@@ -115,63 +120,34 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Kategori Permohonan</th>
-                                                <th>NIK / No. Identitas</th>
-                                                <th>Nama Lembaga / Organisasi</th>
-                                                <th>KTP</th>
-                                                <th>Akta Notaris</th>
-                                                <th>Email</th>
-                                                <th>Nomor WhatsApp</th>
-                                                <th>Pekerjaan</th>
-                                                <th>Alamat</th>
-                                                <th>Rincian Informasi</th>
-                                                <th>Tujuan Penggunaan Informasi</th>
-                                                <th>Cara Memperoleh Informasi</th>
-                                                <th>Mendapatkan Salinan Informasi</th>
-                                                <th>Cara Mendapatkan Salinan Informasi</th>
-                                                <th width="220px;">Action</th>
+                                                <th style="width:220px; text-align:center;">Judul</th>
+                                                <th style="width:220px; text-align:center;">Content</th>
+                                                <th style="text-align:center;">Link</th>
+                                                <th style="text-align:center;">Status Publish</th>
+                                                <th style="width:200px;">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                             @php $i=1 @endphp
-                                            @foreach ($permohonan as $data)
+                                            @foreach ($youtube as $data)
                                                 <td>{{$i++}}</td>
-                                                <td>{{$data->kategori_permohonan}}</td>
-                                                <td>{{$data->nik_nip}}</td>
-                                                <td>{{$data->nama_lengkap}}
+                                                <td>{{$data->judul}}</td>
+                                                <td>{!! $data->content !!}</td>
+                                                <td>{{$data->link}}</td>
                                                 <td>
-                                                    @if ($data->ktp == null)
-                                                        -
+                                                    @if ($data->ispublish == '1')
+                                                        <div class="badge badge-success" style="margin-top:5px;">Publish</div>
                                                     @else
-                                                    <a href="#" class="pop">		
-                                                        <img src="{{ route('file.show', encrypt($data->ktp)) }}" class="img-fluid" style="width: 100px"> 
-                                                    </a>
+                                                        <div class="badge badge-danger" style="margin-top:5px;">Draf</div>
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    @if ($data->akta == null)
-                                                        -
-                                                    @else
-                                                    <a href="#" class="pop">		
-                                                        <img src="{{ route('file.show', encrypt($data->akta)) }}" class="img-fluid" style="width: 100px"> 
-                                                    </a>
-                                                    @endif
-                                                </td>
-                                                <td>{{$data->email}}</td>
-                                                <td>{{$data->telepon}}</td>
-                                                <td>{{$data->pekerjaan}}</td>
-                                                <td>{!!$data->alamat!!}</td>
-                                                <td>{!!$data->rincian_informasi!!}</td>
-                                                <td>{!!$data->tujuan!!}</td>
-                                                <td>{!!$data->get_information!!}</td>
-                                                <td>{!!$data->copy_information!!}</td>
-                                                <td>{!!$data->how_copy!!}</td>
-                                                <td>
-                                                    <form action="{{ route('destroy_permohonan',$data->id) }}"  method="POST">
+                                                    <form action="{{ route('admin.youtube.destroy',$data->id) }}"  method="POST">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus data permohonan user ?')" ><i class="fas fa-trash"></i> Hapus</button>
+                                                        <a href="{{ route('admin.youtube.edit',$data->id) }}" class="btn btn-warning " data-id="{{ $data->id }}"><i class="fa fa-edit"></i> Ubah</a>&ensp;
+                                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Konfirmasi hapus data youtube ?')" ><i class="fas fa-trash"></i> Hapus</button>
                                                     </form>
                                                 </td>
                                             </tr>

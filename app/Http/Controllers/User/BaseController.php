@@ -11,6 +11,7 @@ use App\Models\Post;
 use App\Models\Tag;
 use App\Models\Icon;
 use App\Models\Document;
+use App\Models\Youtube;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
 
@@ -78,9 +79,9 @@ class BaseController extends Controller
         $carousel = Icon::where('kategori_name', '=', 'Carousel')->orderBy('created_at', 'DESC')->limit(3)->get();
         $penghargaan = Icon::where('kategori_name', '=', 'Penghargaan')->orderBy('created_at', 'DESC')->limit(3)->get();
         $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
-        // $youtube = Youtube::where('ispublish', '=', '1')->orderBy('created_at', 'DESC')->first();
-    
-    return view('user.berita.index',compact('beritaterkini', 'beritapinned', 'beritakonten', 'carousel', 'penghargaan', 'carousel', 'penghargaan', 'logo'));
+        $youtube = Youtube::where('ispublish', '=', '1')->orderBy('created_at', 'DESC')->limit(1)->get();
+        
+    return view('user.berita.index',compact('beritaterkini', 'beritapinned', 'beritakonten', 'carousel', 'penghargaan', 'carousel', 'penghargaan', 'logo', 'youtube'));
     }
 
     public function cari(Request $request)

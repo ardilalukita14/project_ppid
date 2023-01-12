@@ -40,6 +40,7 @@
 
    <link rel="stylesheet" type="text/css" href="frontend/slick/slick.css"/>
   	<link rel="stylesheet" type="text/css" href="frontend/slick/slick-theme.css"/>
+    
 </head>
 <body onload="loader()">
 
@@ -170,6 +171,15 @@ slidesToScroll: 2
    
 <script src="//cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
   </div><!-- Body inner end -->
+
+  <script>
+   $(function() {
+     $('.pop').on('click', function() {
+       $('.imagepreview').attr('src',$(this).find('img').attr('src'));
+       $('#imagemodal').modal('show');   
+       });		
+   });
+</script>
   @yield('content')
   </body>
 

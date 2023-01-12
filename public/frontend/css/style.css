@@ -214,7 +214,7 @@ a:focus {
 }
 
 .dark-bg {
-  background: #687ffa;
+  background: #23437f;
   color: #fff;
 }
 
@@ -681,7 +681,7 @@ ul.top-info li p.info-text {
 
 .header-one,
 .header-one .site-navigation {
-  background: #687ffa;
+  background: #23437f;
 }
 
 .header-one .navbar-collapse {
@@ -1203,7 +1203,7 @@ ul.navbar-nav > li > a {
 
 .header-get-a-quote .btn-primary:hover {
   background: #000000;
-  color: #3c83e6 !important;
+  color: #687ffa !important;
 }
 
 ul.navbar-nav > li.header-get-a-quote:hover > a:after {
@@ -1269,7 +1269,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .slide-title {
   font-size: 18px;
-  color: #333;
+  color: #ffff;
   padding-bottom: 10px;
   line-height: 1em;
   font-weight: 500;
@@ -1560,7 +1560,10 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -1px;
-  color: #000000 !important;
+  color: rgb(0, 0, 0) !important;
+  /* -webkit-text-stroke: 1px rgb(0, 0, 0); */
+  /* text-stroke: 1px #F8F8F8; */
+  /* text-shadow: 0px 2px 4px  rgb(255, 255, 255); */
   line-height: 1.2em;
   text-align: center;
 }
@@ -1888,7 +1891,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   display: inline-block;
   margin: 20px 0 50px;
   width: 100%;
-  border-bottom: 3px solid #3c83e6;
+  border-bottom: 3px solid #687ffa;
 }
 .shuffle-btn-group label {
   display: inline-block;
@@ -2277,7 +2280,7 @@ img.testimonial-thumb {
 /* Subscribe area
 ================================================== */
 .subscribe {
-  background: #687ffa;
+  background: #23437f;
   padding: 0;
 }
 
@@ -2460,7 +2463,7 @@ img.testimonial-thumb {
 
 .footer-widget ul.list-arrow li:hover a,
 .footer-widget ul.list-arrow li:hover {
-  color: #3c83e6;
+  color: #687ffa;
 }
 
 .working-hours {
@@ -2473,7 +2476,7 @@ img.testimonial-thumb {
 
 /*-- Copyright --*/
 .copyright {
-  background: #687ffa;
+  background: #23437f;
   color: #111;
   padding: 25px 0;
   position: relative;
@@ -2788,7 +2791,7 @@ img.testimonial-thumb {
   transition: 400ms;
 }
 .ts-team-wrapper .team-social-icons a i:hover {
-  color: #3c83e6;
+  color: #687ffa;
 }
 .ts-team-wrapper:hover .ts-team-content {
   top: 0;
@@ -2968,7 +2971,7 @@ label {
 }
 
 .post-meta a:hover {
-  color: #3c83e6;
+  color: #687ffa;
 }
 
 .post-meta span {
@@ -3248,7 +3251,7 @@ label {
 }
 
 .sidebar .widget ul li a:hover {
-  color: #3c83e6;
+  color: #687ffa;
 }
 
 .sidebar .widget ul li i {
@@ -3283,7 +3286,7 @@ label {
 
 .sidebar ul.nav-tabs li.active a,
 .sidebar ul.nav-tabs li:hover a {
-  color: #3c83e6;
+  color: #687ffa;
 }
 
 .sidebar ul.nav-tabs li {
@@ -3309,7 +3312,7 @@ label {
   display: block;
 }
 .sidebar ul.service-menu li.active a, .sidebar ul.service-menu li:hover a {
-  background: #3c83e6;
+  background: #687ffa;
   color: #fff;
   cursor: pointer;
 }
@@ -3345,7 +3348,7 @@ label {
   display: inline-block;
 }
 .widget.recent-posts .post-info .entry-title a:hover {
-  color: #3c83e6;
+  color: #687ffa;
 }
 .widget.recent-posts .post-date {
   font-weight: 400;
@@ -3616,7 +3619,7 @@ label {
 
 .testimonial-carousel .owl-item.center .testimonial-item img {
     background: var(--primary) !important;
-} 
+}
 
 .testimonial-carousel .owl-nav {
     position: absolute;
@@ -3712,3 +3715,12 @@ label {
 .tabsMenu input[id*="3"]:checked~.tabsContent .tabsContent3{
   display: block;
 }
+
+.shadow {
+  width: 550px;
+  height: 100px;
+  padding: 15px;
+  background-color: #687ffa;
+  box-shadow: 10px 10px 5px coral;
+}
+

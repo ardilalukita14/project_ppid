@@ -107,6 +107,7 @@ Route::prefix('a')->name('admin.')->group(function () {
     Route::resource('/tags', App\Http\Controllers\TagController::class );
     Route::resource('/post', App\Http\Controllers\PostController::class );
     Route::resource('/icons', App\Http\Controllers\IconController::class );
+    Route::resource('/youtube', App\Http\Controllers\YoutubeController::class );
     Route::get('/pengumuman', [\App\Http\Controllers\PostController::class, 'indexpengumuman'])->name('pengumuman.index');
     Route::get('/produk-hukum', [\App\Http\Controllers\PostController::class, 'indexproduk'])->name('pengumuman.index');
     Route::get('/materi-ppid-kota',  [\App\Http\Controllers\PostController::class, 'materippid'])->name('ppidmateri.index');
@@ -185,4 +186,3 @@ Route::get('/menu/file/{file}', [App\Http\Controllers\User\FileController::class
 Route::post('/news/cariberita',[\App\Http\Controllers\User\BaseController::class, 'cari'])->name('reader.search.berita');
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-

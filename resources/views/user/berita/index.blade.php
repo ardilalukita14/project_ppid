@@ -18,8 +18,10 @@
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12 text-center">
-                <h3 class="into-sub-title" data-animation-in="fadeIn">{{$data->judul}}</h3>
-                <h6 class="slide-title" data-animation-in="slideInLeft">{{$data->subjudul}}</h6>
+                <h3 class="into-sub-title" data-animation-in="fadeIn" style="color: rgb(255, 255, 255) !important;
+                -webkit-text-stroke: 1px rgb(74, 109, 165);
+                text-shadow: 0px 2px 4px rgb(255, 255, 255);">{{  $data->judul }}</h3>
+                <h6 class="slide-title" data-animation-in="slideInLeft">{{ $data->subjudul }}</h6>
                 <p data-animation-in="slideInLeft" data-duration-in="1.2">
                     <a href="https://www.madiunkota.go.id/" class="slider btn btn-primary" style="align:center">Lihat</a>
                 </p>
@@ -94,6 +96,15 @@
                     </div>
                 </div><!-- Service 2 end -->
               </div><!-- col end -->
+
+              <a href="/ppid-pelaksana-kota-madiun">
+                <div class="shadow">
+                <center> <span class="ts-service-icon">
+                      <i class="fas fa-briefcase"></i>
+                    </span></center>
+                <center><h8 class="into-sub-title text-white" style="font-size:24px; font-color: #ffff;">PPID Pelaksana</h8></center>
+              </div>
+            </a>
           </div><!-- Content row 1 end -->
         </div><!-- Col end -->
 
@@ -110,7 +121,47 @@
   </div><!-- Container end -->
 </section><!-- Feature are end -->
 
-<hr>
+@foreach($youtube as $data)
+<section id="facts" class="facts-area dark-bg">
+
+    <div class="container">
+          <center><h1>{{$data->judul}}</h1></center>
+            <center><p>{!!$data->content!!}</p></center>
+    <div class="facts-wrapper">
+        <div class="row">
+          <div class="center">
+
+                  <!-- Button trigger modal -->
+
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="width: 900px; heigth: 450px; padding-top: 20px; padding-bottom: 20px; padding-left:20px; padding-right:20px;">
+              <iframe src="{{$data->link}}" frameborder="0" allowfullscreen style="width: 850px; height: 400px;"></iframe>
+            </button>
+            <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                  </div>
+                  <div class="modal-body">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe src="{{$data->link}}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"></button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+        </div> <!-- Facts end -->
+    </div>
+    <!--/ Content row end -->
+  </div>
+</div>
+  <!--/ Container end -->
+</section><!-- Facts end -->
+    @endforeach
 <!-- Content Kedua-->
 <section id="project-area" class="project-area solid-bg">
   <div class="container">
@@ -161,6 +212,8 @@
 
 <br></br>
 <!-- Content Kedua-->
+
+
 @include('layouts.frontend.content3')
 
 
@@ -178,11 +231,9 @@
 
     {{-- <div class="row">
       <div class="col-12">
-
         <div class="row shuffle-wrapper">
           <div class="col-1 shuffle-sizer"></div>
       @foreach($beritakonten as $data)
-
           <div class="col-lg-4 col-md-6 shuffle-item">
           <div class="project-img-container">
             <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
@@ -202,26 +253,24 @@
           @endforeach
         </div><!-- shuffle end -->
       </div>
-
       <div class="col-12">
         <div class="general-btn text-center">
           <a class="btn btn-primary" href="{{ route('contents_kategori', 'berita-ppid') }}">Berita Lainnya</a>
         </div>
       </div>
-
     </div>
      --}}
 
      <div class="row">
      <div class="col-6 col-md-12 col-lg-12">
-        <div class="card" style="height: 400px; background-color:#a9b5f8">
+        <div class="card" style="height: 400px; background-color:#525c92">
           {{-- <div class="card-header">
             <h4>Caption</h4>
           </div> --}}
           <div class="your-class">
             @foreach($penghargaan as $data)
             <div class="icon1"><img loading="lazy" class="img-fluid" src="{{ route('menu.file', encrypt($data->icon)) }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:300px; text-align: center;">
-                {{$data->judul}}
+                {!! $data->judul !!}}
             </div>
             @endforeach
           </div>
@@ -325,10 +374,11 @@
 </section>
 <!--/ News end -->
 
-	
+@include('layouts.frontend.contact')
+
+
 
 @include('layouts.frontend.footer')
 <!-- Footer end -->
 
 @endsection
-
