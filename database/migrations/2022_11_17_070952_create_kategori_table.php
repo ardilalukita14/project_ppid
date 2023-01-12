@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->String('nama_kategori', 150);
             $table->String('slug');
-            $table->String('isaktif', 5);
+            $table->String('isaktif', 5)->nullable(true);
             $table->timestamps();
             $table->softDeletes();
         });

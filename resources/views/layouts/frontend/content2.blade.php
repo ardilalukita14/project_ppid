@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col-md-8 text-center text-md-left">
               <div class="call-to-action-text">
-                <h3 class="action-title">PEMERINTAH KOTA MADIUN</h3>
+                <h3 class="action-title">WEBSITE RESMI PEMERINTAH KOTA MADIUN</h3>
               </div>
           </div><!-- Col end -->
           <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
