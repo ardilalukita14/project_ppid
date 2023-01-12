@@ -270,7 +270,7 @@
           <div class="your-class">
             @foreach($penghargaan as $data)
             <div class="icon1"><img loading="lazy" class="img-fluid" src="{{ route('menu.file', encrypt($data->icon)) }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:300px; text-align: center;">
-                {!! $data->judul !!}}
+                {!! $data->judul !!}
             </div>
             @endforeach
           </div>
