@@ -22,13 +22,15 @@
   <link rel="stylesheet" href="{{ asset ('frontend/plugins/bootstrap/bootstrap.min.css')}}">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="{{ asset ('frontend/plugins/fontawesome/css/all.min.css')}}">
-  <!-- Animation -->
+  {{-- <!-- Animation -->
   <link rel="stylesheet" href="{{ asset ('frontend/plugins/animate-css/animate.css')}}">
   <!-- slick Carousel -->
   <link rel="stylesheet" href="{{ asset ('frontend/plugins/slick/slick.css')}}">
   <link rel="stylesheet" href="{{ asset ('frontend/plugins/slick/slick-theme.css')}}">
   <!-- Colorbox -->
+
   {{-- <link rel="stylesheet" href="{{ asset ('frontend/plugins/colorbox/colorbox.css')}}"> --}}
+
   <!-- Template styles-->
   <link rel="stylesheet" href="{{ asset ('frontend/css/style.css')}}">
 
@@ -38,8 +40,8 @@
   <link rel="stylesheet" href="{{ asset ('frontend/dist/assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css')}}">
    <link href="frontend/lib/animate/animate.min.css" rel="stylesheet">
 
-   <link rel="stylesheet" type="text/css" href="frontend/slick/slick.css"/>
-  	<link rel="stylesheet" type="text/css" href="frontend/slick/slick-theme.css"/>
+   {{-- <link rel="stylesheet" type="text/css" href="frontend/slick/slick.css"/>
+  	<link rel="stylesheet" type="text/css" href="frontend/slick/slick-theme.css"/> --}}
     
 </head>
 <body onload="loader()">
