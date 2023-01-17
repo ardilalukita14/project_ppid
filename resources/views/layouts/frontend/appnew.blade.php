@@ -21,7 +21,7 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="{{ asset ('frontend/plugins/bootstrap/bootstrap.min.css')}}">
   <!-- FontAwesome -->
-  <link rel="stylesheet" href="{{ asset ('frontend/plugins/fontawesome/css/all.min.css')}}">
+  {{-- <link rel="stylesheet" href="{{ asset ('frontend/plugins/fontawesome/css/all.min.css')}}"> --}}
   <!-- Animation -->
   <link rel="stylesheet" href="{{ asset ('frontend/plugins/animate-css/animate.css')}}">
   <!-- slick Carousel -->
