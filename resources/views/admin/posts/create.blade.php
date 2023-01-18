@@ -153,7 +153,7 @@
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-6 col-form-label" for="contents">Konten Berita</label>
-                                    <textarea class="summernote" style="height:10px;" name="contents" class="form-control" required="" placeholder="Konten Berita"></textarea>
+                                    <textarea class="summernote" style="height:10px;" name="contents" class="form-control" placeholder="Konten Berita"></textarea>
                             </div>
                             <div class="form-group row">
                               <label class="col-lg-6 col-form-label">Galeri Berita</label>
