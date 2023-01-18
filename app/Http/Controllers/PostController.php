@@ -22,14 +22,14 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::paginate(5);
+        $posts = Post::all();
         $judul = "Data Posts";
         return view('admin.posts.index', compact('posts', 'judul'));
     }
 
     public function indexpengumuman()
     {
-        $posts = Post::paginate(5)
+        $posts = Post::all()
                 ->where('kategori_id', '=', '1');
         $judul = "Data Posts";
         return view('admin.posts.pengumuman', compact('posts', 'judul'));
@@ -37,7 +37,7 @@ class PostController extends Controller
 
     public function indexproduk()
     {
-        $posts = Post::paginate(5)
+        $posts = Post::all()
                 ->where('kategori_id', '=', '2');
         $judul = "Data Posts";
         return view('admin.posts.produk', compact('posts', 'judul'));
@@ -45,7 +45,7 @@ class PostController extends Controller
 
     public function materippid()
     {
-        $posts = Post::paginate(5)
+        $posts = Post::all()
                 ->where('kategori_id', '=', '3');
         $judul = "Data Posts";
         return view('admin.posts.ppidmateri', compact('posts', 'judul'));
@@ -53,7 +53,7 @@ class PostController extends Controller
 
     public function materiumum()
     {
-        $posts = Post::paginate(5)
+        $posts = Post::all()
                 ->where('kategori_id', '=', '4');
         $judul = "Data Posts";
         return view('admin.posts.materiumum', compact('posts', 'judul'));
@@ -61,7 +61,7 @@ class PostController extends Controller
 
     public function pengaduan()
     {
-        $posts = Post::paginate(5)
+        $posts = Post::all()
                 ->where('kategori_id', '=', '5');
         $judul = "Data Posts";
         return view('admin.posts.pengaduan', compact('posts', 'judul'));
@@ -69,7 +69,7 @@ class PostController extends Controller
 
     public function berita()
     {
-        $posts = Post::paginate(5)
+        $posts = Post::all()
                 ->where('kategori_id', '=', '6');
         $judul = "Data Posts";
         return view('admin.posts.berita', compact('posts', 'judul'));
@@ -77,7 +77,7 @@ class PostController extends Controller
 
     public function artikel()
     {
-        $posts = Post::paginate(5)
+        $posts = Post::all()
                 ->where('kategori_id', '=', '7');
         $judul = "Data Posts";
         return view('admin.posts.artikel', compact('posts', 'judul'));
@@ -85,7 +85,7 @@ class PostController extends Controller
 
     public function narasi()
     {
-        $posts = Post::paginate(5)
+        $posts = Post::all()
                 ->where('kategori_id', '=', '8');
         $judul = "Data Posts";
         return view('admin.posts.narasi', compact('posts', 'judul'));
@@ -93,7 +93,7 @@ class PostController extends Controller
 
     public function galeri()
     {
-        $posts = Post::paginate(5)
+        $posts = Post::all()
                 ->where('kategori_id', '=', '9');
         $judul = "Data Posts";
         return view('admin.posts.galeri', compact('posts', 'judul'));
@@ -101,7 +101,7 @@ class PostController extends Controller
 
     public function infografis()
     {
-        $posts = Post::paginate(5)
+        $posts = Post::all()
                 ->where('kategori_id', '=', '10');
         $judul = "Data Posts";
         return view('admin.posts.infografis', compact('posts', 'judul'));
@@ -216,7 +216,7 @@ class PostController extends Controller
         $galleries = Document::where('posts_id', '=', $post->id)->where('jenis_file', '=', 'gambar')->get();
         $files = Document::where('posts_id', '=', $post->id)->where('jenis_file', '=', 'lampiran')->get();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
-        $categories = Kategori::paginate(5);
+        $categories = Kategori::all();
 
         $parent = "berita";
         $subjudul = "Detail Berita";
