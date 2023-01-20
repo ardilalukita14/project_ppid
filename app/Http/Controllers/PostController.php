@@ -139,6 +139,8 @@ class PostController extends Controller
         $publish = isset($_POST['status_publish']) ? 1 : 0;
         $pinned = isset($_POST['status_pinned']) ? 1 : 0;
 
+        
+        
         if($request->hasFile('thumbnail')){
             $file=$request->file('thumbnail');
     
@@ -148,8 +150,6 @@ class PostController extends Controller
                 $fileName = $fileName.'_'.time().'.'.$extension;
     
                 $path = $file->storeAs('thumbnail/'.$year.'/'.$month.'/'.$day, $fileName, 'local');
-    
-        }
 
         $post = Post::create([
             'judul' => $request->judul,
@@ -165,6 +165,20 @@ class PostController extends Controller
 
         $post->tags()->attach($request->tags);
 
+    } else {
+        $post = Post::create([
+            'judul' => $request->judul,
+            'kategori_id' => $request->kategori_id,
+            'contents' => $request->contents,
+            'tgl_post' => $TglPostNew,
+            'slug' =>  Str::slug($request->judul),
+            'users_id' => Auth::id(),
+            'ispublish' => $publish,
+            'ispinned' => $pinned
+        ]);
+
+        $post->tags()->attach($request->tags);
+    }
 
         if($request->hasFile('dokumen')){
             foreach ($request->file('dokumen') as $filegambar) {
