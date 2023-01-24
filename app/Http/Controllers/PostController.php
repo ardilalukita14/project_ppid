@@ -1,16 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
+use Session;
 use DateTime;
 use App\Models\Tag;
+use App\Models\Icon;
 use App\Models\Post;
-use App\Models\Kategori;
 use App\Models\Document;
+use App\Models\Kategori;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Session;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 class PostController extends Controller
@@ -231,14 +232,14 @@ class PostController extends Controller
         $files = Document::where('posts_id', '=', $post->id)->where('jenis_file', '=', 'lampiran')->get();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
         $categories = Kategori::all();
-
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
         $parent = "berita";
         $subjudul = "Detail Berita";
         $child = "";
         $root_parent = "/";
         $title = "Detail Berita";
 
-        return view('admin.posts.show', compact('galleries','subjudul','data', 'files', 'beritaterkini', 'categories', 'parent', 'child', 'root_parent', 'title'));
+        return view('admin.posts.show', compact('galleries','logo','subjudul','data', 'files', 'beritaterkini', 'categories', 'parent', 'child', 'root_parent', 'title'));
     }
 
     /**
