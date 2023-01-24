@@ -248,7 +248,7 @@
                               <li><a href="https://hargapangan.id/" target="_blank">Tabel Harga Berdasarkan Daerah</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="https://ppid.madiunkota.go.id/" target="_blank">Arsip PPID Kota Madiun</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://arsip-ppid.madiunkota.go.id/" target="_blank">Arsip PPID Kota Madiun</a></li>
                       </ul>
                   </div>
                 </nav>
