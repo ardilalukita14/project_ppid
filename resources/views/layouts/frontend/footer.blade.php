@@ -10,8 +10,8 @@
             <h3 class="widget-title">Tentang Kami</h3>
             <img loading="lazy" width="80px" class="footer-logo" src="{{asset('backend2/assets/img/Lambang_Kota_Madiun.png')}}" alt="Constra">
             <img loading="lazy" width="230px" class="footer-logo" src="{{asset('frontend/images/logo_ppid.png')}}" alt="Constra">
-            <p style="text-align:justify;" class="text-white">Dinas Komunikasi dan Informatika Kota Madiun merupakan unsur pelaksana urusan pemerintahan bidang komunikasi dan informatika,
-              urusan pemerintahan bidang persandian, dan urusan pemerintahan bidang statistik di Kota Madiun.</p>
+            <p style="text-align:justify;" class="text-white">PPID Kota Madiun dikelola oleh Dinas Komunikasi dan Informatika Kota Madiun yang merupakan
+                                                              unsur pelaksana pada pemerintahan bidang komunikasi, informatika, serta statistik dan persandian di Kota Madiun.</p>
             <div class="footer-social">
               <ul>
                 <li ><a href="https://www.facebook.com/pemkotmadiun/" aria-label="Facebook" target="_blank"><i

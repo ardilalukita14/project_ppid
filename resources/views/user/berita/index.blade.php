@@ -22,9 +22,9 @@
                 -webkit-text-stroke: 1px rgb(74, 109, 165);
                 text-shadow: 0px 2px 4px rgb(255, 255, 255);">{{  $data->judul }}</h3>
                 <h6 class="slide-title" data-animation-in="slideInLeft">{{ $data->subjudul }}</h6>
-                <p data-animation-in="slideInLeft" data-duration-in="1.2">
+                <!-- <p data-animation-in="slideInLeft" data-duration-in="1.2">
                     <a href="https://www.madiunkota.go.id/" class="slider btn btn-primary" style="align:center">Lihat</a>
-                </p>
+                </p> -->
               </div>
           </div>
         </div>
@@ -108,12 +108,12 @@
           </div><!-- Content row 1 end -->
         </div><!-- Col end -->
 
-        {{-- <div class="col-lg-6 mt-4 mt-lg-0">
+        <div class="col-lg-6 mt-4 mt-lg-0">
                 <div id="gpr-kominfo-widget-container">
                     <div class="card-body">
                         <script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>
                     </div>
-                </div> --}}
+                </div> 
 
     </div>
         </div><!-- Col end -->
@@ -183,7 +183,7 @@
                 <?php if($data->thumbnail == null ){ ?>
                     <img loading="lazy" class="img-fluid" src="{{ asset('backend2/assets/img/PECELAND-LOGO-VECTOR-980x693.jpg') }}" class="img-fluid" alt="Gambar Default" style="width:800px; height:400px; text-align: center;">
                   <?php }else{ ?>
-                    <img loading="lazy" class="img-fluid" class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="img" style="width:400px; height:250px;">
+                    <img loading="lazy" class="img-fluid" class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="img">
                   <?php } ?>
                   </a>
               </div>
@@ -238,7 +238,7 @@
           <div class="project-img-container">
             <?php $date = DateTime::createFromFormat("Y-m-d", $data->tgl_post);?>
               <a class="gallery-popup" href="{{ route('contents_blog', ['year'=>$date->format("Y"), 'month' => $date->format("m") , 'day' => $date->format("d"), 'slug'=>$data->slug] ) }}" aria-label="project-img">
-                <img class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="project-img" style="width:400px; height:250px;">
+                <img class="img-fluid" src="{{ route('menu.file', encrypt($data->thumbnail)) }}" alt="project-img">
               </a>
               <div class="project-item-info">
                 <div class="project-item-info-content">

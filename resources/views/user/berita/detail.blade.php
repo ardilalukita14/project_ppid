@@ -39,7 +39,7 @@
                       <div class="post-media post-image">
                       @if ($detail->thumbnail == null)
                             @else
-                            <img loading="lazy" src="{{ route('menu.file', encrypt($detail->thumbnail)) }}" class="img-fluid" style="width:800px; height:400px; text-align: center;" alt="thumbnail Default">  <br>
+                            <img loading="lazy" src="{{ route('menu.file', encrypt($detail->thumbnail)) }}" class="img-fluid" style="text-align: center;" alt="thumbnail Default">  <br>
                             @endif
                       </div>
             <div class="entry-content">
@@ -72,7 +72,7 @@
                 
                 @foreach ($galleries as $galeri)
 
-                <a href="{{route('menu.file', encrypt($galeri->path_file))}}" target="_blank" style="color: blue;">{{$galeri->path_file}}</a>
+                <!-- <a href="{{route('menu.file', encrypt($galeri->path_file))}}" target="_blank" style="color: blue;">{{$galeri->path_file}}</a> -->
                 <div class="banner-carousel-item <?php 
                 if($count==0){
                   echo "active";  
@@ -80,7 +80,7 @@
                 else{
                     echo " ";
                 } ?>" 
-                style="background-image:url({{route('menu.file', encrypt($galeri->path_file))}}); width:800px; height:400px; text-align: center;">
+                style="background-image:url({{route('menu.file', encrypt($galeri->path_file))}}); text-align: center;">
             <div class="slider-content text-left">
                 <div class="container h-100">
                   <div class="row align-items-center h-100">

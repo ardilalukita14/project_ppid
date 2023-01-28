@@ -232,7 +232,7 @@ class PostController extends Controller
         $files = Document::where('posts_id', '=', $post->id)->where('jenis_file', '=', 'lampiran')->get();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
         $categories = Kategori::all();
-        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(3)->get();
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
         $parent = "berita";
         $subjudul = "Detail Berita";
         $child = "";

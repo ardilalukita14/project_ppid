@@ -61,7 +61,7 @@
                 <h3 class="widget-title" style="margin-left:-20px; font-size: 25px;">Lampiran</h3>
               </div>
             </div>
-            <a href="{{route('menu.file', encrypt($data->path_file))}}" target="_blank" style="color: blue;">{{$data->path_file}}</a>
+            <!-- <a href="{{route('menu.file', encrypt($data->path_file))}}" target="_blank" style="color: blue;">{{$data->path_file}}</a> -->
               <img src="{{ route('menu.file', encrypt($data->path_file)) }}" class="img-fluid" style="width: 100%;"> 
                @endif
                @endforeach
@@ -70,7 +70,7 @@
               @foreach($berkas as $data) 
               @if ($data->jenis_file == "lampiran")
               <hr>
-              <a href="{{route('menu.file', encrypt($data->path_file))}}" target="_blank" style="color: blue;">{{$data->path_file}}</a>
+              <!-- <a href="{{route('menu.file', encrypt($data->path_file))}}" target="_blank" style="color: blue;">{{$data->path_file}}</a> -->
                 <iframe src="{{ route('menu.file', encrypt($data->path_file)) }}" name="iframe_a"  width="100%" height="600" style="border:1px solid black;"></iframe> <br><br>
                 <a href="{{ route('menu.file', encrypt($data->path_file)) }}" target="_blank"> <button  class="btn btn-info" style="border-radius: 20px;" >Download File</button></a><br><br>
               @endif
