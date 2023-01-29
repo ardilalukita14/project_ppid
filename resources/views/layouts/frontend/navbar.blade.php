@@ -201,9 +201,18 @@
                         </li>
 
                         <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Berita <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ route('contents_kategori', 'berita-ppid') }}">Berita PPID</a></li>
+                                <li><a href="https://www.madiunkota.go.id/">Berita Pemkot</a></li>
+                                <li><a href="{{ route('contents_kategori', 'pengumuman') }}">Pengumuman</a></li>
+                                <li><a href="">Lowongan</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Download <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
-                          <li><a href="{{ route('contents_kategori', 'pengumuman') }}">Pengumuman</a></li>
                           <li><a href="{{ route('contents_kategori', 'produk-hukum') }}">Produk Hukum</a></li>
                             <li class="dropdown-submenu">
                                 <a href="#!" class="dropdown-toggle" data-toggle="dropdown">SOP</a>
@@ -222,7 +231,7 @@
                               </ul>
                           </li>
                             <li><a href="{{ route('contents_kategori', 'laporan-pengaduan') }}">Laporan Pengaduan</a></li>
-                            <li><a href="{{ route('contents_kategori', 'berita-ppid') }}">Berita PPID</a></li>
+                            {{-- <li><a href="{{ route('contents_kategori', 'berita-ppid') }}">Berita PPID</a></li> --}}
                             <li><a href="{{ route('contents_kategori', 'artikel') }}">Artikel</a></li>
                             <li><a href="{{ route('contents_kategori', 'narasi-tunggal') }}">Narasi Tunggal</a></li>
                           </ul>

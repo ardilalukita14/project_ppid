@@ -696,7 +696,7 @@ ul.top-info li p.info-text {
 
 .header-one ul.navbar-nav > li {
   padding-left: 0;
-  padding-right: 28px;
+  padding-right: 46px;
 }
 @media (max-width: 991px) {
   .header-one ul.navbar-nav > li {
@@ -971,8 +971,9 @@ ul.navbar-nav > li > a {
   font-weight: 700 !important;
   text-transform: uppercase;
   letter-spacing: -0.2px;
-  font-size: 14px;
+  font-size: 13px;
   margin: 0;
+  margin-left: -20px;
   line-height: 40px;
   padding: 30px 0;
   transition: 350ms;
