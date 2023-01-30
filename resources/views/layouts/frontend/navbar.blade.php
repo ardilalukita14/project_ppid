@@ -204,7 +204,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Berita <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ route('contents_kategori', 'berita-ppid') }}">Berita PPID</a></li>
-                                <li><a href="https://www.madiunkota.go.id/">Berita Pemkot</a></li>
+                                <li><a href="https://www.madiunkota.go.id/"  target="_blank">Berita Pemkot Madiun</a></li>
                                 <li><a href="{{ route('contents_kategori', 'pengumuman') }}">Pengumuman</a></li>
                                 <li><a href="">Lowongan</a></li>
                             </ul>
@@ -253,7 +253,7 @@
                             <ul class="dropdown-menu" role="menu">
                               <li><a href="https://dashboard.madiunkota.go.id/" target="_blank">Data Sektoral</a></li>
                               <li><a href="https://madiunkota.bps.go.id/" target="_blank">BPS Kota Madiun</a></li>
-                              <li><a href="">Data Penduduk Kota Madiun Tahun 2019</a></li>
+                              <li><a href="https://profilpenduduk.madiunkota.go.id/rekap-data-kependudukan"  target="_blank">Data Penduduk Kota Madiun Tahun 2021</a></li>
                               <li><a href="https://hargapangan.id/" target="_blank">Tabel Harga Berdasarkan Daerah</a></li>
                             </ul>
                         </li>
