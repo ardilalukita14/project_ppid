@@ -198,7 +198,7 @@ class MainController extends Controller
         $tags = Tag::all();
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
          $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
-        return view('user.profileppid.visimisi', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags'. 'logo'));
+        return view('user.profileppid.visimisi', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
     
     }
     

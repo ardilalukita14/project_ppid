@@ -45,7 +45,7 @@ class BaseController extends Controller
             $posts = Post::where('kategori_id', '=', $data->id )->where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->paginate(3);
             $child = $data->nama_kategori;
         }else{
-            $posts = "";
+            $posts = [];
             $child = $slug;
            
         }
