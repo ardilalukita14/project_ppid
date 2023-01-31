@@ -121,48 +121,6 @@
   </div><!-- Container end -->
 </section><!-- Feature are end -->
 
-@foreach($youtube as $data)
-<section id="facts" class="facts-area dark-bg">
-
-    <div class="container">
-          <center><h1>{{$data->judul}}</h1></center>
-            <center><p>{!!$data->content!!}</p></center>
-    <div class="facts-wrapper">
-        <div class="row">
-          <div class="center">
-
-                  <!-- Button trigger modal -->
-
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="width: 900px; heigth: 450px; padding-top: 20px; padding-bottom: 20px; padding-left:20px; padding-right:20px;">
-              <iframe src="{{$data->link}}" frameborder="0" allowfullscreen style="width: 850px; height: 400px;"></iframe>
-            </button>
-            <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel"></h4>
-                  </div>
-                  <div class="modal-body">
-                      <div class="embed-responsive embed-responsive-16by9">
-                          <iframe src="{{$data->link}}" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"></button>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-        </div> <!-- Facts end -->
-    </div>
-    <!--/ Content row end -->
-  </div>
-</div>
-  <!--/ Container end -->
-</section><!-- Facts end -->
-    @endforeach
-
     
 <section class="subscribe no-padding">
   <div class="container">
@@ -331,6 +289,50 @@
   </div>
   <!--/ Container end -->
 </section><!-- Project area end -->
+
+
+
+@foreach($youtube as $data)
+<section id="facts" class="facts-area dark-bg">
+
+    <div class="container">
+          <center><h1>{{$data->judul}}</h1></center>
+            <center><p>{!!$data->content!!}</p></center>
+    <div class="facts-wrapper">
+        <div class="row">
+          <div class="center">
+
+                  <!-- Button trigger modal -->
+
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="width: 900px; heigth: 450px; padding-top: 20px; padding-bottom: 20px; padding-left:20px; padding-right:20px;">
+              <iframe src="{{$data->link}}" frameborder="0" allowfullscreen style="width: 850px; height: 400px;"></iframe>
+            </button>
+            <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                  </div>
+                  <div class="modal-body">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe src="{{$data->link}}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"></button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+        </div> <!-- Facts end -->
+    </div>
+    <!--/ Content row end -->
+  </div>
+</div>
+  <!--/ Container end -->
+</section><!-- Facts end -->
+    @endforeach
 
 
 <section id="project-area" class="project-area solid-bg">
