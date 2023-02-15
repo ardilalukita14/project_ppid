@@ -39,6 +39,7 @@ Route::get('/berita/{year}/{month}/{day}/{slug}', [App\Http\Controllers\User\Bas
 /** Informasi Publik */
 Route::resource('/permohonan-informasi', App\Http\Controllers\User\PermohonanController::class );
 Route::resource('/pengajuan-keberatan', App\Http\Controllers\User\PengajuanController::class );
+Route::resource('/statuspengajuan-keberatan', App\Http\Controllers\User\StatusPengajuanController::class );
 
 /** Dashboard Admin */
 Route::group(['middleware'=>['admin','auth','PreventBackHistory']], function(){
@@ -81,6 +82,11 @@ Route::delete('/hapus-permohonan/{permohonan}', '\App\Http\Controllers\Informasi
 Route::get('/pengajuan', '\App\Http\Controllers\InformasiPublikController@indexpengajuan')->name('admin.informasipublik.indexpengajuan');
 Route::delete('/hapus-pengajuan/{pengajuan}', '\App\Http\Controllers\InformasiPublikController@destroypengajuan')->name('destroy_pengajuan');
 
+/** Status Data Pengajuan */
+Route::get('/test', '\App\Http\Controllers\InformasiPublikController@indexstatuspengajuan')->name('admin.informasipublik.indexstatuspengajuan');
+
+/** Coba Controller */
+//Route::get('/coba', 'App\Http\Controllers\CobaController@index');
 
 /** CRUD Data PPID Pelaksana Kota Madiun*/
 Route::resource('/ppidpelaksana', App\Http\Controllers\PPIDPelaksanaController::class );
