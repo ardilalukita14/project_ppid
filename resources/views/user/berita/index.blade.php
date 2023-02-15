@@ -163,7 +163,7 @@
       <div class="center">
      <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-5">
           <div class="ts-facts-img">
-            <a href="/spermohonan/create" target="_blank"><img loading="lazy" src="frontend/images/permohonan.png" alt="facts-img" style="margin-left: -7px;">
+            <a href="/status-permohonan/create" target="_blank"><img loading="lazy" src="frontend/images/permohonan.png" alt="facts-img" style="margin-left: -7px;">
           </div>
           <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="https://kotamadiun.lapor.go.id/" target="_blank">Cek Status Permohonan Informasi Publik</a></h3>
       </div><!-- Col end -->
