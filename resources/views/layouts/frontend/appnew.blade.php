@@ -55,6 +55,7 @@
                 </center>
             </div>
         </div>
+        @include('layouts.frontend.popup')
 <!-- Javascript Files
   ================================================== -->
 
@@ -89,7 +90,9 @@
 
   <script id="aioa-adawidget" src="https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#d1202f&token=&position=bottom_left"></script>
 
-  
+<!-- Content Kedua-->
+
+
 <script ttype="text/javascript">
 
     $(document).ready(function() {
