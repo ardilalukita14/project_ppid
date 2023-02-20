@@ -76,6 +76,7 @@
   </div>
 </div>
 
+
 <!-- Content Pertama-->
 @include('layouts.frontend.content2')
 
@@ -85,9 +86,18 @@
 <!-- Content Kedua-->
 @include('layouts.frontend.content3')
 
+<script type="text/javascript">
+  $(window).on('load', function() {
+      $('#modalpopup').modal('show');
+  });
+</script>
 
 
-<section id="project-area" class="project-area solid-bg">
+
+
+
+
+{{-- <section id="project-area" class="project-area solid-bg">
   <div class="container">
     <div class="row text-center">
       <div class="col-lg-12">
@@ -475,12 +485,17 @@
   </div>
   <!--/ Container end -->
 
-</section>
+</section> --}}
 <!--/ News end -->
 
 
 @include('layouts.frontend.footer')
 <!-- Footer end -->
 
+
+
+
 @endsection
+
+
 
