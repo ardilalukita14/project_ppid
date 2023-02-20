@@ -58,6 +58,7 @@ Route::get('/profile/tupoksi-pemerintah',[\App\Http\Controllers\ProfileControlle
 Route::get('/profile/tupoksi-unit-kerja',[\App\Http\Controllers\ProfileController::class,'tupoksiunitkerja'])->name('tupoksi.unitkerja.index');
 Route::get('/profile/agenda-kerja-kegiatan-pimpinan',[\App\Http\Controllers\ProfileController::class,'agenda'])->name('agenda.index');
 Route::post('/profil/store', [App\Http\Controllers\ProfileController::class, 'store'])->name('profil.create');
+Route::get('/profile/transparansi-anggaran-kota-madiun',[\App\Http\Controllers\ProfileController::class,'transparansianggaran'])->name('transparansi.index');
 
 /** Menu Profile PPID*/
 Route::get('/profile/ppid',[\App\Http\Controllers\ProfilePPIDController::class,'profileppid'])->name('profile.ppid.index');
@@ -137,6 +138,7 @@ Route::middleware('verified')->group(function () {
 Route::get('/sejarah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'sejarah_madiun'])->name('menu.sejarah.madiun');
 Route::get('/letak-geografis-kota-madiun',[\App\Http\Controllers\User\MainController::class,'geografis_madiun'])->name('menu.geografis.madiun');
 Route::get('/profile-pemerintah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'profil_pemerintah'])->name('menu.profilepemerintah.madiun');
+Route::get('/profile-kota-madiun',[\App\Http\Controllers\User\MainController::class,'profil_kota_madiun'])->name('menu.profilkota.madiun');
 Route::get('/profile-pejabat-kota-madiun',[\App\Http\Controllers\User\MainController::class,'profil_pejabat'])->name('menu.profilepejabat.madiun');
 Route::get('/lhkpn-pejabat-publik-pemerintah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'lhkpn_pejabat'])->name('menu.lhkpn.madiun');
 Route::get('/visi-misi-kota-madiun',[\App\Http\Controllers\User\MainController::class,'visimisi'])->name('menu.visimisi.madiun');
@@ -145,6 +147,7 @@ Route::get('/struktur-organisasi-unit-kerja',[\App\Http\Controllers\User\MainCon
 Route::get('/tupoksi-pemerintah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'tupoksi_pemerintah'])->name('menu.tupoksipemerintah.madiun');
 Route::get('/tupoksi-unit-kerja-kota-madiun',[\App\Http\Controllers\User\MainController::class,'tupoksi_unitkerja'])->name('menu.tupoksiunitkerja.madiun');
 Route::get('/agenda-kerja-dan-kegiatan-pimpinan-pemerintah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'agenda'])->name('menu.agenda.madiun');
+Route::get('/transparansi-anggaran-kota-madiun',[\App\Http\Controllers\User\MainController::class,'transparansianggaran'])->name('menu.transparansianggaran.madiun');
 
 
 /** Menu Profile PPID */

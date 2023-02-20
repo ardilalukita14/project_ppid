@@ -76,6 +76,7 @@
                     <li class="{{ (request()->is('ppidpelaksana')) ? 'active' : '' }}"><a class="nav-link" href="/ppidpelaksana">PPID Pelaksana</a></li>
               </ul>
             </li>
+            <li class="{{ (request()->is('profile/transparansi-anggaran-kota-madiun')) ? 'active' : '' }}"><a class="nav-link" href="{{route('transparansi.index')}}"><i class="fas fa-bullhorn"></i> <span>Transparansi Anggaran</span></a></li>
 
             <li class="menu-header">Informasi Publik</li>
             <li class="nav-item dropdown {{ (request()->is('informasi/daftar-informasi-publik-2022',

@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Validator;
 class ProfileController extends Controller
 {
 
+    public function transparansianggaran() {
+        $profile = Profile::where('kategori_profile', '=', 'transparansi-anggaran-kota-madiun')->first();
+        $judul = "Update Transparansi Anggaran Kota Madiun";
+        $profil = Profile::findorfail($profile->id);
+        $documents = Berkas::where('profile_id', '=', $profil->id)->get();
+        return view('admin.profile.form', compact('profile', 'judul', 'documents'));
+    }
+
     public function madiunprofile() {
         $profile = Profile::where('kategori_profile', '=', 'profil-kota-madiun')->first();
         $judul = "Update Profil Kota Madiun";
@@ -209,6 +217,11 @@ class ProfileController extends Controller
             Session::flash('success','Sukses Update Data');
             return redirect()->route('agenda.index');
         }
+        elseif($profile->kategori_profile == "transparansi-anggaran-kota-madiun"){
+            Session::flash('success','Sukses Update Data');
+            return redirect()->route('transparansi.index');
+        }
+        
     }
 
     public function destroy_berkas($berkasprofile){
@@ -264,6 +277,10 @@ class ProfileController extends Controller
         elseif($id == "12"){
             Session::flash('success','Sukses Hapus Data');
             return redirect()->route('agenda.index');
+        }
+        elseif($id == "24"){
+            Session::flash('success','Sukses Hapus Data');
+            return redirect()->route('transparansi.index');
         }
 
         Session::flash('delete','Data Berkas Berhasil Dihapus');
