@@ -48,11 +48,39 @@ class MainController extends Controller
 
     }
 
+    public function transparansianggaran() {
+    
+        $profile = Profile::where('kategori_profile', '=', 'transparansi-anggaran-kota-madiun')->first();
+        $berkas = Berkas::all()
+                 -> where('profile_id', '=', '24');
+
+        $categories = Kategori::all();
+        $tags = Tag::all();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+         $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
+        return view('user.profile.transparansi', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
+
+    }
+
     public function profil_pemerintah() {
     
         $profile = Profile::where('kategori_profile', '=', 'profil-pemerintah')->first();
         $berkas = Berkas::all()
                 -> where('profile_id', '=', '4');
+
+        $categories = Kategori::all();
+        $tags = Tag::all();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+         $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
+        return view('user.profile.pemerintah', compact('profile', 'berkas', 'categories', 'beritaterkini', 'tags', 'logo'));
+
+    }
+
+    public function profil_kota_madiun() {
+    
+        $profile = Profile::where('kategori_profile', '=', 'profil-kota-madiun')->first();
+        $berkas = Berkas::all()
+                -> where('profile_id', '=', '1');
 
         $categories = Kategori::all();
         $tags = Tag::all();
