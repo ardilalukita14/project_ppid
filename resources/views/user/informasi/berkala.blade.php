@@ -47,8 +47,7 @@
               </h1>
             </div><!-- header end -->
 
-            <div class="entry-content">
-              <p style="margin-top:32px;">{!! $information->deskripsi !!}</p>
+            <div class="entry-content"> <?php echo(stripslashes($information->deskripsi));   ?>
               @else
             <p style="text-align: center" data-aos="fade-in">Informasi tidak ditemukan</p>
           @endif
