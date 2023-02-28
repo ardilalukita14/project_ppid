@@ -126,7 +126,7 @@
   <div class="container">
     <div class="row">
         <div class="col-lg-4">
-          <div class="subscribe-call-to-acton" style="padding-top: 40px; padding-bottom: 40px;">
+          <div class="subscribe-call-to-acton" style="padding-top: 105px; padding-bottom: 105px;">
               <h4 style="color: #ffffff; font-weight:bold;">Pengajuan</h4>
               <h4 style="color: #ffffff; font-weight:bold;">Informasi Publik</h4>
           </div>
@@ -142,20 +142,42 @@
       <div class="center">
      <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
           <div class="ts-facts-img">
-            <a href="/permohonan-informasi/create" target="_blank"><img loading="lazy" src="frontend/images/permohonan.png" alt="facts-img" style="margin-left: -40px;">
+            <a href="/permohonan-informasi/create" target="_blank"><img loading="lazy" src="frontend/images/permohonan.png" alt="facts-img" style="margin-left: -17px;">
           </div>
-          <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="https://kotamadiun.lapor.go.id/" target="_blank">Form Permohonan Informasi Publik</a></h3>
+          <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -50px;"><a href="https://kotamadiun.lapor.go.id/" target="_blank">Form Permohonan Informasi Publik</a></h3>
       </div><!-- Col end -->
 
       <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
         <div class="ts-facts-img">
-            <a href="pengajuan-keberatan/create" target="_blank"><img loading="lazy" src="frontend/images/pengajuan.png" alt="facts-img" style="margin-left:-120px;">
+            <a href="pengajuan-keberatan/create" target="_blank"><img loading="lazy" src="frontend/images/pengajuan.png" alt="facts-img" style="margin-left:-175px;">
           </div>
-            <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -30px;"><a class="counterUp" href="https://sirup.lkpp.go.id/" target="_blank">Form Pengajuan Keberatan Informasi Publik</a></h3>
+            <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -23px;"><a class="counterUp" href="https://sirup.lkpp.go.id/" target="_blank">Form Pengajuan Keberatan Informasi Publik</a></h3>
       </div><!-- Col end -->
     </div> <!-- Facts end -->
 </div>
 <!--/ Content row end -->
+</div>
+
+<div class="facts-wrapper">
+    <div class="row">
+      <div class="center">
+     <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-5">
+          <div class="ts-facts-img">
+            <a href="/status-permohonan/create" target="_blank"><img loading="lazy" src="frontend/images/permohonan.png" alt="facts-img" style="margin-left: -7px;">
+          </div>
+          <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="https://kotamadiun.lapor.go.id/" target="_blank">Cek Status Permohonan Informasi Publik</a></h3>
+      </div><!-- Col end -->
+
+      <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-5">
+        <div class="ts-facts-img">
+            <a href="statuspengajuan-keberatan/create" target="_blank"><img loading="lazy" src="frontend/images/pengajuan.png" alt="facts-img" style="margin-left:-150px;">
+          </div>
+            <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -35px;"><a class="counterUp" href="https://sirup.lkpp.go.id/" target="_blank">Cek Status Pengajuan Keberatan Informasi Publik</a></h3>
+      </div><!-- Col end -->
+    </div> <!-- Facts end -->
+</div>
+<!--/ Content row end -->
+
 </div>
 </div>
               </div>

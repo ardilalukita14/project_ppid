@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use DateTime;
 use App\Models\Permohonan;
 use App\Models\Pengajuan;
+use App\Models\Status_pengajuan;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Session;
@@ -29,6 +30,13 @@ class InformasiPublikController extends Controller
         $pengajuan = Pengajuan::all();
         $judul = "Data Pengajuan User";
         return view('admin.informasipublik.indexpengajuan', compact('pengajuan', 'judul'));
+    }
+
+    public function indexstatuspengajuan()
+    {
+        $statuspengajuan = Status_pengajuan::all();
+        $judul = "Status Pengajuan User";
+        return view('admin.informasipublik.indexstatuspengajuan', compact('statuspengajuan', 'judul'));
     }
 
     /**
@@ -112,5 +120,16 @@ class InformasiPublikController extends Controller
 
         Session::flash('delete','Data Permohonan Berhasil Dihapus');
         return redirect()->route('admin.informasipublik.indexpengajuan');
+    }
+
+    public function destroystatuspengajuan(Status_pengajuan $statuspengajuan)
+    {
+        $pengajuan_status = Status_pengajuan::findorfail($statuspengajuan->id);
+        $pengajuan_status->delete();
+        
+        $statuspengajuan->delete();
+
+        Session::flash('delete','Status Data Permohonan Berhasil Dihapus');
+        return redirect()->route('admin.informasipublik.indexstatuspengajuan');
     }
 }
