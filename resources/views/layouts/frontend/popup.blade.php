@@ -11,7 +11,7 @@
         <div class="modal-body">
           <div class="container">
             <div class="row">
-              <div class="col-sm"  style="text-align: center">
+              {{-- <div class="col-sm"  style="text-align: center">
                <table>
                 <tr  style="text-align: center" > <a href="/permohonan-informasi/create" target="_blank" style="text-align: center">
                   <img loading="lazy" src="frontend/images/permohonan.png" alt="facts-img"  style="align-content: center;  justify-content: center;text-align: center"></a>
@@ -34,8 +34,8 @@
     
                  </table>
                 
-              </div>
-              
+              </div> --}}
+              <img class="w-100" src="{{ asset('img/alurpermohonan.png') }}" alt="service-image">
           
             </div>
           </div>
