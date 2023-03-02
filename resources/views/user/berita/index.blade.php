@@ -142,20 +142,60 @@
       <div class="center">
      <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
           <div class="ts-facts-img">
-            <a href="/permohonan-informasi/create" target="_blank"><img loading="lazy" src="frontend/images/permohonan.png" alt="facts-img" style="margin-left: -40px;">
+            <a href="/permohonan-informasi/create" target="_blank"><img loading="lazy" src="{{ asset('img/evaluation.png') }}" alt="facts-img" style="margin-left: -40px; height:70px;width:auto;">
           </div>
           <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="https://kotamadiun.lapor.go.id/" target="_blank">Form Permohonan Informasi Publik</a></h3>
       </div><!-- Col end -->
 
       <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
         <div class="ts-facts-img">
-            <a href="pengajuan-keberatan/create" target="_blank"><img loading="lazy" src="frontend/images/pengajuan.png" alt="facts-img" style="margin-left:-120px;">
+            <a href="pengajuan-keberatan/create" target="_blank"><img loading="lazy" src="{{ asset('img/report.png') }}" alt="facts-img" style="margin-left:-120px; height:70px;width:auto;">
           </div>
             <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -30px;"><a class="counterUp" href="https://sirup.lkpp.go.id/" target="_blank">Form Pengajuan Keberatan Informasi Publik</a></h3>
       </div><!-- Col end -->
     </div> <!-- Facts end -->
+    
 </div>
 <!--/ Content row end -->
+
+<div class="row">
+  <div class="center">
+ <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
+      <div class="ts-facts-img">
+        <a href="#" target="_blank"><img loading="lazy" src="{{ asset('img/checklist.png') }}" alt="facts-img" style="margin-left: -40px; height:70px;width:auto;">
+      </div>
+      <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="#" target="_blank">Cek Status Permohonan Informasi Publik</a></h3>
+  </div><!-- Col end -->
+
+  <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
+    <div class="ts-facts-img">
+        <a href="#" target="_blank"><img loading="lazy" src="{{ asset('img/verified.png') }}" alt="facts-img" style="margin-left:-120px;height:70px;width:auto;">
+      </div>
+        <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -30px;"><a class="counterUp" href="#" target="_blank">Cek Status Pengajuan Keberatan Informasi Publik</a></h3>
+  </div><!-- Col end -->
+</div> <!-- Facts end -->
+
+</div>
+
+<div class="row">
+  <div class="center">
+ <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
+      <div class="ts-facts-img">
+        <a href="#" ><img loading="lazy" src="{{ asset('img/statistics.png') }}" alt="facts-img" style="margin-left: -40px; height:70px;width:auto;">
+      </div>
+      <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="#" >Statistik Layanan Informasi Publik</a></h3>
+  </div><!-- Col end -->
+
+  <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
+    <div class="ts-facts-img">
+        <a href="{{ route('kanalpengaduan.menu') }}" ><img loading="lazy" src="{{ asset('img/qa.png') }}" alt="facts-img" style="margin-left:-120px; height:70px;width:auto;">
+      </div>
+        <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -30px;"><a class="counterUp" href="{{ route('kanalpengaduan.menu') }}" >Kanal Pengaduan Resmi PPID Kota Madiun</a></h3>
+  </div><!-- Col end -->
+</div> <!-- Facts end -->
+
+</div>
+
 </div>
 </div>
               </div>

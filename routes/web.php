@@ -39,6 +39,8 @@ Route::get('/berita/{year}/{month}/{day}/{slug}', [App\Http\Controllers\User\Bas
 /** Informasi Publik */
 Route::resource('/permohonan-informasi', App\Http\Controllers\User\PermohonanController::class );
 Route::resource('/pengajuan-keberatan', App\Http\Controllers\User\PengajuanController::class );
+Route::get('/kanal-pengaduan',[\App\Http\Controllers\User\PermohonanController::class,'kanalpengaduan'])->name('kanalpengaduan.menu');
+
 
 /** Dashboard Admin */
 Route::group(['middleware'=>['admin','auth','PreventBackHistory']], function(){
@@ -100,6 +102,8 @@ Route::get('/informasi/sop-pedoman-pengelolaan-kepegawaian',[\App\Http\Controlle
 Route::get('/informasi/sop-pedoman-pengelolaan-keuangan',[\App\Http\Controllers\InformationController::class,'sopkeuangan'])->name('sop.keuangan.index');
 Route::post('/informasi/store', [App\Http\Controllers\InformationController::class, 'store'])->name('information.create');
 
+Route::post('/validasipermohonan/store', [App\Http\Controllers\User\PermohonanController::class, 'validasi_store'])->name('permohonan.storevalidasi');
+
 /** Data Kategori*/
 Route::resource('/categories', App\Http\Controllers\KategoriController::class );
 
@@ -114,6 +118,8 @@ Route::prefix('a')->name('admin.')->group(function () {
     Route::get('/materi-ppid-kota',  [\App\Http\Controllers\PostController::class, 'materippid'])->name('ppidmateri.index');
     Route::get('/materi-umum', [\App\Http\Controllers\PostController::class, 'materiumum'])->name('materiumum.index');
     Route::get('/laporan-pengaduan', [\App\Http\Controllers\PostController::class, 'pengaduan'])->name('pengaduan.index');
+    Route::get('/kanalpengaduan', [\App\Http\Controllers\InformasiPublikController::class, 'kanalpengaduan'])->name('kanalpengaduan.index');
+    Route::post('/kanalpengaduan/update', [\App\Http\Controllers\InformasiPublikController::class, 'kanalpengaduan_update'])->name('kanalpengaduan.update');
     Route::get('/berita-ppid', [\App\Http\Controllers\PostController::class, 'berita'])->name('berita.index');
     Route::get('/artikel', [\App\Http\Controllers\PostController::class, 'artikel'])->name('artikel.index');
     Route::get('/narasi-tunggal', [\App\Http\Controllers\PostController::class, 'narasi'])->name('narasi.index');
