@@ -100,6 +100,7 @@
             <li class="menu-header">Informasi Publik</li>
             <li class="{{ (request()->is('permohonan')) ? 'active' : '' }}"><a class="nav-link" href="/permohonan"><i class="fas fa-envelope"></i> <span>Permohonan</span></a></li>
             <li class="{{ (request()->is('pengajuan')) ? 'active' : '' }}"><a class="nav-link" href="/pengajuan"><i class="fas fa-envelope"></i> <span>Pengajuan</span></a></li>
+            <li class="{{ (request()->is('kanalpengaduan')) ? 'active' : '' }}"><a class="nav-link" href="{{route('admin.kanalpengaduan.index')}}"><i class="fas fa-bullhorn"></i> <span>Kanal Pengaduan</span></a></li>
 
             <li class="menu-header">Kategori Postingan</li>
             <li class="{{ (request()->is('a/pengumuman')) ? 'active' : '' }}"><a class="nav-link" href="/a/pengumuman"><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>

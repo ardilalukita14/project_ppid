@@ -1,14 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
+use Session;
 use DateTime;
-use App\Models\Permohonan;
+use App\Models\Profile;
 use App\Models\Pengajuan;
+use App\Models\Permohonan;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Session;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class InformasiPublikController extends Controller
 {
@@ -30,6 +31,27 @@ class InformasiPublikController extends Controller
         $judul = "Data Pengajuan User";
         return view('admin.informasipublik.indexpengajuan', compact('pengajuan', 'judul'));
     }
+
+    public function kanalpengaduan()
+    {
+        $pengaduan = Profile::where('kategori_profile', '=', 'kanalpengaduan')->first();
+        $judul = "Update Data Kanal Pengaduan";
+
+        return view('admin.informasipublik.kanalpengaduan', compact('pengaduan', 'judul'));
+    }
+
+    public function kanalpengaduan_update(Request $request){
+        $pengaduan = Profile::where('kategori_profile', '=', 'kanalpengaduan')->first();
+        $kategori = Profile::find($pengaduan->id);
+        $kategori->title = $request->title;
+        $kategori->slug = Str::slug($pengaduan->kategori_profile, '-');
+        $kategori->deskripsi = $request->deskripsi;
+        $kategori->update();
+
+        Session::flash('success','Data Pengaduan Kanal Berhasil Ditambahkan');
+        return redirect()->route('admin.kanalpengaduan.index');
+    }
+
 
     /**
      * Show the form for creating a new resource.

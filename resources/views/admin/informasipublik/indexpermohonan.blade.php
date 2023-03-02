@@ -115,6 +115,7 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
+                                                <th>Kode Pendaftar</th>
                                                 <th>Kategori Permohonan</th>
                                                 <th>NIK / No. Identitas</th>
                                                 <th>Nama Lembaga / Organisasi</th>
@@ -129,6 +130,7 @@
                                                 <th>Cara Memperoleh Informasi</th>
                                                 <th>Mendapatkan Salinan Informasi</th>
                                                 <th>Cara Mendapatkan Salinan Informasi</th>
+                                                <th>Status Permohonan</th>
                                                 <th width="220px;">Action</th>
                                             </tr>
                                         </thead>
@@ -137,6 +139,7 @@
                                             @php $i=1 @endphp
                                             @foreach ($permohonan as $data)
                                                 <td>{{$i++}}</td>
+                                                <td>{{$data->kode_permohonan}}</td>
                                                 <td>{{$data->kategori_permohonan}}</td>
                                                 <td>{{$data->nik_nip}}</td>
                                                 <td>{{$data->nama_lengkap}}
@@ -167,7 +170,15 @@
                                                 <td>{!!$data->get_information!!}</td>
                                                 <td>{!!$data->copy_information!!}</td>
                                                 <td>{!!$data->how_copy!!}</td>
+                                                <td>@if($data->status_form == '1') <strong><p style="color:orange;  font-weight: bold;"> Menunggu Tindak Lanjut</p></strong>
+                                                     @elseif($data->status_form == "2")  <strong><p style="color:purple;  font-weight: bold;">Proses Tindak Lanjut</p></strong>
+                                                    @elseif($data->status_form == "3") <strong><p style="color:green;  font-weight: bold;"> Selesai Tindak Lanjut</p></strong>
+                                                    @elseif($data->status_form == "4")<strong><p style="color:red;  font-weight: bold;"> Tidak bisa Ditindaklanjuti</p></strong>
+                                                @else -
+                                                @endif</td>
                                                 <td>
+                                                    <button type="button" class="btn btn-warning validasi" data-toggle="modal" data-catatan="{{ $data->catatan_validasi }}" data-status="{{ $data->status_form }}" data-id="{{ $data->id }}" data-nama="{{ $data->nama_lengkap }}" data-target="#validasimodal"><i class="fas fa-check"></i> Validasi</button><br><br>
+                                            
                                                     <form action="{{ route('destroy_permohonan',$data->id) }}"  method="POST">
                                                         @csrf
                                                         @method('DELETE')
@@ -175,6 +186,7 @@
                                                     </form>
                                                 </td>
                                             </tr>
+                                                   
                                             @endforeach
                                     </table>
                                 </div>
@@ -198,4 +210,27 @@
     <!--**********************************
         Main wrapper end
     ***********************************-->
+
+        @include('admin.informasipublik.validasiform')
+
+     
+        <script>
+       
+
+            $('.validasi').on('click', function() {
+                var id = $(this).data('id');
+                var status = $(this).data('status');
+                var nama = $(this).data('nama');
+                var catatan = $(this).data('catatan');
+                $('#nama').val(nama);
+                $('#idvalidasi').val(id);
+                document.getElementById("catatanvalidasi").value = catatan;
+                document.getElementById("statusform").value = status;
+                $('.validasimodal').modal('toggle');
+            })
+
+        </script>
 @endsection
+
+
+

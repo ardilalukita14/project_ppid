@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers\User;
 
+use Session;
+use App\Models\Icon;
+use App\Models\Post;
+use App\Models\Profile;
+use App\Models\Permohonan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Permohonan;
-use App\Models\Icon;
-use Session;
 
 class PermohonanController extends Controller
 {
@@ -109,6 +111,17 @@ class PermohonanController extends Controller
         }
     }
 
+
+    public function kanalpengaduan(){
+        $information = Profile::where('kategori_profile', '=', 'kanalpengaduan')->first();
+      
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Informasi Kanal Pengaduan";
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasipublik.kanalpengaduan', compact('information', 'beritaterkini','title', 'title2', 'subtitle', 'logo' ));
+    }
     /**
      * Display the specified resource.
      *
@@ -152,5 +165,16 @@ class PermohonanController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function validasi_store(Request $request){
+        $permohonanupd = Permohonan::findorfail($request->idvalidasi);
+        $permohonanupd->status_form = $request->statusform;
+        $permohonanupd->catatan_validasi = $request->catatanvalidasi;
+        $permohonanupd->update();
+
+        Session::flash('success','Data Permohonan  Berhasil Divalidasi');
+        return redirect()->route('admin.informasipublik.indexpermohonan');
+        
     }
 }
