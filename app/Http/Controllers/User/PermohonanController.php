@@ -10,6 +10,7 @@ use App\Models\Permohonan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\Pengajuan;
 use Illuminate\Support\Facades\Auth;
 
 class PermohonanController extends Controller
@@ -176,5 +177,34 @@ class PermohonanController extends Controller
         Session::flash('success','Data Permohonan  Berhasil Divalidasi');
         return redirect()->route('admin.informasipublik.indexpermohonan');
         
+    }
+
+
+    public function statistik(){
+        $jumlahpermohonan = Permohonan::count();
+        $jumlahkeberatan = Pengajuan::count();
+        $jumlahinfopublik = $jumlahpermohonan+$jumlahkeberatan;
+        $jumlahselesai = Permohonan::where('status_form', '=', '3')->count();
+        
+        
+        $grafikmonth= DB::select(DB::raw("select DATE_TRUNC('month',p.created_at) AS  createdat, to_char(p.created_at ,'Mon') as mon, extract(year from p.created_at ) as tahun, extract(month from p.created_at ) as bulan, COUNT(id) AS count
+        FROM permohonan p 
+        GROUP BY DATE_TRUNC('month',p.created_at), mon,tahun, bulan
+        order by tahun asc, bulan asc;"));
+        
+        if($grafikmonth != null){
+            foreach ($grafikmonth as $grafik) {
+                $grafikbulan[] = '"'.$grafik->mon.' '.$grafik->tahun.'"';
+                $grafikjumlah[] = $grafik->count;
+            }
+        }
+
+        $title = "Statistik Layanan Informasi Publik";
+        $title2 = "Informasi Publik";
+        $subtitle = "Statistika Layanan Informasi Publik";
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasipublik.statistik', compact('grafikmonth','grafikbulan','grafikjumlah','beritaterkini','title', 'title2', 'subtitle', 'logo','jumlahinfopublik' ,'jumlahpermohonan','jumlahkeberatan','jumlahselesai'));
+
     }
 }

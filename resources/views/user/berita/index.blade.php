@@ -181,9 +181,9 @@
   <div class="center">
  <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
       <div class="ts-facts-img">
-        <a href="#" ><img loading="lazy" src="{{ asset('img/statistics.png') }}" alt="facts-img" style="margin-left: -40px; height:70px;width:auto;">
+        <a href="{{ route('statistik.menu') }}" ><img loading="lazy" src="{{ asset('img/statistics.png') }}" alt="facts-img" style="margin-left: -40px; height:70px;width:auto;">
       </div>
-      <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="#" >Statistik Layanan Informasi Publik</a></h3>
+      <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="{{ route('statistik.menu') }}" >Statistik Layanan Informasi Publik</a></h3>
   </div><!-- Col end -->
 
   <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
