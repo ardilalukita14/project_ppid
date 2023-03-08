@@ -121,111 +121,157 @@
   </div><!-- Container end -->
 </section><!-- Feature are end -->
 
-    
-<section class="subscribe no-padding">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-4">
-          <div class="subscribe-call-to-acton" style="padding-top: 40px; padding-bottom: 40px;">
-              <h4 style="color: #ffffff; font-weight:bold;">Pengajuan</h4>
-              <h4 style="color: #ffffff; font-weight:bold;">Informasi Publik</h4>
-          </div>
-        </div><!-- Col end -->
+    <section class="subscribe no-padding" style="  background: rgb(0 30 51)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="subscribe-call-to-acton" style="padding-top: 40px; padding-bottom: 40px;  background: rgb(0 30 51)">
+                        <h4 style="color: #ffffff; font-weight:bold;">Pengajuan</h4>
+                        <h4 style="color: #ffffff; font-weight:bold;">Informasi Publik</h4>
+                    </div>
+                </div><!-- Col end -->
 
-        <div class="col-lg-8">
-          <div class="ts-newsletter row align-items-center">
-              <div class="col-md-5 newsletter-introtext">
-              <div class="container">
+                <div class="col-lg-8" style="background: rgb(0 30 51)">
+                    <div class="ts-newsletter row align-items-center">
+                        <div class="col-md-5 newsletter-introtext">
+                            <div class="container">
 
-<div class="facts-wrapper">
-    <div class="row">
-      <div class="center">
-     <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
-          <div class="ts-facts-img">
-            <a href="/permohonan-informasi/create" target="_blank"><img loading="lazy" src="{{ asset('img/evaluation.png') }}" alt="facts-img" style="margin-left: -40px; height:70px;width:auto;">
-          </div>
-          <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="https://kotamadiun.lapor.go.id/" target="_blank">Form Permohonan Informasi Publik</a></h3>
-      </div><!-- Col end -->
+                                <div class="facts-wrapper">
+                                    <div class="row">
+                                        <div class="center">
+                                            <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
+                                                <div class="ts-facts-img">
+                                                    <a href="/permohonan-informasi/create" target="_blank"><img
+                                                            loading="lazy"
+                                                            src="{{ asset('img/evaluation.png') }}"
+                                                            alt="facts-img"
+                                                            style="margin-left: -40px; height:70px;width:auto;">
+                                                </div>
+                                                <h3 class="ts-facts-num"
+                                                    style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;">
+                                                    <a href="/permohonan-informasi/create" target="_blank">Form
+                                                        Permohonan Informasi Publik</a></h3>
+                                            </div><!-- Col end -->
 
-      <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
-        <div class="ts-facts-img">
-            <a href="pengajuan-keberatan/create" target="_blank"><img loading="lazy" src="{{ asset('img/report.png') }}" alt="facts-img" style="margin-left:-120px; height:70px;width:auto;">
-          </div>
-            <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -30px;"><a class="counterUp" href="https://sirup.lkpp.go.id/" target="_blank">Form Pengajuan Keberatan Informasi Publik</a></h3>
-      </div><!-- Col end -->
-    </div> <!-- Facts end -->
-    
-</div>
-<!--/ Content row end -->
+                                            <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
+                                                <div class="ts-facts-img">
+                                                    <a href="pengajuan-keberatan/create" target="_blank"><img
+                                                            loading="lazy"
+                                                            src="{{ asset('img/report.png') }}"
+                                                            alt="facts-img"
+                                                            style="margin-left:-120px; height:70px;width:auto;">
+                                                </div>
+                                                <h3 class="ts-facts-num"
+                                                    style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -30px;">
+                                                    <a class="counterUp" href="pengajuan-keberatan/create"
+                                                        target="_blank">Form Pengajuan Keberatan Informasi Publik</a>
+                                                </h3>
+                                            </div><!-- Col end -->
+                                        </div> <!-- Facts end -->
 
-<div class="row">
-  <div class="center">
- <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
-      <div class="ts-facts-img">
-        <a href="#" target="_blank"><img loading="lazy" src="{{ asset('img/checklist.png') }}" alt="facts-img" style="margin-left: -40px; height:70px;width:auto;">
-      </div>
-      <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="#" target="_blank">Cek Status Permohonan Informasi Publik</a></h3>
-  </div><!-- Col end -->
+                                    </div>
+                                    <!--/ Content row end -->
 
-  <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
-    <div class="ts-facts-img">
-        <a href="#" target="_blank"><img loading="lazy" src="{{ asset('img/verified.png') }}" alt="facts-img" style="margin-left:-120px;height:70px;width:auto;">
-      </div>
-        <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -30px;"><a class="counterUp" href="#" target="_blank">Cek Status Pengajuan Keberatan Informasi Publik</a></h3>
-  </div><!-- Col end -->
-</div> <!-- Facts end -->
+                                    <div class="row" style="margin-top:30px;">
+                                        <div class="center">
+                                            <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
+                                                <div class="ts-facts-img">
+                                                    <a href="{{ route('cekstatus.permohonan') }}" ><img loading="lazy"
+                                                            src="{{ asset('img/checklist.png') }}"
+                                                            alt="facts-img"
+                                                            style="margin-left: -40px; height:70px;width:auto;">
+                                                </div>
+                                                <h3 class="ts-facts-num"
+                                                    style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;">
+                                                    <a href="{{ route('cekstatus.permohonan') }}" >Cek Status Permohonan Informasi
+                                                        Publik</a></h3>
+                                            </div><!-- Col end -->
 
-</div>
+                                            <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
+                                                <div class="ts-facts-img">
+                                                    <a href="#" target="_blank"><img loading="lazy"
+                                                            src="{{ asset('img/verified.png') }}"
+                                                            alt="facts-img"
+                                                            style="margin-left:-120px;height:70px;width:auto;">
+                                                </div>
+                                                <h3 class="ts-facts-num"
+                                                    style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -30px;">
+                                                    <a class="counterUp" href="#" target="_blank">Cek Status Pengajuan
+                                                        Keberatan Informasi Publik</a></h3>
+                                            </div><!-- Col end -->
+                                        </div> <!-- Facts end -->
 
-<div class="row">
-  <div class="center">
- <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
-      <div class="ts-facts-img">
-        <a href="{{ route('statistik.menu') }}" ><img loading="lazy" src="{{ asset('img/statistics.png') }}" alt="facts-img" style="margin-left: -40px; height:70px;width:auto;">
-      </div>
-      <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;"><a href="{{ route('statistik.menu') }}" >Statistik Layanan Informasi Publik</a></h3>
-  </div><!-- Col end -->
+                                    </div>
 
-  <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
-    <div class="ts-facts-img">
-        <a href="{{ route('kanalpengaduan.menu') }}" ><img loading="lazy" src="{{ asset('img/qa.png') }}" alt="facts-img" style="margin-left:-120px; height:70px;width:auto;">
-      </div>
-        <h3 class="ts-facts-num" style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -30px;"><a class="counterUp" href="{{ route('kanalpengaduan.menu') }}" >Kanal Pengaduan Resmi PPID Kota Madiun</a></h3>
-  </div><!-- Col end -->
-</div> <!-- Facts end -->
+                                    <div class="row" style="margin-top:30px;">
+                                        <div class="center">
+                                            <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
+                                                <div class="ts-facts-img">
+                                                    <a href="{{ route('statistik.menu') }}"><img
+                                                            loading="lazy"
+                                                            src="{{ asset('img/statistics.png') }}"
+                                                            alt="facts-img"
+                                                            style="margin-left: -40px; height:70px;width:auto;">
+                                                </div>
+                                                <h3 class="ts-facts-num"
+                                                    style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -60px;">
+                                                    <a href="{{ route('statistik.menu') }}">Statistik
+                                                        Layanan Informasi Publik</a></h3>
+                                            </div><!-- Col end -->
 
-</div>
+                                            <div class="col-md-6 col-sm-12 ts-facts mt-5 mt-sm-0">
+                                                <div class="ts-facts-img">
+                                                    <a href="{{ route('kanalpengaduan.menu') }}"><img
+                                                            loading="lazy"
+                                                            src="{{ asset('img/qa.png') }}"
+                                                            alt="facts-img"
+                                                            style="margin-left:-120px; height:70px;width:auto;">
+                                                </div>
+                                                <h3 class="ts-facts-num"
+                                                    style="color: #ffffff; font-size: 12px; width: 500px; text-align:justify; margin-left: -30px;">
+                                                    <a class="counterUp"
+                                                        href="{{ route('kanalpengaduan.menu') }}">Kanal
+                                                        Pengaduan Resmi PPID Kota Madiun</a></h3>
+                                            </div><!-- Col end -->
+                                        </div> <!-- Facts end -->
 
-</div>
-</div>
-              </div>
-          </div><!-- Newsletter end -->
-        </div><!-- Col end -->
+                                    </div>
 
-    </div><!-- Content row end -->
-  </div>
-  <!--/ Container end -->
-</section>
-<!--/ subscribe end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Newsletter end -->
+                </div><!-- Col end -->
 
-<section class="call-to-action no-padding">
-  <div class="container">
-    <div class="action-style-box">
-        <div class="row">
-          <div class="col-md-8 text-center text-md-left">
-              <div class="call-to-action-text">
-                <h3 class="action-title">TRANSPARANSI ANGGARAN KOTA MADIUN</h3>
-              </div>
-          </div><!-- Col end -->
-          <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
-              <div class="call-to-action-btn">
-                <a class="btn btn-primary" href="{{ route('menu.transparansianggaran.madiun') }}" >Transparansi Anggaran<i class="fa fa-arrow-right"></i></a>
-              </div>
-          </div><!-- col end -->
-        </div><!-- row end -->
-    </div><!-- Action style box -->
-  </div><!-- Container end -->
-</section><!-- Action end -->
+            </div><!-- Content row end -->
+        </div>
+        <!--/ Container end -->
+    </section>
+
+   
+
+    <!--/ subscribe end -->
+
+    <section class="call-to-action no-padding" style="  background: #23437f">
+        <div class="container">
+            <div class="action-style-box">
+                <div class="row">
+                    <div class="col-md-8 text-center text-md-left ">
+                        <div class="call-to-action-text">
+                            <h3 class="action-title">TRANSPARANSI ANGGARAN KOTA MADIUN</h3>
+                        </div>
+                    </div><!-- Col end -->
+                    <div class="col-md-4 text-center text-md-right mt-3 mt-md-0 newsletter-introtext">
+                        <div class="call-to-action-btn">
+                            <a class="btn btn-primary"
+                                href="{{ route('menu.transparansianggaran.madiun') }}">Transparansi
+                                Anggaran<i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div><!-- col end -->
+                </div><!-- row end -->
+            </div><!-- Action style box -->
+        </div><!-- Container end -->
+    </section><!-- Action end -->
 
 
 <!-- Content Kedua-->

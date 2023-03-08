@@ -190,7 +190,7 @@ class PermohonanController extends Controller
         $grafikmonth= DB::select(DB::raw("select DATE_TRUNC('month',p.created_at) AS  createdat, to_char(p.created_at ,'Mon') as mon, extract(year from p.created_at ) as tahun, extract(month from p.created_at ) as bulan, COUNT(id) AS count
         FROM permohonan p 
         GROUP BY DATE_TRUNC('month',p.created_at), mon,tahun, bulan
-        order by tahun asc, bulan asc;"));
+        order by tahun desc, bulan asc limit 12;"));
         
         if($grafikmonth != null){
             foreach ($grafikmonth as $grafik) {
@@ -206,5 +206,15 @@ class PermohonanController extends Controller
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
         return view('user.informasipublik.statistik', compact('grafikmonth','grafikbulan','grafikjumlah','beritaterkini','title', 'title2', 'subtitle', 'logo','jumlahinfopublik' ,'jumlahpermohonan','jumlahkeberatan','jumlahselesai'));
 
+    }
+
+    public function cekstatus_permohonan(){
+         
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Informasi Kanal Pengaduan";
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasipublik.cekstatus_permohonan', compact( 'beritaterkini','title', 'title2', 'subtitle', 'logo' ));
     }
 }
