@@ -85,7 +85,7 @@
             <div class="col-md-8">
               <div class="form-group">
                 <label>Alasan Mengajukan Keberatan</label>
-                <textarea class="form-control form-control-name" name="kode_permohonan" id="kode_permohonan" placeholder="Masukkan alasan kenapa mengajukan keberatan" required></textarea>
+                <textarea class="form-control form-control-name" name="alasan" id="alasan" placeholder="Masukkan alasan kenapa mengajukan keberatan" required></textarea>
               </div>
             </div>
           </div>
