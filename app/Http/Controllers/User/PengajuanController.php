@@ -27,6 +27,7 @@ class PengajuanController extends Controller
         $pengajuan = new pengajuan;
         $pengajuan->kode_permohonan = $request->kode_permohonan;
         $pengajuan->nik_nip = $request->nik_nip;
+        $pengajuan->alasanpengajuan = $request->alasan;
         $pengajuan->save();
         if ($pengajuan) {
             Session::flash('success','Pengajuan Keberatan Anda Berhasil Terkirim');

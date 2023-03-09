@@ -105,7 +105,7 @@
 
             @foreach($files as $file)
 
-            <a href="{{ route('menu.file', encrypt($file->path_file)) }}" target="_blank" style="color: blue;">{{$file->path_file}}</a>
+            {{-- <a href="{{ route('menu.file', encrypt($file->path_file)) }}" target="_blank" style="color: blue;">{{$file->path_file}}</a> --}}
             <iframe src="{{ route('menu.file', encrypt($file->path_file)) }}" name="iframe_a"  width="100%" height="600" style="border:1px solid black;"></iframe> <br>
             <a href="{{ route('menu.file', encrypt($file->path_file)) }}" target="_blank"> <button  class="btn btn-info" style="border-radius: 20px; margin-top:15px;" >Download File</button></a><br><br>
             

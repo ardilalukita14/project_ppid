@@ -207,7 +207,7 @@
                                 <li><a href="{{ route('contents_kategori', 'berita-ppid') }}">Berita PPID</a></li>
                                 <li><a href="https://www.madiunkota.go.id/"  target="_blank">Berita Pemkot Madiun</a></li>
                                 <li><a href="{{ route('contents_kategori', 'pengumuman') }}">Pengumuman</a></li>
-                                <li><a href="">Lowongan</a></li>
+                                <li><a href="{{ route('contents_kategori', 'lowongan') }}">Lowongan</a></li>
                             </ul>
                         </li>
 

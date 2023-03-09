@@ -26,11 +26,11 @@
 
   <link rel="stylesheet" href="{{ asset ('frontend/plugins/animate-css/animate.css')}}">
   <!-- slick Carousel -->
-  <link rel="stylesheet" href="{{ asset ('frontend/plugins/slick/slick.css')}}">
+  {{-- <link rel="stylesheet" href="{{ asset ('frontend/plugins/slick/slick.css')}}">
   <link rel="stylesheet" href="{{ asset ('frontend/plugins/slick/slick-theme.css')}}">
   <!-- Colorbox -->
 
-  <link rel="stylesheet" href="{{ asset ('frontend/plugins/colorbox/colorbox.css')}}">
+  <link rel="stylesheet" href="{{ asset ('frontend/plugins/colorbox/colorbox.css')}}"> --}}
 
   <!-- Template styles-->
   <link rel="stylesheet" href="{{ asset ('frontend/css/style.css')}}">
