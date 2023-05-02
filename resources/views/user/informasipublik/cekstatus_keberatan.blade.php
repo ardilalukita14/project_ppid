@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-md-8">
                   <div class="form-group">
-                    <label>Email</label>
+                    <label>NIK</label>
                     <input class="form-control form-control-email" name="nik_nip" id="nik_nip" placeholder="NIK" type="integer"
                       required>
                   </div>

@@ -35,7 +35,7 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-lg-8 mb-5 mb-lg-0">
+      <div class="col-lg-12 mb-5 mb-lg-0">
         <div class="post">
 
           <div class="post-body">
@@ -85,7 +85,7 @@
 
       <div class="col-lg-4">
 
-<div class="sidebar sidebar-right">
+{{-- <div class="sidebar sidebar-right">
   <div class="sidebar-item search-form">
     <h3 class="widget-title" style="margin-left:20px;">Search</h3>
         <form action="{{ route('reader.search.berita') }}" method="POST"  class="mt-3" style="margin-left:20px;">
@@ -143,7 +143,7 @@
           </div><!-- Tags end -->
           </div><!-- Sidebar end -->
 
-    </div><!-- Main row end -->
+    </div><!-- Main row end --> --}}
 
   </div><!-- Container end -->
 </section><!-- Main container end -->

@@ -383,6 +383,21 @@ class MainController extends Controller
         return view('user.informasi.publik', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
+    public function informpublik_2023() {
+    
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Daftar Informasi Publik 2022";
+        $information = Information::where('kategori_informasi', '=', 'daftar-informasi-publik-2023')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '11');
+        $categories = Kategori::all();
+        $tags = Tag::all();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+         $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
+        return view('user.informasi.publik', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
+    
+    }
 
     public function informppid() {
     

@@ -96,6 +96,7 @@ Route::resource('/ppidpelaksana', App\Http\Controllers\PPIDPelaksanaController::
 
 /** Daftar Informasi Publik dan SOP*/
 Route::get('/informasi/daftar-informasi-publik-2022',[\App\Http\Controllers\InformationController::class,'informasipublik'])->name('informasi.publik.index');
+Route::get('/informasi/daftar-informasi-publik-2023',[\App\Http\Controllers\InformationController::class,'informasipublik_2023'])->name('informasi.publik.2023.index');
 Route::get('/informasi/daftar-informasi-publik-ppid-pelaksana',[\App\Http\Controllers\InformationController::class,'informasippid'])->name('informasi.ppid.index');
 Route::get('/informasi/informasi-secara-berkala',[\App\Http\Controllers\InformationController::class,'informasiberkala'])->name('informasi.berkala.index');
 Route::get('/informasi/informasi-serta-merta',[\App\Http\Controllers\InformationController::class,'informasisertamerta'])->name('informasi.serta.merta.index');
@@ -177,6 +178,7 @@ Route::get('/informasi-dikecualikan-ppid-kota-madiun',[\App\Http\Controllers\Use
 /** Menu Informasi Publik */
 /** Menu Profile Pemerintah Kota Madiun */
 Route::get('/daftar-informasi-publik-ppid-kota-madiun',[\App\Http\Controllers\User\MainController::class,'informpublik'])->name('informasi.publik');
+Route::get('/daftar-informasi-publik-ppid-kota-madiun-2023',[\App\Http\Controllers\User\MainController::class,'informpublik_2023'])->name('informasi.publik2023');
 Route::get('/daftar-informasi-publik-ppid-pelaksana',[\App\Http\Controllers\User\MainController::class,'informppid'])->name('informasi.ppid');
 Route::get('/informasi-secara-berkala',[\App\Http\Controllers\User\MainController::class,'informberkala'])->name('informasi.berkala');
 Route::get('/informasi-serta-merta',[\App\Http\Controllers\User\MainController::class,'informsertamerta'])->name('informasi.sertamerta');
