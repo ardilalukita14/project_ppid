@@ -42,25 +42,25 @@
             <div class="entry-header">
               <h1 class="entry-title">
          
-                <a href="news-single.html"><h2 style="margin-top:-35px;">Cek Status Permohonan Informasi Publik </h2></a>
+                <a href="news-single.html"><h2 style="margin-top:-35px;">Cek Status Permohonan Keberatan Informasi Publik </h2></a>
               </h1>
             </div><!-- header end -->
 
             <div class="entry-content">
-              <form id="contact-form" class="form-valide" action="{{route('cekstatus_permohonan.result')}}" method="POST" enctype="multipart/form-data" role="form">
+              <form id="contact-form" class="form-valide" action="{{route('cekstatus_keberatan.result')}}" method="POST" enctype="multipart/form-data" role="form">
                 {{csrf_field()}}
               <div class="error-container"></div>
-              <b>Identitas Pemohon*</b><br></br>
+              <b>Identitas Pemohon Keberatan</b><br></br>
               <div class="row">
                 <div class="col-md-8">
                   <div class="form-group">
-                    <label>No Pendaftaran</label>
+                    <label>No Keberatan</label>
                     <input class="form-control form-control-name" name="kode_permohonan" id="kode_permohonan" placeholder="No Pendaftaran" type="integer" required>
                   </div>
                 </div>
                 <div class="col-md-8">
                   <div class="form-group">
-                    <label>NIK</label>
+                    <label>Email</label>
                     <input class="form-control form-control-email" name="nik_nip" id="nik_nip" placeholder="NIK" type="integer"
                       required>
                   </div>

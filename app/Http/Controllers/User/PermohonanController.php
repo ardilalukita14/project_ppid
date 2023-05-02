@@ -217,4 +217,34 @@ class PermohonanController extends Controller
         $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
         return view('user.informasipublik.cekstatus_permohonan', compact( 'beritaterkini','title', 'title2', 'subtitle', 'logo' ));
     }
+
+    public function cekstatus_permohonan_result(Request $request){
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Informasi Kanal Pengaduan";
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+        $permohonan = Permohonan::where('kode_permohonan', '=', $request->kode_permohonan)->where('nik_nip', '=', $request->nik_nip)->first();
+        return view('user.informasipublik.cekstatus_permohonan_result', compact( 'beritaterkini','title', 'title2', 'subtitle', 'logo','permohonan' ));
+    }
+
+    public function cekstatus_keberatan(){
+         
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Informasi Kanal Pengaduan";
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+        return view('user.informasipublik.cekstatus_keberatan', compact( 'beritaterkini','title', 'title2', 'subtitle', 'logo' ));
+    }
+
+    public function cekstatus_keberatan_result(Request $request){
+        $title = "Informasi";
+        $title2 = "Informasi Publik";
+        $subtitle = "Informasi Kanal Pengaduan";
+        $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+        $permohonan = Pengajuan::where('kode_permohonan', '=', $request->kode_permohonan)->where('nik_nip', '=', $request->nik_nip)->first();
+        return view('user.informasipublik.cekstatus_keberatan_result', compact( 'beritaterkini','title', 'title2', 'subtitle', 'logo','permohonan' ));
+    }
 }
