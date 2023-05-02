@@ -42,6 +42,9 @@ Route::resource('/pengajuan-keberatan', App\Http\Controllers\User\PengajuanContr
 Route::get('/kanal-pengaduan',[\App\Http\Controllers\User\PermohonanController::class,'kanalpengaduan'])->name('kanalpengaduan.menu');
 Route::get('/statistik-pengaduan',[\App\Http\Controllers\User\PermohonanController::class,'statistik'])->name('statistik.menu');
 Route::get('/cekstatus-permohonan',[\App\Http\Controllers\User\PermohonanController::class,'cekstatus_permohonan'])->name('cekstatus.permohonan');
+Route::get('/cekstatus-keberatan',[\App\Http\Controllers\User\PermohonanController::class,'cekstatus_keberatan'])->name('cekstatus.keberatan');
+Route::post('/cekstatus-permohonan/result',[\App\Http\Controllers\User\PermohonanController::class,'cekstatus_permohonan_result'])->name('cekstatus_permohonan.result');
+Route::post('/cekstatus-keberatan/result',[\App\Http\Controllers\User\PermohonanController::class,'cekstatus_keberatan_result'])->name('cekstatus_keberatan.result');
 
 
 /** Dashboard Admin */

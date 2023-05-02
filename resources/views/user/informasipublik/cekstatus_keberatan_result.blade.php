@@ -47,31 +47,63 @@
             </div><!-- header end -->
 
             <div class="entry-content">
-              <form id="contact-form" class="form-valide" action="{{route('cekstatus_permohonan.result')}}" method="POST" enctype="multipart/form-data" role="form">
-                {{csrf_field()}}
-              <div class="error-container"></div>
-              <b>Identitas Pemohon*</b><br></br>
-              <div class="row">
-                <div class="col-md-8">
-                  <div class="form-group">
-                    <label>No Pendaftaran</label>
-                    <input class="form-control form-control-name" name="kode_permohonan" id="kode_permohonan" placeholder="No Pendaftaran" type="integer" required>
-                  </div>
-                </div>
-                <div class="col-md-8">
-                  <div class="form-group">
-                    <label>NIK</label>
-                    <input class="form-control form-control-email" name="nik_nip" id="nik_nip" placeholder="NIK" type="integer"
-                      required>
-                  </div>
-                </div>
-              </div>
-              <div class="text-left"><br>
-                <button class="btn btn-primary solid blank" type="submit">Send Message</button>
-              </div>
-            </form>
+                <table>
+                  <tr>
+                    <td>Kode Permohonan </td>
+                    <td> : </td>
+                    <td><strong>{{ $permohonan->kode_permohonan }}</strong></td>
+                  </tr>
+                  <tr>
+                    <td style="vertical-align:top">Status Permohonan </td>
+                    <td> : </td>
+                    <td>
+                      @if($permohonan->status_form == '1') <strong style="color:orange;"> Menunggu Tindak Lanjut</strong>
+                                                     @elseif($permohonan->status_form == "2")  <strong style="color:purple;" >Proses Tindak Lanjut</strong>
+                                                    @elseif($permohonan->status_form == "3") <strong style="color:green;" >Selesai Tindak Lanjut</strong>
+                                                    @elseif($permohonan->status_form == "4")<strong style="color:red;"> Tidak bisa Ditindaklanjuti</strong>
+                                                @else -
+                                                @endif</td>
 
- 
+                  </tr>
+                  <tr>
+                    <td style="vertical-align:top">Nama Lengkap </td>
+                    <td> : </td>
+                    <td><strong>{{ $permohonan->nama_lengkap }}</strong></td>
+                  </tr>
+                  <tr>
+                    <td style="vertical-align:top">Kategori Permohonan </td>
+                    <td> : </td>
+                    <td>{{ $permohonan->kategori_permohonan }}</td>
+                  </tr>
+                  <tr>
+                    <td style="vertical-align:top">NIP </td>
+                    <td> : </td>
+                    <td>{{ $permohonan->nik_nip }}</td>
+                  </tr>
+                  <tr>
+                    <td style="vertical-align:top">Email </td>
+                    <td> : </td>
+                    <td>{{ $permohonan->email }}</td>
+                  </tr>
+                  <tr>
+                    <td style="vertical-align:top">Telepon </td>
+                    <td style="vertical-align:top"> : </td>
+                    <td>{{ $permohonan->telepon }}</td>
+                  </tr>
+                  <tr>
+                    <td style="vertical-align:top">Rincian Informasi </td>
+                    <td style="vertical-align:top"> : </td>
+                    <td>{!!  $permohonan->rincian_informasi !!}</td>
+                  </tr>
+                  <tr>
+                    <td style="vertical-align:top">Tujuan </td>
+                    <td style="vertical-align:top"> : </td>
+                    <td>{!! $permohonan->tujuan !!}</td>
+                  </tr>
+                </table>
+                <div class="text-left"><br>
+                 <a href="/"> <button class="btn btn-primary solid blank" type="button">Kembali</button></a>
+                </div>
             </div>
           </div><!-- post-body end -->
         </div><!-- 1st post end -->
