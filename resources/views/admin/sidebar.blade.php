@@ -84,6 +84,7 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="far fa-file"></i> <span>Daftar Informasi Publik</span></a>
                 <ul class="dropdown-menu">
                   <li class="{{ (request()->is('informasi/daftar-informasi-publik-2022')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/daftar-informasi-publik-2022">Informasi Publik 2022</a></li>
+                  <li class="{{ (request()->is('informasi/daftar-informasi-publik-2023')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/daftar-informasi-publik-2023">Informasi Publik 2023</a></li>
                   <li class="{{ (request()->is('informasi/daftar-informasi-publik-ppid-pelaksana')) ? 'active' : '' }}"><a class="nav-link" href="/informasi/daftar-informasi-publik-ppid-pelaksana">Informasi Publik PPID</a></li>
                 </ul>
               </li>

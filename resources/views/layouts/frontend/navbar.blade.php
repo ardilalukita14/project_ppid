@@ -191,6 +191,7 @@
                                   <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Daftar Informasi <br> Publik </a>
                                   <ul class="dropdown-menu">
                                     <li><a href="{{ route('informasi.publik') }}">Daftar Informasi Publik 2022</a></li>
+                                    <li><a href="{{ route('informasi.publik2023') }}">Daftar Informasi Publik 2023</a></li>
                                     <li><a href="{{ route('informasi.ppid') }}">Daftar Informasi Publik PPID Pelaksana</a></li>
                                   </ul>
                               </li>

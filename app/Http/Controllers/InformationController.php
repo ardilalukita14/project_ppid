@@ -15,11 +15,21 @@ class InformationController extends Controller
 
     public function informasipublik() {
         $information = Information::where('kategori_informasi', '=', 'daftar-informasi-publik')->first();
-        $judul = "Update Data Informasi Publik";
+        $judul = "Update Data Informasi Publik 2022";
         $informasi = Information::findorfail($information->id);
         $documents = BerkasInformation::where('informasi_id', '=',$informasi->id)->get();
         return view('admin.informasi.form', compact('information', 'judul', 'documents'));
     }
+
+    public function informasipublik_2023() {
+        $information = Information::where('kategori_informasi', '=', 'daftar-informasi-publik-2023')->first();
+        $judul = "Update Data Informasi Publik 2023";
+        $informasi = Information::findorfail($information->id);
+        $documents = BerkasInformation::where('informasi_id', '=',$informasi->id)->get();
+        return view('admin.informasi.form', compact('information', 'judul', 'documents'));
+    }
+
+
 
     public function informasippid() {
         $information = Information::where('kategori_informasi', '=', 'daftar-informasi-publik-ppid-pelaksana')->first();
@@ -147,6 +157,10 @@ class InformationController extends Controller
         if($information->kategori_informasi == "daftar-informasi-publik"){
             Session::flash('success','Sukses Update Data');
             return redirect()->route('informasi.publik.index');
+        }
+        elseif($information->kategori_informasi == "daftar-informasi-publik-2023"){
+            Session::flash('success','Sukses Update Data');
+            return redirect()->route('informasi.publik.2023.index');
         }
         elseif($information->kategori_informasi == "daftar-informasi-publik-ppid-pelaksana"){
             Session::flash('success','Sukses Update Data');
