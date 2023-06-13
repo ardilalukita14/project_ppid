@@ -168,14 +168,14 @@
                                     <li><a href="{{ route('menu.profil.ppid') }}">Profil PPID Kota Madiun</a></li>
                                     <li><a href="{{ route('menu.visimisi.ppid') }}">Visi Misi PPID</a></li>
                                     <li><a href="{{ route('menu.struktur.ppid') }}">Bagan Struktur PPID</a></li>
-                                    <li><a href="{{ route('menu.sop.ppid') }}">SOP</a></li>
+                                    <li><a href="{{ route('menu.sop.ppid') }}">Standar Pelayanan</a></li>
                                     <li><a href="{{ route('menu.tupoksi.ppid') }}">Tupoksi PPID</a></li>
                                     <li><a href="{{ route('menu.sk.ppid') }}">SK PPID</a></li>
                                     <li><a href="{{ route('menu.perwal.ppid') }}">Perwal PPID</a></li>
                                     <li><a href="{{ route('menu.maklumat.ppid') }}">Maklumat PPID</a></li>
                                     <li><a href="{{ route('menu.informasidikecualikan.ppid') }}">SK Daftar Informasi yang Dikecualikan</a></li>
                                     <li><a href="{{ route('menu.informasipublik.ppid') }}">SK Daftar Informasi Publik</a></li>
-                                    <li><a href="{{ route('menu.jampelayanan.ppid') }}">Jam Pelayanan</a></li>
+                                    <li><a href="{{ route('menu.jampelayanan.ppid') }}">Produk Hukum PPID</a></li>
                                 
                                   </ul>
                               </li>
@@ -255,7 +255,7 @@
                             <ul class="dropdown-menu" role="menu">
                               <li><a href="https://dashboard.madiunkota.go.id/" target="_blank">Data Sektoral</a></li>
                               <li><a href="https://madiunkota.bps.go.id/" target="_blank">BPS Kota Madiun</a></li>
-                              <li><a href="https://profilpenduduk.madiunkota.go.id/rekap-data-kependudukan"  target="_blank">Data Penduduk Kota Madiun Tahun 2021</a></li>
+                              <li><a href="https://profilpenduduk.madiunkota.go.id/rekap-data-kependudukan"  target="_blank">Data Penduduk Kota Madiun</a></li>
                               <li><a href="https://hargapangan.id/" target="_blank">Tabel Harga Berdasarkan Daerah</a></li>
                             </ul>
                         </li>
@@ -271,7 +271,7 @@
         </div><!-- Search end -->
 
         <div class="search-block" style="display: none;">
-        <form action="{{ route('reader.search.berita') }}" method="POST"  class="mt-3" style="margin-left:20px;">
+        <form action="{{ route('reader.search.berita') }}" method="GET"  class="mt-3" style="margin-left:20px;">
               @csrf
           <label for="search-field" class="w-100 mb-0">
           <input type="text" value="{{ old('cari') }}" name="cari" class="form-control" placeholder="Temukan informasi">

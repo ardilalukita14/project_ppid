@@ -79,7 +79,7 @@ class ProfilePPIDController extends Controller
 
     public function jampelayanan() {
         $profile = Profile::where('kategori_profile', '=', 'jam-pelayanan')->first();
-        $judul = "Update Jam Pelayanan";
+        $judul = "Update Produk Hukum PPID";
         $profil = Profile::findorfail($profile->id);
         $documents = Berkas::where('profile_id', '=', $profil->id)->get();
         return view('admin.profile.formppid', compact('profile', 'judul', 'documents'));
