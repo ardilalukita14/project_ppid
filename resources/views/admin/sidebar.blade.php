@@ -70,7 +70,7 @@
                     <li class="{{ (request()->is('profile/sk-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sk-ppid">SK PPID</a></li>
                     <li class="{{ (request()->is('profile/perwal-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/perwal-ppid">Perwal</a></li>
                     <li class="{{ (request()->is('profile/maklumat-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/profile/maklumat-ppid">Maklumat</a></li>
-                    <li class="{{ (request()->is('profile/jam-pelayanan')) ? 'active' : '' }}"><a class="nav-link" href="/profile/jam-pelayanan">Jam Pelayanan</a></li>
+                    <li class="{{ (request()->is('profile/jam-pelayanan')) ? 'active' : '' }}"><a class="nav-link" href="/profile/jam-pelayanan">Produk Hukum PPID</a></li>
                     <li class="{{ (request()->is('profile/sk-daftar-informasi-publik')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sk-daftar-informasi-publik">SK Daftar Informasi Publik</a></li>
                     <li class="{{ (request()->is('profile/sk-daftar-informasi-dikecualikan')) ? 'active' : '' }}"><a class="nav-link" href="/profile/sk-daftar-informasi-dikecualikan">SK Daftar Dikecualikan</a></li>
                     <li class="{{ (request()->is('ppidpelaksana')) ? 'active' : '' }}"><a class="nav-link" href="/ppidpelaksana">PPID Pelaksana</a></li>
