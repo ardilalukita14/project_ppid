@@ -187,6 +187,9 @@ slidesToScroll: 2
    });
 </script>
   @yield('content')
+
+
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=qxOLo7Hn"></script>
   </body>
 
   </html>
