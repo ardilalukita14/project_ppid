@@ -223,6 +223,7 @@
                                   <li><a href="{{ route('sop.administrasi') }}">SOP Pedoman Pengelolaan Administrasi</a></li>
                                   <li><a href="{{ route('sop.kepegawaian') }}">SOP Pedoman Pengelolaan Kepegawaian</a></li>
                                   <li><a href="{{ route('sop.keuangan') }}">SOP Pedoman Pengelolaan Keuangan</a></li>
+                                  <li><a href="https://jdih.madiunkota.go.id/">JDIH Kota Madiun</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
@@ -232,7 +233,7 @@
                                 <li><a href="{{ route('contents_kategori', 'materi-umum') }}">Materi Umum</a></li>
                               </ul>
                           </li>
-                            <li><a href="{{ route('contents_kategori', 'laporan-pengaduan') }}">Laporan Pengaduan</a></li>
+                            <li><a href="{{ route('contents_kategori', 'laporan-kinerja-ppid') }}">Laporan Kinerja PPID</a></li>
                             {{-- <li><a href="{{ route('contents_kategori', 'berita-ppid') }}">Berita PPID</a></li> --}}
                             <li><a href="{{ route('contents_kategori', 'artikel') }}">Artikel</a></li>
                             <li><a href="{{ route('contents_kategori', 'narasi-tunggal') }}">Narasi Tunggal</a></li>
