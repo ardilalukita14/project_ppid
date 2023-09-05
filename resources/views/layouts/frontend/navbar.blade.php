@@ -216,6 +216,7 @@
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Download <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
                           <li><a href="{{ route('contents_kategori', 'produk-hukum') }}">Produk Hukum</a></li>
+                          <li><a href="https://jdih.madiunkota.go.id/" target="_blank">JDIH Kota Madiun</a></li>
                             <li class="dropdown-submenu">
                                 <a href="#!" class="dropdown-toggle" data-toggle="dropdown">SOP</a>
                                 <ul class="dropdown-menu">
@@ -223,7 +224,7 @@
                                   <li><a href="{{ route('sop.administrasi') }}">SOP Pedoman Pengelolaan Administrasi</a></li>
                                   <li><a href="{{ route('sop.kepegawaian') }}">SOP Pedoman Pengelolaan Kepegawaian</a></li>
                                   <li><a href="{{ route('sop.keuangan') }}">SOP Pedoman Pengelolaan Keuangan</a></li>
-                                  <li><a href="https://jdih.madiunkota.go.id/">JDIH Kota Madiun</a></li>
+                               
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
