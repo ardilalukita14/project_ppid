@@ -127,7 +127,7 @@
               <li class="{{ (request()->is('a/materi-umum')) ? 'active' : '' }}"><a class="nav-link" href="/a/materi-umum">Materi Umum</a></li>
               </ul>
             </li>
-            <li class="{{ (request()->is('a/laporan-pengaduan')) ? 'active' : '' }}"><a class="nav-link" href="/a/laporan-pengaduan"><i class="fas fa-headset"></i> <span>Laporan Pengaduan</span></a></li>
+            <li class="{{ (request()->is('a/laporan-kinerja-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/a/laporan-kinerja-ppid"><i class="fas fa-headset"></i> <span>Laporan Kinerja PPID</span></a></li>
             <li class="{{ (request()->is('a/berita-ppid')) ? 'active' : '' }}"><a class="nav-link" href="/a/berita-ppid"><i class="fas fa-newspaper"></i> <span>Berita PPID</span></a></li>
             <li class="{{ (request()->is('a/artikel')) ? 'active' : '' }}"><a class="nav-link" href="/a/artikel"><i class="fas fa-quote-left"></i> <span>Artikel</span></a></li>
             <li class="{{ (request()->is('a/narasi-tunggal')) ? 'active' : '' }}"><a class="nav-link" href="/a/narasi-tunggal"><i class="fas fa-microphone"></i> <span>Narasi Tunggal</span></a></li>

@@ -123,7 +123,7 @@ Route::prefix('a')->name('admin.')->group(function () {
     Route::get('/produk-hukum', [\App\Http\Controllers\PostController::class, 'indexproduk'])->name('pengumuman.index');
     Route::get('/materi-ppid-kota',  [\App\Http\Controllers\PostController::class, 'materippid'])->name('ppidmateri.index');
     Route::get('/materi-umum', [\App\Http\Controllers\PostController::class, 'materiumum'])->name('materiumum.index');
-    Route::get('/laporan-pengaduan', [\App\Http\Controllers\PostController::class, 'pengaduan'])->name('pengaduan.index');
+    Route::get('/laporan-kinerja-ppid', [\App\Http\Controllers\PostController::class, 'pengaduan'])->name('pengaduan.index');
     Route::get('/kanalpengaduan', [\App\Http\Controllers\InformasiPublikController::class, 'kanalpengaduan'])->name('kanalpengaduan.index');
     Route::post('/kanalpengaduan/update', [\App\Http\Controllers\InformasiPublikController::class, 'kanalpengaduan_update'])->name('kanalpengaduan.update');
     Route::get('/berita-ppid', [\App\Http\Controllers\PostController::class, 'berita'])->name('berita.index');
