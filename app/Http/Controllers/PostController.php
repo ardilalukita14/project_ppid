@@ -8,9 +8,12 @@ use App\Models\Icon;
 use App\Models\Post;
 use App\Models\Document;
 use App\Models\Kategori;
+use App\Models\Information;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Models\BerkasInformation;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -32,7 +35,7 @@ class PostController extends Controller
     {
         $posts = Post::all()
                 ->where('kategori_id', '=', '1');
-        $judul = "Data Posts";
+        $judul = "Data Pengumuman";
         return view('admin.posts.pengumuman', compact('posts', 'judul'));
     }
 
@@ -40,8 +43,19 @@ class PostController extends Controller
     {
         $posts = Post::all()
                 ->where('kategori_id', '=', '2');
-        $judul = "Data Posts";
+        $judul = "Data Produk Hukum";
         return view('admin.posts.produk', compact('posts', 'judul'));
+    }
+
+    public function indexinovasi()
+    {
+        $information = Information::where('kategori_informasi', '=', 'inovasi-digital')->first();
+        $judul = "Update Data Inovasi Digital";
+        $informasi = Information::findorfail($information->id);
+        $documents = BerkasInformation::where('informasi_id', '=',$informasi->id)->get();
+        return view('admin.informasi.form', compact('information', 'judul', 'documents'));
+
+      
     }
 
     public function materippid()

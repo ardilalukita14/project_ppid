@@ -198,6 +198,10 @@ class InformationController extends Controller
             Session::flash('success','Sukses Update Data');
             return redirect()->route('sop.keuangan.index');
         }
+        elseif($information->kategori_informasi == "inovasi-digital"){
+            Session::flash('success','Sukses Update Data');
+            return redirect()->route('admin.inovasidigital.index');
+        }
     }
 
     public function destroy_berkas_informasi($berkasinformasi){
