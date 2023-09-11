@@ -106,6 +106,7 @@
             <li class="menu-header">Kategori Postingan</li>
             <li class="{{ (request()->is('a/pengumuman')) ? 'active' : '' }}"><a class="nav-link" href="/a/pengumuman"><i class="fas fa-bullhorn"></i> <span>Pengumuman</span></a></li>
             <li class="{{ (request()->is('a/produk-hukum')) ? 'active' : '' }}"><a class="nav-link" href="/a/produk-hukum"><i class="fas fa-ribbon"></i> <span>Produk Hukum</span></a></li>
+            <li class="{{ (request()->is('a/inovasi-digital')) ? 'active' : '' }}"><a class="nav-link" href="/a/inovasi-digital"><i class="fas fa-lightbulb"></i> <span>Inovasi Digital</span></a></li>
 
             <li class="nav-item dropdown {{ (request()->is('informasi/sop-pedoman-pengelolaan-organisasi',
                                                             'informasi/sop-pedoman-pengelolaan-administrasi',

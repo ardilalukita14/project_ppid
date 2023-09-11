@@ -48,6 +48,9 @@ class MainController extends Controller
 
     }
 
+
+ 
+
     public function transparansianggaran() {
     
         $profile = Profile::where('kategori_profile', '=', 'transparansi-anggaran-kota-madiun')->first();
@@ -383,6 +386,24 @@ class MainController extends Controller
         return view('user.informasi.publik', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
     
     }
+    
+    public function inovasi_digital() {
+    
+        $title = "Informasi";
+        $title2 = "Inovasi Digital";
+        $subtitle = "Inovasi Digital";
+        $information = Information::where('kategori_informasi', '=', 'inovasi-digital')->first();
+        $berkas = BerkasInformation::all()
+                -> where('informasi_id', '=', '12');
+        $categories = Kategori::all();
+        $tags = Tag::all();
+        $beritaterkini = Post::where('ispublish', '=', '1')->orderBy('tgl_post', 'DESC')->orderBy('created_at', 'DESC')->limit(3)->get();
+         $logo = Icon::where('kategori_name', '=', 'Logo')->orderBy('created_at', 'DESC')->limit(6)->get();
+        return view('user.informasi.publik', compact('information', 'berkas', 'categories', 'beritaterkini', 'tags', 'title', 'title2', 'subtitle', 'logo'));
+    
+    }
+
+
     public function informpublik_2023() {
     
         $title = "Informasi";

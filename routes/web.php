@@ -120,7 +120,8 @@ Route::prefix('a')->name('admin.')->group(function () {
     Route::resource('/icons', App\Http\Controllers\IconController::class );
     Route::resource('/youtube', App\Http\Controllers\YoutubeController::class );
     Route::get('/pengumuman', [\App\Http\Controllers\PostController::class, 'indexpengumuman'])->name('pengumuman.index');
-    Route::get('/produk-hukum', [\App\Http\Controllers\PostController::class, 'indexproduk'])->name('pengumuman.index');
+    Route::get('/produk-hukum', [\App\Http\Controllers\PostController::class, 'indexproduk'])->name('produkhukum.index');
+    Route::get('/inovasi-digital', [\App\Http\Controllers\PostController::class, 'indexinovasi'])->name('inovasidigital.index');
     Route::get('/materi-ppid-kota',  [\App\Http\Controllers\PostController::class, 'materippid'])->name('ppidmateri.index');
     Route::get('/materi-umum', [\App\Http\Controllers\PostController::class, 'materiumum'])->name('materiumum.index');
     Route::get('/laporan-kinerja-ppid', [\App\Http\Controllers\PostController::class, 'pengaduan'])->name('pengaduan.index');
@@ -147,6 +148,7 @@ Route::middleware('verified')->group(function () {
 });
 
 /** Menu Profile Pemerintah Kota Madiun */
+
 Route::get('/sejarah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'sejarah_madiun'])->name('menu.sejarah.madiun');
 Route::get('/letak-geografis-kota-madiun',[\App\Http\Controllers\User\MainController::class,'geografis_madiun'])->name('menu.geografis.madiun');
 Route::get('/profile-pemerintah-kota-madiun',[\App\Http\Controllers\User\MainController::class,'profil_pemerintah'])->name('menu.profilepemerintah.madiun');
@@ -184,6 +186,8 @@ Route::get('/informasi-secara-berkala',[\App\Http\Controllers\User\MainControlle
 Route::get('/informasi-serta-merta',[\App\Http\Controllers\User\MainController::class,'informsertamerta'])->name('informasi.sertamerta');
 Route::get('/informasi-setiap-saat',[\App\Http\Controllers\User\MainController::class,'informsetiapsaat'])->name('informasi.setiapsaat');
 Route::get('/informasi-dikecualikan',[\App\Http\Controllers\User\MainController::class,'informdikecualikan'])->name('informasi.dikecualikan');
+Route::get('/inovasi-digital', [\App\Http\Controllers\User\MainController::class, 'inovasi_digital'])->name('informasi.inovasidigital');
+
 
 /** Menu SOP */
 Route::get('/sop-pedoman-pengelolaan-organisasi',[\App\Http\Controllers\User\MainController::class,'soporganisasi'])->name('sop.organisasi');

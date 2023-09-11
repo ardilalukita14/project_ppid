@@ -217,6 +217,7 @@
                           <ul class="dropdown-menu" role="menu">
                           <li><a href="{{ route('contents_kategori', 'produk-hukum') }}">Produk Hukum</a></li>
                           <li><a href="https://jdih.madiunkota.go.id/" target="_blank">JDIH Kota Madiun</a></li>
+                          <li><a href="{{ route('informasi.inovasidigital') }}" >Inovasi Digital</a></li>
                             <li class="dropdown-submenu">
                                 <a href="#!" class="dropdown-toggle" data-toggle="dropdown">SOP</a>
                                 <ul class="dropdown-menu">
