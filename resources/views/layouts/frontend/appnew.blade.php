@@ -37,12 +37,35 @@
 
    <!-- Libraries Stylesheet -->
  <!-- CSS Libraries -->
- <link rel="stylesheet" href="{{ asset ('frontend/dist/assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{ asset ('frontend/dist/assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{ asset ('frontend/dist/assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css')}}">
-   <link href="frontend/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="frontend/lib/animate/animate.min.css" rel="stylesheet">
 
-   <link rel="stylesheet" type="text/css" href="frontend/slick/slick.css"/>
-  	<link rel="stylesheet" type="text/css" href="frontend/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="frontend/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="frontend/slick/slick-theme.css"/>
+  <style>
+    .your-class {
+      padding-top:20px;
+      height: 398px;
+      margin: auto;
+    }
+    .your-class .your-class-item {
+        height: 352px;
+        color: #fff;
+        background-position: 50% 50%;
+        background-size: cover;
+      }
+      @media (max-width: 991px) {
+        .your-class{
+          max-width: 600px;
+        }
+      }
+      @media (max-width: 575px) {
+        .your-class{
+          max-width: 320px;
+        }
+      }
+  </style>
     
 </head>
 <body onload="loader()">
@@ -161,11 +184,36 @@ $('.summernote').summernote();
 <script type="text/javascript" src="frontend/slick/slick.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-$('.your-class').slick({
-infinite: true,
-slidesToShow: 2,
-slidesToScroll: 2
-});
+  $('.your-class').slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+
+  ]
+    });
+    $('.your-class').slickAnimation();
 });
 </script>
 
