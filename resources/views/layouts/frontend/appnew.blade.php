@@ -47,9 +47,8 @@
     .your-class {
       padding-top:20px;
       height: 398px;
-      margin: auto;
     }
-    .your-class .your-class-item {
+    .your-class-item {
         height: 352px;
         color: #fff;
         background-position: 50% 50%;
@@ -57,7 +56,7 @@
       }
       @media (max-width: 991px) {
         .your-class{
-          max-width: 600px;
+          max-width: 320px;
         }
       }
       @media (max-width: 575px) {
