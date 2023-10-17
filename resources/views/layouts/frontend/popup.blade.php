@@ -35,7 +35,7 @@
                  </table>
                 
               </div> --}}
-              <img class="w-100" src="{{ asset('img/alurpermohonan.png') }}" alt="service-image">
+              <img class="w-100" src="{{ asset('img/alur2.jpg') }}" alt="service-image">
           
             </div>
           </div>
