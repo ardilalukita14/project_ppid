@@ -110,8 +110,7 @@
   <!-- Template custom -->
   <script src="{{ asset ('frontend/js/script.js')}}"></script>
 
-  <script id="aioa-adawidget" src="https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#d1202f&token=&position=bottom_left"></script>
-
+  <script src="https://cdn.userway.org/widget.js" data-account="I6XG9YwLvY"></script>
 <!-- Content Kedua-->
 
 
