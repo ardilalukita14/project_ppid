@@ -41,12 +41,12 @@
   <link rel="stylesheet" href="{{ asset ('frontend/dist/assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css')}}">
   <link href="frontend/lib/animate/animate.min.css" rel="stylesheet">
 
-  <script>
+  {{-- <script>
       (function(){var s = document.createElement("script");
       s.setAttribute("data-account","I6XG9YwLvY");
       s.setAttribute("src","https://cdn.userway.org/widget.js");
       document.body.appendChild(s);})();
-  </script>
+  </script> --}}
 
   <link rel="stylesheet" type="text/css" href="frontend/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="frontend/slick/slick-theme.css"/>
