@@ -117,7 +117,7 @@
   <!-- Template custom -->
   <script src="{{ asset ('frontend/js/script.js')}}"></script>
 
-  <script src="https://cdn.userway.org/widget.js" data-account="I6XG9YwLvY"></script>
+  {{-- <script src="https://cdn.userway.org/widget.js" data-account="I6XG9YwLvY"></script> --}}
 <!-- Content Kedua-->
 
 
